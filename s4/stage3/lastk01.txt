@@ -1,0 +1,19 @@
+[INFO] simplefb: ready (1080x1920)
+[INFO]              .__.____                     .___
+[INFO]  __ __  ____ |__|    |    _________     __| _/___________
+[INFO] |  |  \/    \|  |    |   /  _ \__  \   / __ |/ __ \_  __\
+[INFO] |  |  /   |  \  |    |__(  <_> ) __ \_/ /_/ \  ___/|  |\/
+[INFO] |____/|___|  /__|_______ \____(____  /\____ |\___  >__|
+[INFO]            \/           \/         \/      \/    \/
+[INFO] passed board initialization
+[INFO] welcome to uniLoader (2daf020) - date 2026-11-14 11:32:29 on samsung-ja3g
+[INFO] cpu: CPSR=600001d3 SCTLR=00c50878 CPACR=00000000
+[INFO] entered_hyp=0
+[INFO] Booting XNU (payload entry 0x68001000)...
+[INFO] xnu: blob 0 bytes, dt 16384 bytes
+[INFO] xnu: decoding 0 bytes...
+[EMERG] lz4: decompression FAILED
+
+0 Corrected bytes, 6 unrecoverable blocks
+Last reset was reset (RST_STAT=0x800)
+471.76 1859.49

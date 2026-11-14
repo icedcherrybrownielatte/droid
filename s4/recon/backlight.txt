@@ -1,0 +1,8 @@
+/sys/class/backlight:
+panel
+
+/sys/class/lcd:
+panel
+0
+255
+SMD_AMS499QP01

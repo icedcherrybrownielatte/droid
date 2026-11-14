@@ -1,0 +1,87 @@
+[INFO] simplefb: ready (1080x1920)
+[INFO]              .__.____                     .___
+[INFO]  __ __  ____ |__|    |    _________     __| _/___________
+[INFO] |  |  \/    \|  |    |   /  _ \__  \   / __ |/ __ \_  __\
+[INFO] |  |  /   |  \  |    |__(  <_> ) __ \_/ /_/ \  ___/|  |\/
+[INFO] |____/|___|  /__|_______ \____(____  /\____ |\___  >__|
+[INFO]            \/           \/         \/      \/    \/
+[INFO] passed board initialization
+[INFO] welcome to uniLoader (2daf020) - date 2026-11-14 13:17:28 on samsung-ja3g
+[INFO] cpu: CPSR=600001d3 SCTLR=00c50878 CPACR=00000000
+[INFO] entered_hyp=0
+[INFO] Booting XNU (payload entry 0x68001000)...
+[INFO] xnu: blob 3572575 bytes, dt 1084 bytes
+[INFO] xnu: decoding 3572575 bytes...
+[INFO] xnu: decoded 6398100 bytes to 0x68001000
+[INFO] xnu: zero bss 6856e000 +23f000
+[INFO] xnu: ramdisk 64 bytes -> 6961bd10 vh=9482
+[INFO] xnu: layout pa=68001000 ks=6398100 dt=6961b094(1084) ba=6961b4d0 top=69700000
+[INFO] xnu: ba#1 vb=80000000 pb=68000000 ms=38000000 tk=69700000 sum=ea3c75e9
+[INFO] xnu: entry offset cd8e0 (parsed)
+XNUTRACE0d816589
+=== XNU BOOT 00000001
+kext submap [0x80000000 - 0xfffeffff], kernel text [0x80001000 - 0x80544000]
+zone leak detection disabled
+[303][304]Scheduler: Default of traditional
+standard timeslicing quantum is 10000 us
+standard background quantum is 2500 us
+[305][306][400][401][402][403][404][405][406][407][408][410][411]mig_table_max_displ = 74
+[413][414][415][416][417][418][307][308][309][310][311]J5410 MCT G_TCON=00000000 cnt=00000000:00000000 WTCON=0000ff39 WTCNT=0000ffff
+J5410 L0 calibration: 120000 counts in 240170 G ticks -> 11991506 Hz
+J5410 cpu: 1M loop = 1254 us, SCTLR=00c5187d ACTLR=00000040
+J5410 timebase up 24000000 Hz
+rtclock_bus_configure: Configuring RTCLOCK...
+[RTCLOCK] Frequency =     24.000000MHz, cvtt2n = 00000029.AAAAAAAA, cvtn2t = 00000000.0624DD2F
+[312][313][314][315][316][499][500][501][502][503][504][505][506][507][508][509][510][511][512][513][514][516][517]Initializing serial KDP
+[518][519][610]Kernel boot args: '-v keepsyms=1 kprintf=1 debug=0x14e'
+[611][612]iBoot version: uniLoader-serrano
+PE_init_iokit: starting IOKit now!
+[31mC[32mO[33mL[34mO[35mR[0m video console at 0xc0001000 (540x960x32)
+[31mC[32mO[33mL[34mO[35mR[0m video console at 0xc0001000 (540x960x32)
+[613][600][601][700][701][702][705][720][721][722][703][602][603][604][605]SM S4MINI,1 sync=0 need=1 wake=0 st0=0 st1=80000000
+[986][987][985][988][606][521]<T00000100 800d0d15 800327a1>
+<T00000200 800d0d15 800327a1>
+<T00000300 800d0d15 80037a13>
+<T00000400 800d0d15 800327a1>
+<T00000500 800d0d15 800327a1>
+<T00000600 800d0d15 80037a13>
+<T00000700 800d0d15 800327a1>
+<T00000800 800d0d15 800327a1>
+<T00000900 800d0d15 80037a13>
+<T00000a00 800d0d15 800327a1>
+<T00000b00 800d0d15 800327a1>
+<T00000c00 800d0d15 80037a13>
+<T00000d00 800d0d15 800327a1>
+<T00000e00 800d0d15 800327a1>
+<T00000f00 800d0d15 80037a13>
+<T00001000 800d0d15 800327a1>
+<T00001100 800d0d15 800327a1>
+<T00001200 800d0d15 80037a13>
+<T00001300 800d0d15 800327a1>
+<T00001400 800d0d15 800327a1>
+<T00001500 800d0d15 80037a13>
+
+J1 timed reboot to recovery: irqs=5560 mct writes=16689 timeouts=0 maxloops=0
+IOKIT jobs out=1 cfgthreads=1 waiting=1 cfgstarts=0 cfgwaits=0 run=0 queued=1
+J5410 timer late avg=16661 us max=2051822 us early=0
+J5410 timer arms=5561 under1ms=0 minreq=240000 handler avg=711 us max=128933 us
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc183ca38
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc1837000
+J5410 sample pc=800d0d15 lr=80037a13 thread=0xc1837a38
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc183ca38
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc1837000
+J5410 sample pc=800d0d15 lr=80037a13 thread=0xc1837a38
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc183ca38
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc1837000
+J5410 sample pc=800d0d15 lr=80037a13 thread=0xc1837a38
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc183ca38
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc1837000
+J5410 sample pc=800d0d15 lr=80037a13 thread=0xc1837a38
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc183ca38
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc1837000
+J5410 sample pc=800d0d15 lr=80037a13 thread=0xc1837a38
+J5410 sample pc=800d0d15 lr=800327a1 thread=0xc183ca38
+<Tdeadb007 000015b8 00000097>
+
+0 Corrected bytes, 34 unrecoverable blocks
+Last reset was reset (RST_STAT=0x800)

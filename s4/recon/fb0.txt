@@ -1,0 +1,5 @@
+name:
+virtual_size: 1088,72
+bits_per_pixel: 32
+stride: 4352
+modes: U:1080x1920p-60

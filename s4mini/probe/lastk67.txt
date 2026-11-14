@@ -1,0 +1,1798 @@
+<6>[    0.098733] persistent_ram: found existing buffer, size 103436, start 103436
+XNUTRACE368ea0bb
+=== XNU BOOT 00000001
+kext submap [0x80000000 - 0xfffeffff], kernel text [0x80001000 - 0x80545000]
+zone leak detection disabled
+Scheduler: Default of traditional
+standard timeslicing quantum is 10000 us
+standard background quantum is 2500 us
+mig_table_max_displ = 74
+rtclock_bus_configure: Configuring RTCLOCK...
+[RTCLOCK] Frequency =      6.750000MHz, cvtt2n = 00000094.25ED097B, cvtn2t = 00000000.01BA5E35
+Initializing serial KDP
+Kernel boot args: '-v keepsyms=1 kprintf=1 debug=0x14e'
+iBoot version: uniLoader-serrano
+PE_init_iokit: starting IOKit now!
+[31mC[32mO[33mL[34mO[35mR[0m video console at 0xc0001000 (200x300x32)
+[31mC[32mO[33mL[34mO[35mR[0m video console at 0xc0001000 (200x300x32)
+IOS7LAB commpage cpus: configured=1 active=1 physical=1 logical=1
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+	The Regents of the University of California. All rights reserved.
+
+MAC Framework successfully initialized
+using 4608 buffer headers and 4352 cluster IO buffer headers
+IOResources: not registry member at registerService()
+IOResources: not registry member at registerService()
+IOResources: not registry member at registerService()
+waitForSystemMapper
+Backtrace 0x8041f49f 0x8041f459 0x8037e5cd 0x8050b7c9 0x800376d9 0x800cb870 0xd1bebd50
+         can't perform kext scan: no kext summaryDSM S4MINI,1 cnt=2
+SC> AppleARMPE <- S4MINI,1
+AppleARMPE::start: Welcome to the NeXT generation.
+J1 disp: managed=230400 free=218145 guard=57619
+Leo primary BGRA CPU surface id=1 540x960 row=2160 bytes=2073600; physical outputRGB565 separate
+J1 disp: AppleCLCD published 540x960 row2160 budget=16777216
+Leo storage: phase=1 raw-open=0 read0=0 reads=0 locator=0 io=00000000
+Leo storage: card-sectors=0 file-validated=0 file-bytes=0 media-created=0 registered=0
+Leo root: selected=0 BSD= major=0 minor=0 COW=0 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=0 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=0 charge-pages=0 hits=0 misses=0 base-reads=0
+M8930 SDC1: POWER=00000001 CLOCK=00009500 STATUS=000c0040
+M8930 SDC1: CMD13 rca=2 status=00000900 state=4
+M8930 SDC1: mode 0 -> 0 sig=55aa stat=00000000 clk=00009500 sw=0000
+M8930 SDC1: read LBA0 r=0 sig=55aa p1type=0c
+J1P l31 before ctrl=46 bank2=28 bank4=40
+J1P l31 after wr=0 ctrl=cf bank2=2b bank4=41
+J1P rpm ver=0.0.0 req180=0
+J1P rpm ack ctx=1 sel2=2000 val=3 waited=1
+J1P lines irq11=0 sda16=1 scl17=1
+J1I mxt rc=0 info 82 23 30 ab x24 y14 obj21 orc=0
+J1I T9 ctrl=00 orient=00 xr=1023 yr=1023 rid=0
+J1I mxt ok=0 polls=0 chg=0 msgs=0 reports=0 errs=0 hid=0 last=00000000
+J1I mxt dropped noopen=0 nopkt=0
+J1K keys home=0 power=0 events=0
+J1I T37 @0088 sz130 inst1 rid0
+J1I T5 @010a sz9 inst1 rid0
+J1I T6 @0113 sz6 inst1 rid1
+J1I T38 @0119 sz8 inst1 rid0
+J1I T71 @0121 sz112 inst1 rid0
+J1I T7 @0191 sz4 inst1 rid0
+J1I T8 @0195 sz14 inst1 rid0
+J1I T9 @01a3 sz46 inst1 rid8
+J1I T18 @01d1 sz2 inst1 rid0
+J1I T25 @01d3 sz9 inst1 rid1
+J1I T42 @01dc sz10 inst1 rid1
+J1I T46 @01e6 sz10 inst1 rid1
+J1I T47 @01f0 sz26 inst1 rid0
+J1I T56 @020a sz30 inst1 rid1
+J1I T57 @0228 sz3 inst1 rid1
+J1I T61 @022b sz5 inst2 rid1
+J1I T65 @0235 sz11 inst1 rid0
+J1I T66 @0240 sz3 inst1 rid1
+J1I T70 @0243 sz10 inst8 rid1
+J1I T72 @0293 sz80 inst1 rid1
+J1I T80 @02e3 sz4 inst1 rid0
+J1I T9 ctrl=83 orient=03 xrange=959 yrange=539
+J1I mxt ready T5@010a sz9 T9@01a3 rid2
+IOS7J1 TOUCH mxt336s init=0
+IOS7J1 TOUCH service-ready stub physical480x800 queue4096; no-input
+IOS7LEO TOUCH published actual Type2A service
+SC< AppleARMPE ok=1
+mbinit: done [56 MB total pool size, (37/18) split]
+Pthread support ABORTS when sync kernel primitives misused
+J1BSD init: calling bsd_autoconf
+bsd_autoconf: calling kminit
+J1BSD autoconf: kminit begin
+J1BSD autoconf: kminit done
+J1BSD autoconf: pseudo_inits begin
+J1BSD autoconf: pseudo_inits done
+J1BSD autoconf: IOKitBSDInit begin
+J1BSD init: bsd_autoconf returned
+J1 stage 740
+J1 stage 741
+J1 stage 742
+J1 stage 743
+J1 stage 744
+J1 stage 745
+J1 stage 746
+J1 stage 747
+J1 stage 748
+J1 stage 751
+J1 stage 752
+Waiting on <dict ID="0"><key>IOProviderClass</key><string ID="1">IOMedia</string><key>Content</key><string ID="2">Apple_HFS</string></dict>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K buttons_read rc=0
+DSM IOResources cnt=0
+PK jobs=10/2 cfg=10 wt=10 dbg=0 0 0 0
+DSM IOPMrootDomain cnt=0
+DSM cpu cnt=2
+SC> AppleARMCPU <- cpu
+AppleARMCPU::start: Starting ARM CPU IOKit provider...
+AppleARMCPU::initCPU(0xc165ab00): we are here to serve!
+AppleARMCPU::start: registered processor with Mach subsystem.
+SC< AppleARMCPU ok=1
+DSM cpus cnt=2
+DSM arm-io cnt=2
+SC> AppleARMIO <- arm-io
+AppleARMIO::start: Publishing device tree entries to IOService plane...
+SC< AppleARMIO ok=1
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+DSM defaults cnt=2
+DSM AppleARMPE cnt=0
+DSM IOCoreSurfaceRoot cnt=0
+DSM IOS7J1FB cnt=0
+DSM IOS7M8930SDMMC cnt=1
+SC> IOBlockStorageDriver <- IOS7M8930SDMMC
+SC< IOBlockStorageDriver ok=1
+DSM IOS7J1Touch cnt=0
+DSM AppleARMGrandCentral cnt=0
+DSM AppleARMCPU cnt=0
+DSM AppleARMIO cnt=0
+DSM Samsung MSM8930 eMMC Media cnt=3
+M8930SD rd blk=0 n=1 res=0 #1
+SC> IOMediaBSDClient <- Samsung MSM8930 eMMC Media
+SC< IOMediaBSDClient ok=1
+SC> IOS7LeoHFSFile <- Samsung MSM8930 eMMC Media
+M8930SD rd blk=5911 n=1 res=0 #1025
+M8930SD rd blk=6423 n=1 res=0 #2049
+M8930SD rd blk=6935 n=1 res=0 #3073
+M8930SD rd blk=7447 n=1 res=0 #4097
+M8930SD rd blk=7959 n=1 res=0 #5121
+M8930SD rd blk=8471 n=1 res=0 #6145
+Leo COW budget: managed=230400 free=217122 reserve=3 target=18 cap=28559 pages
+Leo COW total charge=28800 pages fixed/work=21
+Leo file: validated IOS7/ROOTFS.HFS bytes=1741471744 extents=1 HFS=4858 version=5 BASE_SD_RO=1 COW_RW=1 VOLATILE=1
+Leo storage: phase=4 raw-open=1 read0=1 reads=6650 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=0 registered=0
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=0 misses=0 base-reads=0
+Leo root-file registerService begin validated=1 COWready=1
+Leo root-file registerService returned (matching requested; not media/mount proof)
+SC< IOS7LeoHFSFile ok=1
+SC> IOFDiskPartitionScheme <- Samsung MSM8930 eMMC Media
+SC< IOFDiskPartitionScheme ok=1
+DSM IOBlockStorageDriver cnt=0
+DSM IOMediaBSDClient cnt=0
+DSM IOS7LeoHFSFile cnt=2
+SC> IOS7LeoHFSDriver <- IOS7LeoHFSFile
+Leo HFSDriver start enter provider=0xc166ce00
+Leo J01 job allocation returned role=1 target=0xc1670d00 class=- value=1 RETURN=803fb17f
+Leo storage: phase=6 raw-open=1 read0=1 reads=6650 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=0 misses=0 base-reads=0
+Leo HFSDriver start returned ok=1
+SC< IOS7LeoHFSDriver ok=1
+DSM Untitled 1 cnt=3
+SC> IOMediaBSDClient <- Untitled 1
+SC< IOMediaBSDClient ok=1
+Leo J02 matching job dispatch role=1 target=0xc1670d00 class=- RETURN=8040027f
+Leo J03 matching entry role=1 target=0xc1670d00 class=- RETURN=80400541
+DSM iOS lab Leo SD HFS file Media cnt=3
+Leo J04 candidate probe begin role=1 target=0xc1670d00 class=IOMediaBSDClient RETURN=803ff287
+Leo J05 candidate probe returned role=1 target=0xc1670d00 class=IOMediaBSDClient value=1 RETURN=803ff2e7
+Leo J04 candidate probe begin role=1 target=0xc1670d00 class=IOS7LeoHFSFile RETURN=803ff287
+Leo J05 candidate probe returned role=1 target=0xc1670d00 class=IOS7LeoHFSFile value=0 RETURN=803ff2e7
+Leo J04 candidate probe begin role=1 target=0xc1670d00 class=IOFDiskPartitionScheme RETURN=803ff287
+Leo READCACHE demand: hits=0 misses=1 base-reads=1 bytes=33832
+Leo J05 candidate probe returned role=1 target=0xc1670d00 class=IOFDiskPartitionScheme value=0 RETURN=803ff2e7
+Leo J06 candidate start begin role=1 target=0xc1670d00 class=IOMediaBSDClient RETURN=803ff507
+SC> IOMediaBSDClient <- iOS lab Leo SD HFS file Media
+Leo J01 job allocation returned role=2 target=0xc165a880 class=- value=1 RETURN=803fb17f
+SC< IOMediaBSDClient ok=1
+Leo J07 candidate start returned role=1 target=0xc1670d00 class=IOMediaBSDClient value=1 RETURN=803ff561
+Leo J08 matching busy decrement begin role=1 target=0xc1670d00 class=- RETURN=80400947
+Leo J09 matching busy decrement returned role=1 target=0xc1670d00 class=- value=1 RETURN=80400995
+Got boot device = IOService:/AppleARMPE/IOS7M8930SDMMC/IOBlockStorageDriver/Samsung MSM8930 eMMC Media/IOS7LeoHFSFile/IOS7LeoHFSDriver/iOS lab Leo SD HFS file Media
+BSD root: disk1, major 14, minor 2
+J1 boot: vfs_mountroot begin
+Leo J10 quiet wait entry role=1 target=0xc1670d00 RETURN=80400bd7 state0=0000001e state1=00000001 jobs=3 waiting=3 threads=3 BEST_EFFORT
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+DSM IOS7LeoHFSDriver cnt=0
+DSM IOMediaBSDClient cnt=0
+Leo J02 matching job dispatch role=2 target=0xc165a880 class=- RETURN=8040027f
+Leo J03 matching entry role=2 target=0xc165a880 class=- RETURN=80400541
+DSM IOMediaBSDClient cnt=0
+Leo J08 matching busy decrement begin role=2 target=0xc165a880 class=- RETURN=80400947
+Leo J09 matching busy decrement returned role=2 target=0xc165a880 class=- value=0 RETURN=80400995
+Leo READCACHE demand: hits=0 misses=2 base-reads=2 bytes=33832
+Leo READCACHE demand: hits=0 misses=4 base-reads=4 bytes=33832
+disk1: ioctl(_IOW,'d',198,256) is unsupported.
+disk1: ioctl(_IOR,'d',80,8) is unsupported.
+J1 boot: vfs_mountroot returned errno=0
+J1 boot: root mount readonly=1
+J1 stage 753
+J1 stage 754
+J1 stage 755
+J1 stage 756
+J1 stage 757
+J1 stage 758
+Leo boot: cloneproc returned thread-present=1
+Leo boot: init thread_resume begin
+Leo boot: init thread_resume returned kern=0
+J1 stage 759
+J1 stage 761
+J1 stage 762
+J1 stage 764
+J1 ks 528
+J1 ks 531
+J1 init: bsdinit_task
+J1 init: load_init_program begin
+attempting to start init of /sbin/launchd
+Leo boot: init execve begin path=/sbin/launchd
+IOS7LAB shared region 0x2c000000..0x40000000; stack below 0x2be00000
+J1 exec pid 1 (launchd) err=0
+Leo boot: init execve returned errno=0 (kernel result only)
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7LAB cache mapping 0 va=2e035000 size=0c28e000 offset=00000000 max=5 init=5
+IOS7LAB cache mapping 1 va=3a2c5000 size=01ed6000 offset=0c28e000 max=23 init=23
+IOS7LAB cache mapping 2 va=3c19d000 size=0228c000 offset=0e164000 max=1 init=1
+IOS7LAB cache mapping 3 va=3e429000 size=0017a000 offset=12dbb000 max=1 init=1
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000100 00002cb1 0000000b>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decfa 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8eb8ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1 WDTREG 000: 00000000 00000000 00000000 00000000
+J1 WDTREG 010: 00000000 00000000 00000000 00000000
+J1 WDTREG 020: 00000000 000107ac 00000000 00000000
+J1 WDTREG 030: 00000000 00000003 00000000 00000000
+J1 WDTREG 040: 00000000 00465858 00000c7c 001b8000
+J1 WDTREG 050: 00000000 00000000 1934fba5 001d0000
+J1 WDTREG 060: 00000000 00000000 00000000 00000000
+J1 WDTREG 070: 00000000 00000000 00000000 00000000
+J1 WDTREG 080: 00000000 00000000 01000000 00000000
+J1W round 0 nprocs=1 bb=0 sb=0 P0 S0 CK0 T0
+J1M free=180282 act=598 inact=42 wire=42567 target=1997 min=1051
+J1B n0:
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7LAB vm_map64 size=00000000:00001000 mask=00000000:00000000 flags=49000001 prot=3 result=0 address=0011f000
+M8930SD rd blk=3275780 n=184 res=0 #7169
+IOS7LAB vm_map64 size=00000000:00002000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=00120000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=00122000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=0012f000
+IOS7LAB vm_map64 size=00000000:00100000 mask=00000000:000fffff flags=7000001 prot=3 result=0 address=17d00000
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7LAB vm_map64 size=00000000:00800000 mask=00000000:007fffff flags=2000001 prot=3 result=0 address=18000000
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:17d19620 result=0 name=707 bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:17d19620 result=0 name=a03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:17d19620 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:17d19620 result=0 name=c03 bypass_hints=21
+com.apple.launchd                1        com.apple.launchd                                                1         *** launchd[1] has started up. ***
+com.apple.launchd                1        com.apple.launchd                                                1         *** Verbose boot, will log to /dev/console. ***
+J1 sp launchctl 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000200 00003af3 00000012>
+IOS7LAB vm_map64 size=00000000:00001000 mask=00000000:00000000 flags=49000001 prot=3 result=0 address=00048000
+IOS7LAB vm_map64 size=00000000:00002000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=00049000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=0004b000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=00058000
+IOS7LAB vm_map64 size=00000000:00100000 mask=00000000:000fffff flags=7000001 prot=3 result=0 address=15d00000
+IOS7LAB vm_map64 size=00000000:00800000 mask=00000000:007fffff flags=2000001 prot=3 result=0 address=16000000
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:15d313c0 result=0 name=60b bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:15d313c0 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:15d313c0 result=0 name=c03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:15d313c0 result=0 name=d03 bypass_hints=21
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (fsck) err=0
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:14576f50 result=0 name=807 bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:14576f50 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:14576f50 result=0 name=c03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:14576f50 result=0 name=d03 bypass_hints=21
+Data/Stack execution not permitted: fsck[pid 11] at virtual address 0x18000, protections were read-write
+J1 X 11 fsck 0
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (mount) err=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Leo READCACHE demand: hits=0 misses=8 base-reads=8 bytes=33832
+J1 exec pid 13 (mount_hfs) err=0
+disk1: ioctl(_IOR,'d',80,8) is unsupported.
+Leo J10 quiet wait entry role=1 target=0xc1670d00 RETURN=80400bd7 state0=0000001e state1=00000000 jobs=0 waiting=0 threads=0 BEST_EFFORT
+J1 X 13 mount_hfs 0
+/dev/disk1 on / (hfs, local, noatime)
+J1 X 12 mount 0
+J1 exec pid 14 (FinishRestoreFro) err=0
+J1 X 14 FinishRestoreFro 0
+J1 exec pid 15 (tzinit) err=0
+tzinit: LatestTZTarget doesn't exist, no need to check its validity: No such file or directory
+Leo storage: phase=6 raw-open=1 read0=1 reads=6674 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=2 dirty=2 writes=1 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=24 base-reads=24
+Leo storage: phase=6 raw-open=1 read0=1 reads=6690 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=4 dirty=4 writes=2 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=40 base-reads=40
+J1 X 15 tzinit 100
+J1 exec pid 16 (cc_fips_test) err=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 16 cc_fips_test 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00000300 0000494c 00000015>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp UserEventAgent 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=0 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1T clk hclk=00000000 md=00000000 ns=00000000 rst=00000000 haltA=3fd3ffff
+J1T gpio11 cfg=00000003 io=00000001
+J1T gpio16 cfg=00000000 io=00000001
+J1T gpio17 cfg=00000000 io=00000001
+J1T qup skipped (gsbi3 ahb clock off)
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decfa 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8eb8ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 1 nprocs=9 bb=0 sb=0 P0 S0 CK0 T0
+J1M free=174240 act=1676 inact=143 wire=43275 target=1997 min=1051
+J1B n0:
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00000400 00004fb6 00000018>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp wifid 0 D900 P0 S0
+J1 sp awdd 0 D900 P0 S0
+J1 sp profiled 0 D900 P0 S0
+J1 sp timed 0 D900 P0 S0
+J1 sp audio_device_arbitrator 0 D900 P0 S0
+J1 sp iaptransportd 0 D900 P0 S0
+J1 sp mtmergeprops 0 D900 P0 S0
+J1 sp backupd 0 D900 P0 S0
+J1 sp mediaremoted 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp misd 0 D900 P0 S0
+J1 sp ptpd 0 D900 P0 S0
+J1 sp prdaily 0 D900 P0 S0
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 sp softwareupdated 0 D900 P0 S0
+J1 sp SpringBoard 0 D900 P0 S0
+J1 sp assistantd 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp fud 0 D900 P0 S0
+J1 sp ? 0 D900 P0 S0
+J1 sp OTACrashCopier 0 D900 P0 S0
+J1 sp syslogd 0 D900 P0 S0
+J1 sp keybagd 0 D900 P0 S0
+J1 sp spinforeverd 2 D900 P0 S0
+J1 sp aosnotifyd 0 D900 P0 S0
+J1 sp atwakeup 0 D900 P0 S0
+J1 sp DumpPanic 0 D900 P0 S0
+J1 sp ubd 0 D900 P0 S0
+J1 sp wifiFirmwareLoader 0 D900 P0 S0
+J1 sp mediaserverd 0 D900 P0 S0
+J1 sp powerd 0 D900 P0 S0
+J1 sp configd 0 D900 P0 S0
+J1 sp locationd 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp vendor_device_arbitrator 0 D900 P0 S0
+J1 sp identityservicesd 0 D900 P0 S0
+J1 sp BTServer 0 D900 P0 S0
+J1 sp ptp_device_arbitrator 0 D900 P0 S0
+J1 sp fairplayd.H2 0 D900 P0 S0
+J1 sp backboardd 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp CrashHousekeeping 0 D900 P0 S0
+J1 sp sharingd 0 D900 P0 S0
+J1 sp routined 0 D900 P0 S0
+J1 sp mount_nfs 2 D900 P0 S0
+J1 sp aggregated 0 D900 P0 S0
+J1 sp daily 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp lockdownd 0 D900 P0 S0
+J1 sp mtrecorder 2 D900 P0 S0
+J1 sp imagent 0 D900 P0 S0
+J1 sp accessory_device_arbitrator 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+UDA: total faults=16384 prdaily far39d8a2cc pc39c8b982 fsr5
+J1 sp passd 0 D900 P0 S0
+J1 sp installd 0 D900 P0 S0
+J1 sp fseventsd 0 D900 P0 S0
+J1 sp vmd 0 D900 P0 S0
+J1 sp wirelessproxd 0 D900 P0 S0
+J1 sp MobileStorageMounter 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000500 0000584c 0000001d>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp AppleIDAuthAgent 0 D900 P0 S0
+J1 sp atc 0 D900 P0 S0
+J1 sp mstreamd 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp notifyd 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Data/Stack execution not permitted: MobileStorageMou[pid 69] at virtual address 0xd7000, protections were read-write
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decfa 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8eb8ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 2 nprocs=56 bb=31 sb=36 P0 S0 CK8 T0
+J1M free=164184 act=2701 inact=694 wire=47189 target=1997 min=1051
+J1B n4: d51 c8 ce d5a
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp /usr/sbin/mDNSResponder blocked
+<T00000600 00005f8c 00000022>
+UDA: total faults=32768 backupd far3a414998 pc39c84e70 fsr7
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp mtrecorder 2 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+M8930SD rd blk=3045604 n=256 res=0 #8193
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp spinforeverd 2 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000700 00006325 00000029>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+UDA: total faults=49152 assistantd far3a88a238 pc39c84e4e fsr7
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 3 nprocs=56 bb=31 sb=36 P0 S0 CK8 T3
+J1M free=154797 act=5454 inact=963 wire=48192 target=1997 min=1051
+J1B n6: d51 c8 ce d5a d56 d4c
+J1Q head=0 tail=0 opened=0 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp /usr/sbin/mDNSResponder blocked
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000800 0000665a 0000002d>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp spinforeverd 2 D900 P0 S0
+J1 sp mtrecorder 2 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00000900 0000691e 00000032>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+UDA: total faults=65536 SpringBoard far3afe8758 pc39c85294 fsr80f
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp aslmanager 0 D900 P0 S0
+J1W round 4 nprocs=57 bb=31 sb=36 P0 S0 CK8 T6
+J1M free=146430 act=8434 inact=1710 wire=48514 target=1997 min=1051
+J1B n11: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 65 BTServer 0
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 sp xpcd 0 D900 P0 S0
+<T00000a00 00006c63 00000036>
+Data/Stack execution not permitted: xpcd[pid 82] at virtual address 0xc000, protections were read-write
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 54 DumpPanic 100
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 TMR ff1c d59922037038 cal56.699
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 33 CrashHousekeepin 0
+J1 sp spinforeverd 2 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 22 audio_device_arb 0
+J1 X 57 vendor_device_ar 0
+<T00000b00 00006ee3 00000039>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp mtrecorder 2 D900 P0 S0
+J1 X 64 ptp_device_arbit 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 81 aslmanager 0
+J1 X 61 accessory_device 0
+J1 TMR ff1c d59923352297 cal58.879
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 TMR ff1c d119927510223 cal60.112
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=0 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp MobileGestaltHelper 0 D900 P0 S0
+<T00000c00 000071c2 0000003d>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 TMR ff1c d119922018482 cal61.452
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 PATCH backboardd checkin
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 5 nprocs=51 bb=31 sb=36 P0 S0 CK28 T85
+J1M free=142127 act=9366 inact=2428 wire=48570 target=1997 min=1051
+J1B n18: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 69 MobileStorageMou 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp /usr/sbin/mDNSResponder blocked
+<T00000d00 000074fa 00000041>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp lsd 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp spinforeverd 2 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp mtrecorder 2 D900 P0 S0
+<T00000e00 000076f5 00000044>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+M8930SD rd blk=879044 n=8 res=0 #9217
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+Leo storage: phase=6 raw-open=1 read0=1 reads=7142 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=91 dirty=91 writes=94 sync=1 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=740 base-reads=740
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Leo storage: phase=6 raw-open=1 read0=1 reads=7142 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=99 dirty=99 writes=97 sync=2 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=804 base-reads=804
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp lockbot 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000f00 00007c3c 00000047>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp distnoted 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 fb open type=0
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decfa 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8eb8ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 6 nprocs=53 bb=31 sb=36 P0 S0 CK28 T172
+J1M free=137705 act=10312 inact=2745 wire=49239 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+UDA: total faults=81920 routined far3c08c4bc pc2f41cd6c fsr7
+J1 X 29 prdaily 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 TMR ff1c d76722447444 cal74.723
+J1 fb open type=0
+J1 fb open type=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001000 00008287 0000004b>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1Q head=0 tail=0 opened=0 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 TMR ff1c d78722443963 cal76.841
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001100 0000847a 0000004e>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp spinforeverd 2 D903 P0 S0
+J1 X 10 launchctl 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 53 atwakeup 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp networkd 0 D903 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp mtrecorder 2 D903 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+b7ea47f7,00000012,c78acc7d,00000012,00000000,00000000,00000001,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,80000007,80000007,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 present #1 fmt42475241 row2160
+J1 frame #1 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=1 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 43 fud 0
+<T00001200 00008a14 00000051>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 7 nprocs=50 bb=31 sb=36 P1 S0 CK28 T197
+J1M free=136614 act=11377 inact=2145 wire=49340 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001300 00008c75 00000054>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Data/Stack execution not permitted: backboardd[pid 31] at virtual address 0x2e79000, protections were read-write
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp networkd_privileged 0 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp apsd 0 D903 P1 S0
+IOS7LEO TOUCH client type=0 pid=31
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7LEO TOUCH queue-map type0 bytes=4136
+<T00001400 00008ea7 00000056>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7LEO TOUCH method=0 sin=1 stin=0 sout=0 stout=0
+IOS7LEO TOUCH reader-open selector=0
+IOS7LEO TOUCH notification-port type0 registered; not-event-delivery-proof
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7LEO TOUCH method=2 sin=2 stin=52 sout=0 stout=52
+J1 sp spinforeverd 2 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+<T00001500 0000916f 00000059>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp mtrecorder 2 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 CHECKIN id5b9938 from pid36
+J1 CHK dest act-2147483648 rcv pid31 name1c03 q0/5
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E31:1969-12-31 16:01:31.-419 backboardd[31:5103] 
+E31:Telling the system app that it can start immediately
+J1 CHECKIN id5b9939 from pid31
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001600 0000939f 0000005c>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 8 nprocs=52 bb=31 sb=36 P1 S0 CK31 T216
+J1M free=134614 act=11849 inact=2164 wire=49794 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001700 00009600 0000005f>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+M8930SD rd blk=2029365 n=1 res=0 #10241
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Data/Stack execution not permitted: mediaserverd[pid 49] at virtual address 0xe5000, protections were read-write
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001800 00009807 00000062>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E36:1969-12-31 16:01:36.-360 SpringBoard[36:1b07] 
+E36:+[SBPushStore migratePushStore] Migrating push store: /var/mobile/Library/SpringBoard/PushStore
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp spinforeverd 2 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E36:1969-12-31 16:01:39.-799 SpringBoard[36:1b07] 
+E36:+[SBPushStore migratePushStore] Push store does not exist; no migration needed.
+J1 X 26 mtmergeprops 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp mtrecorder 2 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001900 00009ae8 00000065>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 9 nprocs=51 bb=31 sb=36 P1 S0 CK31 T246
+J1M free=132033 act=12506 inact=2312 wire=49967 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001a00 00009dab 00000068>
+UDA: total faults=98304 backboardd far2ea9000 pc3a297ca8 fsr807
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 34 daily 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp securityd 0 D903 P1 S0
+J1 sp SCHelper 0 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 92 lockbot 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001b00 00009fb4 0000006b>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp spinforeverd 2 D903 P1 S0
+<T00001c00 0000a142 0000006e>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp mtrecorder 2 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001d00 0000a2ce 00000071>
+Leo software-pacing notification count=1 result=0 now=113189447703 interval=16667000
+5b9c398f,0000001a,5ac3e5c9,0000001a,00000000,00000000,00000002,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 present #2 fmt42475241 row2160
+J1 frame #2 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=2 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=2 result=0 now=113247586962 interval=16667000
+5f135c0a,0000001a,5e4e9f50,0000001a,00000000,00000000,00000003,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 present #3 fmt42475241 row2160
+J1 frame #3 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=3 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=3 result=0 now=113306666666 interval=16667000
+6298d822,0000001a,61cadf67,0000001a,00000000,00000000,00000004,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 frame #4 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=4 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 10 nprocs=51 bb=31 sb=36 P4 S0 CK31 T275
+J1M free=130991 act=13256 inact=1501 wire=50093 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 42 OTACrashCopier 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001e00 0000b0fd 00000074>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 PATCH SpringBoard nobuddy
+E36:1969-12-31 16:01:57.-701 SpringBoard[36:1b07] 
+E36:Loaded logger: SBAppInstallationLog
+E36:1969-12-31 16:01:57.-696 SpringBoard[36:1b07] 
+E36:Loaded logger: SBIconLog
+E36:1969-12-31 16:01:57.-689 SpringBoard[36:1b07] 
+E36:Loaded logger: SBWorkspaceLogging
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp mobileassetd 0 D903 P4 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001f00 0000b40e 00000077>
+E36:1969-12-31 16:01:59.-876 SpringBoard[36:1b07] 
+E36:*** error reading settings archive file: <SBRootSettings: /var/mobile/Documents/com.apple.springboard.settings/RootSettings.plist> 
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E36:1969-12-31 16:02:00.-798 SpringBoard[36:1b07] 
+E36:*** error reading settings archive file: <SBRootSettings: /var/mobile/Documents/com.apple.springboard.settings/RootSettings.previous.plist> 
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+Leo software-pacing notification count=4 result=0 now=120464375555 interval=16667000
+J1 frame #5 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=5 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=5 result=0 now=120507586074 interval=16667000
+J1 frame #6 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=6 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=6 result=0 now=120549667555 interval=16667000
+J1 frame #7 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=7 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1 sp spinforeverd 2 D903 P7 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 20 awdd 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp mtrecorder 2 D903 P7 S0
+<T00002000 0000ba46 00000079>
+Leo software-pacing notification count=7 result=0 now=121938986222 interval=16667000
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Leo software-pacing notification count=8 result=0 now=121965933925 interval=16667000
+Leo software-pacing notification count=9 result=0 now=121987509481 interval=16667000
+Leo software-pacing notification count=10 result=0 now=122017197925 interval=16667000
+Leo software-pacing notification count=11 result=0 now=122046820296 interval=16667000
+IOS7LAB surface request 1: <dict><key>IOSurfaceWidth</key><integer size="32">0x21c</integer><key>IOSurfaceMemoryRegion</key><string>PurpleGfxMem</string><key>IOSurfaceIsGlobal</key><true/><key>IOSurfaceBytesPerRow</key><integer size="32">0x880</integer><key>IOSurfacePixelFormat</key><integer size="32">0x42475241</integer><key>IOSurfaceBytesPerElement</key><integer size="32">0x4</integer><key>IOSurfaceCacheMode</key><integer
+IOS7LAB surface parsed w=540 h=960 fmt=42475241 row=2176 alloc=2088960 -> 0
+Leo software-pacing notification count=12 result=0 now=122073987851 interval=16667000
+Leo software-pacing notification count=13 result=0 now=122102966370 interval=16667000
+Leo software-pacing notification count=14 result=0 now=122130813777 interval=16667000
+Leo software-pacing notification count=15 result=0 now=122160322074 interval=16667000
+Leo software-pacing notification count=16 result=0 now=122190617777 interval=16667000
+651f9666,0000001c,6a20e9ee,0000001c,00000000,00000000,00000008,00000002,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 frame #8 avg=2,2,2 lit=2% nzwords=518400 first=0 w0=55000000
+IOS7LAB framebuffer presented transaction=8 surface=2 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=17 result=0 now=122263606222 interval=16667000
+J1 frame #9 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=9 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=18 result=0 now=122308116444 interval=16667000
+J1 frame #10 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=10 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=19 result=0 now=122356932000 interval=16667000
+J1 frame #11 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=11 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+Leo software-pacing notification count=20 result=0 now=122450081925 interval=16667000
+J1 frame #12 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=12 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=21 result=0 now=122494433925 interval=16667000
+J1 frame #13 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=13 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=22 result=0 now=122538269925 interval=16667000
+J1 frame #14 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=14 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E31:1969-12-31 16:02:02.-254 backboardd[31:d1b] 
+E31:-[BKSystemAppSentinel lock_notePresenceOfSystemApp:] Now monitoring "com.apple.SpringBoard"
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp itunesstored 0 D903 P14 S0
+J1W round 11 nprocs=51 bb=31 sb=36 P14 S0 CK95 T318
+J1M free=128487 act=13802 inact=1648 wire=50628 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002100 0000ccd6 0000007c>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 fb open type=0
+Leo software-pacing notification count=1 result=0 now=126098974518 interval=16667000
+Leo software-pacing notification count=2 result=0 now=126122214962 interval=16667000
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002200 0000cf00 00000080>
+E36:1969-12-31 16:02:08.-735 SpringBoard[36:1b07] 
+E36:ERROR: WiFi device not found, no WiFi untill a device is attached
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:02:08.-625 SpringBoard[36:1b07] 
+E36:BTM: attaching to BTServer
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:02:09.-585 SpringBoard[36:1b07] 
+E36:BTM: failed to attach with error 9
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002300 0000d1f5 00000083>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 frame #15 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=15 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1 frame #16 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=16 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 frame #17 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=17 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1W round 12 nprocs=51 bb=31 sb=36 P17 S0 CK95 T334
+J1M free=125320 act=14866 inact=1551 wire=50860 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002400 0000d695 00000086>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002500 0000d803 00000089>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 frame #18 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=18 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1 frame #19 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=19 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1 frame #20 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=20 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+UDA: total faults=114688 launchd far3c18d28c pc3a2989ba fsr80f
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002600 0000dbed 0000008c>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp DuetLST 0 D904 P20 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00002700 0000dd3f 0000008e>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 117 SCHelper 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 13 nprocs=51 bb=31 sb=36 P20 S0 CK95 T359
+J1M free=123237 act=15318 inact=1707 wire=50995 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:1969-12-31 16:02:23.-207 SpringBoard[36:1b07] 
+E36:lockdown didn't have a ActivationState value set.
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002800 0000e049 00000091>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002900 0000e1b7 00000094>
+E36:1969-12-31 16:02:28.-650 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7b8ad 0x3195d 0x31d88d03 0x31d889c1 0x31d82ca9 0x31d81569 0x31d7c871 0x
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp ABDatabaseDoctor 0 D904 P20 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002a00 0000e422 00000097>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp vsassetd 0 D904 P20 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:02:33.-334 SpringBoard[36:1b07] 
+E36:throwing out icon because its isn't visible in the model : node=<SBApplicationIcon: 0x1667ea50; nodeID: "com.apple.camera"> com.apple.camera
+E36:1969-12-31 16:02:33.-323 SpringBoard[36:1b07] 
+E36:throwing out icon because its isn't visible in the model : node=<SBApplicationIcon: 0x16683870; nodeID: "com.apple.compass"> com.apple.compass
+E36:1969-12-31 16:02:33.-308 SpringBoard[36:1b07] 
+E36:throwing out icon because its isn't visible in the model : node=<SBApplicationIcon: 0x16684470; nodeID: "com.apple.nike"> com.apple.nike
+J1W round 14 nprocs=56 bb=31 sb=36 P20 S0 CK95 T385
+J1M free=120407 act=15863 inact=1730 wire=51310 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1U pid36 sl2035000
+0:378546be 37854589
+ 37853e1b 3776cead 37853373
+ 378531bb 378538f3 37860ec3
+ 37860fe7 2d49025d 2d43dc29
+
+2:381efa50 381ef84d
+
+3:38202078 382682c1
+
+4:38202c70 38267c23
+
+5:38202c70 38267c23
+
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp voiced 0 D904 P20 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00002b00 0000ea10 0000009a>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00002c00 0000eb7e 0000009d>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00002d00 0000ed4e 000000a0>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002e00 0000ee84 000000a3>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 15 nprocs=54 bb=31 sb=36 P20 S0 CK95 T406
+J1M free=117942 act=16278 inact=2186 wire=51539 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002f00 0000f0e7 000000a6>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E36:1969-12-31 16:02:47.-966 SpringBoard[36:10027] 
+E36:Using your own bundle identifier as an NSUserDefaults suite name does not make sense and will not work. Break on _NSUserDefaults_Log_Nonsensical_Suites to find 
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+M8930SD rd blk=1861036 n=16 res=0 #11265
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003000 0000f31f 000000a8>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 139 ABDatabaseDoctor 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003100 0000f4a9 000000ab>
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 142 vsassetd 0
+J1W round 16 nprocs=52 bb=31 sb=36 P20 S0 CK95 T433
+J1M free=116336 act=16766 inact=2226 wire=51449 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00003200 0000f74a 000000ae>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+UDA: total faults=131072 SpringBoard far50c3000 pc3a297e50 fsr807
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003300 0000f8c2 000000b0>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 144 voiced 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7LAB framebuffer presented transaction=21 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+IOS7LAB framebuffer presented transaction=22 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+IOS7LAB framebuffer presented transaction=23 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003400 0000fbad 000000b3>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003500 0000fd1b 000000b6>
+J1 sp touchsetupd 0 D904 P23 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 17 nprocs=53 bb=31 sb=36 P23 S0 CK95 T472
+J1M free=113199 act=17187 inact=3077 wire=51514 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00003600 0000ffc8 000000b9>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:03:07.-532 SpringBoard[36:1b07] 
+E36:Application windows are expected to have a root view controller at the end of application launch
+E36:1969-12-31 16:03:07.-527 SpringBoard[36:1b07] 
+E36:Application windows are expected to have a root view controller at the end of application launch
+IOS7LAB remap64 result=0 reply_bytes=52
+<T00003700 00010256 000000bb>
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+
+
+** Log started Wed Dec 31 16:03:08 PST 1969 **
+
+CoreAnimation: updates deferred for too long
+IOS7LAB framebuffer presented transaction=24 surface=2 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003800 000106ff 000000be>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7J1 TOUCH mxt x=37 y=621 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=down x=0 y=0 down=1 timestamp=192348003703; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=208 tail=208; queue-progress-only
+IOS7J1 TOUCH mxt x=43 y=621 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192380824740; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=416 tail=416; queue-progress-only
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7J1 TOUCH mxt x=48 y=621 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192412120740; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=624 tail=624; queue-progress-only
+IOS7J1 TOUCH mxt x=53 y=621 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192441753185; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=832 tail=832; queue-progress-only
+IOS7J1 TOUCH mxt x=56 y=621 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192473917333; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=63 y=621 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192526067851; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=71 y=619 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192577014222; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=126 y=635 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192626629481; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=157 y=649 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192677863851; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=162 y=653 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192728165481; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=1872 tail=2080; queue-progress-only
+IOS7J1 TOUCH mxt x=165 y=654 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192762524296; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=183 y=662 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192809913333; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=232 y=687 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=192860880444; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=307 y=734 down=0 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=up x=0 y=0 down=0 timestamp=192911674962; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=2912 tail=2912; queue-progress-only
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003900 00011276 000000c1>
+J1W round 18 nprocs=52 bb=31 sb=36 P86 S0 CK95 T488
+J1M free=111784 act=17295 inact=3164 wire=51590 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7J1 TOUCH mxt x=46 y=644 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=down x=0 y=0 down=1 timestamp=195827247851; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=50 y=647 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=195887395703; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7J1 TOUCH mxt x=63 y=649 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=195948691111; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=85 y=653 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=195998261037; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=118 y=658 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=196052528296; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=145 y=667 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=196106201777; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=206 y=698 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=196169089629; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=240 y=715 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=196234086370; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=245 y=718 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=196291140296; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=245 y=718 down=0 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=up x=0 y=0 down=0 timestamp=196349908000; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7LEO TOUCH reader-head head=1040 tail=1040; queue-progress-only
+<T00003a00 00011b2e 000000c4>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=1040 tail=1040 opened=1 pend=0 notify calls=7 ok=7 busy=0 err=0 noport=0 last=0 qfail=0
+IOS7J1 TOUCH mxt x=68 y=638 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=down x=0 y=0 down=1 timestamp=198697815851; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=1248 tail=1248; queue-progress-only
+IOS7J1 TOUCH mxt x=68 y=638 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=198729480444; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=68 y=638 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=198786156296; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=68 y=638 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=198846462962; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=71 y=642 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=198909944444; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7J1 TOUCH mxt x=87 y=646 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=198975071407; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=137 y=656 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=199039392888; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=202 y=682 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=199103177481; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003b00 0001221a 000000c7>
+E36:1969-12-31 16:03:19.-137 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1UC AppleCLCD/IOS7LabFramebufferClient sel=12 pid=31 rep=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:03:21.-68 SpringBoard[36:1b07] 
+E36:[MPUSystemMediaControls] Disabling lock screen media controls updates for screen turning off.
+E36:1969-12-31 16:03:21.-63 SpringBoard[36:1b07] 
+E36:[MPUNowPlayingController] Not registered for now playing notifications. Ignoring call to -unregisterForNotifications.
+E36:1969-12-31 16:03:22.-619 SpringBoard[36:1b07] 
+E36:Could not determine current country code: Error Domain=GEOErrorDomain Code=-2 "The operation couldn’t be completed. (GEOErrorDomain error -2.)"
+<T00003c00 00012635 000000ca>
+J1W round 19 nprocs=52 bb=31 sb=36 P149 Sa070002 CK95 T501
+J1M free=109990 act=17581 inact=3280 wire=51667 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00003d00 0001274f 000000cd>
+J1 sp voiced 0 D904 P149 Sa070002
+J1 sp assetsd 0 D904 P149 Sa070002
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=16 pid=36 rep=0
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=0 pid=36 rep=0
+IOS7LAB surface request 2: <dict><key>IOSurfaceWidth</key><integer size="32">0x21c</integer><key>IOSurfaceIsGlobal</key><true/><key>IOSurfaceBytesPerRow</key><integer size="32">0x880</integer><key>IOSurfaceBytesPerElement</key><integer size="32">0x4</integer><key>IOSurfaceAllocSize</key><integer size="32">0x1fe000</integer><key>IOSurfacePixelFormat</key><integer size="64">0x42475241</integer><key>IOSurfaceHeight</key><integ
+IOS7LAB surface parsed w=540 h=960 fmt=42475241 row=2176 alloc=2088960 -> 0
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=6 pid=31 rep=0
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=25 pid=31 rep=0
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=1 pid=31 rep=0
+J1 pmap_remove_range wired clamp 0<150
+J1 pmap_remove_range wired clamp 0<256
+J1 pmap_remove_range wired clamp 0<104
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=17 pid=36 rep=0
+IOS7LAB surface use-count inc id=3
+UDA: total faults=147456 SpringBoard far5fc9002 pc2e49983a fsr7
+<T00003e00 00012bff 000000d0>
+J1 sp calaccessd 0 D904 P149 Sa070002
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=18 pid=36 rep=0
+IOS7LAB surface use-count dec id=3
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=1 pid=36 rep=0
+<T00003f00 00012ce5 000000d3>
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=0 pid=36 rep=0
+IOS7LAB surface request 3: <dict><key>IOSurfaceWidth</key><integer size="32">0x21c</integer><key>IOSurfaceIsGlobal</key><true/><key>IOSurfaceBytesPerRow</key><integer size="32">0x880</integer><key>IOSurfaceBytesPerElement</key><integer size="32">0x4</integer><key>IOSurfaceAllocSize</key><integer size="32">0x1fe000</integer><key>IOSurfacePixelFormat</key><integer size="64">0x42475241</integer><key>IOSurfaceHeight</key><integ
+IOS7LAB surface parsed w=540 h=960 fmt=42475241 row=2176 alloc=2088960 -> 0
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=6 pid=31 rep=0
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=25 pid=31 rep=0
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=1 pid=31 rep=0
+J1 pmap_remove_range wired clamp 0<145
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=17 pid=36 rep=0
+IOS7LAB surface use-count inc id=4
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=18 pid=36 rep=0
+IOS7LAB surface use-count dec id=4
+J1UC IOCoreSurfaceRoot/IOS7LabSurfaceClient sel=1 pid=36 rep=0
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x165cd2a0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+J1Q head=3744 tail=3744 opened=1 pend=0 notify calls=27 ok=27 busy=0 err=0 noport=0 last=0 qfail=0
+E36:1969-12-31 16:03:32.-643 SpringBoard[36:1b07] 
+E36:SMS Plugin initialized.
+E36:1969-12-31 16:03:32.-452 SpringBoard[36:1b07] 
+E36:SIMToolkit plugin for SpringBoard initialized.
+E36:1969-12-31 16:03:32.-237 SpringBoard[36:1b07] 
+E36:Sharing Plugin initialized.
+E36:1969-12-31 16:03:33.-539 SpringBoard[36:1b07] 
+E36:ERROR: WiFi device not found.
+E36:1969-12-31 16:03:33.-372 SpringBoard[36:1b07] 
+E36:WiFi picker plugin initialized
+J1W round 20 nprocs=55 bb=31 sb=36 P149 Sa070002 CK95 T519
+J1M free=105680 act=17831 inact=3790 wire=52099 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1U pid36 sl2035000
+0:381efa50 381ef84d
+ 3825c5d7 3825ebbd 3825e9f5
+ 2d3f13a9 2d41720d 2db43ea5
+ 2db44269 78105 78295
+
+2:381efa50 381ef84d
+
+3:381efab8 3813cd0d
+
+4:381efa50 381ef84d
+
+5:381efaa0 3813cd41
+
+<T00004000 0001359b 000000d5>
+E36:1969-12-31 16:03:34.-791 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x167047f0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+E36:1969-12-31 16:03:35.-350 SpringBoard[36:1b07] 
+E36:lockdown didn't have a ActivationState value set.
+E36:1969-12-31 16:03:35.-337 SpringBoard[36:1b07] 
+E36:lockdown didn't have a ActivationState value set.
+E36:1969-12-31 16:03:35.-322 SpringBoard[36:1b07] 
+E36:lockdown didn't have a ActivationState value set.
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1658ee60)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+<T00004100 00013900 000000d8>
+E36:1969-12-31 16:03:37.-836 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+J1 sp ? 0 D904 P149 Sa070002
+J1 sp MobileMail 0 D904 P149 Sa070002
+E31:1969-12-31 16:03:38.-962 backboardd[31:de17] 
+E31:Could not set priority of MobileMail[169] to 1, priority: Invalid argument
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x16721c00)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+<T00004200 00013b54 000000db>
+E36:1969-12-31 16:03:40.-762 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x165746a0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+<T00004300 00013ce4 000000de>
+E36:1969-12-31 16:03:42.-390 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x165746a0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+J1W round 21 nprocs=57 bb=31 sb=36 P149 Sa070002 CK95 T538
+J1M free=103868 act=18011 inact=3949 wire=52400 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:1969-12-31 16:03:44.-220 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+<T00004400 00014048 000000e1>
+J1Q head=1040 tail=1040 opened=1 pend=0 notify calls=31 ok=31 busy=0 err=0 noport=0 last=0 qfail=0
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x16772460)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+E36:1969-12-31 16:03:46.-414 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+Data/Stack execution not permitted: assetsd[pid 161] at virtual address 0x1861000, protections were read-write
+J1 EXC 161 assetsd e1 far0 kr0
+ pc01861028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a1706c3 2f2bfb0b sl2035000
+J1 X 161 assetsd a
+<T00004500 00014349 000000e4>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x167a1f50)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+E36:1969-12-31 16:03:48.-260 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+J1 sp assetsd 0 D904 P149 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x167c96d0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+<T00004600 00014596 000000e6>
+E36:1969-12-31 16:03:51.-993 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+UDA: total faults=163840 assetsd far3ae47d20 pc39c8c622 fsr7
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x16778310)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+E36:1969-12-31 16:03:52.-608 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x16632c70)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+<T00004700 000148d5 000000e9>
+J1W round 22 nprocs=57 bb=31 sb=36 P149 Sa070002 CK95 T563
+J1M free=101562 act=18254 inact=3853 wire=52539 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:1969-12-31 16:03:53.-119 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x166105f0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+E36:1969-12-31 16:03:55.-647 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+Data/Stack execution not permitted: assetsd[pid 174] at virtual address 0x18b2000, protections were read-write
+J1 EXC 174 assetsd e1 far0 kr0
+ pc018b2028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 174 assetsd a
+<T00004800 00014d47 000000ec>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x167c5640)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+E36:1969-12-31 16:03:56.-13 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x16632c70)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+J1Q head=1040 tail=1040 opened=1 pend=0 notify calls=31 ok=31 busy=0 err=0 noport=0 last=0 qfail=0
+<T00004900 00014fd3 000000ee>
+J1 kill 31 backboardd -> 169 sig17
+E36:1969-12-31 16:03:59.-810 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+E31:1969-12-31 16:03:59.-686 backboardd[31:de23] 
+E31:com.apple.mobilemail failed to launch in time
+E31:1969-12-31 16:03:59.-682 backboardd[31:de23] 
+E31:Forcing crash report of MobileMail[169]...
+J1 sp assetsd 0 D904 P149 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x166105f0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+E36:1969-12-31 16:04:00.-102 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+<T00004a00 00015346 000000f1>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x17154870)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4127308 with error 22)  
+E36:1969-12-31 16:04:02.-746 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x781a5 0x7c855 0x265f13 0x265a85 0x2f4a9f01 0x2f41dd69 0x2fe09cc5 0x7a307 0x782e
+J1K home down opened=1
+J1K home up opened=1
+E36:1969-12-31 16:04:03.-481 SpringBoard[36:1b07] 
+E36:[MPUSystemMediaControls] Enabling lock screen media controls updates for screen turning on.
+J1UC AppleCLCD/IOS7LabFramebufferClient sel=12 pid=31 rep=0
+J1W round 23 nprocs=57 bb=31 sb=36 P149 Sa070002 CK95 T624
+J1M free=99988 act=18358 inact=3980 wire=52607 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00004b00 000156cc 000000f4>
+Data/Stack execution not permitted: assetsd[pid 179] at virtual address 0xf9000, protections were read-write
+J1 EXC 179 assetsd e1 far0 kr0
+ pc000f9028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 179 assetsd a
+<T00004c00 000157f6 000000f6>
+J1 X 163 voiced 0
+<T00004d00 00015826 000000f9>
+J1 X 72 atc 0
+J1 sp assetsd 0 D904 P149 Sa070002
+J1 X 25 backupd 0
+J1Q head=1152 tail=1152 opened=1 pend=0 notify calls=33 ok=33 busy=0 err=0 noport=0 last=0 qfail=0
+<T00004e00 000158ea 000000fb>
+J1W round 24 nprocs=54 bb=31 sb=36 P149 Sa070002 CK95 T664
+J1M free=101086 act=18349 inact=3932 wire=52314 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00004f00 00015a04 000000fe>
+Data/Stack execution not permitted: assetsd[pid 185] at virtual address 0x1803000, protections were read-write
+J1 EXC 185 assetsd e1 far0 kr0
+ pc01803028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 23 misd 0
+J1 X 185 assetsd a
+<T00005000 00015b3f 00000101>
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+<T00005100 00015c0d 00000103>
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+J1 sp assetsd 0 D904 P149 Sa070002
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+J1K home down opened=1
+<T00005200 00015df1 00000106>
+J1K home up opened=1
+J1K home down opened=1
+J1K home up opened=1
+J1Q head=3608 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+J1W round 25 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T699
+J1M free=101167 act=18354 inact=3810 wire=52264 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00005300 00015faf 00000108>
+Data/Stack execution not permitted: assetsd[pid 192] at virtual address 0x1847000, protections were read-write
+J1 EXC 192 assetsd e1 far0 kr0
+ pc01847028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 192 assetsd a
+<T00005400 000160db 0000010b>
+<T00005500 000160f9 0000010e>
+UDA: total faults=180224 launchd far3c192104 pc3a297eca fsr7
+J1 sp assetsd 0 D904 P149 Sa070002
+<T00005600 00016177 00000110>
+J1W round 26 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T732
+J1M free=100868 act=18336 inact=3760 wire=52316 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1U pid36 sl2035000
+0:381efaa0 3813cd41
+ 2e76593d 329de357 2d474f01
+ 2d3e8d69 2ddd4cc5 252995
+ 2527cf 2526e1 27a7f7
+
+2:381efa50 381ef84d
+
+3:381efab8 3813cd0d
+
+4:381efa50 381ef84d
+
+5:381efaa0 3813cd41
+
+<T00005700 0001635a 00000113>
+Data/Stack execution not permitted: assetsd[pid 197] at virtual address 0x17f6000, protections were read-write
+J1 EXC 197 assetsd e1 far0 kr0
+ pc017f6028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 197 assetsd a
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+<T00005800 000164e9 00000115>
+<T00005900 00016507 00000118>
+J1 sp assetsd 0 D904 P149 Sa070002
+<T00005a00 00016548 0000011b>
+J1W round 27 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T761
+J1M free=100532 act=18347 inact=3774 wire=52322 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00005b00 00016662 0000011d>
+Data/Stack execution not permitted: assetsd[pid 203] at virtual address 0x188c000, protections were read-write
+J1 EXC 203 assetsd e1 far0 kr0
+ pc0188c028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 203 assetsd a
+<T00005c00 0001678e 00000120>
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+<T00005d00 0001680f 00000122>
+J1 sp assetsd 0 D904 P149 Sa070002
+<T00005e00 00016850 00000125>
+J1W round 28 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T786
+J1M free=100134 act=18330 inact=3763 wire=52340 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00005f00 0001696a 00000128>
+Data/Stack execution not permitted: assetsd[pid 209] at virtual address 0x185f000, protections were read-write
+J1 EXC 209 assetsd e1 far0 kr0
+ pc0185f028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 209 assetsd a
+<T00006000 00016a96 0000012a>
+<T00006100 00016ab4 0000012d>
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+J1 sp assetsd 0 D904 P149 Sa070002
+<T00006200 00016b58 0000012f>
+J1W round 29 nprocs=54 bb=31 sb=36 P149 Sa070002 CK95 T832
+J1M free=100080 act=18313 inact=3746 wire=52369 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00006300 00016c72 00000132>
+Data/Stack execution not permitted: assetsd[pid 214] at virtual address 0x1849000, protections were read-write
+J1 EXC 214 assetsd e1 far0 kr0
+ pc01849028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 214 assetsd a
+<T00006400 00016d9e 00000135>
+<T00006500 00016dbc 00000137>
+J1 sp assetsd 0 D904 P149 Sa070002
+UDA: total faults=196608 launchd far17d52200 pc3a25db3e fsr80f
+J1W round 30 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T852
+J1M free=99699 act=18313 inact=3747 wire=52379 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00006600 00016f37 0000013a>
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+<T00006700 00016fb8 0000013c>
+Data/Stack execution not permitted: assetsd[pid 220] at virtual address 0x1838000, protections were read-write
+J1 EXC 220 assetsd e1 far0 kr0
+ pc01838028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 220 assetsd a
+<T00006800 000170e4 0000013f>
+<T00006900 00017102 00000141>
+J1 sp assetsd 0 D904 P149 Sa070002
+J1W round 31 nprocs=54 bb=31 sb=36 P149 Sa070002 CK95 T875
+J1M free=99241 act=18313 inact=3754 wire=52368 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00006a00 0001723e 00000144>
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+<T00006b00 000172bf 00000147>
+Data/Stack execution not permitted: assetsd[pid 226] at virtual address 0x17ce000, protections were read-write
+J1 EXC 226 assetsd e1 far0 kr0
+ pc017ce028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 226 assetsd a
+<T00006c00 000173eb 00000149>
+E36:1969-12-31 16:05:31.-261 SpringBoard[36:20b] 
+E36:BBDataProvider: WATodayDataProvider failed to load after 120 seconds.
+<T00006d00 00017485 0000014c>
+J1 sp syncdefaultsd 0 D904 P149 Sa070002
+J1 sp assetsd 0 D904 P149 Sa070002
+J1W round 32 nprocs=54 bb=31 sb=36 P149 Sa070002 CK95 T896
+J1M free=98650 act=18338 inact=3780 wire=52445 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00006e00 000175ea 0000014f>
+<T00006f00 00017608 00000151>
+Data/Stack execution not permitted: assetsd[pid 233] at virtual address 0x1885000, protections were read-write
+J1 EXC 233 assetsd e1 far0 kr0
+ pc01885028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 233 assetsd a
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+<T00007000 00017797 00000154>
+<T00007100 000177b5 00000156>
+J1W round 33 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T913
+J1M free=98473 act=18354 inact=3795 wire=52438 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1 sp assetsd 0 D904 P149 Sa070002
+<T00007200 000178f1 00000159>
+<T00007300 0001790f 0000015c>
+Data/Stack execution not permitted: assetsd[pid 239] at virtual address 0x17e4000, protections were read-write
+J1 EXC 239 assetsd e1 far0 kr0
+ pc017e4028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 239 assetsd a
+<T00007400 00017a3b 0000015e>
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+<T00007500 00017abc 00000161>
+J1W round 34 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T934
+J1M free=98321 act=18354 inact=3795 wire=52444 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+UDA: total faults=212992 launchd far3c8edfaa pc2bf075a2 fsr7
+J1 sp assetsd 0 D904 P149 Sa070002
+<T00007600 00017c35 00000163>
+<T00007700 00017c53 00000166>
+Data/Stack execution not permitted: assetsd[pid 245] at virtual address 0x1821000, protections were read-write
+J1 EXC 245 assetsd e1 far0 kr0
+ pc01821028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 245 assetsd a
+<T00007800 00017d7f 00000168>
+<T00007900 00017d9d 0000016b>
+J1W round 35 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T980
+J1M free=98183 act=18354 inact=3796 wire=52448 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+J1 sp assetsd 0 D904 P149 Sa070002
+<T00007a00 00017f3c 0000016e>
+<T00007b00 00017f5a 00000170>
+Data/Stack execution not permitted: assetsd[pid 250] at virtual address 0x1847000, protections were read-write
+J1 EXC 250 assetsd e1 far0 kr0
+ pc01847028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 250 assetsd a
+<T00007c00 00018086 00000173>
+<T00007d00 000180a4 00000175>
+J1W round 36 nprocs=54 bb=31 sb=36 P149 Sa070002 CK95 T1000
+J1M free=97916 act=18354 inact=3797 wire=52453 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1 sp assetsd 0 D904 P149 Sa070002
+<T00007e00 000181e1 00000178>
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+<T00007f00 00018262 0000017b>
+Data/Stack execution not permitted: assetsd[pid 256] at virtual address 0x1834000, protections were read-write
+J1 EXC 256 assetsd e1 far0 kr0
+ pc01834028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 256 assetsd a
+<T00008000 0001838e 0000017d>
+J1W round 37 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T1022
+J1M free=97766 act=18354 inact=3797 wire=52462 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00008100 000184a8 00000180>
+<T00008200 000184c6 00000182>
+J1 sp assetsd 0 D904 P149 Sa070002
+<T00008300 00018507 00000185>
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+<T00008400 00018588 00000188>
+Data/Stack execution not permitted: assetsd[pid 262] at virtual address 0xba000, protections were read-write
+J1 EXC 262 assetsd e1 far0 kr0
+ pc000ba028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 262 assetsd a
+J1W round 38 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T1043
+J1M free=97646 act=18354 inact=3797 wire=52467 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00008500 000187ae 0000018a>
+<T00008600 000187cc 0000018d>
+J1 sp assetsd 0 D904 P149 Sa070002
+UDA: total faults=229376 assetsd far2f52e5f4 pc3a19f7e4 fsr7
+<T00008700 0001884a 0000018f>
+Data/Stack execution not permitted: assetsd[pid 268] at virtual address 0x17f8000, protections were read-write
+J1 EXC 268 assetsd e1 far0 kr0
+ pc017f8028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 268 assetsd a
+<T00008800 00018976 00000192>
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+J1T clk hclk=00000000 md=00000000 ns=00000000 rst=00000000 haltA=3fd3ffff
+J1T gpio11 cfg=00000003 io=00000001
+J1T gpio16 cfg=00000000 io=00000001
+J1T gpio17 cfg=00000000 io=00000001
+J1T qup skipped (gsbi3 ahb clock off)
+J1P summary l31 46/28/40 -> cf/2b/41 wr=0 rpm ack=1 sel2=2000 val=3 lines irq=0 sda=1 scl=1
+J1I mxt rc=0 info 82 23 30 ab x24 y14 obj21 orc=0
+J1I T9 ctrl=83 orient=03 xr=959 yr=539 rid=2
+J1I mxt ok=1 polls=7283 chg=104 msgs=172 reports=85 errs=0 hid=85 last=200e53a2
+J1I mxt dropped noopen=0 nopkt=0
+J1K keys home=0 power=0 events=32
+J1H 0 0e 05 00 00 00 00 00 00
+J1H 0 02 20 39 e8 48 01 0c 00
+J1H 0 0e 05 00 01 00 00 00 00
+J1H 0 02 94 39 e8 48 01 0c 00
+J1H 0 0e 0c 00 07 00 00 00 00
+J1H 0 02 90 28 e1 c8 07 49 00
+J1H 0 0e 05 00 08 00 00 00 00
+J1H 0 02 c0 24 e0 cc 08 49 00
+J1H 0 0e 05 00 00 00 00 00 00
+J1H 0 02 3c 1a d3 88 01 14 10
+J1H 0 0e 05 00 01 00 00 00 00
+J1H 0 02 c0 19 d6 c0 0c 48 60
+J1H 0 0e 0d 00 00 00 00 00 00
+J1H 0 02 38 18 d1 44 07 3d 10
+J1H 0 0e 0d 00 0b 00 01 00 00
+J1H 0 02 c0 16 d2 08 0a 3d 60
+J1I T37 @0088 sz130 inst1 rid0
+J1I T5 @010a sz9 inst1 rid0
+J1I T6 @0113 sz6 inst1 rid1
+J1I T38 @0119 sz8 inst1 rid0
+J1I T71 @0121 sz112 inst1 rid0
+J1I T7 @0191 sz4 inst1 rid0
+J1I T8 @0195 sz14 inst1 rid0
+J1I T9 @01a3 sz46 inst1 rid8
+J1I T18 @01d1 sz2 inst1 rid0
+J1I T25 @01d3 sz9 inst1 rid1
+J1I T42 @01dc sz10 inst1 rid1
+J1I T46 @01e6 sz10 inst1 rid1
+J1I T47 @01f0 sz26 inst1 rid0
+J1I T56 @020a sz30 inst1 rid1
+J1I T57 @0228 sz3 inst1 rid1
+J1I T61 @022b sz5 inst2 rid1
+J1I T65 @0235 sz11 inst1 rid0
+J1I T66 @0240 sz3 inst1 rid1
+J1I T70 @0243 sz10 inst8 rid1
+J1I T72 @0293 sz80 inst1 rid1
+J1I T80 @02e3 sz4 inst1 rid0
+J1W round 39 nprocs=53 bb=31 sb=36 P149 Sa070002 CK95 T1063
+J1M free=97479 act=18354 inact=3797 wire=52472 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00008900 00019166 00000194>
+<T00008a00 00019184 00000197>
+J1 sp assetsd 0 D904 P149 Sa070002
+<T00008b00 000191c5 0000019a>
+<T00008c00 000191e3 0000019c>
+Data/Stack execution not permitted: assetsd[pid 274] at virtual address 0x17d4000, protections were read-write
+J1 EXC 274 assetsd e1 far0 kr0
+ pc017d4028 lr2f24839b
+ bt 2f2478bb 2f262f97 35e2e4fd 35e41fe5 35e41e77 2f2bf9cd 3a17056f 2f2bfb0b sl2035000
+J1 X 274 assetsd a
+J1Q head=3664 tail=3664 opened=1 pend=0 notify calls=66 ok=66 busy=0 err=0 noport=0 last=0 qfail=0
+<T00008d00 00019372 0000019f>
+<T00008e00 00019390 000001a1>
+J1 sp assetsd 0 D904 P149 Sa070002
+
+J1 timed reboot to recovery
+<Tdeadb007 00008ec9 000001a4>
+
+0 Corrected bytes, 809 unrecoverable blocks

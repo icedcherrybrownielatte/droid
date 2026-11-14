@@ -1,0 +1,756 @@
+XNUTRACE6e294b73
+=== XNU BOOT 00000001
+kext submap [0x80000000 - 0xfffeffff], kernel text [0x80001000 - 0x80542000]
+zone leak detection disabled
+Scheduler: Default of traditional
+standard timeslicing quantum is 10000 us
+standard background quantum is 2500 us
+mig_table_max_displ = 74
+rtclock_bus_configure: Configuring RTCLOCK...
+[RTCLOCK] Frequency =      6.750000MHz, cvtt2n = 00000094.25ED097B, cvtn2t = 00000000.01BA5E35
+Initializing serial KDP
+Kernel boot args: '-v keepsyms=1 kprintf=1 debug=0x14e'
+iBoot version: uniLoader-serrano
+PE_init_iokit: starting IOKit now!
+[31mC[32mO[33mL[34mO[35mR[0m video console at 0xc0001000 (200x300x32)
+[31mC[32mO[33mL[34mO[35mR[0m video console at 0xc0001000 (200x300x32)
+IOS7LAB commpage cpus: configured=1 active=1 physical=1 logical=1
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+	The Regents of the University of California. All rights reserved.
+
+MAC Framework successfully initialized
+using 4608 buffer headers and 4352 cluster IO buffer headers
+IOResources: not registry member at registerService()
+IOResources: not registry member at registerService()
+IOResources: not registry member at registerService()
+waitForSystemMapper
+Backtrace 0x8041f39f 0x8041f359 0x8037e4cd 0x805087c9 0x800376d9 0x800cb800 0xd1b4bd50
+         can't perform kext scan: no kext summaryDSM S4MINI,1 cnt=2
+SC> AppleARMPE <- S4MINI,1
+AppleARMPE::start: Welcome to the NeXT generation.
+J1 disp: managed=230400 free=218145 guard=57619
+Leo primary BGRA CPU surface id=1 540x960 row=2160 bytes=2073600; physical outputRGB565 separate
+J1 disp: AppleCLCD published 540x960 row2160 budget=16777216
+Leo storage: phase=1 raw-open=0 read0=0 reads=0 locator=0 io=00000000
+Leo storage: card-sectors=0 file-validated=0 file-bytes=0 media-created=0 registered=0
+Leo root: selected=0 BSD= major=0 minor=0 COW=0 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=0 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=0 charge-pages=0 hits=0 misses=0 base-reads=0
+M8930 SDC1: POWER=00000001 CLOCK=00009500 STATUS=000c0040
+M8930 SDC1: CMD13 rca=2 status=00000900 state=4
+M8930 SDC1: mode 0 -> 0 sig=55aa stat=00000000 clk=00009500 sw=0000
+M8930 SDC1: read LBA0 r=0 sig=55aa p1type=0c
+IOS7J1 TOUCH service-ready stub physical480x800 queue4096; no-input
+IOS7LEO TOUCH published actual Type2A service
+SC< AppleARMPE ok=1
+mbinit: done [56 MB total pool size, (37/18) split]
+Pthread support ABORTS when sync kernel primitives misused
+J1BSD init: calling bsd_autoconf
+bsd_autoconf: calling kminit
+J1BSD autoconf: kminit begin
+J1BSD autoconf: kminit done
+J1BSD autoconf: pseudo_inits begin
+J1BSD autoconf: pseudo_inits done
+J1BSD autoconf: IOKitBSDInit begin
+J1BSD init: bsd_autoconf returned
+J1 stage 740
+J1 stage 741
+J1 stage 742
+J1 stage 743
+J1 stage 744
+J1 stage 745
+J1 stage 746
+J1 stage 747
+J1 stage 748
+J1 stage 751
+J1 stage 752
+Waiting on <dict ID="0"><key>IOProviderClass</key><string ID="1">IOMedia</string><key>Content</key><string ID="2">Apple_HFS</string></dict>
+DSM IOResources cnt=0
+PK jobs=10/2 cfg=10 wt=10 dbg=0 0 0 0
+DSM IOPMrootDomain cnt=0
+DSM cpu cnt=2
+SC> AppleARMCPU <- cpu
+AppleARMCPU::start: Starting ARM CPU IOKit provider...
+AppleARMCPU::initCPU(0xc15bbb00): we are here to serve!
+AppleARMCPU::start: registered processor with Mach subsystem.
+SC< AppleARMCPU ok=1
+DSM cpus cnt=2
+DSM arm-io cnt=2
+SC> AppleARMIO <- arm-io
+AppleARMIO::start: Publishing device tree entries to IOService plane...
+SC< AppleARMIO ok=1
+DSM defaults cnt=2
+DSM AppleARMPE cnt=0
+DSM IOCoreSurfaceRoot cnt=0
+DSM IOS7J1FB cnt=0
+DSM IOS7M8930SDMMC cnt=1
+SC> IOBlockStorageDriver <- IOS7M8930SDMMC
+SC< IOBlockStorageDriver ok=1
+DSM IOS7J1Touch cnt=0
+DSM AppleARMGrandCentral cnt=0
+DSM AppleARMCPU cnt=0
+DSM AppleARMIO cnt=0
+DSM Samsung MSM8930 eMMC Media cnt=3
+M8930SD rd blk=0 n=1 res=0 #1
+SC> IOMediaBSDClient <- Samsung MSM8930 eMMC Media
+SC< IOMediaBSDClient ok=1
+SC> IOS7LeoHFSFile <- Samsung MSM8930 eMMC Media
+M8930SD rd blk=5911 n=1 res=0 #1025
+M8930SD rd blk=6423 n=1 res=0 #2049
+M8930SD rd blk=6935 n=1 res=0 #3073
+M8930SD rd blk=7447 n=1 res=0 #4097
+M8930SD rd blk=7959 n=1 res=0 #5121
+M8930SD rd blk=8471 n=1 res=0 #6145
+Leo COW budget: managed=230400 free=217122 reserve=3 target=18 cap=28559 pages
+Leo COW total charge=28800 pages fixed/work=21
+Leo file: validated IOS7/ROOTFS.HFS bytes=1741471744 extents=1 HFS=4858 version=5 BASE_SD_RO=1 COW_RW=1 VOLATILE=1
+Leo storage: phase=4 raw-open=1 read0=1 reads=6650 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=0 registered=0
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=0 misses=0 base-reads=0
+Leo root-file registerService begin validated=1 COWready=1
+Leo root-file registerService returned (matching requested; not media/mount proof)
+SC< IOS7LeoHFSFile ok=1
+SC> IOFDiskPartitionScheme <- Samsung MSM8930 eMMC Media
+SC< IOFDiskPartitionScheme ok=1
+DSM IOBlockStorageDriver cnt=0
+DSM IOMediaBSDClient cnt=0
+DSM IOS7LeoHFSFile cnt=2
+SC> IOS7LeoHFSDriver <- IOS7LeoHFSFile
+Leo HFSDriver start enter provider=0xc15cce00
+Leo J01 job allocation returned role=1 target=0xc15d1d00 class=- value=1 RETURN=803fb07f
+Leo storage: phase=6 raw-open=1 read0=1 reads=6650 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=0 misses=0 base-reads=0
+Leo HFSDriver start returned ok=1
+SC< IOS7LeoHFSDriver ok=1
+DSM Untitled 1 cnt=3
+SC> IOMediaBSDClient <- Untitled 1
+SC< IOMediaBSDClient ok=1
+Leo J02 matching job dispatch role=1 target=0xc15d1d00 class=- RETURN=8040017f
+Leo J03 matching entry role=1 target=0xc15d1d00 class=- RETURN=80400441
+DSM iOS lab Leo SD HFS file Media cnt=3
+Leo J04 candidate probe begin role=1 target=0xc15d1d00 class=IOMediaBSDClient RETURN=803ff187
+Leo J05 candidate probe returned role=1 target=0xc15d1d00 class=IOMediaBSDClient value=1 RETURN=803ff1e7
+Leo J04 candidate probe begin role=1 target=0xc15d1d00 class=IOS7LeoHFSFile RETURN=803ff187
+Leo J05 candidate probe returned role=1 target=0xc15d1d00 class=IOS7LeoHFSFile value=0 RETURN=803ff1e7
+Leo J04 candidate probe begin role=1 target=0xc15d1d00 class=IOFDiskPartitionScheme RETURN=803ff187
+Leo READCACHE demand: hits=0 misses=1 base-reads=1 bytes=33832
+Leo J05 candidate probe returned role=1 target=0xc15d1d00 class=IOFDiskPartitionScheme value=0 RETURN=803ff1e7
+Leo J06 candidate start begin role=1 target=0xc15d1d00 class=IOMediaBSDClient RETURN=803ff407
+SC> IOMediaBSDClient <- iOS lab Leo SD HFS file Media
+Leo J01 job allocation returned role=2 target=0xc15bb880 class=- value=1 RETURN=803fb07f
+SC< IOMediaBSDClient ok=1
+Leo J07 candidate start returned role=1 target=0xc15d1d00 class=IOMediaBSDClient value=1 RETURN=803ff461
+Leo J08 matching busy decrement begin role=1 target=0xc15d1d00 class=- RETURN=80400847
+Leo J09 matching busy decrement returned role=1 target=0xc15d1d00 class=- value=1 RETURN=80400895
+Got boot device = IOService:/AppleARMPE/IOS7M8930SDMMC/IOBlockStorageDriver/Samsung MSM8930 eMMC Media/IOS7LeoHFSFile/IOS7LeoHFSDriver/iOS lab Leo SD HFS file Media
+BSD root: disk1, major 14, minor 2
+J1 boot: vfs_mountroot begin
+Leo J10 quiet wait entry role=1 target=0xc15d1d00 RETURN=80400ad7 state0=0000001e state1=00000001 jobs=3 waiting=3 threads=3 BEST_EFFORT
+DSM IOS7LeoHFSDriver cnt=0
+DSM IOMediaBSDClient cnt=0
+Leo J02 matching job dispatch role=2 target=0xc15bb880 class=- RETURN=8040017f
+Leo J03 matching entry role=2 target=0xc15bb880 class=- RETURN=80400441
+DSM IOMediaBSDClient cnt=0
+Leo J08 matching busy decrement begin role=2 target=0xc15bb880 class=- RETURN=80400847
+Leo J09 matching busy decrement returned role=2 target=0xc15bb880 class=- value=0 RETURN=80400895
+Leo READCACHE demand: hits=0 misses=2 base-reads=2 bytes=33832
+Leo READCACHE demand: hits=0 misses=4 base-reads=4 bytes=33832
+disk1: ioctl(_IOW,'d',198,256) is unsupported.
+disk1: ioctl(_IOR,'d',80,8) is unsupported.
+J1 boot: vfs_mountroot returned errno=0
+J1 boot: root mount readonly=1
+J1 stage 753
+J1 stage 754
+J1 stage 755
+J1 stage 756
+J1 stage 757
+J1 stage 758
+Leo boot: cloneproc returned thread-present=1
+Leo boot: init thread_resume begin
+Leo boot: init thread_resume returned kern=0
+J1 stage 759
+J1 stage 761
+J1 stage 762
+J1 stage 764
+J1 ks 528
+J1 ks 531
+J1 init: bsdinit_task
+J1 init: load_init_program begin
+attempting to start init of /sbin/launchd
+Leo boot: init execve begin path=/sbin/launchd
+IOS7LAB shared region 0x2c000000..0x40000000; stack below 0x2be00000
+J1 exec pid 1 (launchd) err=0
+Leo boot: init execve returned errno=0 (kernel result only)
+IOS7LAB cache mapping 0 va=2f61d000 size=0c28e000 offset=00000000 max=5 init=5
+IOS7LAB cache mapping 1 va=3b8ad000 size=01ed6000 offset=0c28e000 max=23 init=23
+IOS7LAB cache mapping 2 va=3d785000 size=0228c000 offset=0e164000 max=1 init=1
+IOS7LAB cache mapping 3 va=3fa11000 size=0017a000 offset=12dbb000 max=1 init=1
+<T00000100 00000004 0000000a>
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 000000a6 000000a6 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 008400a6 00a60026 00000000 3f8decf9 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8e98ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1 WDTREG 000: 00000000 00000000 00000000 00000000
+J1 WDTREG 010: 00000000 00000000 00000000 00000000
+J1 WDTREG 020: 00000000 000107ac 00000000 00000000
+J1 WDTREG 030: 00000000 00000003 00000000 00000000
+J1 WDTREG 040: 00000000 004608d8 00000c7c 001b8000
+J1 WDTREG 050: 00000000 00000000 1d34fbe5 001d0000
+J1 WDTREG 060: 00000000 00000000 00000000 00000000
+J1 WDTREG 070: 00000000 00000000 00000000 00000000
+J1 WDTREG 080: 00000000 00000000 01000000 00000000
+J1W round 0 nprocs=1 bb=0 sb=0 P0 S0 CK0 T0
+J1M free=180108 act=610 inact=42 wire=42539 target=1997 min=1051
+J1B n0:
+IOS7LAB vm_map64 size=00000000:00001000 mask=00000000:00000000 flags=49000001 prot=3 result=0 address=000f4000
+M8930SD rd blk=3275780 n=184 res=0 #7169
+IOS7LAB vm_map64 size=00000000:00002000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000f5000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000f7000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=00104000
+IOS7LAB vm_map64 size=00000000:00100000 mask=00000000:000fffff flags=7000001 prot=3 result=0 address=17d00000
+IOS7LAB vm_map64 size=00000000:00800000 mask=00000000:007fffff flags=2000001 prot=3 result=0 address=18000000
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:17d02bf0 result=0 name=707 bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:17d02bf0 result=0 name=a03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:17d02bf0 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:17d02bf0 result=0 name=c03 bypass_hints=21
+com.apple.launchd                1        com.apple.launchd                                                1         *** launchd[1] has started up. ***
+com.apple.launchd                1        com.apple.launchd                                                1         *** Verbose boot, will log to /dev/console. ***
+J1 sp launchctl 0 D900 P0 S0
+IOS7LAB vm_map64 size=00000000:00001000 mask=00000000:00000000 flags=49000001 prot=3 result=0 address=000cc000
+IOS7LAB vm_map64 size=00000000:00002000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000cd000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000cf000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000dc000
+IOS7LAB vm_map64 size=00000000:00100000 mask=00000000:000fffff flags=7000001 prot=3 result=0 address=14500000
+IOS7LAB vm_map64 size=00000000:00800000 mask=00000000:007fffff flags=2000001 prot=3 result=0 address=14800000
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:1457c0b0 result=0 name=60b bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:1457c0b0 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:1457c0b0 result=0 name=c03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:1457c0b0 result=0 name=d03 bypass_hints=21
+<T00000200 00000004 00000011>
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (fsck) err=0
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:1454f340 result=0 name=807 bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:1454f340 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:1454f340 result=0 name=c03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:1454f340 result=0 name=d03 bypass_hints=21
+Data/Stack execution not permitted: fsck[pid 11] at virtual address 0xca000, protections were read-write
+J1 X 11 fsck 0
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (mount) err=0
+Leo READCACHE demand: hits=0 misses=8 base-reads=8 bytes=33832
+J1 exec pid 13 (mount_hfs) err=0
+disk1: ioctl(_IOR,'d',80,8) is unsupported.
+Leo J10 quiet wait entry role=1 target=0xc15d1d00 RETURN=80400ad7 state0=0000001e state1=00000000 jobs=0 waiting=0 threads=0 BEST_EFFORT
+J1 X 13 mount_hfs 0
+/dev/disk1 on / (hfs, local, noatime)
+J1 X 12 mount 0
+J1 exec pid 14 (FinishRestoreFro) err=0
+J1 X 14 FinishRestoreFro 0
+J1 exec pid 15 (tzinit) err=0
+tzinit: LatestTZTarget doesn't exist, no need to check its validity: No such file or directory
+Leo storage: phase=6 raw-open=1 read0=1 reads=6674 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=2 dirty=2 writes=1 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=24 base-reads=24
+Leo storage: phase=6 raw-open=1 read0=1 reads=6690 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=4 dirty=4 writes=2 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=40 base-reads=40
+J1 X 15 tzinit 100
+J1 exec pid 16 (cc_fips_test) err=0
+J1 X 16 cc_fips_test 0
+<T00000300 00000004 00000014>
+J1 sp UserEventAgent 0 D900 P0 S0
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 000000a6 000000a6 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 008400a6 00a60026 00000000 3f8decf9 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8e98ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 1 nprocs=45 bb=0 sb=0 P0 S0 CK0 T0
+J1M free=172337 act=1699 inact=144 wire=44251 target=1997 min=1051
+J1B n0:
+<T00000400 00000004 00000017>
+J1 sp wifid 0 D900 P0 S0
+J1 sp profiled 0 D900 P0 S0
+J1 sp awdd 0 D900 P0 S0
+J1 sp timed 0 D900 P0 S0
+J1 sp audio_device_arbitrator 0 D900 P0 S0
+J1 sp misd 0 D900 P0 S0
+J1 sp mediaremoted 0 D900 P0 S0
+J1 sp /System/Library/PrivateFrameworks/MobileBackup.framework/backupd blocked
+J1 sp mtmergeprops 0 D900 P0 S0
+J1 X 25 launchd 200
+J1 sp iaptransportd 0 D900 P0 S0
+J1 sp ptpd 0 D900 P0 S0
+J1 sp prdaily 0 D900 P0 S0
+J1 sp ? 0 D900 P0 S0
+J1 sp SpringBoard 0 D900 P0 S0
+J1 sp routined 0 D900 P0 S0
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 35 launchd 200
+J1 sp fud 0 D900 P0 S0
+J1 sp mtrecorder 2 D900 P0 S0
+J1 sp syslogd 0 D900 P0 S0
+J1 sp spinforeverd 2 D900 P0 S0
+J1 sp keybagd 0 D900 P0 S0
+J1 sp wifiFirmwareLoader 0 D900 P0 S0
+J1 sp ubd 0 D900 P0 S0
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 47 launchd 200
+J1 sp atwakeup 0 D900 P0 S0
+J1 sp DumpPanic 0 D900 P0 S0
+J1 sp lockdownd 0 D900 P0 S0
+J1 sp locationd 0 D900 P0 S0
+J1 sp identityservicesd 0 D900 P0 S0
+J1 sp mount_nfs 2 D900 P0 S0
+J1 sp aggregated 0 D900 P0 S0
+J1 sp OTACrashCopier 0 D900 P0 S0
+J1 sp assistantd 0 D900 P0 S0
+J1 sp ptp_device_arbitrator 0 D900 P0 S0
+J1 sp BTServer 0 D900 P0 S0
+J1 sp fairplayd.H2 0 D900 P0 S0
+J1 sp vmd 0 D900 P0 S0
+J1 sp softwareupdated 0 D900 P0 S0
+J1 sp backboardd 0 D900 P0 S0
+J1 sp sharingd 0 D900 P0 S0
+J1 sp CrashHousekeeping 0 D900 P0 S0
+J1 sp daily 0 D900 P0 S0
+J1 X 44 launchd 200
+J1 sp aosnotifyd 0 D900 P0 S0
+J1 sp powerd 0 D900 P0 S0
+J1 X 49 launchd 200
+J1 sp vendor_device_arbitrator 0 D900 P0 S0
+J1 sp configd 0 D900 P0 S0
+J1 X 40 launchd 200
+J1 sp installd 0 D900 P0 S0
+J1 sp accessory_device_arbitrator 0 D900 P0 S0
+J1 sp imagent 0 D900 P0 S0
+J1 sp wirelessproxd 0 D900 P0 S0
+J1 sp AppleIDAuthAgent 0 D900 P0 S0
+J1 sp MobileStorageMounter 0 D900 P0 S0
+J1 sp atc 0 D900 P0 S0
+J1 sp passd 0 D900 P0 S0
+J1 sp fseventsd 0 D900 P0 S0
+UDA: total faults=16384 vendor_device_ar far2f7141ec pc2bf0efec fsr7
+J1 sp mstreamd 0 D900 P0 S0
+<T00000500 00000004 0000001d>
+Data/Stack execution not permitted: MobileStorageMou[pid 69] at virtual address 0x6b000, protections were read-write
+J1 sp notifyd 0 D900 P0 S0
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 000000a6 000000a6 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 008400a6 00a60026 00000000 3f8decf9 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8e98ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 2 nprocs=55 bb=31 sb=36 P0 S0 CK8 T1
+J1M free=164006 act=2868 inact=677 wire=46308 target=1997 min=1051
+J1B n4: d51 c8 ce d5a
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 74 launchd 200
+J1 sp spinforeverd 2 D900 P0 S0
+J1 X 77 launchd 200
+J1 sp mtrecorder 2 D900 P0 S0
+J1 X 78 launchd 200
+UDA: total faults=32768 aosnotifyd far18e000 pc2bf0f1c6 fsr80f
+<T00000600 00000004 00000023>
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 76 launchd 200
+M8930SD rd blk=3244988 n=248 res=0 #8193
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 79 launchd 200
+<T00000700 00000004 00000029>
+UDA: total faults=49152 routined far3b2f44dc pc3b273982 fsr7
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 80 launchd 200
+J1W round 3 nprocs=54 bb=31 sb=36 P0 S0 CK8 T6
+J1M free=154496 act=6083 inact=1095 wire=47033 target=1997 min=1051
+J1B n8: d51 c8 ce d5a d56 d4c 194 4b49d85
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 81 launchd 200
+J1 sp mtrecorder 2 D900 P0 S0
+J1 X 83 launchd 200
+J1 sp spinforeverd 2 D900 P0 S0
+<T00000800 00000004 0000002d>
+J1 X 82 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 84 launchd 200
+J1 sp aslmanager 0 D900 P0 S0
+<T00000900 00000004 00000032>
+J1 X 65 BTServer 0
+J1 sp xpcd 0 D900 P0 S0
+Data/Stack execution not permitted: xpcd[pid 86] at virtual address 0x3c000, protections were read-write
+J1 X 54 DumpPanic 100
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 87 launchd 200
+J1W round 4 nprocs=54 bb=31 sb=36 P0 S0 CK8 T62
+J1M free=147203 act=8567 inact=1623 wire=47359 target=1997 min=1051
+J1B n11: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2
+J1 TMR ff1c d59933160371 cal53.203
+J1 X 33 CrashHousekeepin 0
+<T00000a00 00000004 00000035>
+J1 X 61 accessory_device 0
+J1 X 22 audio_device_arb 0
+J1 TMR ff1c d59934483778 cal55.065
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 88 launchd 200
+J1 X 64 ptp_device_arbit 0
+J1 sp mtrecorder 2 D900 P0 S0
+J1 X 89 launchd 200
+J1 X 85 aslmanager 0
+J1 X 57 vendor_device_ar 0
+J1 sp spinforeverd 2 D900 P0 S0
+J1 X 90 launchd 200
+<T00000b00 00000004 00000038>
+J1 sp MobileGestaltHelper 0 D900 P0 S0
+J1 TMR ff1c d59933144038 cal58.068
+UDA: total faults=65536 MobileGestaltHel far3d77a12c pc3b8821b6 fsr7
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 92 launchd 200
+J1 PATCH backboardd checkin
+J1 TMR ff1c d119933143556 cal59.982
+J1 X 69 MobileStorageMou 0
+<T00000c00 00000004 0000003d>
+J1W round 5 nprocs=48 bb=31 sb=36 P0 S0 CK28 T91
+J1M free=142563 act=9562 inact=2406 wire=47589 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f d9 4b49d9d 4e 4f 192 e20 cd b39 af5 3ae8
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 93 launchd 200
+M8930SD rd blk=123156 n=8 res=0 #9217
+<T00000d00 00000004 00000040>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 94 launchd 200
+J1 sp mtrecorder 2 D900 P0 S0
+J1 X 96 launchd 200
+J1 sp spinforeverd 2 D900 P0 S0
+J1 X 97 launchd 200
+J1 sp /usr/sbin/mDNSResponder blocked
+Leo storage: phase=6 raw-open=1 read0=1 reads=7190 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=96 dirty=96 writes=104 sync=1 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=780 base-reads=780
+J1 X 95 launchd 200
+Leo storage: phase=6 raw-open=1 read0=1 reads=7190 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=105 dirty=105 writes=114 sync=2 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=852 base-reads=852
+J1 sp lockbot 0 D900 P0 S0
+<T00000e00 00000004 00000043>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 99 launchd 200
+J1 fb open type=0
+J1 X 29 prdaily 0
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 100 launchd 200
+J1 TMR ff1c d71599926444 cal69.601
+J1 fb open type=0
+J1 fb open type=0
+<T00000f00 00000004 00000046>
+J1 TMR ff1c d73599923333 cal71.728
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 101 launchd 200
+J1 sp networkd 0 D903 P0 S0
+073cd6d7,00000011,07cd8ad2,00000011,00000000,00000000,00000001,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,80000007,80000007,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 present #1 fmt42475241 row2160
+J1 frame #1 avg=0,0,0 lit=0%
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 000000a6 000000a6 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 008400a6 00a60026 00000000 3f8decf9 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8e98ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 6 nprocs=49 bb=31 sb=36 P1 S0 CK28 T178
+J1M free=138708 act=10559 inact=2788 wire=48103 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f d9 4b49d9d 4e 4f 192 e20 cd b39 af5 3ae8
+E31:1969-12-31 16:01:13.-680 backboardd[31:1107] 
+E31:No image found for apple-logo
+<T00001000 00000004 00000049>
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 103 launchd 200
+J1 X 53 atwakeup 0
+Data/Stack execution not permitted: backboardd[pid 31] at virtual address 0x2e73000, protections were read-write
+J1 X 43 fud 0
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 sp distnoted 0 D903 P1 S0
+J1 X 104 launchd 200
+J1 sp networkd_privileged 0 D903 P1 S0
+J1 sp mtrecorder 2 D903 P1 S0
+<T00001100 00000004 0000004c>
+J1 X 107 launchd 200
+IOS7LEO TOUCH client type=0 pid=31
+J1 sp /usr/sbin/mDNSResponder blocked
+IOS7LEO TOUCH queue-map type0 bytes=4136
+J1 sp spinforeverd 2 D903 P1 S0
+J1 X 109 launchd 200
+J1 X 108 launchd 200
+IOS7LEO TOUCH method=0 sin=1 stin=0 sout=0 stout=0
+IOS7LEO TOUCH reader-open selector=0
+IOS7LEO TOUCH notification-port type0 registered; not-event-delivery-proof
+J1 X 10 launchctl 0
+<T00001200 00000004 0000004f>
+IOS7LEO TOUCH method=2 sin=2 stin=52 sout=0 stout=52
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 110 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 111 launchd 200
+J1 sp apsd 0 D903 P1 S0
+UDA: total faults=81920 apsd far3b395f28 pc3b273982 fsr7
+<T00001300 00000004 00000052>
+J1 CHECKIN id5b9938 from pid36
+J1 CHK dest act-2147483648 rcv pid31 name1c07 q0/5
+J1 sp lsd 0 D903 P1 S0
+E31:1969-12-31 16:01:22.-591 backboardd[31:4f0f] 
+E31:Telling the system app that it can start immediately
+J1 CHECKIN id5b9939 from pid31
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1W round 7 nprocs=51 bb=31 sb=36 P1 S0 CK31 T208
+J1M free=139166 act=11122 inact=1810 wire=48445 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f d9 4b49d9d 4e 4f 192 e20 cd b39 af5 3ae8
+J1 X 114 launchd 200
+<T00001400 00000004 00000054>
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 115 launchd 200
+J1 sp mtrecorder 2 D903 P1 S0
+J1 X 117 launchd 200
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 118 launchd 200
+J1 sp spinforeverd 2 D903 P1 S0
+J1 X 116 launchd 200
+<T00001500 00000004 00000057>
+J1 X 119 launchd 200
+E36:1969-12-31 16:01:26.-366 SpringBoard[36:1b07] 
+E36:+[SBPushStore migratePushStore] Migrating push store: /var/mobile/Library/SpringBoard/PushStore
+E36:1969-12-31 16:01:29.-859 SpringBoard[36:1b07] 
+E36:+[SBPushStore migratePushStore] Push store does not exist; no migration needed.
+<T00001600 00000004 0000005a>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 120 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 121 launchd 200
+J1 X 34 daily 0
+M8930SD rd blk=2918780 n=64 res=0 #10241
+<T00001700 00000004 0000005d>
+J1 sp SCHelper 0 D903 P1 S0
+J1W round 8 nprocs=50 bb=31 sb=36 P1 S0 CK31 T237
+J1M free=136834 act=11653 inact=1271 wire=48742 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f d9 4b49d9d 4e 4f 192 e20 cd b39 af5 3ae8
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 123 launchd 200
+J1 sp securityd 0 D903 P1 S0
+<T00001800 00000004 00000060>
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 125 launchd 200
+J1 sp mtrecorder 2 D903 P1 S0
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 126 launchd 200
+J1 X 127 launchd 200
+J1 X 26 mtmergeprops 0
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 128 launchd 200
+<T00001900 00000004 00000063>
+J1 sp spinforeverd 2 D903 P1 S0
+J1 X 129 launchd 200
+J1 X 98 lockbot 0
+<T00001a00 00000004 00000065>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 130 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+Leo software-pacing notification count=1 result=0 now=102570053037 interval=16667000
+e2a51f25,00000017,e1b7326f,00000017,00000000,00000000,00000002,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 present #2 fmt42475241 row2160
+J1 frame #2 avg=0,0,0 lit=0%
+Leo software-pacing notification count=2 result=0 now=102591960148 interval=16667000
+e3f365cc,00000017,e30b250e,00000017,00000000,00000000,00000003,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 present #3 fmt42475241 row2160
+J1 frame #3 avg=0,0,0 lit=0%
+Leo software-pacing notification count=3 result=0 now=102610887111 interval=16667000
+e514333f,00000017,e42c79eb,00000017,00000000,00000000,00000004,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 frame #4 avg=0,0,0 lit=0%
+J1 X 131 launchd 200
+Leo software-pacing notification count=4 result=0 now=103288035111 interval=16667000
+J1W round 9 nprocs=49 bb=31 sb=36 P4 S0 CK31 T270
+J1M free=134942 act=12326 inact=1092 wire=48913 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f d9 4b49d9d 4e 4f 192 e20 cd b39 af5 3ae8
+Leo software-pacing notification count=5 result=0 now=103309137037 interval=16667000
+Leo software-pacing notification count=6 result=0 now=103329285185 interval=16667000
+Leo software-pacing notification count=7 result=0 now=103349344592 interval=16667000
+J1 X 42 OTACrashCopier 0
+Leo software-pacing notification count=8 result=0 now=103369430222 interval=16667000
+Leo software-pacing notification count=9 result=0 now=103389473333 interval=16667000
+Leo software-pacing notification count=10 result=0 now=103410060740 interval=16667000
+Leo software-pacing notification count=11 result=0 now=103431180000 interval=16667000
+Leo software-pacing notification count=12 result=0 now=103451216148 interval=16667000
+Leo software-pacing notification count=13 result=0 now=103471262814 interval=16667000
+Leo software-pacing notification count=14 result=0 now=103491355407 interval=16667000
+Leo software-pacing notification count=15 result=0 now=103511491259 interval=16667000
+Leo software-pacing notification count=16 result=0 now=103531549185 interval=16667000
+Leo software-pacing notification count=17 result=0 now=103551692444 interval=16667000
+Leo software-pacing notification count=18 result=0 now=103571722962 interval=16667000
+Leo software-pacing notification count=19 result=0 now=103591759259 interval=16667000
+Leo software-pacing notification count=20 result=0 now=103612674370 interval=16667000
+Leo software-pacing notification count=21 result=0 now=103632262814 interval=16667000
+Leo software-pacing notification count=22 result=0 now=103652615259 interval=16667000
+Leo software-pacing notification count=23 result=0 now=103672711259 interval=16667000
+Leo software-pacing notification count=24 result=0 now=103699012592 interval=16667000
+J1 sp mobileassetd 0 D903 P4 S0
+<T00001b00 00000004 00000068>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 133 launchd 200
+J1 frame #5 avg=0,0,0 lit=0%
+J1 frame #6 avg=0,0,0 lit=0%
+J1 frame #7 avg=0,0,0 lit=0%
+E36:1969-12-31 16:01:46.-548 SpringBoard[36:1b07] 
+E36:Loaded logger: SBAppInstallationLog
+E36:1969-12-31 16:01:46.-546 SpringBoard[36:1b07] 
+E36:Loaded logger: SBIconLog
+E36:1969-12-31 16:01:46.-544 SpringBoard[36:1b07] 
+E36:Loaded logger: SBWorkspaceLogging
+<T00001c00 00000004 0000006b>
+E36:1969-12-31 16:01:47.-115 SpringBoard[36:1b07] 
+E36:*** error reading settings archive file: <SBRootSettings: /var/mobile/Documents/com.apple.springboard.settings/RootSettings.plist> 
+J1 sp mtrecorder 2 D903 P7 Sa010003
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 136 launchd 200
+E36:1969-12-31 16:01:48.-64 SpringBoard[36:1b07] 
+E36:*** error reading settings archive file: <SBRootSettings: /var/mobile/Documents/com.apple.springboard.settings/RootSettings.previous.plist> 
+J1 X 134 launchd 200
+J1 frame #8 avg=0,0,0 lit=0%
+J1 frame #9 avg=0,0,0 lit=0%
+J1 frame #10 avg=0,0,0 lit=0%
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 135 launchd 200
+UDA: total faults=98304 launchd fared35f pc2bede47e fsr7
+J1 sp spinforeverd 2 D903 P10 Sa010003
+J1 X 137 launchd 200
+E31:1969-12-31 16:01:49.-52 backboardd[31:552b] 
+E31:-[BKSystemAppSentinel lock_notePresenceOfSystemApp:] Now monitoring "com.apple.SpringBoard"
+<T00001d00 00000004 0000006e>
+J1 sp itunesstored 0 D903 P10 Sa010003
+J1 X 20 awdd 0
+<T00001e00 00000004 00000071>
+J1W round 10 nprocs=49 bb=31 sb=36 P10 Sa010003 CK31 T289
+J1M free=133040 act=12813 inact=1256 wire=48919 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f d9 4b49d9d 4e 4f 192 e20 cd b39 af5 3ae8
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 139 launchd 200
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 140 launchd 200
+<T00001f00 00000004 00000074>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 141 launchd 200
+<T00002000 00000004 00000076>
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 142 launchd 200
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 143 launchd 200
+<T00002100 00000004 00000079>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 144 launchd 200
+J1 sp DuetLST 0 D903 P10 Sa010003
+J1W round 11 nprocs=50 bb=31 sb=36 P10 Sa010003 CK31 T335
+J1M free=130851 act=13215 inact=1410 wire=49110 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f d9 4b49d9d 4e 4f 192 e20 cd b39 af5 3ae8
+J1 sp /usr/sbin/mediaserverd blocked
+<T00002200 00000004 0000007c>
+J1 X 146 launchd 200
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 147 launchd 200
+<T00002300 00000004 0000007e>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 148 launchd 200
+J1 X 122 SCHelper 0
+J1 sp /usr/sbin/mediaserverd blocked
+<T00002400 00000004 00000081>
+J1 X 149 launchd 200
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 150 launchd 200
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 151 launchd 200
+<T00002500 00000004 00000085>
+J1W round 12 nprocs=49 bb=31 sb=36 P10 Sa010003 CK31 T363
+J1M free=128605 act=13491 inact=1655 wire=49199 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f d9 4b49d9d 4e 4f 192 e20 cd b39 af5 3ae8
+J1 sp /usr/sbin/mediaserverd blocked
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 152 launchd 200
+J1 X 153 launchd 200
+<T00002600 00000004 00000087>
+<T00002700 00000004 0000008a>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 154 launchd 200
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 155 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 156 launchd 200
+<T00002800 00000004 0000008d>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1W round 13 nprocs=50 bb=31 sb=36 P10 Sa010003 CK31 T397
+J1M free=127631 act=13683 inact=1927 wire=49239 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f d9 4b49d9d 4e 4f 192 e20 cd b39 af5 3ae8
+J1 X 157 launchd 200
+<T00002900 00000004 0000008f>
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 158 launchd 200
+<T00002a00 00000004 00000092>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 159 launchd 200
+<T00002b00 00000004 00000095>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 161 launchd 200
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 160 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+<T00002c00 00000004 00000097>
+J1 X 162 launchd 200
+J1 X 23 misd 0
+J1W round 14 nprocs=49 bb=31 sb=36 P10 Sa010003 CK31 T420
+J1M free=127259 act=13758 inact=1940 wire=49187 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f d9 4b49d9d 4e 4f 192 e20 cd b39 af5 3ae8
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+<T00002d00 00000004 0000009a>
+J1 X 163 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 164 launchd 200
+<T00002e00 00000004 0000009c>
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1 X 165 launchd 200
+<T00002f00 00000004 0000009f>
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 166 launchd 200
+J1 X 167 launchd 200
+<T00003000 00000004 000000a1>
+J1 sp /System/L
+4 Corrected bytes, 306 unrecoverable blocks

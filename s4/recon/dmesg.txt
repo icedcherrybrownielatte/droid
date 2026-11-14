@@ -1,0 +1,1571 @@
+[  571.737897] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  571.744270] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  571.744396] L0    479 mif: if_usb_probe: successfully done
+[  571.747631] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  571.801072] L0   2680 mif: link_pm_ioctl: 6f33
+[  571.801243] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  572.043635] L0   3735 [SSP]: debug_work_func(1) - Sensor state: 0x1fff, RC: 0, MS: 0
+[  572.388661] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  573.142981] L0   1419 [get_timestamp][irqdiff=10029789330] Event time diff is too large for 6 sensor
+[  573.146492] L0   2802 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  573.388663] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  574.388661] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  574.572443] L0      0 sec-battery sec-battery: sec_bat_alarm
+[  574.572628] L0      0 sec-battery sec-battery: sec_bat_alarm: Activated
+[  574.572915] L0   5389 sec-battery sec-battery: sec_bat_monitor_work: Start
+[  574.583749] L0   5389 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  574.583848] L0   5389 sec_bat_get_current_average
+[  574.584969] L0   5389 sec-fuelgauge 18-0036: sec_fg_get_scaled_capacity: scaled capacity (73.1)
+[  574.585388] L0   5389 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(326), Temp-ADC(1190)
+[  574.586583] L0   5389 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(-250), Temp-ADC(33000)
+[  574.586736] L0   5389 sec-battery sec-battery: sec_bat_get_battery_info:Vnow(4080mV),Inow(360mA),SOC(73%),Tbat(326)
+[  574.586894] L0   5389 sec-battery sec-battery: Connected,Vavg(4080mV),Vocv(4007mV),Tamb(-250),Iavg(360mA),Iadc(0)
+[  574.587049] L0   5389 sec-battery sec-battery: sec_bat_battery_cable_check: Battery Connected
+[  574.588946] L0   5389 max77803_get_vbus_state: VBUS is valid. CHGIN < CHGIN_OVLO
+[  574.589898] L0   5389 max77803_get_charger_state: CHG_DTLS : 0x 1
+[  574.590008] L0   5389 sec-battery sec-battery: sec_bat_monitor_work: Status(Charging), mode(Normal), Health(Good), Cable(4), siop_level(100)
+[  574.623146] L0   5389 sec-battery sec-battery: sec_bat_monitor_work: Call sec_bat_set_polling
+[  574.623301] L0   5389 sec-battery sec-battery: sec_bat_set_polling: Start
+[  574.623416] L0   5389 sec-battery sec-battery: sec_bat_set_polling: Status:Charging, Sleep:No, Charging:Yes, Short Poll:Yes
+[  574.623581] L0   5389 sec-battery sec-battery: sec_bat_set_polling: Polling time 30/30 sec.
+[  574.623725] L0   5389 sec-battery sec-battery: sec_bat_set_polling: End
+[  574.623835] L0   5389 sec-battery sec-battery: sec_bat_monitor_work: End
+[  575.388660] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  576.388662] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  577.005327] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  577.388661] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  578.012039] L0   2680 mif: cbd: main: Modem type = 1
+[  578.016092] L0   2680 mif: cbd: main: Boot link = 5
+[  578.020761] L0   2680 mif: cbd: main: Main link = 5
+[  578.026598] L0   2680 mif: usb_init_communication: 2680:cbd
+[  578.026691] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  578.034738] L0   2680 store_ehci_power: EHCI turns off
+[  578.034844] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  578.034959] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  578.035074] L0   2680 usb usb1: USB disconnect, device number 1
+[  578.035172] L0   2680 usb 1-2: USB disconnect, device number 2
+[  578.035263] L0   2680 usb 1-2: unregistering device
+[  578.035346] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  578.035803] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  578.035949] L0   2680 mif: usb_rx_complete: urb error status = -108
+[  578.042549] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  578.045860] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  578.098441] L0   2680 usb usb1: unregistering device
+[  578.098548] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  578.098921] L0   2680 s5p-ehci s5p-ehci: shutdown urb dca9db80 ep1in-intr
+[  578.100901] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  578.114527] L0   2680 s5p-ehci s5p-ehci: stop
+[  578.114819] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  578.115161] L0   2680 s5p-ehci s5p-ehci: irq normal 3041 err 316 reclaim 773 (lost 0)
+[  578.115283] L0   2680 s5p-ehci s5p-ehci: complete 3596 unlink 80
+[  578.115391] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  578.115554] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  578.166540] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  578.166666] L0   2680 mif: xmm6262_on: 
+[  578.374087] L0   2680 store_ehci_power: EHCI turns on
+[  578.374243] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  578.374674] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  578.374775] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  578.374942] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  578.375209] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  578.375466] L0   2680 s5p-ehci s5p-ehci: park 0
+[  578.375543] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  578.375686] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  578.375808] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  578.383179] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  578.383730] L0   2680 usb usb1: default language 0x0409
+[  578.383862] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  578.383954] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  578.384074] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  578.384196] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  578.384293] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  578.384407] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  578.390393] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  578.392871] L0   2680 usb usb1: usb_probe_device
+[  578.393155] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  578.393328] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  578.395205] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  578.395301] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  578.395407] L0   2680 hub 1-0:1.0: USB hub found
+[  578.395519] L0   2680 hub 1-0:1.0: 3 ports detected
+[  578.395602] L0   2680 hub 1-0:1.0: standalone hub
+[  578.395681] L0   2680 hub 1-0:1.0: individual port power switching
+[  578.395778] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  578.395887] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  578.396008] L0   2680 hub 1-0:1.0: local power source is good
+[  578.396106] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  578.397874] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  578.408300] L0   2680 mif: link_pm_ioctl: 6f33
+[  578.408448] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  578.493719] L0   5062 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  578.493885] L0   5062 hub 1-0:1.0: port 2: status 0501 change 0001
+[  578.593732] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  578.593910] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  578.648716] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  578.648849] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  578.703680] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  578.758717] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  578.758851] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  578.836674] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  578.836828] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  578.836921] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  578.837038] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  578.850034] L0    479 usb 1-2: usb_probe_device
+[  578.850226] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  578.850907] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  578.852935] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  578.853255] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  578.853407] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  578.853525] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  578.860965] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  578.861097] L0    479 mif: if_usb_probe: successfully done
+[  578.863177] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  578.915654] L0   2680 mif: link_pm_ioctl: 6f33
+[  578.915825] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  579.388657] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  580.388659] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  581.370101] L0   5322 mif: misc_release: umts_boot0 (opened 1)
+[  581.388179] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  581.419868] L0      1 init: Service 'ril-daemon' (pid 5312) exited with status 1
+[  581.420078] L0      1 init: Sending signal 9 to service 'ril-daemon' (pid 5312) process group...
+[  581.420598] L0      1 libprocessgroup: Successfully killed process cgroup uid 1001 pid 5312 in 0ms
+[  581.432054] L0      1 init: starting service 'ril-daemon'...
+[  581.436200] L0      1 init: Received control message 'interface_start' for 'android.hardware.radio@1.0::IRadio/slot1' from pid: 2571 (/system/bin/hwservicemanager)
+[  581.436563] L0      1 init: Could not find service hosting interface android.hardware.radio@1.0::IRadio/slot1
+[  581.465958] L0      1 init: Received control message 'interface_start' for 'android.hardware.radio.deprecated@1.0::IOemHook/slot1' from pid: 2571 (/system/bin/hwservicemanager)
+[  581.466286] L0      1 init: Could not find service hosting interface android.hardware.radio.deprecated@1.0::IOemHook/slot1
+[  581.559740] L0   5389 cpu1: SWRESET
+[  581.560266] L1      0 CPU1: Booted secondary processor
+[  581.562672] L0   5389 cpu2: SWRESET
+[  581.563224] L2      0 CPU2: Booted secondary processor
+[  581.576603] L1   5389 cpu3: SWRESET
+[  581.577152] L3      0 CPU3: Booted secondary processor
+[  581.760311] B0   2679 type=1302 audit(1789735949.660:466): item=0 name="/vendor/bin/hw/rild" inode=3085 dev=103:0c mode=0100755 ouid=0 ogid=2000 rdev=00:00 obj=u:object_r:rild_exec:s0
+[  581.760608] B0   2679 type=1400 audit(1789736140.785:479): avc: denied { search } for pid=5932 comm="rild" name="block" dev="tmpfs" ino=2126 scontext=u:r:rild:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+[  581.761653] B0   2679 type=1400 audit(1789736140.785:479): avc: denied { search } for pid=5932 comm="rild" name="block" dev="tmpfs" ino=2126 scontext=u:r:rild:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+[  581.762059] B0   2679 type=1300 audit(1789736140.785:479): arch=40000028 syscall=322 per=800008 success=yes exit=12 a0=ffffff9c a1=aafde16c a2=20000 a3=0 items=1 ppid=1 ppcomm=init pid=5932 auid=4294967295 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4294967295 comm="rild" exe="/system/vendor/bin/hw/rild" subj=u:r:rild:s0 key=(null)
+[  581.762884] B0   2679 type=1300 audit(1789736140.785:479): arch=40000028 syscall=322 per=800008 success=yes exit=12 a0=ffffff9c a1=aafde16c a2=20000 a3=0 items=1 ppid=1 ppcomm=init pid=5932 auid=4294967295 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4294967295 comm="rild" exe="/system/vendor/bin/hw/rild" subj=u:r:rild:s0 key=(null)
+[  581.765336] B0   2679 type=1307 audit(1789736140.785:479): cwd="/"
+[  581.766136] B0   2679 type=1307 audit(1789736140.785:479): cwd="/"
+[  581.766298] B0   2679 type=1302 audit(1789736140.785:479): item=0 name="/dev/mbin0" inode=2165 dev=00:0d mode=060660 ouid=1000 ogid=1001 rdev=103:05 obj=u:object_r:block_device:s0
+[  581.767076] B0   2679 type=1302 audit(1789736140.785:479): item=0 name="/dev/mbin0" inode=2165 dev=00:0d mode=060660 ouid=1000 ogid=1001 rdev=103:05 obj=u:object_r:block_device:s0
+[  581.767409] B0   2679 type=1320 audit(1789736140.785:479): 
+[  581.864347] L0   5932 mif: usb_init_communication: 5932:rild
+[  581.864454] L0   5932 mif: misc_open: umts_boot0 (opened 2)
+[  581.869688] L0   5932 mif: misc_release: umts_boot0 (opened 1)
+[  581.874960] L0   5932 mif: usb_init_communication: 5932:rild
+[  581.875047] L0   5932 mif: misc_open: umts_boot0 (opened 2)
+[  582.388303] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  582.607240] L1   5923 IRQ153 no longer affine to CPU1
+[  582.610159] L0   5389 CPU1: shutdown
+[  582.615218] L2   5926 IRQ154 no longer affine to CPU2
+[  582.618224] L0   5389 CPU2: shutdown
+[  582.622726] L3   5929 IRQ155 no longer affine to CPU3
+[  582.625646] L0   5389 CPU3: shutdown
+[  583.043640] L0   5389 [SSP]: debug_work_func(1) - Sensor state: 0x1fff, RC: 0, MS: 0
+[  583.172771] L0   1419 [get_timestamp][irqdiff=10029790627] Event time diff is too large for 6 sensor
+[  583.174231] L0   2802 audit: audit_lost=1763 audit_rate_limit=5 audit_backlog_limit=64
+[  583.174352] L0   2802 audit: rate limit exceeded
+[  583.178491] L0   2679 type=1320 audit(1789736140.785:479): 
+[  583.178700] L0   2679 type=1400 audit(1789736142.200:480): avc: denied { read } for pid=2802 comm="" name="temp" dev="sysfs" ino=19346 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[  583.179702] L0   2679 type=1400 audit(1789736142.200:480): avc: denied { read } for pid=2802 comm="" name="temp" dev="sysfs" ino=19346 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[  583.180030] L0   2679 type=1400 audit(1789736142.200:480): avc: denied { open } for pid=2802 comm="" name="temp" dev="sysfs" ino=19346 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[  583.180556] L0   2679 type=1400 audit(1789736142.200:480): avc: denied { open } for pid=2802 comm="" name="temp" dev="sysfs" ino=19346 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[  583.180906] L0   2679 type=1300 audit(1789736142.200:480): arch=40000028 syscall=322 per=800008 success=yes exit=24 a0=ffffff9c a1=b4929484 a2=20000 a3=0 items=1 ppid=1 ppcomm=init pid=2802 auid=4294967295 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4294967295 comm="" exe="/system/vendor/bin/hw/android.hardware.sensors@1.0-service.exynos5410" subj=u:r:init:s0 key=(null)
+[  583.181649] L0   2679 type=1300 audit(1789736142.200:480): arch=40000028 syscall=322 per=800008 success=yes exit=24 a0=ffffff9c a1=b4929484 a2=20000 a3=0 items=1 ppid=1 ppcomm=init pid=2802 auid=4294967295 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4294967295 comm="" exe="/system/vendor/bin/hw/android.hardware.sensors@1.0-service.exynos5410" subj=u:r:init:s0 key=(null)
+[  583.182184] L0   2679 type=1307 audit(1789736142.200:480): cwd="/"
+[  583.182807] L0   2679 type=1307 audit(1789736142.200:480): cwd="/"
+[  583.186756] L0   2802 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  583.188592] L0   2679 type=1302 audit(1789736142.200:480): item=0 name="/sys/class/power_supply/battery/temp" inode=19346 dev=00:0e mode=0100664 ouid=1001 ogid=1000 rdev=00:00 obj=u:object_r:sysfs:s0
+[  583.388664] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  584.119991] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  584.388666] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  584.623812] L0      0 sec-battery sec-battery: sec_bat_alarm
+[  584.623957] L0      0 sec-battery sec-battery: sec_bat_alarm: Activated
+[  584.624102] L0   5389 sec-battery sec-battery: sec_bat_monitor_work: Start
+[  584.634891] L0   5389 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  584.634991] L0   5389 sec_bat_get_current_average
+[  584.636112] L0   5389 sec-fuelgauge 18-0036: sec_fg_get_scaled_capacity: scaled capacity (73.1)
+[  584.636525] L0   5389 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(326), Temp-ADC(1190)
+[  584.637721] L0   5389 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(-250), Temp-ADC(33000)
+[  584.637875] L0   5389 sec-battery sec-battery: sec_bat_get_battery_info:Vnow(4082mV),Inow(360mA),SOC(73%),Tbat(326)
+[  584.638119] L0   5389 sec-battery sec-battery: Connected,Vavg(4082mV),Vocv(4007mV),Tamb(-250),Iavg(360mA),Iadc(0)
+[  584.638276] L0   5389 sec-battery sec-battery: sec_bat_battery_cable_check: Battery Connected
+[  584.640089] L0   5389 max77803_get_vbus_state: VBUS is valid. CHGIN < CHGIN_OVLO
+[  584.641041] L0   5389 max77803_get_charger_state: CHG_DTLS : 0x 1
+[  584.641152] L0   5389 sec-battery sec-battery: sec_bat_time_management: Charging Time : 362 secs
+[  584.641292] L0   5389 sec-battery sec-battery: sec_bat_temperature: HT(600), HR(400), LT(-50), LR(0)
+[  584.641436] L0   5389 sec-battery sec-battery: sec_bat_check_fullcharged_condition: Not enough SOC (73%)
+[  584.641580] L0   5389 sec-battery sec-battery: sec_bat_fullcharged_check: Charging Mode : Normal
+[  584.641718] L0   5389 sec-battery sec-battery: sec_bat_monitor_work: Status(Charging), mode(Normal), Health(Good), Cable(4), siop_level(100)
+[  584.676131] L0   5389 sec-battery sec-battery: sec_bat_monitor_work: Call sec_bat_set_polling
+[  584.676283] L0   5389 sec-battery sec-battery: sec_bat_set_polling: Start
+[  584.676400] L0   5389 sec-battery sec-battery: sec_bat_set_polling: Status:Charging, Sleep:No, Charging:Yes, Short Poll:Yes
+[  584.676566] L0   5389 sec-battery sec-battery: sec_bat_set_polling: Polling time 10/30 sec.
+[  584.676711] L0   5389 sec-battery sec-battery: sec_bat_set_polling: End
+[  584.676823] L0   5389 sec-battery sec-battery: sec_bat_monitor_work: End
+[  585.125884] L0   2680 mif: cbd: main: Modem type = 1
+[  585.130284] L0   2680 mif: cbd: main: Boot link = 5
+[  585.134620] L0   2680 mif: cbd: main: Main link = 5
+[  585.140094] L0   2680 mif: usb_init_communication: 2680:cbd
+[  585.140188] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  585.148216] L0   2679 type=1302 audit(1789736142.200:480): item=0 name="/sys/class/power_supply/battery/temp" inode=19346 dev=00:0e mode=0100664 ouid=1001 ogid=1000 rdev=00:00 obj=u:object_r:sysfs:s0
+[  585.148560] L0   2679 type=1400 audit(1789736144.174:481): avc: denied { write } for pid=2680 comm="cbd" name="ehci_power" dev="sysfs" ino=13049 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[  585.149648] L0   2680 store_ehci_power: EHCI turns off
+[  585.149750] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  585.149861] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  585.149978] L0   2680 usb usb1: USB disconnect, device number 1
+[  585.150076] L0   2680 usb 1-2: USB disconnect, device number 2
+[  585.150168] L0   2680 usb 1-2: unregistering device
+[  585.150252] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  585.150708] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  585.150857] L0   2680 mif: usb_rx_complete: urb error status = -108
+[  585.159060] L0   2679 type=1400 audit(1789736144.174:481): avc: denied { write } for pid=2680 comm="cbd" name="ehci_power" dev="sysfs" ino=13049 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[  585.159427] L0   2679 type=1300 audit(1789736144.174:481): arch=40000028 syscall=322 per=800000 success=yes exit=8 a0=ffffff9c a1=478e1 a2=20002 a3=0 items=1 ppid=1 ppcomm=init pid=2680 auid=4294967295 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4294967295 comm="cbd" exe="/system/vendor/bin/cbd" subj=u:r:init:s0 key=(null)
+[  585.160179] L0   2679 type=1300 audit(1789736144.174:481): arch=40000028 syscall=322 per=800000 success=yes exit=8 a0=ffffff9c a1=478e1 a2=20002 a3=0 items=1 ppid=1 ppcomm=init pid=2680 auid=4294967295 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4294967295 comm="cbd" exe="/system/vendor/bin/cbd" subj=u:r:init:s0 key=(null)
+[  585.160662] L0   2679 type=1307 audit(1789736144.174:481): cwd="/"
+[  585.161419] L0   2679 type=1307 audit(1789736144.174:481): cwd="/"
+[  585.161567] L0   2679 type=1302 audit(1789736144.174:481): item=0 name="/dev/ehci_power" inode=13049 dev=00:0e mode=0100664 ouid=0 ogid=0 rdev=00:00 obj=u:object_r:sysfs:s0
+[  585.162299] L0   2679 type=1302 audit(1789736144.174:481): item=0 name="/dev/ehci_power" inode=13049 dev=00:0e mode=0100664 ouid=0 ogid=0 rdev=00:00 obj=u:object_r:sysfs:s0
+[  585.162551] L0   2679 type=1320 audit(1789736144.174:481): 
+[  585.163142] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  585.165170] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  585.219948] L0   2680 usb usb1: unregistering device
+[  585.220056] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  585.220436] L0   2680 s5p-ehci s5p-ehci: shutdown urb dca9dc00 ep1in-intr
+[  585.222445] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  585.232823] L0   2680 s5p-ehci s5p-ehci: stop
+[  585.233815] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  585.234232] L0   2680 s5p-ehci s5p-ehci: irq normal 3077 err 320 reclaim 783 (lost 0)
+[  585.234333] L0   2680 s5p-ehci s5p-ehci: complete 3641 unlink 81
+[  585.234417] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  585.234549] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  585.242373] L0   5389 cpu1: SWRESET
+[  585.242886] L1      0 CPU1: Booted secondary processor
+[  585.246026] L0   5389 cpu2: SWRESET
+[  585.246529] L2      0 CPU2: Booted secondary processor
+[  585.248807] L0   5389 cpu3: SWRESET
+[  585.249308] L3      0 CPU3: Booted secondary processor
+[  585.285026] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  585.285110] L0   2680 mif: xmm6262_on: 
+[  585.388295] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  585.493626] L0   2680 store_ehci_power: EHCI turns on
+[  585.493759] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  585.494186] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  585.494289] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  585.494441] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  585.494711] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  585.494970] L0   2680 s5p-ehci s5p-ehci: park 0
+[  585.495047] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  585.495178] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  585.495301] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  585.503322] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  585.503984] L0   2680 usb usb1: default language 0x0409
+[  585.504119] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  585.504212] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  585.504331] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  585.504454] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  585.504551] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  585.504665] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  585.511529] L0   2680 usb usb1: usb_probe_device
+[  585.511635] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  585.511808] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  585.514388] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  585.514493] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  585.514602] L0   2680 hub 1-0:1.0: USB hub found
+[  585.514719] L0   2680 hub 1-0:1.0: 3 ports detected
+[  585.514802] L0   2680 hub 1-0:1.0: standalone hub
+[  585.514880] L0   2680 hub 1-0:1.0: individual port power switching
+[  585.514978] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  585.515087] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  585.515207] L0   2680 hub 1-0:1.0: local power source is good
+[  585.515306] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  585.517290] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  585.563485] L0   2680 mif: link_pm_ioctl: 6f33
+[  585.563631] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  585.613516] L0   5062 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  585.613667] L0   5062 hub 1-0:1.0: port 2: status 0501 change 0001
+[  585.713293] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  585.713428] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  585.768298] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  585.768411] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  585.823253] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  585.878296] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  585.878407] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  585.906870] L1   5957 IRQ153 no longer affine to CPU1
+[  585.909785] L0   5389 CPU1: shutdown
+[  585.914235] L2   5962 IRQ154 no longer affine to CPU2
+[  585.917483] L0   5389 CPU2: shutdown
+[  585.922237] L3   5965 IRQ155 no longer affine to CPU3
+[  585.925566] L0   5389 CPU3: shutdown
+[  585.954759] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  585.954890] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  585.954983] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  585.955100] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  585.969503] L0    479 usb 1-2: usb_probe_device
+[  585.969631] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  585.970113] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  585.973360] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  585.973472] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  585.973621] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  585.973738] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  585.980149] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  585.980278] L0    479 mif: if_usb_probe: successfully done
+[  585.983310] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  586.070739] L0   2680 mif: link_pm_ioctl: 6f33
+[  586.070920] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  586.138677] L0   5389 cpu1: SWRESET
+[  586.139197] L1      0 CPU1: Booted secondary processor
+[  586.143365] L0   5389 cpu2: SWRESET
+[  586.143872] L2      0 CPU2: Booted secondary processor
+[  586.149533] L0   5389 cpu3: SWRESET
+[  586.150039] L3      0 CPU3: Booted secondary processor
+[  586.388285] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  586.809461] L1   5980 IRQ153 no longer affine to CPU1
+[  586.812713] L0   5389 CPU1: shutdown
+[  586.818208] L2   5983 IRQ154 no longer affine to CPU2
+[  586.821155] L3   5389 CPU2: shutdown
+[  586.825783] L3   5986 IRQ155 no longer affine to CPU3
+[  586.829558] L0   5389 CPU3: shutdown
+[  587.388660] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  588.388664] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  589.388662] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  590.388665] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  591.281781] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  591.388664] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  592.288144] L0   2680 mif: cbd: main: Modem type = 1
+[  592.291960] L0   2680 mif: cbd: main: Boot link = 5
+[  592.297436] L0   2680 mif: cbd: main: Main link = 5
+[  592.302082] L0   2680 mif: usb_init_communication: 2680:cbd
+[  592.302176] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  592.310576] L0   2680 store_ehci_power: EHCI turns off
+[  592.310681] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  592.310795] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  592.310910] L0   2680 usb usb1: USB disconnect, device number 1
+[  592.311009] L0   2680 usb 1-2: USB disconnect, device number 2
+[  592.311102] L0   2680 usb 1-2: unregistering device
+[  592.311186] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  592.311644] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  592.311790] L0   2680 mif: usb_rx_complete: urb error status = -108
+[  592.319309] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  592.321903] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  592.373577] L0   2680 usb usb1: unregistering device
+[  592.373686] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  592.374062] L0   2680 s5p-ehci s5p-ehci: shutdown urb dcc32b00 ep1in-intr
+[  592.376849] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  592.388862] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  592.389786] L0   2680 s5p-ehci s5p-ehci: stop
+[  592.390317] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  592.390669] L0   2680 s5p-ehci s5p-ehci: irq normal 3117 err 324 reclaim 793 (lost 0)
+[  592.390792] L0   2680 s5p-ehci s5p-ehci: complete 3686 unlink 82
+[  592.390901] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  592.391064] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  592.442054] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  592.442179] L0   2680 mif: xmm6262_on: 
+[  592.649082] L0   2680 store_ehci_power: EHCI turns on
+[  592.649239] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  592.649670] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  592.649771] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  592.649938] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  592.650205] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  592.650460] L0   2680 s5p-ehci s5p-ehci: park 0
+[  592.650538] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  592.650682] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  592.650805] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  592.658185] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  592.658739] L0   2680 usb usb1: default language 0x0409
+[  592.658872] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  592.658965] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  592.659084] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  592.659208] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  592.659305] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  592.659419] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  592.667574] L0   2680 usb usb1: usb_probe_device
+[  592.667679] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  592.667853] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  592.669962] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  592.670064] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  592.670178] L0   2680 hub 1-0:1.0: USB hub found
+[  592.670288] L0   2680 hub 1-0:1.0: 3 ports detected
+[  592.670370] L0   2680 hub 1-0:1.0: standalone hub
+[  592.670451] L0   2680 hub 1-0:1.0: individual port power switching
+[  592.670554] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  592.670663] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  592.670785] L0   2680 hub 1-0:1.0: local power source is good
+[  592.670887] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  592.672657] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  592.683309] L0   2680 mif: link_pm_ioctl: 6f33
+[  592.683460] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  592.768723] L0   5062 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  592.768895] L0   5062 hub 1-0:1.0: port 2: status 0501 change 0001
+[  592.868730] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  592.868910] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  592.923713] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  592.923850] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  592.978690] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  593.033339] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  593.033473] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  593.112153] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  593.112305] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  593.112402] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  593.112520] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  593.127049] L0    479 usb 1-2: usb_probe_device
+[  593.127178] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  593.127744] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  593.134036] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  593.134155] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  593.134310] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  593.134428] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  593.140752] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  593.140887] L0    479 mif: if_usb_probe: successfully done
+[  593.143167] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  593.190528] L0   2680 mif: link_pm_ioctl: 6f33
+[  593.190700] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  593.202465] L0   1419 [get_timestamp][irqdiff=10029708003] Event time diff is too large for 6 sensor
+[  593.206016] L0   2802 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  593.388156] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  594.043637] L0      5 [SSP]: debug_work_func(2) - Sensor state: 0x1fff, RC: 0, MS: 0
+[  594.388450] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  594.677129] L0      0 sec-battery sec-battery: sec_bat_alarm
+[  594.677315] L0      0 sec-battery sec-battery: sec_bat_alarm: Activated
+[  594.677604] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Start
+[  594.687707] L0      5 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  594.687806] L0      5 sec_bat_get_current_average
+[  594.689943] L0      5 sec-fuelgauge 18-0036: sec_fg_get_scaled_capacity: scaled capacity (73.3)
+[  594.690372] L0      5 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(325), Temp-ADC(1191)
+[  594.691567] L0      5 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(-250), Temp-ADC(33000)
+[  594.691728] L0      5 sec-battery sec-battery: sec_bat_get_battery_info:Vnow(4082mV),Inow(360mA),SOC(73%),Tbat(325)
+[  594.691889] L0      5 sec-battery sec-battery: Connected,Vavg(4082mV),Vocv(4008mV),Tamb(-250),Iavg(360mA),Iadc(0)
+[  594.692051] L0      5 sec-battery sec-battery: sec_bat_battery_cable_check: Battery Connected
+[  594.693954] L0      5 max77803_get_vbus_state: VBUS is valid. CHGIN < CHGIN_OVLO
+[  594.694908] L0      5 max77803_get_charger_state: CHG_DTLS : 0x 1
+[  594.695022] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Status(Charging), mode(Normal), Health(Good), Cable(4), siop_level(100)
+[  594.728836] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Call sec_bat_set_polling
+[  594.728994] L0      5 sec-battery sec-battery: sec_bat_set_polling: Start
+[  594.729113] L0      5 sec-battery sec-battery: sec_bat_set_polling: Status:Charging, Sleep:No, Charging:Yes, Short Poll:Yes
+[  594.729281] L0      5 sec-battery sec-battery: sec_bat_set_polling: Polling time 20/30 sec.
+[  594.729433] L0      5 sec-battery sec-battery: sec_bat_set_polling: End
+[  594.729543] L0      5 sec-battery sec-battery: sec_bat_monitor_work: End
+[  595.388442] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  596.388442] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  597.388306] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  598.389125] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  598.393979] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  599.393626] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  599.395619] L0   2680 mif: cbd: main: Modem type = 1
+[  599.399673] L0   2680 mif: cbd: main: Boot link = 5
+[  599.404463] L0   2680 mif: cbd: main: Main link = 5
+[  599.410448] L0   2680 mif: usb_init_communication: 2680:cbd
+[  599.410542] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  599.417731] L0   2680 store_ehci_power: EHCI turns off
+[  599.417841] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  599.418062] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  599.418181] L0   2680 usb usb1: USB disconnect, device number 1
+[  599.418285] L0   2680 usb 1-2: USB disconnect, device number 2
+[  599.418382] L0   2680 usb 1-2: unregistering device
+[  599.418465] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  599.418938] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  599.419089] L0   2680 mif: usb_rx_complete: urb error status = -108
+[  599.426923] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  599.429709] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  599.483314] L0   2680 usb usb1: unregistering device
+[  599.483426] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  599.483810] L0   2680 s5p-ehci s5p-ehci: shutdown urb dcc62780 ep1in-intr
+[  599.485818] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  599.499404] L0   2680 s5p-ehci s5p-ehci: stop
+[  599.499820] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  599.500168] L0   2680 s5p-ehci s5p-ehci: irq normal 3155 err 328 reclaim 803 (lost 0)
+[  599.500297] L0   2680 s5p-ehci s5p-ehci: complete 3731 unlink 83
+[  599.500407] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  599.500568] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  599.551571] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  599.551701] L0   2680 mif: xmm6262_on: 
+[  599.759095] L0   2680 store_ehci_power: EHCI turns on
+[  599.759254] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  599.759685] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  599.759786] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  599.759953] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  599.760221] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  599.760477] L0   2680 s5p-ehci s5p-ehci: park 0
+[  599.760554] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  599.760698] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  599.760821] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  599.768185] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  599.768732] L0   2680 usb usb1: default language 0x0409
+[  599.768866] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  599.768959] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  599.769078] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  599.769201] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  599.769298] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  599.769413] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  599.778408] L0   2680 usb usb1: usb_probe_device
+[  599.778510] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  599.778685] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  599.780593] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  599.780685] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  599.780792] L0   2680 hub 1-0:1.0: USB hub found
+[  599.780905] L0   2680 hub 1-0:1.0: 3 ports detected
+[  599.780988] L0   2680 hub 1-0:1.0: standalone hub
+[  599.781067] L0   2680 hub 1-0:1.0: individual port power switching
+[  599.781165] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  599.781274] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  599.781393] L0   2680 hub 1-0:1.0: local power source is good
+[  599.781492] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  599.783481] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  599.793323] L0   2680 mif: link_pm_ioctl: 6f33
+[  599.793469] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  599.878724] L0   5062 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  599.878891] L0   5062 hub 1-0:1.0: port 2: status 0501 change 0001
+[  599.978737] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  599.978917] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  600.033355] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  600.033485] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  600.088683] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  600.143728] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  600.143862] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  600.221705] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  600.221854] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  600.221948] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  600.222065] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  600.236120] L0    479 usb 1-2: usb_probe_device
+[  600.236227] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  600.236779] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  600.239598] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  600.239706] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  600.239856] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  600.239973] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  600.246486] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  600.246613] L0    479 mif: if_usb_probe: successfully done
+[  600.249587] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  600.300941] L0   2680 mif: link_pm_ioctl: 6f33
+[  600.301111] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  600.393676] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  600.898628] L0   5932 mif: misc_release: umts_boot0 (opened 1)
+[  600.903582] L0   5932 mif: usb_init_communication: 5932:rild
+[  600.903676] L0   5932 mif: misc_open: umts_boot0 (opened 2)
+[  601.393665] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  602.128823] L0      5 $$$$$$$$$ mem1_1 BYTE[125604]CYCLE[9990312] Ratio[(byte/cycle * 16) *100] : 0
+[  602.128987] L0      5 $$$$$$$$$ mem1_0 BYTE[805632]CYCLE[9990312] Ratio[(byte/cycle * 16) *100] : 0
+[  602.129133] L0      5 $$$$$$$$$ mem0_1 BYTE[131800]CYCLE[9990312] Ratio[(byte/cycle * 16) *100] : 0
+[  602.129278] L0      5 $$$$$$$$$ mem0_0 BYTE[690528]CYCLE[9990312] Ratio[(byte/cycle * 16) *100] : 0
+[  602.393667] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  603.232309] L0   1419 [get_timestamp][irqdiff=10029834746] Event time diff is too large for 6 sensor
+[  603.235835] L0   2802 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  603.393666] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  604.393664] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  604.729517] L0      0 sec-battery sec-battery: sec_bat_alarm
+[  604.729660] L0      0 sec-battery sec-battery: sec_bat_alarm: Activated
+[  604.729862] L0   3735 sec-battery sec-battery: sec_bat_monitor_work: Start
+[  604.739905] L0   3735 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  604.740004] L0   3735 sec_bat_get_current_average
+[  604.741124] L0   3735 sec-fuelgauge 18-0036: sec_fg_get_scaled_capacity: scaled capacity (73.3)
+[  604.742607] L0   3735 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(325), Temp-ADC(1191)
+[  604.743890] L0   3735 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(-250), Temp-ADC(33000)
+[  604.744045] L0   3735 sec-battery sec-battery: sec_bat_get_battery_info:Vnow(4082mV),Inow(360mA),SOC(73%),Tbat(325)
+[  604.744205] L0   3735 sec-battery sec-battery: Connected,Vavg(4082mV),Vocv(4008mV),Tamb(-250),Iavg(360mA),Iadc(0)
+[  604.744361] L0   3735 sec-battery sec-battery: sec_bat_battery_cable_check: Battery Connected
+[  604.746174] L0   3735 max77803_get_vbus_state: VBUS is valid. CHGIN < CHGIN_OVLO
+[  604.747125] L0   3735 max77803_get_charger_state: CHG_DTLS : 0x 1
+[  604.747235] L0   3735 sec-battery sec-battery: sec_bat_monitor_work: Status(Charging), mode(Normal), Health(Good), Cable(4), siop_level(100)
+[  604.760350] L0   3735 sec-battery sec-battery: sec_bat_monitor_work: Call sec_bat_set_polling
+[  604.760501] L0   3735 sec-battery sec-battery: sec_bat_set_polling: Start
+[  604.760618] L0   3735 sec-battery sec-battery: sec_bat_set_polling: Status:Charging, Sleep:No, Charging:Yes, Short Poll:Yes
+[  604.760784] L0   3735 sec-battery sec-battery: sec_bat_set_polling: Polling time 30/30 sec.
+[  604.760928] L0   3735 sec-battery sec-battery: sec_bat_set_polling: End
+[  604.761039] L0   3735 sec-battery sec-battery: sec_bat_monitor_work: End
+[  605.043639] L0      5 [SSP]: debug_work_func(1) - Sensor state: 0x1fff, RC: 0, MS: 0
+[  605.393665] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  605.505393] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  606.393665] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  606.511483] L0   2680 mif: cbd: main: Modem type = 1
+[  606.515588] L0   2680 mif: cbd: main: Boot link = 5
+[  606.520886] L0   2680 mif: cbd: main: Main link = 5
+[  606.525567] L0   2680 mif: usb_init_communication: 2680:cbd
+[  606.525661] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  606.534502] L0   2680 store_ehci_power: EHCI turns off
+[  606.534605] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  606.534719] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  606.534835] L0   2680 usb usb1: USB disconnect, device number 1
+[  606.534935] L0   2680 usb 1-2: USB disconnect, device number 2
+[  606.535027] L0   2680 usb 1-2: unregistering device
+[  606.535111] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  606.535581] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  606.535729] L0   2680 mif: usb_rx_complete: urb error status = -108
+[  606.542302] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  606.545614] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  606.598560] L0   2680 usb usb1: unregistering device
+[  606.598670] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  606.599050] L0   2680 s5p-ehci s5p-ehci: shutdown urb dcc62d00 ep1in-intr
+[  606.601057] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  606.614434] L0   2680 s5p-ehci s5p-ehci: stop
+[  606.614838] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  606.615183] L0   2680 s5p-ehci s5p-ehci: irq normal 3191 err 332 reclaim 813 (lost 0)
+[  606.615307] L0   2680 s5p-ehci s5p-ehci: complete 3776 unlink 84
+[  606.615414] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  606.615575] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  606.666566] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  606.666692] L0   2680 mif: xmm6262_on: 
+[  606.874089] L0   2680 store_ehci_power: EHCI turns on
+[  606.874246] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  606.874677] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  606.874778] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  606.874945] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  606.875212] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  606.875470] L0   2680 s5p-ehci s5p-ehci: park 0
+[  606.875547] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  606.875692] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  606.875815] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  606.883184] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  606.883730] L0   2680 usb usb1: default language 0x0409
+[  606.883862] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  606.883956] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  606.884076] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  606.884199] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  606.884297] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  606.884411] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  606.892519] L0   2680 usb usb1: usb_probe_device
+[  606.892624] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  606.892792] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  606.894894] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  606.894991] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  606.895097] L0   2680 hub 1-0:1.0: USB hub found
+[  606.895211] L0   2680 hub 1-0:1.0: 3 ports detected
+[  606.895293] L0   2680 hub 1-0:1.0: standalone hub
+[  606.895371] L0   2680 hub 1-0:1.0: individual port power switching
+[  606.895469] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  606.895578] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  606.895699] L0   2680 hub 1-0:1.0: local power source is good
+[  606.895797] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  606.897561] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  606.908310] L0   2680 mif: link_pm_ioctl: 6f33
+[  606.908459] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  606.993726] L0   5062 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  606.993894] L0   5062 hub 1-0:1.0: port 2: status 0501 change 0001
+[  607.093734] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  607.093912] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  607.148725] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  607.148858] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  607.203684] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  607.258724] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  607.258858] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  607.336711] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  607.336866] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  607.336959] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  607.337076] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  607.350544] L0    479 usb 1-2: usb_probe_device
+[  607.350668] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  607.351336] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  607.353610] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  607.353719] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  607.353870] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  607.353989] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  607.361592] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  607.361726] L0    479 mif: if_usb_probe: successfully done
+[  607.363805] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  607.393429] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  607.416330] L0   2680 mif: link_pm_ioctl: 6f33
+[  607.416497] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  608.393665] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  609.393664] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  610.393666] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  611.393664] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  612.393666] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  612.620398] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  613.262140] L0   1419 [get_timestamp][irqdiff=10029825794] Event time diff is too large for 6 sensor
+[  613.265667] L0   2802 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  613.393667] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  613.626139] L0   2680 mif: cbd: main: Modem type = 1
+[  613.630801] L0   2680 mif: cbd: main: Boot link = 5
+[  613.635003] L0   2680 mif: cbd: main: Main link = 5
+[  613.640817] L0   2680 mif: usb_init_communication: 2680:cbd
+[  613.640911] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  613.648310] L0   2680 store_ehci_power: EHCI turns off
+[  613.648414] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  613.648525] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  613.648640] L0   2680 usb usb1: USB disconnect, device number 1
+[  613.648738] L0   2680 usb 1-2: USB disconnect, device number 2
+[  613.648831] L0   2680 usb 1-2: unregistering device
+[  613.648914] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  613.649373] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  613.649519] L0   2680 mif: usb_rx_complete: urb error status = -108
+[  613.657209] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  613.659238] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  613.707810] L0   2680 usb usb1: unregistering device
+[  613.707919] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  613.708498] L0   2680 s5p-ehci s5p-ehci: shutdown urb dcc62680 ep1in-intr
+[  613.713503] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  613.730788] L0   2680 s5p-ehci s5p-ehci: stop
+[  613.731820] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  613.732086] L0   2680 s5p-ehci s5p-ehci: irq normal 3226 err 336 reclaim 823 (lost 0)
+[  613.732185] L0   2680 s5p-ehci s5p-ehci: complete 3821 unlink 85
+[  613.732269] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  613.732397] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  613.744473] L0   3735 cpu1: SWRESET
+[  613.744982] L1      0 CPU1: Booted secondary processor
+[  613.747684] L0   3735 cpu2: SWRESET
+[  613.748226] L2      0 CPU2: Booted secondary processor
+[  613.750803] L0   3735 cpu3: SWRESET
+[  613.751305] L3      0 CPU3: Booted secondary processor
+[  613.782867] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  613.783032] L0   2680 mif: xmm6262_on: 
+[  613.993637] L0   2680 store_ehci_power: EHCI turns on
+[  613.993774] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  613.994205] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  613.994306] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  613.994459] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  613.994720] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  613.994982] L0   2680 s5p-ehci s5p-ehci: park 0
+[  613.995060] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  613.995195] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  613.995320] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  614.003381] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  614.003970] L0   2680 usb usb1: default language 0x0409
+[  614.004105] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  614.004198] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  614.004318] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  614.004440] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  614.004537] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  614.004651] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  614.011445] L0   2680 usb usb1: usb_probe_device
+[  614.011547] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  614.011726] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  614.014250] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  614.014349] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  614.014457] L0   2680 hub 1-0:1.0: USB hub found
+[  614.014573] L0   2680 hub 1-0:1.0: 3 ports detected
+[  614.014657] L0   2680 hub 1-0:1.0: standalone hub
+[  614.014735] L0   2680 hub 1-0:1.0: individual port power switching
+[  614.014832] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  614.014941] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  614.015061] L0   2680 hub 1-0:1.0: local power source is good
+[  614.015159] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  614.017059] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  614.058467] L0   2680 mif: link_pm_ioctl: 6f33
+[  614.058616] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  614.113488] L0   5062 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  614.113639] L0   5062 hub 1-0:1.0: port 2: status 0501 change 0001
+[  614.213293] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  614.213428] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  614.268317] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  614.268425] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  614.323253] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  614.378313] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  614.378422] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  614.393277] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  614.406782] L1   6039 IRQ153 no longer affine to CPU1
+[  614.409682] L0   3735 CPU1: shutdown
+[  614.413853] L2   6042 IRQ154 no longer affine to CPU2
+[  614.417065] L0   3735 CPU2: shutdown
+[  614.421808] L3   6045 IRQ155 no longer affine to CPU3
+[  614.425129] L0   3735 CPU3: shutdown
+[  614.454776] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  614.454907] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  614.454999] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  614.455117] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  614.468984] L0    479 usb 1-2: usb_probe_device
+[  614.469094] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  614.469739] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  614.471885] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  614.471993] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  614.472143] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  614.472260] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  614.479840] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  614.479969] L0    479 mif: if_usb_probe: successfully done
+[  614.481902] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  614.566170] L0   2680 mif: link_pm_ioctl: 6f33
+[  614.566351] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  614.761346] L0      0 sec-battery sec-battery: sec_bat_alarm
+[  614.761531] L0      0 sec-battery sec-battery: sec_bat_alarm: Activated
+[  614.761816] L0   3735 sec-battery sec-battery: sec_bat_monitor_work: Start
+[  614.773111] L0   3735 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  614.773211] L0   3735 sec_bat_get_current_average
+[  614.774332] L0   3735 sec-fuelgauge 18-0036: sec_fg_get_scaled_capacity: scaled capacity (73.3)
+[  614.774747] L0   3735 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(325), Temp-ADC(1191)
+[  614.775942] L0   3735 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(-250), Temp-ADC(33000)
+[  614.776095] L0   3735 sec-battery sec-battery: sec_bat_get_battery_info:Vnow(4082mV),Inow(360mA),SOC(73%),Tbat(325)
+[  614.776254] L0   3735 sec-battery sec-battery: Connected,Vavg(4082mV),Vocv(4008mV),Tamb(-250),Iavg(360mA),Iadc(0)
+[  614.776408] L0   3735 sec-battery sec-battery: sec_bat_battery_cable_check: Battery Connected
+[  614.778302] L0   3735 max77803_get_vbus_state: VBUS is valid. CHGIN < CHGIN_OVLO
+[  614.779255] L0   3735 max77803_get_charger_state: CHG_DTLS : 0x 1
+[  614.779365] L0   3735 sec-battery sec-battery: sec_bat_time_management: Charging Time : 392 secs
+[  614.779503] L0   3735 sec-battery sec-battery: sec_bat_temperature: HT(600), HR(400), LT(-50), LR(0)
+[  614.779647] L0   3735 sec-battery sec-battery: sec_bat_check_fullcharged_condition: Not enough SOC (73%)
+[  614.779789] L0   3735 sec-battery sec-battery: sec_bat_fullcharged_check: Charging Mode : Normal
+[  614.779927] L0   3735 sec-battery sec-battery: sec_bat_monitor_work: Status(Charging), mode(Normal), Health(Good), Cable(4), siop_level(100)
+[  614.793580] L0   3735 sec-battery sec-battery: sec_bat_monitor_work: Call sec_bat_set_polling
+[  614.793730] L0   3735 sec-battery sec-battery: sec_bat_set_polling: Start
+[  614.793844] L0   3735 sec-battery sec-battery: sec_bat_set_polling: Status:Charging, Sleep:No, Charging:Yes, Short Poll:Yes
+[  614.794008] L0   3735 sec-battery sec-battery: sec_bat_set_polling: Polling time 10/30 sec.
+[  614.794147] L0   3735 sec-battery sec-battery: sec_bat_set_polling: End
+[  614.794257] L0   3735 sec-battery sec-battery: sec_bat_monitor_work: End
+[  615.393662] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  616.043636] L0      5 [SSP]: debug_work_func(1) - Sensor state: 0x1fff, RC: 0, MS: 0
+[  616.393663] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  617.393661] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  618.393663] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  619.393661] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  619.775259] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  619.925032] L0   5932 mif: misc_release: umts_boot0 (opened 0)
+[  619.931029] L0   5932 mif: usb_init_communication: 5932:rild
+[  619.931124] L0   5932 mif: misc_open: umts_boot0 (opened 1)
+[  620.393661] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  620.781492] L0   2680 mif: cbd: main: Modem type = 1
+[  620.785453] L0   2680 mif: cbd: main: Boot link = 5
+[  620.790219] L0   2680 mif: cbd: main: Main link = 5
+[  620.796068] L0   2680 mif: usb_init_communication: 2680:cbd
+[  620.796161] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  620.803629] L0   2680 store_ehci_power: EHCI turns off
+[  620.803733] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  620.803848] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  620.803962] L0   2680 usb usb1: USB disconnect, device number 1
+[  620.804060] L0   2680 usb 1-2: USB disconnect, device number 2
+[  620.804152] L0   2680 usb 1-2: unregistering device
+[  620.804235] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  620.804687] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  620.804841] L0   2680 mif: usb_rx_complete: urb error status = -108
+[  620.811304] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  620.814629] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  620.868496] L0   2680 usb usb1: unregistering device
+[  620.868603] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  620.868985] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5d44700 ep1in-intr
+[  620.870989] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  620.884292] L0   2680 s5p-ehci s5p-ehci: stop
+[  620.885335] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  620.885680] L0   2680 s5p-ehci s5p-ehci: irq normal 3267 err 340 reclaim 833 (lost 0)
+[  620.885803] L0   2680 s5p-ehci s5p-ehci: complete 3866 unlink 86
+[  620.885910] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  620.886102] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  620.937174] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  620.937298] L0   2680 mif: xmm6262_on: 
+[  621.144080] L0   2680 store_ehci_power: EHCI turns on
+[  621.144237] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  621.144668] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  621.144769] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  621.144935] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  621.145200] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  621.145456] L0   2680 s5p-ehci s5p-ehci: park 0
+[  621.145532] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  621.145676] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  621.145798] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  621.153185] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  621.153731] L0   2680 usb usb1: default language 0x0409
+[  621.153862] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  621.153955] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  621.154074] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  621.154196] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  621.154293] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  621.154407] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  621.162493] L0   2680 usb usb1: usb_probe_device
+[  621.162593] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  621.162760] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  621.164859] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  621.164956] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  621.165063] L0   2680 hub 1-0:1.0: USB hub found
+[  621.165176] L0   2680 hub 1-0:1.0: 3 ports detected
+[  621.165260] L0   2680 hub 1-0:1.0: standalone hub
+[  621.165339] L0   2680 hub 1-0:1.0: individual port power switching
+[  621.165437] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  621.165546] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  621.165666] L0   2680 hub 1-0:1.0: local power source is good
+[  621.165764] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  621.167544] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  621.178298] L0   2680 mif: link_pm_ioctl: 6f33
+[  621.178442] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  621.263722] L0   5062 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  621.263888] L0   5062 hub 1-0:1.0: port 2: status 0501 change 0001
+[  621.364510] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  621.364691] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  621.393660] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  621.418705] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  621.418839] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  621.473682] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  621.528455] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  621.528589] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  621.607160] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  621.607307] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  621.607401] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  621.607517] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  621.620610] L0    479 usb 1-2: usb_probe_device
+[  621.620715] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  621.621403] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  621.624291] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  621.624400] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  621.624549] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  621.624666] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  621.631579] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  621.631707] L0    479 mif: if_usb_probe: successfully done
+[  621.634745] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  621.685557] L0   2680 mif: link_pm_ioctl: 6f33
+[  621.685733] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  622.393659] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  623.291924] L0   1419 [get_timestamp][irqdiff=10029783301] Event time diff is too large for 6 sensor
+[  623.295486] L0   2802 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  623.393661] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  624.393660] L0   5062 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  624.794567] L0      0 sec-battery sec-battery: sec_bat_alarm
+[  624.794752] L0      0 sec-battery sec-battery: sec_bat_alarm: Activated
+[  624.795035] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Start
+[  624.805111] L0      5 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  624.805210] L0      5 sec_bat_get_current_average
+[  624.806329] L0      5 sec-fuelgauge 18-0036: sec_fg_get_scaled_capacity: scaled capacity (73.3)
+[  624.807816] L0      5 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(325), Temp-ADC(1191)
+[  624.809095] L0      5 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(-250), Temp-ADC(33000)
+[  624.809248] L0      5 sec-battery sec-battery: sec_bat_get_battery_info:Vnow(4085mV),Inow(360mA),SOC(73%),Tbat(325)
+[  624.809407] L0      5 sec-battery sec-battery: Connected,Vavg(4085mV),Vocv(4008mV),Tamb(-250),Iavg(360mA),Iadc(0)
+[  624.809563] L0      5 sec-battery sec-battery: sec_bat_battery_cable_check: Battery Connected
+[  624.811374] L0      5 max77803_get_vbus_state: VBUS is valid. CHGIN < CHGIN_OVLO
+[  624.812325] L0      5 max77803_get_charger_state: CHG_DTLS : 0x 1
+[  624.812434] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Status(Charging), mode(Normal), Health(Good), Cable(4), siop_level(100)
+[  624.846406] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Call sec_bat_set_polling
+[  624.846560] L0      5 sec-battery sec-battery: sec_bat_set_polling: Start
+[  624.846676] L0      5 sec-battery sec-battery: sec_bat_set_polling: Status:Charging, Sleep:No, Charging:Yes, Short Poll:Yes
+[  624.846841] L0      5 sec-battery sec-battery: sec_bat_set_polling: Polling time 20/30 sec.
+[  624.846983] L0      5 sec-battery sec-battery: sec_bat_set_polling: End
+[  624.847094] L0      5 sec-battery sec-battery: sec_bat_monitor_work: End
+[  625.393659] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  626.393668] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  626.888778] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  626.954499] L0      5 cpu1: SWRESET
+[  626.955017] L1      0 CPU1: Booted secondary processor
+[  626.957344] L0      5 cpu2: SWRESET
+[  626.957849] L2      0 CPU2: Booted secondary processor
+[  626.965867] L0      5 cpu3: SWRESET
+[  626.966370] L3      0 CPU3: Booted secondary processor
+[  627.043206] L0      5 [SSP]: debug_work_func(1) - Sensor state: 0x1fff, RC: 0, MS: 0
+[  627.393316] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  627.806870] L1   6075 IRQ153 no longer affine to CPU1
+[  627.809838] L2      5 CPU1: shutdown
+[  627.813566] L2   6078 IRQ154 no longer affine to CPU2
+[  627.816795] L0      5 CPU2: shutdown
+[  627.821235] L3   6081 IRQ155 no longer affine to CPU3
+[  627.824562] L0      5 CPU3: shutdown
+[  627.903971] L0   2680 mif: cbd: main: Modem type = 1
+[  627.907766] L0   2680 mif: cbd: main: Boot link = 5
+[  627.913638] L0   2680 mif: cbd: main: Main link = 5
+[  627.917792] L0   2680 mif: usb_init_communication: 2680:cbd
+[  627.917885] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  627.926595] L0   2680 store_ehci_power: EHCI turns off
+[  627.926702] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  627.926809] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  627.926923] L0   2680 usb usb1: USB disconnect, device number 1
+[  627.927022] L0   2680 usb 1-2: USB disconnect, device number 2
+[  627.927115] L0   2680 usb 1-2: unregistering device
+[  627.927198] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  627.927648] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  627.927835] L0      0 mif: usb_rx_complete: urb error status = -108
+[  627.935603] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  627.937536] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  627.988239] L0   2680 usb usb1: unregistering device
+[  627.988347] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  627.988719] L0   2680 s5p-ehci s5p-ehci: shutdown urb ddd7d480 ep1in-intr
+[  627.991624] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  628.004523] L0   2680 s5p-ehci s5p-ehci: stop
+[  628.004814] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  628.005158] L0   2680 s5p-ehci s5p-ehci: irq normal 3304 err 344 reclaim 844 (lost 0)
+[  628.005280] L0   2680 s5p-ehci s5p-ehci: complete 3911 unlink 87
+[  628.005388] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  628.005553] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  628.056548] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  628.056672] L0   2680 mif: xmm6262_on: 
+[  628.264079] L0   2680 store_ehci_power: EHCI turns on
+[  628.264237] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  628.264668] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  628.264769] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  628.264934] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  628.265200] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  628.265455] L0   2680 s5p-ehci s5p-ehci: park 0
+[  628.265532] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  628.265676] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  628.265800] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  628.273185] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  628.273744] L0   2680 usb usb1: default language 0x0409
+[  628.273876] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  628.273969] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  628.274088] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  628.274211] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  628.274307] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  628.274421] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  628.282553] L0   2680 usb usb1: usb_probe_device
+[  628.282656] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  628.282822] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  628.284919] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  628.285013] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  628.285118] L0   2680 hub 1-0:1.0: USB hub found
+[  628.285231] L0   2680 hub 1-0:1.0: 3 ports detected
+[  628.285313] L0   2680 hub 1-0:1.0: standalone hub
+[  628.285393] L0   2680 hub 1-0:1.0: individual port power switching
+[  628.285490] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  628.285598] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  628.285725] L0   2680 hub 1-0:1.0: local power source is good
+[  628.285824] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  628.287562] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  628.298310] L0   2680 mif: link_pm_ioctl: 6f33
+[  628.298456] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  628.383719] L0   6074 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  628.383886] L0   6074 hub 1-0:1.0: port 2: status 0501 change 0001
+[  628.393243] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  628.483730] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  628.483910] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  628.538831] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  628.538966] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  628.593683] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  628.648707] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  628.648841] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  628.727249] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  628.727397] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  628.727491] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  628.727607] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  628.741074] L0    479 usb 1-2: usb_probe_device
+[  628.741183] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  628.741750] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  628.744010] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  628.744119] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  628.744268] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  628.744384] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  628.751761] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  628.751890] L0    479 mif: if_usb_probe: successfully done
+[  628.753921] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  628.805651] L0   2680 mif: link_pm_ioctl: 6f33
+[  628.805818] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  629.393661] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  629.945058] L0   2679 type=1320 audit(1789736144.174:481): 
+[  629.945270] L0   2679 type=1400 audit(1789736188.970:482): avc: denied { ioctl } for pid=5932 comm="rild" path="/dev/umts_boot0" dev="tmpfs" ino=3133 ioctlcmd=6f27 scontext=u:r:rild:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[  629.946350] L0   2679 type=1400 audit(1789736188.970:482): avc: denied { ioctl } for pid=5932 comm="rild" path="/dev/umts_boot0" dev="tmpfs" ino=3133 ioctlcmd=6f27 scontext=u:r:rild:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[  629.946734] L0   2679 type=1300 audit(1789736188.970:482): arch=40000028 syscall=54 per=800008 success=yes exit=3 a0=12 a1=6f27 a2=36ab226d a3=ab2ad7c4 items=0 ppid=1 ppcomm=init pid=5932 auid=4294967295 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4294967295 comm="rild" exe="/system/vendor/bin/hw/rild" subj=u:r:rild:s0 key=(null)
+[  629.947470] L0   2679 type=1300 audit(1789736188.970:482): arch=40000028 syscall=54 per=800008 success=yes exit=3 a0=12 a1=6f27 a2=36ab226d a3=ab2ad7c4 items=0 ppid=1 ppcomm=init pid=5932 auid=4294967295 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4294967295 comm="rild" exe="/system/vendor/bin/hw/rild" subj=u:r:rild:s0 key=(null)
+[  629.948828] L0   2679 type=1320 audit(1789736188.970:482): 
+[  630.393660] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  631.393668] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  632.393660] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  633.321713] L0   1419 [get_timestamp][irqdiff=10029790351] Event time diff is too large for 6 sensor
+[  633.325663] L0   2802 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  633.393662] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  634.010404] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  634.393663] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  634.847400] L0      0 sec-battery sec-battery: sec_bat_alarm
+[  634.847586] L0      0 sec-battery sec-battery: sec_bat_alarm: Activated
+[  634.847870] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Start
+[  634.858734] L0      5 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  634.858833] L0      5 sec_bat_get_current_average
+[  634.859956] L0      5 sec-fuelgauge 18-0036: sec_fg_get_scaled_capacity: scaled capacity (73.4)
+[  634.860377] L0      5 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(325), Temp-ADC(1191)
+[  634.861572] L0      5 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(-250), Temp-ADC(33000)
+[  634.861725] L0      5 sec-battery sec-battery: sec_bat_get_battery_info:Vnow(4085mV),Inow(360mA),SOC(73%),Tbat(325)
+[  634.861883] L0      5 sec-battery sec-battery: Connected,Vavg(4085mV),Vocv(4010mV),Tamb(-250),Iavg(360mA),Iadc(0)
+[  634.862037] L0      5 sec-battery sec-battery: sec_bat_battery_cable_check: Battery Connected
+[  634.863941] L0      5 max77803_get_vbus_state: VBUS is valid. CHGIN < CHGIN_OVLO
+[  634.864893] L0      5 max77803_get_charger_state: CHG_DTLS : 0x 1
+[  634.865003] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Status(Charging), mode(Normal), Health(Good), Cable(4), siop_level(100)
+[  634.877861] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Call sec_bat_set_polling
+[  634.878233] L0      5 sec-battery sec-battery: sec_bat_set_polling: Start
+[  634.878350] L0      5 sec-battery sec-battery: sec_bat_set_polling: Status:Charging, Sleep:No, Charging:Yes, Short Poll:Yes
+[  634.878516] L0      5 sec-battery sec-battery: sec_bat_set_polling: Polling time 30/30 sec.
+[  634.878656] L0      5 sec-battery sec-battery: sec_bat_set_polling: End
+[  634.878766] L0      5 sec-battery sec-battery: sec_bat_monitor_work: End
+[  635.016637] L0   2680 mif: cbd: main: Modem type = 1
+[  635.020597] L0   2680 mif: cbd: main: Boot link = 5
+[  635.026053] L0   2680 mif: cbd: main: Main link = 5
+[  635.030568] L0   2680 mif: usb_init_communication: 2680:cbd
+[  635.030662] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  635.039084] L0   2680 store_ehci_power: EHCI turns off
+[  635.039188] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  635.039303] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  635.039418] L0   2680 usb usb1: USB disconnect, device number 1
+[  635.039518] L0   2680 usb 1-2: USB disconnect, device number 2
+[  635.039610] L0   2680 usb 1-2: unregistering device
+[  635.039693] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  635.040148] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  635.040324] L0      0 mif: usb_rx_complete: urb error status = -108
+[  635.046953] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  635.050281] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  635.096907] L0   2680 usb usb1: unregistering device
+[  635.097014] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  635.097393] L0   2680 s5p-ehci s5p-ehci: shutdown urb ddd18480 ep1in-intr
+[  635.100299] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  635.117188] L0   2680 s5p-ehci s5p-ehci: stop
+[  635.117817] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  635.118389] L0   2680 s5p-ehci s5p-ehci: irq normal 3341 err 348 reclaim 854 (lost 0)
+[  635.118514] L0   2680 s5p-ehci s5p-ehci: complete 3956 unlink 88
+[  635.118621] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  635.118783] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  635.136053] L0   3735 cpu1: SWRESET
+[  635.136562] L1      0 CPU1: Booted secondary processor
+[  635.144392] L0   3735 cpu2: SWRESET
+[  635.144893] L2      0 CPU2: Booted secondary processor
+[  635.147220] L0   3735 cpu3: SWRESET
+[  635.147718] L3      0 CPU3: Booted secondary processor
+[  635.169183] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  635.169266] L0   2680 mif: xmm6262_on: 
+[  635.378632] L0   2680 store_ehci_power: EHCI turns on
+[  635.378766] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  635.379194] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  635.379296] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  635.379447] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  635.379717] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  635.379973] L0   2680 s5p-ehci s5p-ehci: park 0
+[  635.380051] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  635.380183] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  635.380307] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  635.388205] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  635.388771] L0   2680 usb usb1: default language 0x0409
+[  635.388907] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  635.389000] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  635.389120] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  635.389243] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  635.389341] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  635.389455] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  635.395623] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  635.397023] L0   2680 usb usb1: usb_probe_device
+[  635.397120] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  635.397299] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  635.399261] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  635.399359] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  635.399467] L0   2680 hub 1-0:1.0: USB hub found
+[  635.399586] L0   2680 hub 1-0:1.0: 3 ports detected
+[  635.399668] L0   2680 hub 1-0:1.0: standalone hub
+[  635.399747] L0   2680 hub 1-0:1.0: individual port power switching
+[  635.399845] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  635.399953] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  635.400074] L0   2680 hub 1-0:1.0: local power source is good
+[  635.400172] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  635.402056] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  635.448488] L0   2680 mif: link_pm_ioctl: 6f33
+[  635.448644] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  635.498419] L0   6074 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  635.498573] L0   6074 hub 1-0:1.0: port 2: status 0501 change 0001
+[  635.598301] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  635.598437] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  635.653303] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  635.653414] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  635.708209] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  635.763301] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  635.763411] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  635.806744] L1   6109 IRQ153 no longer affine to CPU1
+[  635.809662] L0   3735 CPU1: shutdown
+[  635.814222] L2   6112 IRQ154 no longer affine to CPU2
+[  635.817458] L0   3735 CPU2: shutdown
+[  635.822473] L3   6115 IRQ155 no longer affine to CPU3
+[  635.825898] L0   3735 CPU3: shutdown
+[  635.839894] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  635.840024] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  635.840117] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  635.840235] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  635.854535] L0    479 usb 1-2: usb_probe_device
+[  635.854665] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  635.855252] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  635.858542] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  635.858653] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  635.858802] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  635.858920] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  635.865327] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  635.865455] L0    479 mif: if_usb_probe: successfully done
+[  635.867422] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  635.955818] L0   2680 mif: link_pm_ioctl: 6f33
+[  635.955983] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  636.393661] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  637.393668] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  638.043278] L0   3735 [SSP]: debug_work_func(1) - Sensor state: 0x1fff, RC: 0, MS: 0
+[  638.393664] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  638.952948] L0   5932 mif: misc_release: umts_boot0 (opened 1)
+[  638.959370] L0   2679 type=1320 audit(1789736188.970:482): 
+[  638.959557] L0   2679 type=1400 audit(1789736197.985:483): avc: denied { read write } for pid=5932 comm="rild" name="umts_boot0" dev="tmpfs" ino=3133 scontext=u:r:rild:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[  638.960843] L0   5932 mif: usb_init_communication: 5932:rild
+[  638.960937] L0   5932 mif: misc_open: umts_boot0 (opened 2)
+[  638.966021] L0   2679 type=1400 audit(1789736197.985:483): avc: denied { read write } for pid=5932 comm="rild" name="umts_boot0" dev="tmpfs" ino=3133 scontext=u:r:rild:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[  638.966369] L0   2679 type=1400 audit(1789736197.985:483): avc: denied { open } for pid=5932 comm="rild" name="umts_boot0" dev="tmpfs" ino=3133 scontext=u:r:rild:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[  638.966994] L0   2679 type=1400 audit(1789736197.985:483): avc: denied { open } for pid=5932 comm="rild" name="umts_boot0" dev="tmpfs" ino=3133 scontext=u:r:rild:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[  638.967353] L0   2679 type=1300 audit(1789736197.985:483): arch=40000028 syscall=322 per=800008 success=yes exit=18 a0=ffffff9c a1=ab5425be a2=20002 a3=0 items=1 ppid=1 ppcomm=init pid=5932 auid=4294967295 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4294967295 comm="rild" exe="/system/vendor/bin/hw/rild" subj=u:r:rild:s0 key=(null)
+[  638.969139] L0   2679 type=1300 audit(1789736197.985:483): arch=40000028 syscall=322 per=800008 success=yes exit=18 a0=ffffff9c a1=ab5425be a2=20002 a3=0 items=1 ppid=1 ppcomm=init pid=5932 auid=4294967295 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4294967295 comm="rild" exe="/system/vendor/bin/hw/rild" subj=u:r:rild:s0 key=(null)
+[  638.969640] L0   2679 type=1307 audit(1789736197.985:483): cwd="/"
+[  638.970305] L0   2679 type=1307 audit(1789736197.985:483): cwd="/"
+[  638.970455] L0   2679 type=1302 audit(1789736197.985:483): item=0 name="/dev/umts_boot0" inode=3133 dev=00:0d mode=020660 ouid=1000 ogid=1001 rdev=0a:25 obj=u:object_r:device:s0
+[  638.971185] L0   2679 type=1302 audit(1789736197.985:483): item=0 name="/dev/umts_boot0" inode=3133 dev=00:0d mode=020660 ouid=1000 ogid=1001 rdev=0a:25 obj=u:object_r:device:s0
+[  638.971456] L0   2679 type=1320 audit(1789736197.985:483): 
+[  639.393659] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  640.393664] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  641.160383] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  641.393664] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  642.166613] L0   2680 mif: cbd: main: Modem type = 1
+[  642.170574] L0   2680 mif: cbd: main: Boot link = 5
+[  642.175340] L0   2680 mif: cbd: main: Main link = 5
+[  642.181189] L0   2680 mif: usb_init_communication: 2680:cbd
+[  642.181283] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  642.188594] L0   2680 store_ehci_power: EHCI turns off
+[  642.188702] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  642.188814] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  642.188931] L0   2680 usb usb1: USB disconnect, device number 1
+[  642.189034] L0   2680 usb 1-2: USB disconnect, device number 2
+[  642.189129] L0   2680 usb 1-2: unregistering device
+[  642.189213] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  642.189673] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  642.189830] L0   2680 mif: usb_rx_complete: urb error status = -108
+[  642.196428] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  642.199756] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  642.253502] L0   2680 usb usb1: unregistering device
+[  642.253615] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  642.254018] L0   2680 s5p-ehci s5p-ehci: shutdown urb de2a3e00 ep1in-intr
+[  642.256018] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  642.269437] L0   2680 s5p-ehci s5p-ehci: stop
+[  642.270326] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  642.270668] L0   2680 s5p-ehci s5p-ehci: irq normal 3377 err 352 reclaim 864 (lost 0)
+[  642.270797] L0   2680 s5p-ehci s5p-ehci: complete 4001 unlink 89
+[  642.270906] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  642.271070] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  642.322064] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  642.322194] L0   2680 mif: xmm6262_on: 
+[  642.393660] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  642.528726] L0   2680 store_ehci_power: EHCI turns on
+[  642.528886] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  642.529320] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  642.529421] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  642.529591] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  642.529864] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  642.530123] L0   2680 s5p-ehci s5p-ehci: park 0
+[  642.530203] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  642.530347] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  642.530470] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  642.538234] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  642.538784] L0   2680 usb usb1: default language 0x0409
+[  642.538917] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  642.539014] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  642.539140] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  642.539263] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  642.539364] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  642.539484] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  642.547616] L0   2680 usb usb1: usb_probe_device
+[  642.547715] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  642.547898] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  642.550020] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  642.550115] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  642.550223] L0   2680 hub 1-0:1.0: USB hub found
+[  642.550336] L0   2680 hub 1-0:1.0: 3 ports detected
+[  642.550423] L0   2680 hub 1-0:1.0: standalone hub
+[  642.550502] L0   2680 hub 1-0:1.0: individual port power switching
+[  642.550599] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  642.550713] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  642.550844] L0   2680 hub 1-0:1.0: local power source is good
+[  642.550942] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  642.552695] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  642.563312] L0   2680 mif: link_pm_ioctl: 6f33
+[  642.563458] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  642.648719] L0   6074 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  642.648889] L0   6074 hub 1-0:1.0: port 2: status 0501 change 0001
+[  642.748732] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  642.748916] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  642.803753] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  642.803886] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  642.858680] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  642.915359] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  642.915490] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  642.992123] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  642.992271] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  642.992364] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  642.992488] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  643.006202] L0    479 usb 1-2: usb_probe_device
+[  643.006330] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  643.006782] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  643.010515] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  643.010625] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  643.010777] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  643.010901] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  643.017322] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  643.017450] L0    479 mif: if_usb_probe: successfully done
+[  643.020479] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  643.070662] L0   2680 mif: link_pm_ioctl: 6f33
+[  643.070833] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  643.351485] L0   1419 [get_timestamp][irqdiff=10029780187] Event time diff is too large for 6 sensor
+[  643.355396] L0   2802 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  643.393663] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  644.393663] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  644.879078] L0      0 sec-battery sec-battery: sec_bat_alarm
+[  644.879269] L0      0 sec-battery sec-battery: sec_bat_alarm: Activated
+[  644.879558] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Start
+[  644.889643] L0      5 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  644.889744] L0      5 sec_bat_get_current_average
+[  644.890868] L0      5 sec-fuelgauge 18-0036: sec_fg_get_scaled_capacity: scaled capacity (73.4)
+[  644.893228] L0      5 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(325), Temp-ADC(1193)
+[  644.894426] L0      5 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(-250), Temp-ADC(33000)
+[  644.894580] L0      5 sec-battery sec-battery: sec_bat_get_battery_info:Vnow(4085mV),Inow(360mA),SOC(73%),Tbat(325)
+[  644.894739] L0      5 sec-battery sec-battery: Connected,Vavg(4085mV),Vocv(4010mV),Tamb(-250),Iavg(360mA),Iadc(0)
+[  644.894895] L0      5 sec-battery sec-battery: sec_bat_battery_cable_check: Battery Connected
+[  644.896706] L0      5 max77803_get_vbus_state: VBUS is valid. CHGIN < CHGIN_OVLO
+[  644.897658] L0      5 max77803_get_charger_state: CHG_DTLS : 0x 1
+[  644.897767] L0      5 sec-battery sec-battery: sec_bat_time_management: Charging Time : 422 secs
+[  644.897908] L0      5 sec-battery sec-battery: sec_bat_temperature: HT(600), HR(400), LT(-50), LR(0)
+[  644.898125] L0      5 sec-battery sec-battery: sec_bat_check_fullcharged_condition: Not enough SOC (73%)
+[  644.898270] L0      5 sec-battery sec-battery: sec_bat_fullcharged_check: Charging Mode : Normal
+[  644.898409] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Status(Charging), mode(Normal), Health(Good), Cable(4), siop_level(100)
+[  644.912364] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Call sec_bat_set_polling
+[  644.912516] L0      5 sec-battery sec-battery: sec_bat_set_polling: Start
+[  644.912631] L0      5 sec-battery sec-battery: sec_bat_set_polling: Status:Charging, Sleep:No, Charging:Yes, Short Poll:Yes
+[  644.912798] L0      5 sec-battery sec-battery: sec_bat_set_polling: Polling time 10/30 sec.
+[  644.913150] L0      5 sec-battery sec-battery: sec_bat_set_polling: End
+[  644.913267] L0      5 sec-battery sec-battery: sec_bat_monitor_work: End
+[  645.393661] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  646.393278] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  647.393661] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  648.274553] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  648.393663] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  649.043282] L0   1620 [SSP]: debug_work_func(1) - Sensor state: 0x1fff, RC: 0, MS: 0
+[  649.280655] L0   2680 mif: cbd: main: Modem type = 1
+[  649.284757] L0   2680 mif: cbd: main: Boot link = 5
+[  649.290048] L0   2680 mif: cbd: main: Main link = 5
+[  649.294731] L0   2680 mif: usb_init_communication: 2680:cbd
+[  649.294825] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  649.303246] L0   2680 store_ehci_power: EHCI turns off
+[  649.303348] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  649.303464] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  649.303580] L0   2680 usb usb1: USB disconnect, device number 1
+[  649.303678] L0   2680 usb 1-2: USB disconnect, device number 2
+[  649.303771] L0   2680 usb 1-2: unregistering device
+[  649.303854] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  649.304314] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  649.304498] L0      0 mif: usb_rx_complete: urb error status = -108
+[  649.312334] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  649.314548] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  649.368381] L0   2680 usb usb1: unregistering device
+[  649.368492] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  649.368874] L0   2680 s5p-ehci s5p-ehci: shutdown urb de2a3e00 ep1in-intr
+[  649.370860] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  649.384499] L0   2680 s5p-ehci s5p-ehci: stop
+[  649.385488] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  649.385829] L0   2680 s5p-ehci s5p-ehci: irq normal 3414 err 356 reclaim 874 (lost 0)
+[  649.385953] L0   2680 s5p-ehci s5p-ehci: complete 4046 unlink 90
+[  649.386061] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  649.386221] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  649.393267] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  649.437221] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  649.437348] L0   2680 mif: xmm6262_on: 
+[  649.643738] L0   2680 store_ehci_power: EHCI turns on
+[  649.643896] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  649.644328] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  649.644429] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  649.644593] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  649.644861] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  649.645117] L0   2680 s5p-ehci s5p-ehci: park 0
+[  649.645194] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  649.645338] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  649.645461] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  649.653185] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  649.653733] L0   2680 usb usb1: default language 0x0409
+[  649.653866] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  649.653959] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  649.654079] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  649.654203] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  649.654300] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  649.654415] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  649.662644] L0   2680 usb usb1: usb_probe_device
+[  649.662743] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  649.662915] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  649.665025] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  649.665121] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  649.665226] L0   2680 hub 1-0:1.0: USB hub found
+[  649.665337] L0   2680 hub 1-0:1.0: 3 ports detected
+[  649.665419] L0   2680 hub 1-0:1.0: standalone hub
+[  649.665497] L0   2680 hub 1-0:1.0: individual port power switching
+[  649.665595] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  649.665704] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  649.665827] L0   2680 hub 1-0:1.0: local power source is good
+[  649.665926] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  649.667669] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  649.678308] L0   2680 mif: link_pm_ioctl: 6f33
+[  649.678456] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  649.763723] L0   6074 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  649.763891] L0   6074 hub 1-0:1.0: port 2: status 0501 change 0001
+[  649.863731] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  649.863909] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  649.918745] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  649.918878] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  649.973686] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  650.028371] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  650.028502] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  650.107167] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  650.107324] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  650.107417] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  650.107534] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  650.120641] L0    479 usb 1-2: usb_probe_device
+[  650.120749] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  650.121284] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  650.124623] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  650.124734] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  650.124884] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  650.125002] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  650.132123] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  650.132252] L0    479 mif: if_usb_probe: successfully done
+[  650.134352] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  650.185531] L0   2680 mif: link_pm_ioctl: 6f33
+[  650.185701] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  650.393663] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  651.393663] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  652.393661] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  652.723706] L0      5 $$$$$$$$$ mem1_1 BYTE[129892]CYCLE[9992684] Ratio[(byte/cycle * 16) *100] : 0
+[  652.723870] L0      5 $$$$$$$$$ mem1_0 BYTE[805884]CYCLE[9992684] Ratio[(byte/cycle * 16) *100] : 0
+[  652.724016] L0      5 $$$$$$$$$ mem0_1 BYTE[135768]CYCLE[9992684] Ratio[(byte/cycle * 16) *100] : 0
+[  652.724163] L0      5 $$$$$$$$$ mem0_0 BYTE[690720]CYCLE[9992684] Ratio[(byte/cycle * 16) *100] : 0
+[  653.381254] L0   1419 [get_timestamp][irqdiff=10029768286] Event time diff is too large for 6 sensor
+[  653.384802] L0   2802 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  653.393233] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  654.393673] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  654.913361] L0      0 sec-battery sec-battery: sec_bat_alarm
+[  654.913547] L0      0 sec-battery sec-battery: sec_bat_alarm: Activated
+[  654.913834] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Start
+[  654.925090] L0      5 max77803_get_input_current: CHG_CNFG_09(0x12)
+[  654.925190] L0      5 sec_bat_get_current_average
+[  654.926311] L0      5 sec-fuelgauge 18-0036: sec_fg_get_scaled_capacity: scaled capacity (73.4)
+[  654.926730] L0      5 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(325), Temp-ADC(1193)
+[  654.927925] L0      5 sec-battery sec-battery: sec_bat_get_temperature_by_adc: Temp(-250), Temp-ADC(33000)
+[  654.928163] L0      5 sec-battery sec-battery: sec_bat_get_battery_info:Vnow(4086mV),Inow(360mA),SOC(73%),Tbat(325)
+[  654.928325] L0      5 sec-battery sec-battery: Connected,Vavg(4086mV),Vocv(4010mV),Tamb(-250),Iavg(360mA),Iadc(0)
+[  654.928481] L0      5 sec-battery sec-battery: sec_bat_battery_cable_check: Battery Connected
+[  654.930294] L0      5 max77803_get_vbus_state: VBUS is valid. CHGIN < CHGIN_OVLO
+[  654.931245] L0      5 max77803_get_charger_state: CHG_DTLS : 0x 1
+[  654.931354] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Status(Charging), mode(Normal), Health(Good), Cable(4), siop_level(100)
+[  654.964974] L0      5 sec-battery sec-battery: sec_bat_monitor_work: Call sec_bat_set_polling
+[  654.965128] L0      5 sec-battery sec-battery: sec_bat_set_polling: Start
+[  654.965244] L0      5 sec-battery sec-battery: sec_bat_set_polling: Status:Charging, Sleep:No, Charging:Yes, Short Poll:Yes
+[  654.965411] L0      5 sec-battery sec-battery: sec_bat_set_polling: Polling time 20/30 sec.
+[  654.965558] L0      5 sec-battery sec-battery: sec_bat_set_polling: End
+[  654.965669] L0      5 sec-battery sec-battery: sec_bat_monitor_work: End
+[  655.389514] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  655.394419] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  656.393618] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  656.396051] L0   2680 mif: cbd: main: Modem type = 1
+[  656.400096] L0   2680 mif: cbd: main: Boot link = 5
+[  656.404888] L0   2680 mif: cbd: main: Main link = 5
+[  656.410874] L0   2680 mif: usb_init_communication: 2680:cbd
+[  656.410968] L0   2680 mif: misc_open: umts_boot0 (opened 2)
+[  656.418245] L0   2680 store_ehci_power: EHCI turns off
+[  656.418349] L0   2680 s5p-ehci s5p-ehci: remove, state 1
+[  656.418465] L0   2680 s5p-ehci s5p-ehci: roothub graceful disconnect
+[  656.418581] L0   2680 usb usb1: USB disconnect, device number 1
+[  656.418681] L0   2680 usb 1-2: USB disconnect, device number 2
+[  656.418773] L0   2680 usb 1-2: unregistering device
+[  656.418857] L0   2680 usb 1-2: unregistering interface 1-2:1.0
+[  656.419317] L0   2680 s5p-ehci s5p-ehci: shutdown urb e5895e00 ep3in-bulk
+[  656.419490] L0      0 mif: usb_rx_complete: urb error status = -108
+[  656.427765] L0   2680 mif: if_usb_disconnect: unbind(xmm626x_acm_unbind)
+[  656.429858] L0   2680 usb 1-2: usb_disable_device nuking all URBs
+[  656.483992] L0   2680 usb usb1: unregistering device
+[  656.484103] L0   2680 usb usb1: unregistering interface 1-0:1.0
+[  656.484512] L0   2680 s5p-ehci s5p-ehci: shutdown urb de2a3e80 ep1in-intr
+[  656.486528] L0   2680 usb usb1: usb_disable_device nuking all URBs
+[  656.499355] L0   2680 s5p-ehci s5p-ehci: stop
+[  656.500477] L0   2680 s5p-ehci s5p-ehci: reset command 0010006 (park)=0 ithresh=1 period=512 Reset HALT
+[  656.500822] L0   2680 s5p-ehci s5p-ehci: irq normal 3450 err 360 reclaim 884 (lost 0)
+[  656.500944] L0   2680 s5p-ehci s5p-ehci: complete 4091 unlink 91
+[  656.501052] L0   2680 s5p-ehci s5p-ehci: ehci_stop completed status 1000 Halt
+[  656.501211] L0   2680 s5p-ehci s5p-ehci: USB bus 1 deregistered
+[  656.552204] L0   2680 mif: misc_ioctl: umts_boot0: IOCTL_MODEM_ON
+[  656.552331] L0   2680 mif: xmm6262_on: 
+[  656.759089] L0   2680 store_ehci_power: EHCI turns on
+[  656.759246] L0   2680 mif: set_hsic_lpa_states: 373: called(s5p_usb_phy_init+0x1d4/0x43c): 
+[  656.759676] L0   2680 s5p-ehci s5p-ehci: s5p_ehci_phy_init : 0x0
+[  656.759777] L0   2680 s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[  656.759945] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  656.760213] L0   2680 s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[  656.760468] L0   2680 s5p-ehci s5p-ehci: park 0
+[  656.760544] L0   2680 s5p-ehci s5p-ehci: support lpm
+[  656.760688] L0   2680 s5p-ehci s5p-ehci: irq 103, io mem 0x12110000
+[  656.760811] L0   2680 s5p-ehci s5p-ehci: init command 0010005 (park)=0 ithresh=1 period=512 RUN
+[  656.768188] L0   2680 s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[  656.768745] L0   2680 usb usb1: default language 0x0409
+[  656.768879] L0   2680 usb usb1: udev 1, busnum 1, minor = 0
+[  656.768973] L0   2680 usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  656.769093] L0   2680 usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  656.769216] L0   2680 usb usb1: Product: S5P EHCI Host Controller
+[  656.769314] L0   2680 usb usb1: Manufacturer: Linux 3.4.113-gaa57b6327ea ehci_hcd
+[  656.769428] L0   2680 usb usb1: SerialNumber: s5p-ehci
+[  656.777588] L0   2680 usb usb1: usb_probe_device
+[  656.777688] L0   2680 usb usb1: configuration #1 chosen from 1 choice
+[  656.777872] L0   2680 usb usb1: adding 1-0:1.0 (config #1, interface 0)
+[  656.779959] L0   2680 hub 1-0:1.0: usb_probe_interface
+[  656.780055] L0   2680 hub 1-0:1.0: usb_probe_interface - got id
+[  656.780162] L0   2680 hub 1-0:1.0: USB hub found
+[  656.780276] L0   2680 hub 1-0:1.0: 3 ports detected
+[  656.780359] L0   2680 hub 1-0:1.0: standalone hub
+[  656.780438] L0   2680 hub 1-0:1.0: individual port power switching
+[  656.780536] L0   2680 hub 1-0:1.0: individual port over-current protection
+[  656.780645] L0   2680 hub 1-0:1.0: power on to power good time: 20ms
+[  656.780766] L0   2680 hub 1-0:1.0: local power source is good
+[  656.780865] L0   2680 hub 1-0:1.0: enabling power on all ports
+[  656.782626] L0   2680 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '001'
+[  656.793312] L0   2680 mif: link_pm_ioctl: 6f33
+[  656.793457] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [0]
+[  656.878724] L0   6074 s5p-ehci s5p-ehci: GetStatus port:2 status 001803 0  ACK POWER sig=j CSC CONNECT
+[  656.878891] L0   6074 hub 1-0:1.0: port 2: status 0501 change 0001
+[  656.978690] L0    479 hub 1-0:1.0: state 7 ports 3 chg 0004 evt 0000
+[  656.978869] L0    479 hub 1-0:1.0: port 2, status 0501, change 0000, 480 Mb/s
+[  657.033720] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  657.033852] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  657.088679] L0    479 usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[  657.143345] L0    479 s5p-ehci s5p-ehci: port 2 high speed
+[  657.143477] L0    479 s5p-ehci s5p-ehci: GetStatus port:2 status 001005 0  ACK POWER sig=se0 PE CONNECT
+[  657.220334] L0    479 usb 1-2: skipped 3 descriptors after configuration
+[  657.220478] L0    479 usb 1-2: udev 2, busnum 1, minor = 1
+[  657.220572] L0    479 usb 1-2: New USB device found, idVendor=8087, idProduct=0716
+[  657.220689] L0    479 usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  657.234561] L0    479 usb 1-2: usb_probe_device
+[  657.234746] L0    479 usb 1-2: configuration #1 chosen from 1 choice
+[  657.235421] L0    479 usb 1-2: adding 1-2:1.0 (config #1, interface 0)
+[  657.237486] L0    479 cdc_modem 1-2:1.0: usb_probe_interface
+[  657.237591] L0    479 cdc_modem 1-2:1.0: usb_probe_interface - got id
+[  657.237739] L0    479 mif: if_usb_probe: bind(xmm626x_acm_bind), pipe(0), format(4)
+[  657.237856] L0    479 mif: xmm626x_acm_bind: cdc-data desc - XMM6360 bootrom
+[  657.244421] L0    479 mif: usb_defered_tx_purge_anchor: Previous TX packet purge
+[  657.244548] L0    479 mif: if_usb_probe: successfully done
+[  657.247810] L0    479 /media/salih/28e401a5-a63b-43fb-97b0-08ae09e11b86/android/lineage-16.0/kernel/samsung/exynos5410/drivers/usb/core/inode.c: creating file '002'
+[  657.300409] L0   2680 mif: link_pm_ioctl: 6f33
+[  657.300585] L0   2680 mif: cbd: hsic_xmit_boot: check [BOOTROM] link connected = [1]
+[  657.393660] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  657.984353] L0   5932 mif: misc_release: umts_boot0 (opened 1)
+[  657.989348] L0   5932 mif: usb_init_communication: 5932:rild
+[  657.989442] L0   5932 mif: misc_open: umts_boot0 (opened 2)
+[  658.393665] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  659.393670] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  660.043703] L0   1620 [SSP]: debug_work_func(1) - Sensor state: 0x1fff, RC: 0, MS: 0
+[  660.343423] L0   1620 cpu1: SWRESET
+[  660.343945] L1      0 CPU1: Booted secondary processor
+[  660.346695] L0   1620 cpu2: SWRESET
+[  660.347200] L2      0 CPU2: Booted secondary processor
+[  660.351047] L0   1620 cpu3: SWRESET
+[  660.351559] L3      0 CPU3: Booted secondary processor
+[  660.393185] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  661.207215] L1   6178 IRQ153 no longer affine to CPU1
+[  661.210210] L2   1620 CPU1: shutdown
+[  661.214408] L2   6181 IRQ154 no longer affine to CPU2
+[  661.217279] L0   1620 CPU2: shutdown
+[  661.221615] L3   6184 IRQ155 no longer affine to CPU3
+[  661.224603] L0   1620 CPU3: shutdown
+[  661.393662] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  661.641186] L0   1620 cpu1: SWRESET
+[  661.641715] L1      0 CPU1: Booted secondary processor
+[  661.644433] L1   1620 cpu2: SWRESET
+[  661.644948] L2      0 CPU2: Booted secondary processor
+[  661.657583] L1   1620 cpu3: SWRESET
+[  661.658099] L3      0 CPU3: Booted secondary processor
+[  662.393331] L0   6074 thermal_sys: [TMU] ACTIVE: Under active trip temp=42000
+[  662.504258] L0   2680 mif: misc_release: umts_boot0 (opened 1)
+[  662.510434] L0   2679 type=1320 audit(1789736197.985:483): 
+[  662.510647] L0   2679 type=1400 audit(1789736221.530:484): avc: denied { append } for pid=2680 comm="cbd" name="wake_unlock" dev="sysfs" ino=71 scontext=u:r:init:s0 tcontext=u:object_r:sysfs_wake_lock:s0 tclass=file permissive=1
+[  662.511294] L0   2679 type=1400 audit(1789736221.530:484): avc: denied { append } for pid=2680 comm="cbd" name="wake_unlock" dev="sysfs" ino=71 scontext=u:r:init:s0 tcontext=u:object_r:sysfs_wake_lock:s0 tclass=file permissive=1
+[  662.511646] L0   2679 type=1400 audit(1789736221.530:484): avc: denied { open } for pid=2680 comm="cbd" name="wake_unlock" dev="sysfs" ino=71 scontext=u:r:init:s0 tcontext=u:object_r:sysfs_wake_lock:s0 tclass=file permissive=1
+[  662.512212] L0   2679 type=1400 audit(1789736221.530:484): avc: denied { open } for pid=2680 comm="cbd" name="wake_unlock" dev="sysfs" ino=71 scontext=u:r:init:s0 tcontext=u:object_r:sysfs_wake_lock:s0 tclass=file permissive=1
+[  662.512570] L0   2679 type=1300 audit(1789736221.530:484): arch=40000028 syscall=322 per=800000 success=yes exit=7 a0=ffffff9c a1=4770b a2=20441 a3=1b4 items=1 ppid=1 ppcomm=init pid=2680 auid=4294967295 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4294967295 comm="cbd" exe="/system/vendor/bin/cbd" subj=u:r:init:s0 key=(null)
+[  662.515032] L1   2679 type=1300 audit(1789736221.530:484): arch=40000028 syscall=322 per=800000 success=yes exit=7 a0=ffffff9c a1=4770b a2=20441 a3=1b4 items=1 ppid=1 ppcomm=init pid=2680 auid=4294967295 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4294967295 comm="cbd" exe="/system/vendor/bin/cbd" subj=u:r:init:s0 key=(null)
+[  662.515572] L1   2679 type=1307 audit(1789736221.530:484): cwd="/"
+[  662.516496] L1   2679 type=1307 audit(1789736221.530:484): cwd="/"
+[  662.516665] L1   2679 type=1302 audit(1789736221.530:484): item=0 name="/sys/power/wake_unlock" inode=71 dev=00:0e mode=0100660 ouid=1001 ogid=3010 rdev=00:00 obj=u:object_r:sysfs_wake_lock:s0
+[  662.517555] L1   2679 type=1302 audit(1789736221.530:484): item=0 name="/sys/power/wake_unlock" inode=71 dev=00:0e mode=0100660 ouid=1001 ogid=3010 rdev=00:00 obj=u:object_r:sysfs_wake_lock:s0
+[  662.517855] L1   2679 type=1320 audit(1789736221.530:484): 
+[  662.520628] L1   6201 IRQ153 no longer affine to CPU1
+[  662.523660] L3   1620 CPU1: shutdown
+[  662.528407] L2   6204 IRQ154 no longer affine to CPU2
+[  662.531762] L0   1620 CPU2: shutdown
+[  662.540892] L3   6207 IRQ155 no longer affine to CPU3
+[  662.544804] L0   1620 CPU3: shutdown
+[  662.966161] L0   1620 cpu1: SWRESET
+[  662.966684] L1      0 CPU1: Booted secondary processor
+[  662.969725] L0   1620 cpu2: SWRESET
+[  662.970226] L2      0 CPU2: Booted secondary processor
+[  662.972402] L0   1620 cpu3: SWRESET
+[  662.972903] L3      0 CPU3: Booted secondary processor

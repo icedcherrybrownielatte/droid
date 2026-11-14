@@ -1,0 +1,854 @@
+XNUTRACE32d1a9ad
+=== XNU BOOT 00000001
+kext submap [0x80000000 - 0xfffeffff], kernel text [0x80001000 - 0x80542000]
+zone leak detection disabled
+Scheduler: Default of traditional
+standard timeslicing quantum is 10000 us
+standard background quantum is 2500 us
+mig_table_max_displ = 74
+rtclock_bus_configure: Configuring RTCLOCK...
+[RTCLOCK] Frequency =      6.750000MHz, cvtt2n = 00000094.25ED097B, cvtn2t = 00000000.01BA5E35
+Initializing serial KDP
+Kernel boot args: '-v keepsyms=1 kprintf=1 debug=0x14e'
+iBoot version: uniLoader-serrano
+PE_init_iokit: starting IOKit now!
+[31mC[32mO[33mL[34mO[35mR[0m video console at 0xc0001000 (200x300x32)
+[31mC[32mO[33mL[34mO[35mR[0m video console at 0xc0001000 (200x300x32)
+IOS7LAB commpage cpus: configured=1 active=1 physical=1 logical=1
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+	The Regents of the University of California. All rights reserved.
+
+MAC Framework successfully initialized
+using 4608 buffer headers and 4352 cluster IO buffer headers
+IOResources: not registry member at registerService()
+IOResources: not registry member at registerService()
+IOResources: not registry member at registerService()
+waitForSystemMapper
+Backtrace 0x8041f3cf 0x8041f389 0x8037e4f5 0x805087c9 0x800376d9 0x800cb360 0xd1b4bd50
+         can't perform kext scan: no kext summaryDSM S4MINI,1 cnt=2
+SC> AppleARMPE <- S4MINI,1
+AppleARMPE::start: Welcome to the NeXT generation.
+J1 disp: managed=230400 free=218145 guard=57619
+Leo primary BGRA CPU surface id=1 540x960 row=2160 bytes=2073600; physical outputRGB565 separate
+J1 disp: AppleCLCD published 540x960 row2160 budget=16777216
+Leo storage: phase=1 raw-open=0 read0=0 reads=0 locator=0 io=00000000
+Leo storage: card-sectors=0 file-validated=0 file-bytes=0 media-created=0 registered=0
+Leo root: selected=0 BSD= major=0 minor=0 COW=0 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=0 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=0 charge-pages=0 hits=0 misses=0 base-reads=0
+M8930 SDC1: POWER=00000001 CLOCK=00009500 STATUS=000c0040
+M8930 SDC1: CMD13 rca=2 status=00000900 state=4
+M8930 SDC1: mode 0 -> 0 sig=55aa stat=00000000 clk=00009500 sw=0000
+M8930 SDC1: read LBA0 r=0 sig=55aa p1type=0c
+IOS7J1 TOUCH service-ready stub physical480x800 queue4096; no-input
+IOS7LEO TOUCH published actual Type2A service
+SC< AppleARMPE ok=1
+mbinit: done [56 MB total pool size, (37/18) split]
+Pthread support ABORTS when sync kernel primitives misused
+J1BSD init: calling bsd_autoconf
+bsd_autoconf: calling kminit
+J1BSD autoconf: kminit begin
+J1BSD autoconf: kminit done
+J1BSD autoconf: pseudo_inits begin
+J1BSD autoconf: pseudo_inits done
+J1BSD autoconf: IOKitBSDInit begin
+J1BSD init: bsd_autoconf returned
+J1 stage 740
+J1 stage 741
+J1 stage 742
+J1 stage 743
+J1 stage 744
+J1 stage 745
+J1 stage 746
+J1 stage 747
+J1 stage 748
+J1 stage 751
+J1 stage 752
+Waiting on <dict ID="0"><key>IOProviderClass</key><string ID="1">IOMedia</string><key>Content</key><string ID="2">Apple_HFS</string></dict>
+DSM IOResources cnt=0
+PK jobs=10/2 cfg=10 wt=10 dbg=0 0 0 0
+DSM IOPMrootDomain cnt=0
+DSM cpu cnt=2
+SC> AppleARMCPU <- cpu
+AppleARMCPU::start: Starting ARM CPU IOKit provider...
+AppleARMCPU::initCPU(0xc15bbb00): we are here to serve!
+AppleARMCPU::start: registered processor with Mach subsystem.
+SC< AppleARMCPU ok=1
+DSM cpus cnt=2
+DSM arm-io cnt=2
+SC> AppleARMIO <- arm-io
+AppleARMIO::start: Publishing device tree entries to IOService plane...
+SC< AppleARMIO ok=1
+DSM defaults cnt=2
+DSM AppleARMPE cnt=0
+DSM IOCoreSurfaceRoot cnt=0
+DSM IOS7J1FB cnt=0
+DSM IOS7M8930SDMMC cnt=1
+SC> IOBlockStorageDriver <- IOS7M8930SDMMC
+SC< IOBlockStorageDriver ok=1
+DSM IOS7J1Touch cnt=0
+DSM AppleARMGrandCentral cnt=0
+DSM AppleARMCPU cnt=0
+DSM AppleARMIO cnt=0
+DSM Samsung MSM8930 eMMC Media cnt=3
+M8930SD rd blk=0 n=1 res=0 #1
+SC> IOMediaBSDClient <- Samsung MSM8930 eMMC Media
+SC< IOMediaBSDClient ok=1
+SC> IOS7LeoHFSFile <- Samsung MSM8930 eMMC Media
+M8930SD rd blk=5911 n=1 res=0 #1025
+M8930SD rd blk=6423 n=1 res=0 #2049
+M8930SD rd blk=6935 n=1 res=0 #3073
+M8930SD rd blk=7447 n=1 res=0 #4097
+M8930SD rd blk=7959 n=1 res=0 #5121
+M8930SD rd blk=8471 n=1 res=0 #6145
+Leo COW budget: managed=230400 free=217122 reserve=3 target=18 cap=28559 pages
+Leo COW total charge=28800 pages fixed/work=21
+Leo file: validated IOS7/ROOTFS.HFS bytes=1741471744 extents=1 HFS=4858 version=5 BASE_SD_RO=1 COW_RW=1 VOLATILE=1
+Leo storage: phase=4 raw-open=1 read0=1 reads=6650 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=0 registered=0
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=0 misses=0 base-reads=0
+Leo root-file registerService begin validated=1 COWready=1
+Leo root-file registerService returned (matching requested; not media/mount proof)
+SC< IOS7LeoHFSFile ok=1
+SC> IOFDiskPartitionScheme <- Samsung MSM8930 eMMC Media
+SC< IOFDiskPartitionScheme ok=1
+DSM IOBlockStorageDriver cnt=0
+DSM IOMediaBSDClient cnt=0
+DSM IOS7LeoHFSFile cnt=2
+SC> IOS7LeoHFSDriver <- IOS7LeoHFSFile
+Leo HFSDriver start enter provider=0xc15cce00
+Leo J01 job allocation returned role=1 target=0xc15d1d00 class=- value=1 RETURN=803fb0af
+Leo storage: phase=6 raw-open=1 read0=1 reads=6650 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=0 misses=0 base-reads=0
+Leo HFSDriver start returned ok=1
+SC< IOS7LeoHFSDriver ok=1
+DSM Untitled 1 cnt=3
+SC> IOMediaBSDClient <- Untitled 1
+SC< IOMediaBSDClient ok=1
+Leo J02 matching job dispatch role=1 target=0xc15d1d00 class=- RETURN=804001af
+Leo J03 matching entry role=1 target=0xc15d1d00 class=- RETURN=80400471
+DSM iOS lab Leo SD HFS file Media cnt=3
+Leo J04 candidate probe begin role=1 target=0xc15d1d00 class=IOMediaBSDClient RETURN=803ff1b7
+Leo J05 candidate probe returned role=1 target=0xc15d1d00 class=IOMediaBSDClient value=1 RETURN=803ff217
+Leo J04 candidate probe begin role=1 target=0xc15d1d00 class=IOS7LeoHFSFile RETURN=803ff1b7
+Leo J05 candidate probe returned role=1 target=0xc15d1d00 class=IOS7LeoHFSFile value=0 RETURN=803ff217
+Leo J04 candidate probe begin role=1 target=0xc15d1d00 class=IOFDiskPartitionScheme RETURN=803ff1b7
+Leo READCACHE demand: hits=0 misses=1 base-reads=1 bytes=33832
+Leo J05 candidate probe returned role=1 target=0xc15d1d00 class=IOFDiskPartitionScheme value=0 RETURN=803ff217
+Leo J06 candidate start begin role=1 target=0xc15d1d00 class=IOMediaBSDClient RETURN=803ff437
+SC> IOMediaBSDClient <- iOS lab Leo SD HFS file Media
+Leo J01 job allocation returned role=2 target=0xc15bb880 class=- value=1 RETURN=803fb0af
+SC< IOMediaBSDClient ok=1
+Leo J07 candidate start returned role=1 target=0xc15d1d00 class=IOMediaBSDClient value=1 RETURN=803ff491
+Leo J08 matching busy decrement begin role=1 target=0xc15d1d00 class=- RETURN=80400877
+Leo J09 matching busy decrement returned role=1 target=0xc15d1d00 class=- value=1 RETURN=804008c5
+Got boot device = IOService:/AppleARMPE/IOS7M8930SDMMC/IOBlockStorageDriver/Samsung MSM8930 eMMC Media/IOS7LeoHFSFile/IOS7LeoHFSDriver/iOS lab Leo SD HFS file Media
+BSD root: disk1, major 14, minor 2
+J1 boot: vfs_mountroot begin
+Leo J10 quiet wait entry role=1 target=0xc15d1d00 RETURN=80400b07 state0=0000001e state1=00000001 jobs=3 waiting=3 threads=3 BEST_EFFORT
+DSM IOS7LeoHFSDriver cnt=0
+DSM IOMediaBSDClient cnt=0
+Leo J02 matching job dispatch role=2 target=0xc15bb880 class=- RETURN=804001af
+Leo J03 matching entry role=2 target=0xc15bb880 class=- RETURN=80400471
+DSM IOMediaBSDClient cnt=0
+Leo J08 matching busy decrement begin role=2 target=0xc15bb880 class=- RETURN=80400877
+Leo J09 matching busy decrement returned role=2 target=0xc15bb880 class=- value=0 RETURN=804008c5
+Leo READCACHE demand: hits=0 misses=2 base-reads=2 bytes=33832
+Leo READCACHE demand: hits=0 misses=4 base-reads=4 bytes=33832
+disk1: ioctl(_IOW,'d',198,256) is unsupported.
+disk1: ioctl(_IOR,'d',80,8) is unsupported.
+J1 boot: vfs_mountroot returned errno=0
+J1 boot: root mount readonly=1
+J1 stage 753
+J1 stage 754
+J1 stage 755
+J1 stage 756
+J1 stage 757
+J1 stage 758
+Leo boot: cloneproc returned thread-present=1
+Leo boot: init thread_resume begin
+Leo boot: init thread_resume returned kern=0
+J1 stage 759
+J1 stage 761
+J1 stage 762
+J1 stage 764
+J1 ks 528
+J1 ks 531
+J1 init: bsdinit_task
+J1 init: load_init_program begin
+attempting to start init of /sbin/launchd
+Leo boot: init execve begin path=/sbin/launchd
+IOS7LAB shared region 0x2c000000..0x40000000; stack below 0x2be00000
+J1 exec pid 1 (launchd) err=0
+Leo boot: init execve returned errno=0 (kernel result only)
+IOS7LAB cache mapping 0 va=2dd41000 size=0c28e000 offset=00000000 max=5 init=5
+IOS7LAB cache mapping 1 va=39fd1000 size=01ed6000 offset=0c28e000 max=23 init=23
+IOS7LAB cache mapping 2 va=3bea9000 size=0228c000 offset=0e164000 max=1 init=1
+IOS7LAB cache mapping 3 va=3e135000 size=0017a000 offset=12dbb000 max=1 init=1
+<T00000100 00000004 0000000b>
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decf9 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8e98ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1 WDTREG 000: 00000000 00000000 00000000 00000000
+J1 WDTREG 010: 00000000 00000000 00000000 00000000
+J1 WDTREG 020: 00000000 000107ac 00000000 00000000
+J1 WDTREG 030: 00000000 00000003 00000000 00000000
+J1 WDTREG 040: 00000000 00460678 00000c7c 001b8000
+J1 WDTREG 050: 00000000 00000000 1d34fbe5 001d0000
+J1 WDTREG 060: 00000000 00000000 00000000 00000000
+J1 WDTREG 070: 00000000 00000000 00000000 00000000
+J1 WDTREG 080: 00000000 00000000 01000000 00000000
+J1W round 0 nprocs=1 bb=0 sb=0 P0 S0 CK0 T0
+J1M free=180254 act=604 inact=42 wire=42558 target=1997 min=1051
+J1B n0:
+IOS7LAB vm_map64 size=00000000:00001000 mask=00000000:00000000 flags=49000001 prot=3 result=0 address=000b2000
+M8930SD rd blk=3275780 n=184 res=0 #7169
+IOS7LAB vm_map64 size=00000000:00002000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000b3000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000b5000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000c2000
+IOS7LAB vm_map64 size=00000000:00100000 mask=00000000:000fffff flags=7000001 prot=3 result=0 address=17d00000
+IOS7LAB vm_map64 size=00000000:00800000 mask=00000000:007fffff flags=2000001 prot=3 result=0 address=18000000
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:17d40b50 result=0 name=707 bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:17d40b50 result=0 name=a03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:17d40b50 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:17d40b50 result=0 name=c03 bypass_hints=21
+com.apple.launchd                1        com.apple.launchd                                                1         *** launchd[1] has started up. ***
+com.apple.launchd                1        com.apple.launchd                                                1         *** Verbose boot, will log to /dev/console. ***
+J1 sp launchctl 0 D900 P0 S0
+IOS7LAB vm_map64 size=00000000:00001000 mask=00000000:00000000 flags=49000001 prot=3 result=0 address=000bb000
+IOS7LAB vm_map64 size=00000000:00002000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000bc000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000be000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=000cb000
+IOS7LAB vm_map64 size=00000000:00100000 mask=00000000:000fffff flags=7000001 prot=3 result=0 address=15d00000
+IOS7LAB vm_map64 size=00000000:00800000 mask=00000000:007fffff flags=2000001 prot=3 result=0 address=16000000
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:15d04610 result=0 name=60b bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:15d04610 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:15d04610 result=0 name=c03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:15d04610 result=0 name=d03 bypass_hints=21
+<T00000200 00000004 00000011>
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (fsck) err=0
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:15d72050 result=0 name=807 bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:15d72050 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:15d72050 result=0 name=c03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:15d72050 result=0 name=d03 bypass_hints=21
+Data/Stack execution not permitted: fsck[pid 11] at virtual address 0x63000, protections were read-write
+J1 X 11 fsck 0
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (mount) err=0
+Leo READCACHE demand: hits=0 misses=8 base-reads=8 bytes=33832
+J1 exec pid 13 (mount_hfs) err=0
+disk1: ioctl(_IOR,'d',80,8) is unsupported.
+Leo J10 quiet wait entry role=1 target=0xc15d1d00 RETURN=80400b07 state0=0000001e state1=00000000 jobs=0 waiting=0 threads=0 BEST_EFFORT
+J1 X 13 mount_hfs 0
+/dev/disk1 on / (hfs, local, noatime)
+J1 X 12 mount 0
+J1 exec pid 14 (FinishRestoreFro) err=0
+J1 X 14 FinishRestoreFro 0
+J1 exec pid 15 (tzinit) err=0
+tzinit: LatestTZTarget doesn't exist, no need to check its validity: No such file or directory
+Leo storage: phase=6 raw-open=1 read0=1 reads=6674 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=2 dirty=2 writes=1 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=24 base-reads=24
+Leo storage: phase=6 raw-open=1 read0=1 reads=6690 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=4 dirty=4 writes=2 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=40 base-reads=40
+J1 X 15 tzinit 100
+J1 exec pid 16 (cc_fips_test) err=0
+J1 X 16 cc_fips_test 0
+<T00000300 00000004 00000015>
+J1 sp /usr/libexec/UserEventAgent blocked
+J1 X 17 launchd 200
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decf9 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8e98ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 1 nprocs=38 bb=0 sb=0 P0 S0 CK0 T0
+J1M free=172984 act=1593 inact=140 wire=44016 target=1997 min=1051
+J1B n0:
+<T00000400 00000004 00000017>
+J1 sp /usr/sbin/wifid blocked
+J1 sp /System/Library/PrivateFrameworks/ManagedConfiguration.framework/Support/profiled blocked
+J1 X 18 launchd 200
+J1 sp /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Support/awdd blocked
+J1 sp /usr/libexec/timed blocked
+J1 X 20 launchd 200
+J1 sp /usr/libexec/audio_device_arbitrator blocked
+J1 sp /usr/libexec/misd blocked
+J1 X 22 launchd 200
+J1 X 23 launchd 200
+J1 X 19 launchd 200
+J1 X 21 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted blocked
+J1 sp /System/Library/PrivateFrameworks/MobileBackup.framework/backupd blocked
+J1 X 25 launchd 200
+J1 sp /usr/libexec/mtmergeprops blocked
+J1 sp /System/Library/PrivateFrameworks/IAP.framework/Support/iaptransportd blocked
+J1 sp /usr/libexec/ptpd blocked
+J1 X 27 launchd 200
+J1 X 24 launchd 200
+J1 X 26 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MobileSoftwareUpdate.framework/Support/softwareupdated blocked
+J1 sp /System/Library/CoreServices/prdaily blocked
+J1 sp /usr/libexec/backboardd blocked
+J1 sp /usr/libexec/sharingd blocked
+J1 sp /usr/libexec/CrashHousekeeping blocked
+J1 X 32 launchd 200
+J1 sp /usr/sbin/daily blocked
+J1 X 33 launchd 200
+J1 X 28 launchd 200
+J1 X 34 launchd 200
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 30 launchd 200
+J1 sp ? blocked
+J1 X 29 launchd 200
+J1 X 38 launchd 200
+J1 sp /System/Library/PrivateFrameworks/AssistantServices.framework/assistantd blocked
+J1 X 31 launchd 200
+J1 sp /usr/libexec/routined blocked
+J1 sp /System/Library/CoreServices/SpringBoard.app/SpringBoard blocked
+J1 sp /sbin/mount_nfs blocked
+J1 X 36 launchd 200
+J1 sp /System/Library/PrivateFrameworks/AggregateDictionary.framework/Support/aggregated blocked
+J1 X 35 launchd 200
+J1 sp /System/Library/CoreServices/OTACrashCopier blocked
+J1 sp /System/Library/PrivateFrameworks/MobileAccessoryUpdater.framework/Resources/fud blocked
+J1 X 42 launchd 200
+J1 X 39 launchd 200
+J1 sp /usr/local/libexec/mtrecorder blocked
+J1 X 37 launchd 200
+J1 X 44 launchd 200
+J1 sp /usr/sbin/syslogd blocked
+J1 sp /usr/libexec/aosnotifyd blocked
+J1 X 45 launchd 200
+J1 X 40 launchd 200
+J1 sp /usr/local/bin/spinforeverd blocked
+J1 X 41 launchd 200
+J1 sp /usr/libexec/keybagd blocked
+J1 X 47 launchd 200
+J1 X 43 launchd 200
+J1 X 48 launchd 200
+J1 X 46 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+J1 sp /System/Library/CoreServices/powerd.bundle/powerd blocked
+J1 sp /usr/libexec/wifiFirmwareLoader blocked
+J1 X 50 launchd 200
+J1 sp /System/Library/PrivateFrameworks/Ubiquity.framework/Versions/A/Support/ubd blocked
+J1 X 51 launchd 200
+J1 sp /usr/libexec/atwakeup blocked
+J1 X 52 launchd 200
+J1 sp /System/Library/CoreServices/DumpPanic blocked
+J1 sp /usr/libexec/lockdownd blocked
+J1 X 54 launchd 200
+J1 X 49 launchd 200
+J1 X 55 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 sp /usr/libexec/vendor_device_arbitrator blocked
+J1 X 56 launchd 200
+J1 X 57 launchd 200
+J1 sp /System/Library/PrivateFrameworks/IDSCore.framework/identityservicesd.app/identityservicesd blocked
+J1 sp /usr/libexec/configd blocked
+J1 X 58 launchd 200
+J1 X 59 launchd 200
+J1 X 53 launchd 200
+J1 sp /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/imagent blocked
+J1 sp /usr/libexec/accessory_device_arbitrator blocked
+J1 X 60 launchd 200
+J1 X 61 launchd 200
+J1 sp /usr/sbin/fairplayd.H2 blocked
+J1 sp /System/Library/PrivateFrameworks/VisualVoicemail.framework/vmd blocked
+J1 X 62 launchd 200
+J1 X 63 launchd 200
+J1 sp /usr/libexec/ptp_device_arbitrator blocked
+J1 sp /usr/sbin/BTServer blocked
+J1 sp /usr/libexec/fseventsd blocked
+J1 sp /usr/libexec/installd blocked
+J1 X 67 launchd 200
+J1 sp /System/Library/Frameworks/PassKit.framework/passd blocked
+J1 sp /System/Library/CoreServices/MobileStorageMounter.app/MobileStorageMounter blocked
+J1 X 68 launchd 200
+J1 sp /usr/sbin/wirelessproxd blocked
+J1 X 64 launchd 200
+J1 sp /System/Library/CoreServices/AppleIDAuthAgent blocked
+J1 X 70 launchd 200
+J1 X 65 launchd 200
+J1 sp /usr/libexec/atc blocked
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 72 launchd 200
+J1 X 66 launchd 200
+J1 X 69 launchd 200
+J1 X 71 launchd 200
+J1 X 73 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 74 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 75 launchd 200
+<T00000500 00000004 0000001a>
+J1 sp /usr/libexec/locationd blocked
+J1 X 76 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 77 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 78 launchd 200
+J1 sp /System/Library/CoreServices/SpringBoard.app/SpringBoard blocked
+J1 X 79 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 80 launchd 200
+<T00000600 00000004 0000001c>
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 81 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 X 82 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 83 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 84 launchd 200
+<T00000700 00000004 0000001f>
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 85 launchd 200
+J1 sp /usr/libexec/UserEventAgent blocked
+J1 X 86 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 X 87 launchd 200
+J1 sp /usr/sbin/wifid blocked
+J1 X 88 launchd 200
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decf9 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8e98ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 2 nprocs=8 bb=0 sb=0 P0 S0 CK0 T19
+J1M free=173595 act=1594 inact=142 wire=43988 target=1997 min=1051
+J1B n0:
+J1 sp /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Support/awdd blocked
+J1 sp /usr/libexec/audio_device_arbitrator blocked
+J1 X 90 launchd 200
+J1 X 89 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted blocked
+J1 sp /System/Library/PrivateFrameworks/IAP.framework/Support/iaptransportd blocked
+J1 sp /usr/libexec/backboardd blocked
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 96 launchd 200
+J1 X 91 launchd 200
+J1 sp /usr/libexec/mtmergeprops blocked
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 93 launchd 200
+J1 sp /usr/libexec/sharingd blocked
+J1 X 97 launchd 200
+J1 X 92 launchd 200
+J1 X 98 launchd 200
+J1 sp /usr/libexec/ptpd blocked
+J1 X 94 launchd 200
+J1 X 95 launchd 200
+UDA: total faults=16384 launchd far2beadaec pc2be8a0b8 fsr7
+J1 sp /System/Library/PrivateFrameworks/AggregateDictionary.framework/Support/aggregated blocked
+J1 sp /usr/local/libexec/mtrecorder blocked
+J1 X 101 launchd 200
+J1 sp /usr/sbin/syslogd blocked
+J1 sp /usr/local/bin/spinforeverd blocked
+J1 X 100 launchd 200
+J1 X 99 launchd 200
+J1 X 102 launchd 200
+J1 sp /System/Library/CoreServices/SpringBoard.app/SpringBoard blocked
+J1 sp /System/Library/CoreServices/powerd.bundle/powerd blocked
+J1 X 103 launchd 200
+<T00000800 00000004 00000022>
+J1 X 104 launchd 200
+J1 sp /usr/libexec/wifiFirmwareLoader blocked
+J1 sp /System/Library/PrivateFrameworks/Ubiquity.framework/Versions/A/Support/ubd blocked
+J1 X 105 launchd 200
+J1 X 106 launchd 200
+J1 sp /usr/libexec/lockdownd blocked
+J1 sp /usr/libexec/vendor_device_arbitrator blocked
+J1 sp /System/Library/PrivateFrameworks/IDSCore.framework/identityservicesd.app/identityservicesd blocked
+J1 sp /usr/libexec/configd blocked
+J1 X 109 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 107 launchd 200
+J1 X 111 launchd 200
+J1 X 108 launchd 200
+J1 X 110 launchd 200
+J1 sp /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/imagent blocked
+J1 sp /usr/libexec/accessory_device_arbitrator blocked
+J1 X 112 launchd 200
+J1 sp /usr/sbin/fairplayd.H2 blocked
+J1 sp /System/Library/PrivateFrameworks/VisualVoicemail.framework/vmd blocked
+J1 X 114 launchd 200
+J1 sp /usr/libexec/fseventsd blocked
+J1 X 113 launchd 200
+J1 X 115 launchd 200
+J1 sp /usr/libexec/ptp_device_arbitrator blocked
+J1 sp /usr/sbin/wirelessproxd blocked
+J1 sp /usr/sbin/BTServer blocked
+J1 sp /usr/libexec/atc blocked
+J1 sp /System/Library/CoreServices/MobileStorageMounter.app/MobileStorageMounter blocked
+J1 X 116 launchd 200
+J1 X 117 launchd 200
+J1 X 118 launchd 200
+J1 X 119 launchd 200
+J1 X 120 launchd 200
+J1 X 121 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 122 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 123 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 X 124 launchd 200
+<T00000900 00000004 00000024>
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 125 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 126 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 X 127 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 128 launchd 200
+J1 sp /System/Library/CoreServices/SpringBoard.app/SpringBoard blocked
+J1 X 129 launchd 200
+<T00000a00 00000004 00000027>
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 130 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 131 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 132 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 X 133 launchd 200
+<T00000b00 00000004 00000029>
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 134 launchd 200
+J1 sp /usr/libexec/UserEventAgent blocked
+J1 X 135 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 136 launchd 200
+J1W round 3 nprocs=2 bb=0 sb=0 P0 S0 CK0 T62
+J1M free=173644 act=1594 inact=142 wire=43931 target=1997 min=1051
+J1B n0:
+J1 sp /usr/sbin/wifid blocked
+J1 X 137 launchd 200
+J1 sp /usr/libexec/audio_device_arbitrator blocked
+J1 sp /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Support/awdd blocked
+J1 sp /usr/libexec/backboardd blocked
+J1 X 139 launchd 200
+J1 X 138 launchd 200
+J1 sp /System/Library/PrivateFrameworks/IAP.framework/Support/iaptransportd blocked
+J1 X 141 launchd 200
+J1 X 140 launchd 200
+J1 sp /usr/libexec/mtmergeprops blocked
+J1 X 142 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted blocked
+J1 X 143 launchd 200
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 X 144 launchd 200
+J1 sp /usr/libexec/sharingd blocked
+J1 X 145 launchd 200
+J1 sp /usr/libexec/ptpd blocked
+J1 X 146 launchd 200
+J1 sp /usr/sbin/syslogd blocked
+J1 X 148 launchd 200
+J1 sp /System/Library/PrivateFrameworks/AggregateDictionary.framework/Support/aggregated blocked
+J1 sp /usr/local/libexec/mtrecorder blocked
+J1 X 149 launchd 200
+J1 sp /usr/local/bin/spinforeverd blocked
+J1 X 147 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 150 launchd 200
+J1 X 151 launchd 200
+J1 sp /System/Library/CoreServices/SpringBoard.app/SpringBoard blocked
+J1 sp /System/Library/CoreServices/powerd.bundle/powerd blocked
+J1 sp /usr/libexec/wifiFirmwareLoader blocked
+J1 X 152 launchd 200
+J1 sp /System/Library/PrivateFrameworks/Ubiquity.framework/Versions/A/Support/ubd blocked
+J1 X 155 launchd 200
+J1 X 153 launchd 200
+J1 X 154 launchd 200
+<T00000c00 00000004 0000002c>
+J1 sp /System/Library/PrivateFrameworks/IDSCore.framework/identityservicesd.app/identityservicesd blocked
+J1 X 156 launchd 200
+J1 sp /usr/libexec/lockdownd blocked
+J1 sp /usr/libexec/vendor_device_arbitrator blocked
+J1 X 157 launchd 200
+J1 sp /usr/libexec/configd blocked
+J1 sp /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/imagent blocked
+J1 sp /usr/sbin/fairplayd.H2 blocked
+J1 sp /System/Library/PrivateFrameworks/VisualVoicemail.framework/vmd blocked
+J1 X 161 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 158 launchd 200
+J1 X 159 launchd 200
+J1 X 160 launchd 200
+J1 X 164 launchd 200
+J1 sp /usr/libexec/accessory_device_arbitrator blocked
+J1 sp /usr/libexec/fseventsd blocked
+J1 sp /usr/libexec/ptp_device_arbitrator blocked
+J1 sp /usr/sbin/wirelessproxd blocked
+J1 sp /usr/sbin/BTServer blocked
+J1 X 162 launchd 200
+J1 X 163 launchd 200
+J1 X 165 launchd 200
+J1 X 166 launchd 200
+J1 X 167 launchd 200
+J1 sp /usr/libexec/atc blocked
+J1 sp /usr/libexec/locationd blocked
+J1 X 168 launchd 200
+J1 sp /System/Library/CoreServices/MobileStorageMounter.app/MobileStorageMounter blocked
+J1 X 171 launchd 200
+J1 X 169 launchd 200
+J1 X 170 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 172 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 173 launchd 200
+<T00000d00 00000004 0000002f>
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 174 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 X 175 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 176 launchd 200
+J1 sp /System/Library/CoreServices/SpringBoard.app/SpringBoard blocked
+J1 X 177 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 178 launchd 200
+<T00000e00 00000004 00000031>
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 179 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 180 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 X 181 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 182 launchd 200
+<T00000f00 00000004 00000034>
+J1 sp /usr/libexec/UserEventAgent blocked
+J1 X 183 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 184 launchd 200
+J1W round 4 nprocs=2 bb=0 sb=0 P0 S0 CK0 T110
+J1M free=173605 act=1594 inact=142 wire=43931 target=1997 min=1051
+J1B n0:
+J1 sp /usr/sbin/wifid blocked
+J1 X 185 launchd 200
+J1 sp /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Support/awdd blocked
+J1 sp /usr/libexec/audio_device_arbitrator blocked
+J1 sp /System/Library/PrivateFrameworks/IAP.framework/Support/iaptransportd blocked
+J1 X 188 launchd 200
+J1 sp /usr/libexec/backboardd blocked
+J1 X 186 launchd 200
+J1 X 187 launchd 200
+J1 X 189 launchd 200
+J1 sp /usr/libexec/mtmergeprops blocked
+J1 sp /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted blocked
+J1 X 191 launchd 200
+J1 X 190 launchd 200
+J1 sp /usr/libexec/ptpd blocked
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 195 launchd 200
+J1 X 192 launchd 200
+J1 X 193 launchd 200
+J1 sp /usr/libexec/sharingd blocked
+J1 X 194 launchd 200
+J1 sp /usr/sbin/syslogd blocked
+J1 X 196 launchd 200
+J1 sp /usr/local/libexec/mtrecorder blocked
+J1 X 197 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 sp /System/Library/PrivateFrameworks/AggregateDictionary.framework/Support/aggregated blocked
+J1 X 198 launchd 200
+J1 sp /usr/local/bin/spinforeverd blocked
+J1 X 199 launchd 200
+J1 X 200 launchd 200
+J1 sp /System/Library/CoreServices/powerd.bundle/powerd blocked
+J1 X 201 launchd 200
+J1 sp /usr/libexec/wifiFirmwareLoader blocked
+J1 X 202 launchd 200
+J1 sp /System/Library/PrivateFrameworks/Ubiquity.framework/Versions/A/Support/ubd blocked
+J1 X 203 launchd 200
+J1 sp /System/Library/CoreServices/SpringBoard.app/SpringBoard blocked
+J1 X 204 launchd 200
+J1 sp /System/Library/PrivateFrameworks/IDSCore.framework/identityservicesd.app/identityservicesd blocked
+J1 sp /usr/libexec/lockdownd blocked
+J1 sp /usr/sbin/fairplayd.H2 blocked
+J1 sp /usr/libexec/vendor_device_arbitrator blocked
+J1 X 207 launchd 200
+J1 X 206 launchd 200
+J1 X 205 launchd 200
+J1 X 208 launchd 200
+<T00001000 00000004 00000037>
+J1 sp /usr/libexec/configd blocked
+J1 sp /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/imagent blocked
+J1 sp /System/Library/PrivateFrameworks/VisualVoicemail.framework/vmd blocked
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 211 launchd 200
+J1 X 209 launchd 200
+J1 X 210 launchd 200
+J1 X 212 launchd 200
+J1 sp /usr/libexec/fseventsd blocked
+J1 sp /usr/libexec/ptp_device_arbitrator blocked
+J1 sp /usr/libexec/accessory_device_arbitrator blocked
+J1 sp /usr/sbin/wirelessproxd blocked
+J1 X 214 launchd 200
+J1 X 215 launchd 200
+J1 X 213 launchd 200
+J1 sp /System/Library/CoreServices/MobileStorageMounter.app/MobileStorageMounter blocked
+J1 sp /usr/sbin/BTServer blocked
+J1 sp /usr/libexec/atc blocked
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 216 launchd 200
+J1 X 219 launchd 200
+J1 X 217 launchd 200
+J1 X 218 launchd 200
+J1 X 220 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 221 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 X 222 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 223 launchd 200
+<T00001100 00000004 00000039>
+UDA: total faults=32768 launchd far3be9f128 pc39fab9ca fsr80f
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 224 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 225 launchd 200
+J1 sp /System/Library/CoreServices/SpringBoard.app/SpringBoard blocked
+J1 X 226 launchd 200
+<T00001200 00000004 0000003c>
+J1 sp /usr/libexec/locationd blocked
+J1 X 227 launchd 200
+J1 sp /usr/sbin/mediaserverd blocked
+J1 X 228 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 229 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 230 launchd 200
+J1 sp /usr/libexec/UserEventAgent blocked
+J1 X 231 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 232 launchd 200
+<T00001300 00000004 0000003f>
+J1W round 5 nprocs=2 bb=0 sb=0 P0 S0 CK0 T158
+J1M free=173482 act=1594 inact=142 wire=43932 target=1997 min=1051
+J1B n0:
+J1 sp /usr/sbin/wifid blocked
+J1 X 233 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 X 234 launchd 200
+J1 sp /System/Library/PrivateFrameworks/IAP.framework/Support/iaptransportd blocked
+J1 X 235 launchd 200
+J1 sp /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Support/awdd blocked
+J1 sp /usr/libexec/audio_device_arbitrator blocked
+J1 X 236 launchd 200
+J1 sp /usr/libexec/backboardd blocked
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 239 launchd 200
+J1 X 238 launchd 200
+J1 X 237 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted blocked
+J1 sp /usr/libexec/mtmergeprops blocked
+J1 X 240 launchd 200
+J1 X 241 launchd 200
+J1 sp /usr/libexec/ptpd blocked
+J1 sp /usr/sbin/syslogd blocked
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 sp /usr/libexec/sharingd blocked
+J1 X 245 launchd 200
+J1 sp /usr/local/libexec/mtrecorder blocked
+J1 X 242 launchd 200
+J1 X 243 launchd 200
+J1 X 244 launchd 200
+J1 X 246 launchd 200
+J1 sp /System/Library/PrivateFrameworks/AggregateDictionary.framework/Support/aggregated blocked
+J1 sp /usr/local/bin/spinforeverd blocked
+J1 X 247 launchd 200
+J1 X 248 launchd 200
+J1 sp /System/Library/CoreServices/powerd.bundle/powerd blocked
+J1 X 249 launchd 200
+J1 sp /usr/libexec/wifiFirmwareLoader blocked
+J1 X 250 launchd 200
+J1 sp /System/Library/PrivateFrameworks/Ubiquity.framework/Versions/A/Support/ubd blocked
+J1 X 251 launchd 200
+J1 sp /System/Library/CoreServices/SpringBoard.app/SpringBoard blocked
+J1 X 252 launchd 200
+J1 sp /usr/sbin/fairplayd.H2 blocked
+J1 sp /usr/libexec/lockdownd blocked
+J1 sp /System/Library/PrivateFrameworks/IDSCore.framework/identityservicesd.app/identityservicesd blocked
+J1 X 253 launchd 200
+J1 X 254 launchd 200
+J1 X 255 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 sp /usr/libexec/vendor_device_arbitrator blocked
+J1 X 256 launchd 200
+J1 X 257 launchd 200
+J1 sp /System/Library/PrivateFrameworks/VisualVoicemail.framework/vmd blocked
+J1 X 258 launchd 200
+J1 sp /usr/libexec/configd blocked
+J1 sp /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/imagent blocked
+J1 X 259 launchd 200
+J1 X 260 launchd 200
+<T00001400 00000004 00000041>
+J1 sp /usr/libexec/fseventsd blocked
+J1 sp /usr/libexec/ptp_device_arbitrator blocked
+J1 sp /System/Library/CoreServices/MobileStorageMounter.app/MobileStorageMounter blocked
+J1 sp /usr/sbin/BTServer blocked
+J1 X 261 launchd 200
+J1 X 262 launchd 200
+J1 X 265 launchd 200
+J1 sp /usr/libexec/accessory_device_arbitrator blocked
+J1 sp /usr/sbin/wirelessproxd blocked
+J1 sp /usr/sbin/mediaserverd blocked
+J1 sp /usr/libexec/atc blocked
+J1 X 266 launchd 200
+J1 X 263 launchd 200
+J1 X 264 launchd 200
+J1 X 268 launchd 200
+J1 X 267 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 269 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 X 270 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 271 launchd 200
+<T00001500 00000004 00000044>
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 272 launchd 200
+J1 sp /usr/libexec/locationd blocked
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd blocked
+J1 X 273 launchd 200
+J1 X 274 launchd 200
+J1 sp /System/Library/CoreServices/SpringBoard.app/SpringBoard blocked
+J1 X 275 launchd 200
+J1 sp /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstream
+6 Corrected bytes, 305 unrecoverable blocks

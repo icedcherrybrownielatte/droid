@@ -1,0 +1,1 @@
+Linux version 3.4.113-g90c8fa0009aa (nobody@android-build) (gcc version 4.9.x 20150123 (prerelease) (GCC) ) #1 SMP PREEMPT Wed Aug 17 01:23:51 CEST 2022

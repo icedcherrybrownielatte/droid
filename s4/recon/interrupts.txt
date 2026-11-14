@@ -1,0 +1,128 @@
+           CPU0       
+ 65:          0       GIC  dma-pl330.2
+ 66:          0       GIC  dma-pl330.0
+ 67:          0       GIC  dma-pl330.1
+ 74:          0       GIC  s3c2410-wdt
+ 85:          1       GIC  exynos4210-uart
+ 88:      35260       GIC  s3c2440-i2c.0
+ 89:          0       GIC  s3c2440-i2c.1
+ 91:       1870       GIC  s3c2440-i2c.3
+ 92:     181660       GIC  exynos5-hs-i2c.0
+ 93:          0       GIC  exynos5-hs-i2c.1
+ 95:          0       GIC  exynos5-hs-i2c.3
+ 97:          0       GIC  exynos-tmu
+102:          0       GIC  spi-s3c64xx
+103:       4837       GIC  ehci_hcd:usb1
+104:        833       GIC  xhci_hcd:usb2, exynos-ss-udc.0
+107:      34198       GIC  dw-mci
+108:        658       GIC  dw-mci
+109:         25       GIC  dw-mci
+111:          0       GIC  s5p-mipi-csis.0
+112:          0       GIC  s5p-mipi-csis.1
+114:        204       GIC  mipi-dsi
+117:          0       GIC  exynos-gsc
+118:          0       GIC  exynos-gsc
+119:          0       GIC  exynos-gsc
+120:          0       GIC  exynos-gsc
+121:          0       GIC  exynos5-jpeg-hx
+122:          0       GIC  exynos5-scaler
+123:          0       GIC  s5p-fimg2d
+126:          0       GIC  s5p-mixer
+127:          0       GIC  hdmi-int
+128:         16       GIC  s5p-mfc-v6
+129:          2       GIC  samsung-rp
+138:       1270       GIC  samsung-adc-v5
+142:          0       GIC  exynos-fimc-lite.2
+147:        545       GIC
+149:      14782       GIC  pvrsrvkm
+152:      51575       GIC  mct_tick0
+157:          0       GIC  exynos-fimc-lite.0
+158:          0       GIC  exynos-fimc-lite.1
+200:          0       GIC  s5p-jpeg
+201:          0       GIC  exynos-sysmmu.3
+215:          0       GIC  exynos-tmu
+216:          0       GIC  exynos-tmu
+217:          0       GIC  exynos-tmu
+224:          0       GIC  exynos-sysmmu.19
+225:          0       GIC  s5p-mipi-csis.2
+255:          4       GIC  mobicore
+272:          0  combiner  exynos-sysmmu.5
+274:          0  combiner  exynos-sysmmu.6
+276:          0  combiner  exynos-sysmmu.7
+278:          0  combiner  exynos-sysmmu.8
+280:          0  combiner  exynos-sysmmu.14
+282:          0  combiner  exynos-sysmmu.11
+284:          0  combiner  exynos-sysmmu.12
+286:          0  combiner  exynos-sysmmu.17
+288:          0  combiner  exynos-sysmmu.4
+290:          0  combiner  exynos-sysmmu.20
+294:          0  combiner  exynos-sysmmu.9
+296:          0  combiner  exynos-sysmmu.9
+298:          0  combiner  exynos-sysmmu.9
+300:          0  combiner  exynos-sysmmu.9
+302:          0  combiner  exynos-sysmmu.16
+306:          0  combiner  exynos-sysmmu.0
+316:          0  combiner  exynos-sysmmu.2
+325:          0  combiner  exynos-sysmmu.0
+332:          0  combiner  exynos-sysmmu.16
+336:          0  combiner  exynos-sysmmu.18
+340:          0  combiner  exynos-sysmmu.16
+342:          0  combiner  exynos-sysmmu.9
+344:          0  combiner  exynos-sysmmu.16
+350:          0  combiner  exynos-sysmmu.10
+405:       2508  combiner  s3c_fb
+409:          0  combiner  mcuctl
+443:          0  combiner  mct_comp_irq
+446:          0  combiner  exynos-sysmmu.21
+449:          0  combiner  exynos-sysmmu.13
+453:          0  combiner  exynos-sysmmu.15
+513:          0  exynos-eint  flip_cover
+514:          0  exynos-eint  gpio_keys
+515:          0  exynos-eint  gpio_keys
+517:         38  exynos-eint  gpio_keys
+518:          1  exynos-eint  gps_host_wake
+519:          0  exynos-eint  sec-pmic-irq
+522:          0  exynos-eint  hostwake
+523:         68  exynos-eint  bcm2079x-i2c
+524:         24  exynos-eint  max77803-irq
+525:          0  exynos-eint  fuelgauge-irq
+526:        644  exynos-eint  synaptics_rmi4_i2c
+529:          4  exynos-eint  bt host_wake
+530:         10  exynos-eint  gpio_keys
+531:          0  exynos-eint  wpc-int
+532:          0  exynos-eint  dw_mmc.2
+533:         12  exynos-eint  arizona
+535:          0  exynos-eint  phone_active
+539:       3016  exynos-eint  SSP_Int
+543:          1  exynos-eint  hdmi-ext
+547:          7  s5p_gpioint  sec_touchkey
+559:          0  s5p_gpioint  sii8240
+655:          0  sec-pmic  rtc-alarm0
+693:          0   arizona  wm5102 AOD
+694:          0   arizona  wm5102 IRQ
+745:          0    regmap  JACKDET rise
+746:          0    regmap  JACKDET fall
+767:          0    regmap  Thermal warning
+768:          0    regmap  Thermal shutdown
+769:          0    regmap  MICDET
+770:          0    regmap  HPDET
+776:          0    regmap  Underclocked
+777:          0    regmap  Overclocked
+780:          0    regmap  CLKGEN error
+792:          0    regmap  Boot done
+795:          0    regmap  FLL2 clock OK
+796:          0    regmap  FLL1 clock OK
+831:          2  max77803  bypass-irq
+832:          0  max77803  battery-irq
+836:         10  max77803  chgin-irq
+837:          0  max77803  muic-adc
+840:          0  max77803  muic-adc1k
+841:          2  max77803  muic-chgtype
+845:          2  max77803  muic-vbvolt
+IPI0:          0          0          0          0  Timer broadcast interrupts
+IPI1:      27328      31743      27666      23993  Rescheduling interrupts
+IPI2:         11         31         27         26  Function call interrupts
+IPI3:          0        302        311        308  Single function call interrupts
+IPI4:          0          0          0          0  CPU stop interrupts
+IPI5:          0          0          0          0  CPU backtrace
+Err:          0

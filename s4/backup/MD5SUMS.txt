@@ -1,0 +1,10 @@
+52c130457f9b6102767b44313c7f7e13 *backup/BOOT.img
+b5cfa9d6c8febd618f91ac2843d50a1c *backup/BOTA0.img
+b5cfa9d6c8febd618f91ac2843d50a1c *backup/BOTA1.img
+8f4e33f3dc3e414ff94e5fb6905cba8c *backup/CARRIER.img
+16fe4b160504bf793583f57df20d0580 *backup/EFS.img
+1f7dfaee70f3659e41c4ebc344db611b *backup/PARAM.img
+c6bc7927851ba9eee70e75068d7f6fbe *backup/RECOVERY.img
+b5cfa9d6c8febd618f91ac2843d50a1c *backup/m9kefs1.img
+b5cfa9d6c8febd618f91ac2843d50a1c *backup/m9kefs2.img
+b5cfa9d6c8febd618f91ac2843d50a1c *backup/m9kefs3.img

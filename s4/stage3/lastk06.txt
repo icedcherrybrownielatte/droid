@@ -1,0 +1,101 @@
+[    0.000000] B0      0 clkout: bad source 0
+[    0.000000] B0      0 clkout: bad source 0
+[    0.000000] B0      0 (sec_debug_set_upload_magic) 66262564
+[    0.000000] B0      0 (sec_debug_set_upload_cause) cafebabe
+[    0.104049] B0      1 gpio: GPC0 has missing PM functions
+[    0.104141] B0      1 gpio: GPC3 has missing PM functions
+[    0.105849] B0      1 gpio: GPZ has no PM function
+[    0.126160] B0      1 panel I
+[    0.127085] B0      1 synaptics_verify_panel_revision: panel_revision: 8, system_rev: 10, lcdtype: 0x428047, touch_type: 8, el_type: M4, h_sync: OK, ddi_type: SDC
+[    0.127179] B0      1 synaptics_tsp_init touch : 526
+[    0.137161] B0      1 [exynos5_universal5410_fpga_init] initialization start!
+[    0.137216] B0      1 [exynos5_universal5410_fpga_init] SYSTEM REVISION is bigger than 5
+[    0.137273] B0      1 [exynos5_universal5410_fpga_init] Change the Barcode I2C line
+[    0.137327] B0      1 [exynos5_universal5410_fpga_init] SYSTEM REVISION : 10
+[    0.137378] B0      1 [exynos5_universal5410_fpga_init] BARCODE SCL : 217
+[    0.137426] B0      1 [exynos5_universal5410_fpga_init] BARCODE SDA : 218
+[    0.137690] B0      1 irda_device_init called!
+[    0.137734] B0      1 irda_device_init complete
+[    0.157881] B0      1 Failed to get (null) clock
+[    0.158066] B0      1 Failed to get (null) clock
+[    0.164768] B0      1 exynos_interface_init: failed to create sysfs interface
+[    0.338245] B0      1 exynos5-i2c exynos5-hs-i2c.2: no platform data
+[    2.669666] B0      1 gps_host_wake_isr GPS pin level[Low]
+[    2.670079] B0      1 s3c-adc samsung-adc-v5: operating without regulator "vdd" .
+[    2.692396] B1    720 alg: comp: Compression test 1 failed for lzo-generic: output len = 57
+[    2.867762] B0      1 ion_device_add_heap: can not insert multiple heaps with id 1
+[    2.874153] B0      1 ion_device_add_heap: can not insert multiple heaps with id 0
+[    3.063680] B0      1 [TSP] synaptics_power on
+[    3.380554] B0      1 Initialize JPEG driver
+[    3.389721] B0      1 s5p-hdmi exynos5-hdmi: Set HDMI phy power off
+[    3.928215] B1      1 wm5102-codec wm5102-codec: dapm: unknown pin RCV
+[    3.933424] B1      1 wm5102-codec wm5102-codec: dapm: unknown pin VPS
+[    3.939925] B1      1 wm5102-codec wm5102-codec: dapm: unknown pin SPK
+[    3.946427] B1      1 wm5102-codec wm5102-codec: dapm: unknown pin HP
+[    4.229380] B0      1 mif: modem_probe: mif_sipc5
+[    4.235587] B0      1 mif: modem_probe: link created: usb
+[    4.243220] B0      1 mif: sipc5_init_io_device: dm_state : umts_dm0, sucess
+[    4.255840] B0      1 mif: modem_probe: Complete!!!
+[    4.382807] B0      1 sec_touchkey_driver 8-0020: JA LCD type Print : 0x428047
+[    4.802483] B1      1 sec-battery sec-battery: sec_battery_probe: Failed to Enable Wakeup Source(-6)
+[    4.815416] B1      1 ice4_fpga: probe complete barcode_emul_probe
+[    5.037428] B1      1 mmc_force_presence_change: called for device exynos5_device_dwmci1
+[    5.358651] B0      5 dw_mmc dw_mmc.1: data CRC error
+[    5.362706] B0      5 dw_mmc dw_mmc.1: data CRC error
+[    5.512508] B1      8 exynos-xhci exynos-xhci.0: exynos_xhci_runtime_suspend
+[    5.518290] B1      8 exynos-xhci exynos-xhci.0: exynos_xhci_runtime_suspend<-- retval(0)
+[    5.851400] B3      1 init: property_set("ro.boot.selinux", "enforcing") failed
+[    5.936819] B3      1 init: waitpid failed: No child processes
+[    5.944121] B3      1 init: /init.rc: 13: invalid keyword 'setcon'
+[    5.949248] B3      1 init: /init.rc: 63: invalid keyword 'load_all_props'
+[    5.956115] B3      1 init: could not import file '/init.recovery.logd.rc' from '/init.rc': No such file or directory
+[    5.967010] B3      1 init: could not import file '/init.recovery.vold_decrypt.rc' from '/init.rc': No such file or directory
+[    5.984508] B3   1545 charger: void healthd_board_init(struct healthd_config *): Unable to load battery scale image
+[    6.864694] B2      1 init: /dev/hw_random not found
+[    6.880398] B2      1 init: /dev/hw_random not found
+[    6.885383] B2      1 android_usb: already disabled
+[    6.890623] B2      1 fs_mgr: Cannot open file /fstab.universal5410
+[    6.895575] B2      1 init: unable to read fstab /fstab.universal5410: No such file or directory
+[    6.906841] B2      1 android_usb: already disabled
+[    6.963898] B0    460 audience_es325 4-003e: firmware request failed
+[    7.090057] B2      1 init: avc:  denied  { set } for property=twrp.crash_counter pid=2348 uid=0 gid=0 scontext=u:r:recovery:s0 tcontext=u:object_r:default_prop:s0 tclass=property_service permissive=1
+[    7.645718] B0   2348 synaptics_rmi4_i2c 0-0020: synaptics_rmi4_start_device already power on
+[    8.602238] B0    460 Initialize JPEG Hx driver
+[   20.253816] B0   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[   26.678125] B2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[   44.850550] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[   68.939562] B2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[   74.991883] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[   93.049189] B2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  104.973686] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  131.076012] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  153.100754] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  191.937697] L1   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  201.904079] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  230.383043] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  242.999981] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  253.058216] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  261.038481] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  272.495969] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  313.343537] B2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  321.191183] B0   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  350.364864] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  374.799446] L0   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  386.882682] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  435.998023] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  446.955129] B2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  459.110621] B2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  477.105467] B2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  489.126241] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  496.367118] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  501.166892] B2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  512.678461] B2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  524.912387] B2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  536.385881] L2   2348 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  540.275896] L2      1 SysRq : Emergency Remount R/O
+[  540.382105] L2      1 (sec_debug_set_upload_magic) 0
+[  541.054197] L0      1 Restarting system with command ''.
+[  541.058451] L0      1 sec_reboot (104, )
+
+No errors detected
+Last reset was reset (RST_STAT=0x800)

@@ -1,0 +1,40 @@
+6401952 -> 3574571
+boot_recfb.img: 1 file pushed, 0 skipped. 11.1 MB/s (10485760 bytes in 0.904s)
+DCIM files deleted: 35 rc=0 
+/var before: /dev/disk0s1s2  6.0G  2.3G  3.8G  38% /private/var
+/var after:  /dev/disk0s1s2  6.0G  2.2G  3.9G  36% /private/var
+photos\IMG_3962.JPG
+photos\IMG_3963.JPG
+photos\IMG_3964.JPG
+photos\IMG_3965.JPG
+photos\IMG_3966.JPG
+photos\IMG_3967.JPG
+photos\IMG_3968.JPG
+photos\IMG_3969.JPG
+photos\IMG_3970.JPG
+photos\IMG_3971.JPG
+photos\IMG_3972.JPG
+photos\IMG_3973.JPG
+photos\IMG_3974.JPG
+photos\IMG_3975.JPG
+photos\IMG_3976.JPG
+photos\IMG_3977.JPG
+photos\IMG_3978.JPG
+photos\IMG_3979.JPG
+photos\IMG_3980.JPG
+photos\IMG_3981.JPG
+photos\IMG_3982.JPG
+photos\IMG_3983.JPG
+photos\IMG_3984.JPG
+photos\IMG_3985.JPG
+photos\IMG_3986.JPG
+photos\IMG_3987.JPG
+photos\IMG_3988.JPG
+photos\IMG_3989.JPG
+photos\IMG_3990.JPG
+photos\IMG_3991.JPG
+photos\IMG_3992.JPG
+photos\IMG_3993.JPG
+photos\IMG_3994.JPG
+photos\IMG_3995.JPG
+iter.sh: line 18: 1-32: command not found

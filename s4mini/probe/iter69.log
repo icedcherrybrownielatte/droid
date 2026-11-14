@@ -1,0 +1,41 @@
+6402192 -> 3575299
+boot_recfb.img: 1 file pushed, 0 skipped. 10.3 MB/s (10485760 bytes in 0.970s)
+DCIM files deleted: 34 rc=0 
+/var before: /dev/disk0s1s2  6.0G  2.3G  3.8G  38% /private/var
+/var after:  /dev/disk0s1s2  6.0G  2.2G  3.8G  37% /private/var
+photos\IMG_4135.JPG
+photos\IMG_4136.JPG
+photos\IMG_4137.JPG
+photos\IMG_4138.JPG
+photos\IMG_4139.JPG
+photos\IMG_4140.JPG
+photos\IMG_4141.JPG
+photos\IMG_4142.JPG
+photos\IMG_4143.JPG
+photos\IMG_4144.JPG
+photos\IMG_4145.JPG
+photos\IMG_4146.JPG
+photos\IMG_4147.JPG
+photos\IMG_4148.JPG
+photos\IMG_4149.JPG
+photos\IMG_4150.JPG
+photos\IMG_4151.JPG
+photos\IMG_4152.JPG
+photos\IMG_4153.JPG
+photos\IMG_4154.JPG
+photos\IMG_4155.JPG
+photos\IMG_4156.JPG
+photos\IMG_4157.JPG
+photos\IMG_4158.JPG
+photos\IMG_4159.JPG
+photos\IMG_4160.JPG
+photos\IMG_4161.JPG
+photos\IMG_4162.JPG
+photos\IMG_4163.JPG
+photos\IMG_4164.JPG
+photos\IMG_4165.JPG
+photos\IMG_4166.JPG
+photos\IMG_4167.JPG
+photos\IMG_4168.JPG
+photos\IMG_4169.JPG
+back in TWRP

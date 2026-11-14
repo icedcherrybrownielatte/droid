@@ -1,0 +1,2355 @@
+<6>[    0.098672] persistent_ram: found existing buffer, size 154134, start 154134
+XNUTRACEbbfeff5c
+=== XNU BOOT 00000001
+kext submap [0x80000000 - 0xfffeffff], kernel text [0x80001000 - 0x80545000]
+zone leak detection disabled
+Scheduler: Default of traditional
+standard timeslicing quantum is 10000 us
+standard background quantum is 2500 us
+mig_table_max_displ = 74
+rtclock_bus_configure: Configuring RTCLOCK...
+[RTCLOCK] Frequency =      6.750000MHz, cvtt2n = 00000094.25ED097B, cvtn2t = 00000000.01BA5E35
+Initializing serial KDP
+Kernel boot args: '-v keepsyms=1 kprintf=1 debug=0x14e'
+iBoot version: uniLoader-serrano
+PE_init_iokit: starting IOKit now!
+[31mC[32mO[33mL[34mO[35mR[0m video console at 0xc0001000 (200x300x32)
+[31mC[32mO[33mL[34mO[35mR[0m video console at 0xc0001000 (200x300x32)
+IOS7LAB commpage cpus: configured=1 active=1 physical=1 logical=1
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+	The Regents of the University of California. All rights reserved.
+
+MAC Framework successfully initialized
+using 4608 buffer headers and 4352 cluster IO buffer headers
+IOResources: not registry member at registerService()
+IOResources: not registry member at registerService()
+IOResources: not registry member at registerService()
+waitForSystemMapper
+Backtrace 0x8041f41f 0x8041f3d9 0x8037e541 0x8050b7c9 0x800376d9 0x800cb870 0xd1bebd50
+         can't perform kext scan: no kext summaryDSM S4MINI,1 cnt=2
+SC> AppleARMPE <- S4MINI,1
+AppleARMPE::start: Welcome to the NeXT generation.
+J1 disp: managed=230400 free=218145 guard=57619
+Leo primary BGRA CPU surface id=1 540x960 row=2160 bytes=2073600; physical outputRGB565 separate
+J1 disp: AppleCLCD published 540x960 row2160 budget=16777216
+Leo storage: phase=1 raw-open=0 read0=0 reads=0 locator=0 io=00000000
+Leo storage: card-sectors=0 file-validated=0 file-bytes=0 media-created=0 registered=0
+Leo root: selected=0 BSD= major=0 minor=0 COW=0 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=0 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=0 charge-pages=0 hits=0 misses=0 base-reads=0
+M8930 SDC1: POWER=00000001 CLOCK=00009500 STATUS=000c0040
+M8930 SDC1: CMD13 rca=2 status=00000900 state=4
+M8930 SDC1: mode 0 -> 0 sig=55aa stat=00000000 clk=00009500 sw=0000
+M8930 SDC1: read LBA0 r=0 sig=55aa p1type=0c
+J1P l31 before ctrl=46 bank2=28 bank4=40
+J1P l31 after wr=0 ctrl=cf bank2=2b bank4=41
+J1P rpm ver=0.0.0 req180=0
+J1P rpm ack ctx=1 sel2=2000 val=3 waited=1
+J1P lines irq11=0 sda16=1 scl17=1
+J1I mxt rc=0 info 82 23 30 ab x24 y14 obj21 orc=0
+J1I T9 ctrl=00 orient=00 xr=1023 yr=1023 rid=0
+J1I mxt ok=0 polls=0 chg=0 msgs=0 reports=0 errs=0 hid=0 last=00000000
+J1I mxt dropped noopen=0 nopkt=0
+J1K keys home=0 power=0 events=0
+J1I T37 @0088 sz130 inst1 rid0
+J1I T5 @010a sz9 inst1 rid0
+J1I T6 @0113 sz6 inst1 rid1
+J1I T38 @0119 sz8 inst1 rid0
+J1I T71 @0121 sz112 inst1 rid0
+J1I T7 @0191 sz4 inst1 rid0
+J1I T8 @0195 sz14 inst1 rid0
+J1I T9 @01a3 sz46 inst1 rid8
+J1I T18 @01d1 sz2 inst1 rid0
+J1I T25 @01d3 sz9 inst1 rid1
+J1I T42 @01dc sz10 inst1 rid1
+J1I T46 @01e6 sz10 inst1 rid1
+J1I T47 @01f0 sz26 inst1 rid0
+J1I T56 @020a sz30 inst1 rid1
+J1I T57 @0228 sz3 inst1 rid1
+J1I T61 @022b sz5 inst2 rid1
+J1I T65 @0235 sz11 inst1 rid0
+J1I T66 @0240 sz3 inst1 rid1
+J1I T70 @0243 sz10 inst8 rid1
+J1I T72 @0293 sz80 inst1 rid1
+J1I T80 @02e3 sz4 inst1 rid0
+J1I T9 ctrl=83 orient=03 xrange=959 yrange=539
+J1I mxt ready T5@010a sz9 T9@01a3 rid2
+IOS7J1 TOUCH mxt336s init=0
+IOS7J1 TOUCH service-ready stub physical480x800 queue4096; no-input
+IOS7LEO TOUCH published actual Type2A service
+SC< AppleARMPE ok=1
+mbinit: done [56 MB total pool size, (37/18) split]
+Pthread support ABORTS when sync kernel primitives misused
+J1BSD init: calling bsd_autoconf
+bsd_autoconf: calling kminit
+J1BSD autoconf: kminit begin
+J1BSD autoconf: kminit done
+J1BSD autoconf: pseudo_inits begin
+J1BSD autoconf: pseudo_inits done
+J1BSD autoconf: IOKitBSDInit begin
+J1BSD init: bsd_autoconf returned
+J1 stage 740
+J1 stage 741
+J1 stage 742
+J1 stage 743
+J1 stage 744
+J1 stage 745
+J1 stage 746
+J1 stage 747
+J1 stage 748
+J1 stage 751
+J1 stage 752
+Waiting on <dict ID="0"><key>IOProviderClass</key><string ID="1">IOMedia</string><key>Content</key><string ID="2">Apple_HFS</string></dict>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K buttons_read rc=0
+DSM IOResources cnt=0
+PK jobs=10/2 cfg=10 wt=10 dbg=0 0 0 0
+DSM IOPMrootDomain cnt=0
+DSM cpu cnt=2
+SC> AppleARMCPU <- cpu
+AppleARMCPU::start: Starting ARM CPU IOKit provider...
+AppleARMCPU::initCPU(0xc165ab00): we are here to serve!
+AppleARMCPU::start: registered processor with Mach subsystem.
+SC< AppleARMCPU ok=1
+DSM cpus cnt=2
+DSM arm-io cnt=2
+SC> AppleARMIO <- arm-io
+AppleARMIO::start: Publishing device tree entries to IOService plane...
+SC< AppleARMIO ok=1
+DSM defaults cnt=2
+DSM AppleARMPE cnt=0
+DSM IOCoreSurfaceRoot cnt=0
+DSM IOS7J1FB cnt=0
+DSM IOS7M8930SDMMC cnt=1
+SC> IOBlockStorageDriver <- IOS7M8930SDMMC
+SC< IOBlockStorageDriver ok=1
+DSM IOS7J1Touch cnt=0
+DSM AppleARMGrandCentral cnt=0
+DSM AppleARMCPU cnt=0
+DSM AppleARMIO cnt=0
+DSM Samsung MSM8930 eMMC Media cnt=3
+M8930SD rd blk=0 n=1 res=0 #1
+SC> IOMediaBSDClient <- Samsung MSM8930 eMMC Media
+SC< IOMediaBSDClient ok=1
+SC> IOS7LeoHFSFile <- Samsung MSM8930 eMMC Media
+M8930SD rd blk=5911 n=1 res=0 #1025
+M8930SD rd blk=6423 n=1 res=0 #2049
+M8930SD rd blk=6935 n=1 res=0 #3073
+M8930SD rd blk=7447 n=1 res=0 #4097
+M8930SD rd blk=7959 n=1 res=0 #5121
+M8930SD rd blk=8471 n=1 res=0 #6145
+Leo COW budget: managed=230400 free=217122 reserve=3 target=18 cap=28559 pages
+Leo COW total charge=28800 pages fixed/work=21
+Leo file: validated IOS7/ROOTFS.HFS bytes=1741471744 extents=1 HFS=4858 version=5 BASE_SD_RO=1 COW_RW=1 VOLATILE=1
+Leo storage: phase=4 raw-open=1 read0=1 reads=6650 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=0 registered=0
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=0 misses=0 base-reads=0
+Leo root-file registerService begin validated=1 COWready=1
+Leo root-file registerService returned (matching requested; not media/mount proof)
+SC< IOS7LeoHFSFile ok=1
+SC> IOFDiskPartitionScheme <- Samsung MSM8930 eMMC Media
+SC< IOFDiskPartitionScheme ok=1
+DSM IOBlockStorageDriver cnt=0
+DSM IOMediaBSDClient cnt=0
+DSM IOS7LeoHFSFile cnt=2
+SC> IOS7LeoHFSDriver <- IOS7LeoHFSFile
+Leo HFSDriver start enter provider=0xc166ce00
+Leo J01 job allocation returned role=1 target=0xc1670d00 class=- value=1 RETURN=803fb0ff
+Leo storage: phase=6 raw-open=1 read0=1 reads=6650 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=0 dirty=0 writes=0 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=0 misses=0 base-reads=0
+Leo HFSDriver start returned ok=1
+SC< IOS7LeoHFSDriver ok=1
+DSM Untitled 1 cnt=3
+SC> IOMediaBSDClient <- Untitled 1
+SC< IOMediaBSDClient ok=1
+Leo J02 matching job dispatch role=1 target=0xc1670d00 class=- RETURN=804001ff
+Leo J03 matching entry role=1 target=0xc1670d00 class=- RETURN=804004c1
+DSM iOS lab Leo SD HFS file Media cnt=3
+Leo J04 candidate probe begin role=1 target=0xc1670d00 class=IOMediaBSDClient RETURN=803ff207
+Leo J05 candidate probe returned role=1 target=0xc1670d00 class=IOMediaBSDClient value=1 RETURN=803ff267
+Leo J04 candidate probe begin role=1 target=0xc1670d00 class=IOS7LeoHFSFile RETURN=803ff207
+Leo J05 candidate probe returned role=1 target=0xc1670d00 class=IOS7LeoHFSFile value=0 RETURN=803ff267
+Leo J04 candidate probe begin role=1 target=0xc1670d00 class=IOFDiskPartitionScheme RETURN=803ff207
+Leo READCACHE demand: hits=0 misses=1 base-reads=1 bytes=33832
+Leo J05 candidate probe returned role=1 target=0xc1670d00 class=IOFDiskPartitionScheme value=0 RETURN=803ff267
+Leo J06 candidate start begin role=1 target=0xc1670d00 class=IOMediaBSDClient RETURN=803ff487
+SC> IOMediaBSDClient <- iOS lab Leo SD HFS file Media
+Leo J01 job allocation returned role=2 target=0xc165a880 class=- value=1 RETURN=803fb0ff
+SC< IOMediaBSDClient ok=1
+Leo J07 candidate start returned role=1 target=0xc1670d00 class=IOMediaBSDClient value=1 RETURN=803ff4e1
+Leo J08 matching busy decrement begin role=1 target=0xc1670d00 class=- RETURN=804008c7
+Leo J09 matching busy decrement returned role=1 target=0xc1670d00 class=- value=1 RETURN=80400915
+Got boot device = IOService:/AppleARMPE/IOS7M8930SDMMC/IOBlockStorageDriver/Samsung MSM8930 eMMC Media/IOS7LeoHFSFile/IOS7LeoHFSDriver/iOS lab Leo SD HFS file Media
+BSD root: disk1, major 14, minor 2
+J1 boot: vfs_mountroot begin
+Leo J10 quiet wait entry role=1 target=0xc1670d00 RETURN=80400b57 state0=0000001e state1=00000001 jobs=3 waiting=3 threads=3 BEST_EFFORT
+DSM IOS7LeoHFSDriver cnt=0
+DSM IOMediaBSDClient cnt=0
+Leo J02 matching job dispatch role=2 target=0xc165a880 class=- RETURN=804001ff
+Leo J03 matching entry role=2 target=0xc165a880 class=- RETURN=804004c1
+DSM IOMediaBSDClient cnt=0
+Leo J08 matching busy decrement begin role=2 target=0xc165a880 class=- RETURN=804008c7
+Leo J09 matching busy decrement returned role=2 target=0xc165a880 class=- value=0 RETURN=80400915
+Leo READCACHE demand: hits=0 misses=2 base-reads=2 bytes=33832
+Leo READCACHE demand: hits=0 misses=4 base-reads=4 bytes=33832
+disk1: ioctl(_IOW,'d',198,256) is unsupported.
+disk1: ioctl(_IOR,'d',80,8) is unsupported.
+J1 boot: vfs_mountroot returned errno=0
+J1 boot: root mount readonly=1
+J1 stage 753
+J1 stage 754
+J1 stage 755
+J1 stage 756
+J1 stage 757
+J1 stage 758
+Leo boot: cloneproc returned thread-present=1
+Leo boot: init thread_resume begin
+Leo boot: init thread_resume returned kern=0
+J1 stage 759
+J1 stage 761
+J1 stage 762
+J1 stage 764
+J1 ks 528
+J1 ks 531
+J1 init: bsdinit_task
+J1 init: load_init_program begin
+attempting to start init of /sbin/launchd
+Leo boot: init execve begin path=/sbin/launchd
+IOS7LAB shared region 0x2c000000..0x40000000; stack below 0x2be00000
+J1 exec pid 1 (launchd) err=0
+Leo boot: init execve returned errno=0 (kernel result only)
+IOS7LAB cache mapping 0 va=2e784000 size=0c28e000 offset=00000000 max=5 init=5
+IOS7LAB cache mapping 1 va=3aa14000 size=01ed6000 offset=0c28e000 max=23 init=23
+IOS7LAB cache mapping 2 va=3c8ec000 size=0228c000 offset=0e164000 max=1 init=1
+IOS7LAB cache mapping 3 va=3eb78000 size=0017a000 offset=12dbb000 max=1 init=1
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00000100 00002c09 0000000b>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decfa 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8eb8ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1 WDTREG 000: 00000000 00000000 00000000 00000000
+J1 WDTREG 010: 00000000 00000000 00000000 00000000
+J1 WDTREG 020: 00000000 000107ac 00000000 00000000
+J1 WDTREG 030: 00000000 00000003 00000000 00000000
+J1 WDTREG 040: 00000000 004656c8 00000c7c 001b8000
+J1 WDTREG 050: 00000000 00000000 1934fba5 001d0000
+J1 WDTREG 060: 00000000 00000000 00000000 00000000
+J1 WDTREG 070: 00000000 00000000 00000000 00000000
+J1 WDTREG 080: 00000000 00000000 01000000 00000000
+J1W round 0 nprocs=1 bb=0 sb=0 P0 S0 CK0 T0
+J1M free=180282 act=598 inact=42 wire=42560 target=1997 min=1051
+J1B n0:
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7LAB vm_map64 size=00000000:00001000 mask=00000000:00000000 flags=49000001 prot=3 result=0 address=00125000
+M8930SD rd blk=3275780 n=184 res=0 #7169
+IOS7LAB vm_map64 size=00000000:00002000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=00126000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=00128000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=00135000
+IOS7LAB vm_map64 size=00000000:00100000 mask=00000000:000fffff flags=7000001 prot=3 result=0 address=16d00000
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7LAB vm_map64 size=00000000:00800000 mask=00000000:007fffff flags=2000001 prot=3 result=0 address=17000000
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:16d6a6f0 result=0 name=707 bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:16d6a6f0 result=0 name=a03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:16d6a6f0 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:16d6a6f0 result=0 name=c03 bypass_hints=21
+com.apple.launchd                1        com.apple.launchd                                                1         *** launchd[1] has started up. ***
+com.apple.launchd                1        com.apple.launchd                                                1         *** Verbose boot, will log to /dev/console. ***
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp launchctl 0 D900 P0 S0
+<T00000200 00003a4b 00000012>
+IOS7LAB vm_map64 size=00000000:00001000 mask=00000000:00000000 flags=49000001 prot=3 result=0 address=0004e000
+IOS7LAB vm_map64 size=00000000:00002000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=0004f000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=00051000
+IOS7LAB vm_map64 size=00000000:0000d000 mask=00000000:00000000 flags=1000001 prot=3 result=0 address=0005e000
+IOS7LAB vm_map64 size=00000000:00100000 mask=00000000:000fffff flags=7000001 prot=3 result=0 address=17d00000
+IOS7LAB vm_map64 size=00000000:00800000 mask=00000000:007fffff flags=2000001 prot=3 result=0 address=18000000
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:17d79050 result=0 name=60b bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:17d79050 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:17d79050 result=0 name=c03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:17d79050 result=0 name=d03 bypass_hints=21
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (launchctl) err=2
+J1 exec pid 11 (fsck) err=0
+IOS7LAB port_construct flags=12 qlimit=6 context=00000000:15d1fa20 result=0 name=807 bypass_hints=0
+IOS7LAB port_construct flags=33 qlimit=6 context=00000000:15d1fa20 result=0 name=b03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:15d1fa20 result=0 name=c03 bypass_hints=21
+IOS7LAB port_construct flags=23 qlimit=6 context=00000000:15d1fa20 result=0 name=d03 bypass_hints=21
+Data/Stack execution not permitted: fsck[pid 11] at virtual address 0xf7000, protections were read-write
+J1 X 11 fsck 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (launchctl) err=2
+J1 exec pid 12 (mount) err=0
+Leo READCACHE demand: hits=0 misses=8 base-reads=8 bytes=33832
+J1 exec pid 13 (mount_hfs) err=0
+disk1: ioctl(_IOR,'d',80,8) is unsupported.
+Leo J10 quiet wait entry role=1 target=0xc1670d00 RETURN=80400b57 state0=0000001e state1=00000000 jobs=0 waiting=0 threads=0 BEST_EFFORT
+J1 X 13 mount_hfs 0
+/dev/disk1 on / (hfs, local, noatime)
+J1 X 12 mount 0
+J1 exec pid 14 (FinishRestoreFro) err=0
+J1 X 14 FinishRestoreFro 0
+J1 exec pid 15 (tzinit) err=0
+tzinit: LatestTZTarget doesn't exist, no need to check its validity: No such file or directory
+Leo storage: phase=6 raw-open=1 read0=1 reads=6674 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=2 dirty=2 writes=1 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=24 base-reads=24
+Leo storage: phase=6 raw-open=1 read0=1 reads=6690 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=4 dirty=4 writes=2 sync=0 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=40 base-reads=40
+J1 X 15 tzinit 100
+J1 exec pid 16 (cc_fips_test) err=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 16 cc_fips_test 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000300 000048a4 00000015>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=0 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp UserEventAgent 0 D900 P0 S0
+J1T clk hclk=00000000 md=00000000 ns=00000000 rst=00000000 haltA=3fd3ffff
+J1T gpio11 cfg=00000003 io=00000001
+J1T gpio16 cfg=00000000 io=00000001
+J1T gpio17 cfg=00000000 io=00000001
+J1T qup skipped (gsbi3 ahb clock off)
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decfa 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8eb8ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 1 nprocs=6 bb=0 sb=0 P0 S0 CK0 T0
+J1M free=174557 act=1595 inact=144 wire=43196 target=1997 min=1051
+J1B n0:
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000400 00004f0e 00000018>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp wifid 0 D900 P0 S0
+J1 sp profiled 0 D900 P0 S0
+J1 sp awdd 0 D900 P0 S0
+J1 sp timed 0 D900 P0 S0
+J1 sp audio_device_arbitrator 0 D900 P0 S0
+J1 sp misd 0 D900 P0 S0
+J1 sp mediaremoted 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp backupd 0 D900 P0 S0
+J1 sp mtmergeprops 0 D900 P0 S0
+J1 sp iaptransportd 0 D900 P0 S0
+J1 sp ptpd 0 D900 P0 S0
+J1 sp OTACrashCopier 0 D900 P0 S0
+J1 sp fud 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp mtrecorder 2 D900 P0 S0
+J1 sp syslogd 0 D900 P0 S0
+J1 sp aggregated 0 D900 P0 S0
+J1 sp spinforeverd 2 D900 P0 S0
+J1 sp SpringBoard 0 D900 P0 S0
+J1 sp routined 0 D900 P0 S0
+J1 sp DumpPanic 0 D900 P0 S0
+J1 sp atwakeup 0 D900 P0 S0
+J1 sp ubd 0 D900 P0 S0
+J1 sp identityservicesd 0 D900 P0 S0
+J1 sp vendor_device_arbitrator 0 D900 P0 S0
+J1 sp configd 0 D900 P0 S0
+J1 sp imagent 0 D900 P0 S0
+J1 sp lockdownd 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp locationd 0 D900 P0 S0
+J1 sp vmd 0 D900 P0 S0
+J1 sp accessory_device_arbitrator 0 D900 P0 S0
+J1 sp fairplayd.H2 0 D900 P0 S0
+J1 sp installd 0 D900 P0 S0
+J1 sp BTServer 0 D900 P0 S0
+J1 sp ptp_device_arbitrator 0 D900 P0 S0
+J1 sp MobileStorageMounter 0 D900 P0 S0
+J1 sp passd 0 D900 P0 S0
+J1 sp wirelessproxd 0 D900 P0 S0
+J1 sp prdaily 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp softwareupdated 0 D900 P0 S0
+J1 sp CrashHousekeeping 0 D900 P0 S0
+J1 sp sharingd 0 D900 P0 S0
+J1 sp backboardd 0 D900 P0 S0
+J1 sp /usr/sbin/mDNSResponder blocked
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp mount_nfs 2 D900 P0 S0
+J1 sp ? 0 D900 P0 S0
+J1 sp assistantd 0 D900 P0 S0
+J1 sp powerd 0 D900 P0 S0
+J1 sp aosnotifyd 0 D900 P0 S0
+J1 sp keybagd 0 D900 P0 S0
+J1 sp mediaserverd 0 D900 P0 S0
+J1 sp wifiFirmwareLoader 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp mstreamd 0 D900 P0 S0
+J1 sp fseventsd 0 D900 P0 S0
+J1 sp AppleIDAuthAgent 0 D900 P0 S0
+J1 sp atc 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00000500 000057a6 0000001d>
+UDA: total faults=16384 mediaremoted far3ac81b38 pc3a3d3e70 fsr7
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp daily 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Data/Stack execution not permitted: MobileStorageMou[pid 69] at virtual address 0x8c000, protections were read-write
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decfa 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8eb8ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 2 nprocs=55 bb=31 sb=36 P0 S0 CK8 T0
+J1M free=164829 act=2613 inact=691 wire=46785 target=1997 min=1051
+J1B n0:
+<T00000600 00005e2a 00000021>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+UDA: total faults=32768 atc far3ac01010 pc3a3d3e4e fsr7
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp notifyd 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp spinforeverd 2 D900 P0 S0
+J1 sp /usr/sbin/mDNSResponder blocked
+J1 sp mtrecorder 2 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000700 0000620f 00000028>
+M8930SD rd blk=2635356 n=64 res=0 #8193
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+UDA: total faults=49152 wirelessproxd far3c9280ca pc2fc181aa fsr7
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1W round 3 nprocs=56 bb=31 sb=36 P0 S0 CK8 T3
+J1M free=155669 act=5356 inact=964 wire=47730 target=1997 min=1051
+J1B n6: d51 c8 ce d5a d56 d4c
+J1Q head=0 tail=0 opened=0 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00000800 00006581 0000002d>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp /usr/sbin/mDNSResponder blocked
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp mtrecorder 2 D900 P0 S0
+J1 sp spinforeverd 2 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000900 000067fb 00000031>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1W round 4 nprocs=56 bb=31 sb=36 P0 S0 CK8 T6
+J1M free=147077 act=8484 inact=1637 wire=48002 target=1997 min=1051
+J1B n11: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp aslmanager 0 D900 P0 S0
+UDA: total faults=65536 aslmanager far3a3eca0f pc3a3dadfe fsr7
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000a00 00006b5c 00000036>
+J1 X 65 BTServer 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp xpcd 0 D900 P0 S0
+Data/Stack execution not permitted: xpcd[pid 82] at virtual address 0xe0000, protections were read-write
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 TMR ff1c d59922852297 cal55.832
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 54 DumpPanic 100
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 33 CrashHousekeepin 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000b00 00006db2 00000039>
+J1 TMR ff1c d59924175889 cal57.583
+J1 sp mtrecorder 2 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp spinforeverd 2 D900 P0 S0
+J1 sp /usr/sbin/mDNSResponder blocked
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 22 audio_device_arb 0
+J1 X 57 vendor_device_ar 0
+J1 X 64 ptp_device_arbit 0
+J1 X 61 accessory_device 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 81 aslmanager 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=0 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1 TMR ff1c d119922937630 cal59.934
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000c00 000070ae 0000003c>
+J1 TMR ff1c d119922833963 cal60.687
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp MobileGestaltHelper 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 PATCH backboardd checkin
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1W round 5 nprocs=51 bb=31 sb=36 P0 S0 CK28 T84
+J1M free=142562 act=9320 inact=2300 wire=48163 target=1997 min=1051
+J1B n19: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 69 MobileStorageMou 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00000d00 00007423 00000041>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp lsd 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+M8930SD rd blk=549980 n=8 res=0 #9217
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp mtrecorder 2 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00000e00 00007624 00000044>
+J1 sp spinforeverd 2 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp /usr/sbin/mDNSResponder blocked
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp /System/Library/Frameworks/Accounts.framework/accountsd blocked
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp lockbot 0 D900 P0 S0
+<T00000f00 00007839 00000047>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp distnoted 0 D900 P0 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Leo storage: phase=6 raw-open=1 read0=1 reads=7190 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=106 dirty=106 writes=128 sync=1 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=860 base-reads=860
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+Leo storage: phase=6 raw-open=1 read0=1 reads=7190 locator=0 io=00000000
+Leo storage: card-sectors=11239391 file-validated=1 file-bytes=1741471744 media-created=1 registered=1
+Leo root: selected=0 BSD= major=0 minor=0 COW=1 VOLATILE=1 BASE_SD_RO=1
+Leo COW: cap=28559 pages used=117 dirty=117 writes=141 sync=2 error=00000000
+Leo READCACHE: bytes=33832 charge-pages=9 hits=2 misses=948 base-reads=948
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 HFPLL 200: 00000007 7845c665 00000022 00000000 00000001 0100c000 00000000 00000001
+J1 HFPLL 300: 00000000 7845c665 00000022 00000000 00000001 0100c000 00000000 00000000
+J1 HFPLL 400: 00000000 7805c665 00000000 00000000 00000000 0000c000 00000000 00000000
+J1 HFPLL 420: 00000b07 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+J1 ACS0 000: 00000000 00000080 00006704 00000000 00000000 00000003 00000000 00000000
+J1 SAW0 000: 00000000 1c871001 00000000 00003000 00000092 00000092 00000000 00000000
+J1 SAWL2 000: 00000000 1c911001 00000000 00003000 00000000 00000000 00000000 00000000
+J1 SAW0 020: 00000000 03020004 00840092 00920012 00000000 3f8decfa 00000000 00000000
+J1 SAWL2 020: 00000000 00000000 00000000 00000000 00000000 1f8eb8ea 00000000 00000000
+J1 CPMR cpu0=00000001 l2=00000020
+J1W round 6 nprocs=53 bb=31 sb=36 P0 S0 CK28 T168
+J1M free=138080 act=10321 inact=2611 wire=48825 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 TMR ff1c d75958681000 cal73.960
+J1 fb open type=0
+J1 fb open type=0
+J1 fb open type=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001000 00008155 0000004a>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 29 prdaily 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=0 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1 TMR ff1c d77958678334 cal76.060
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001100 00008392 0000004d>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp mtrecorder 2 D903 P0 S0
+J1 X 10 launchctl 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+UDA: total faults=81920 softwarebehavior far3a44d05c pc3a3da982 fsr7
+J1 sp spinforeverd 2 D903 P0 S0
+J1 X 53 atwakeup 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+a4045883,00000012,a4b45120,00000012,00000000,00000000,00000001,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,80000007,80000007,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 present #1 fmt42475241 row2160
+J1 frame #1 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=1 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 43 fud 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001200 00008955 00000050>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp networkd 0 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1W round 7 nprocs=50 bb=31 sb=36 P1 S0 CK28 T194
+J1M free=136915 act=11380 inact=2014 wire=48923 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001300 00008bd2 00000053>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+Data/Stack execution not permitted: backboardd[pid 31] at virtual address 0x2e06000, protections were read-write
+J1 sp networkd_privileged 0 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00001400 00008da0 00000056>
+IOS7LEO TOUCH client type=0 pid=31
+IOS7LEO TOUCH queue-map type0 bytes=4136
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7LEO TOUCH method=0 sin=1 stin=0 sout=0 stout=0
+IOS7LEO TOUCH reader-open selector=0
+IOS7LEO TOUCH notification-port type0 registered; not-event-delivery-proof
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp apsd 0 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp mtrecorder 2 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7LEO TOUCH method=2 sin=2 stin=52 sout=0 stout=52
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+<T00001500 000090ca 00000059>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp spinforeverd 2 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 CHECKIN id5b9938 from pid36
+J1 CHK dest act-2147483648 rcv pid31 name1c03 q0/5
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E31:1969-12-31 16:01:31.-418 backboardd[31:7003] 
+E31:Telling the system app that it can start immediately
+J1 CHECKIN id5b9939 from pid31
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001600 000092fc 0000005c>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1W round 8 nprocs=52 bb=31 sb=36 P1 S0 CK31 T217
+J1M free=135008 act=11836 inact=2037 wire=49354 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001700 0000955d 0000005f>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+M8930SD rd blk=717132 n=40 res=0 #10241
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001800 000096f3 00000062>
+E36:1969-12-31 16:01:35.-487 SpringBoard[36:1b07] 
+E36:+[SBPushStore migratePushStore] Migrating push store: /var/mobile/Library/SpringBoard/PushStore
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Data/Stack execution not permitted: mediaserverd[pid 49] at virtual address 0x20a000, protections were read-write
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp mtrecorder 2 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:01:38.-752 SpringBoard[36:1b07] 
+E36:+[SBPushStore migratePushStore] Push store does not exist; no migration needed.
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp spinforeverd 2 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001900 00009a2f 00000065>
+J1 X 26 mtmergeprops 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1 X 34 daily 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp SCHelper 0 D903 P1 S0
+J1W round 9 nprocs=51 bb=31 sb=36 P1 S0 CK31 T244
+J1M free=133572 act=12349 inact=1641 wire=49504 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001a00 00009d35 00000068>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp securityd 0 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001b00 00009ec0 0000006b>
+UDA: total faults=98304 lsd far1e14014 pc3143f08e fsr7
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 92 lockbot 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001c00 0000a077 0000006e>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp mtrecorder 2 D903 P1 S0
+J1 sp spinforeverd 2 D903 P1 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001d00 0000a223 00000071>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Leo software-pacing notification count=1 result=0 now=113447926518 interval=16667000
+6b044c6e,0000001a,6a2913ea,0000001a,00000000,00000000,00000002,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 present #2 fmt42475241 row2160
+J1 frame #2 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=2 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=2 result=0 now=113505603851 interval=16667000
+6e746283,0000001a,6da30efc,0000001a,00000000,00000000,00000003,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 present #3 fmt42475241 row2160
+J1 frame #3 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=3 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=3 result=0 now=113568965185 interval=16667000
+723b33b9,0000001a,71997554,0000001a,00000000,00000000,00000004,00000001,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 frame #4 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=4 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1W round 10 nprocs=51 bb=31 sb=36 P4 S0 CK31 T275
+J1M free=131331 act=13211 inact=1498 wire=49659 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 42 OTACrashCopier 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00001e00 0000b052 00000074>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1 sp mobileassetd 0 D903 P4 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 PATCH SpringBoard nobuddy
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E36:1969-12-31 16:01:58.-660 SpringBoard[36:1b07] 
+E36:Loaded logger: SBAppInstallationLog
+E36:1969-12-31 16:01:58.-651 SpringBoard[36:1b07] 
+E36:Loaded logger: SBIconLog
+E36:1969-12-31 16:01:58.-648 SpringBoard[36:1b07] 
+E36:Loaded logger: SBWorkspaceLogging
+Leo software-pacing notification count=4 result=0 now=118857907703 interval=16667000
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+Leo software-pacing notification count=5 result=0 now=118886944888 interval=16667000
+Leo software-pacing notification count=6 result=0 now=118907981481 interval=16667000
+Leo software-pacing notification count=7 result=0 now=118930555407 interval=16667000
+Leo software-pacing notification count=8 result=0 now=118960642962 interval=16667000
+Leo software-pacing notification count=9 result=0 now=118983971407 interval=16667000
+IOS7LAB surface request 1: <dict><key>IOSurfaceWidth</key><integer size="32">0x21c</integer><key>IOSurfaceMemoryRegion</key><string>PurpleGfxMem</string><key>IOSurfaceIsGlobal</key><true/><key>IOSurfaceBytesPerRow</key><integer size="32">0x880</integer><key>IOSurfacePixelFormat</key><integer size="32">0x42475241</integer><key>IOSurfaceBytesPerElement</key><integer size="32">0x4</integer><key>IOSurfaceCacheMode</key><integer
+IOS7LAB surface parsed w=540 h=960 fmt=42475241 row=2176 alloc=2088960 -> 0
+Leo software-pacing notification count=10 result=0 now=119009201333 interval=16667000
+Leo software-pacing notification count=11 result=0 now=119030162074 interval=16667000
+Leo software-pacing notification count=12 result=0 now=119060086666 interval=16667000
+Leo software-pacing notification count=13 result=0 now=119089088592 interval=16667000
+Leo software-pacing notification count=14 result=0 now=119110835851 interval=16667000
+ad7a0f6f,0000001b,b3874dc5,0000001b,00000000,00000000,00000005,00000002,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000021c,000003c0,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000001,ff000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000
+J1 frame #5 avg=2,2,2 lit=2% nzwords=518400 first=0 w0=57000000
+IOS7LAB framebuffer presented transaction=5 surface=2 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=15 result=0 now=119191346814 interval=16667000
+J1 frame #6 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=6 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=16 result=0 now=119235681777 interval=16667000
+J1 frame #7 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=7 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=17 result=0 now=119279388000 interval=16667000
+J1 frame #8 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=8 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+Leo software-pacing notification count=18 result=0 now=119381883407 interval=16667000
+J1 frame #9 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=9 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=19 result=0 now=119425042814 interval=16667000
+J1 frame #10 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=10 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=20 result=0 now=119466970962 interval=16667000
+J1 frame #11 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=11 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+<T00001f00 0000c32b 00000077>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:02:00.-308 SpringBoard[36:1b07] 
+E36:*** error reading settings archive file: <SBRootSettings: /var/mobile/Documents/com.apple.springboard.settings/RootSettings.plist> 
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp mtrecorder 2 D903 P11 S0
+E36:1969-12-31 16:02:01.-237 SpringBoard[36:1b07] 
+E36:*** error reading settings archive file: <SBRootSettings: /var/mobile/Documents/com.apple.springboard.settings/RootSettings.previous.plist> 
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+Leo software-pacing notification count=21 result=0 now=121971992592 interval=16667000
+J1 frame #12 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=12 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=22 result=0 now=122015319555 interval=16667000
+J1 frame #13 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=13 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+Leo software-pacing notification count=23 result=0 now=122064299851 interval=16667000
+J1 frame #14 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=14 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp spinforeverd 2 D903 P14 S0
+<T00002000 0000c997 0000007a>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1W round 11 nprocs=52 bb=31 sb=36 P14 S0 CK95 T316
+J1M free=128266 act=13803 inact=1615 wire=50287 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1 sp itunesstored 0 D903 P14 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 20 awdd 0
+E31:1969-12-31 16:02:04.-270 backboardd[31:5727] 
+E31:-[BKSystemAppSentinel lock_notePresenceOfSystemApp:] Now monitoring "com.apple.SpringBoard"
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002100 0000ccbc 0000007d>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 fb open type=0
+Leo software-pacing notification count=1 result=0 now=126105245629 interval=16667000
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:02:07.-106 SpringBoard[36:1b07] 
+E36:ERROR: WiFi device not found, no WiFi untill a device is attached
+E36:1969-12-31 16:02:07.-95 SpringBoard[36:1b07] 
+E36:BTM: attaching to BTServer
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002200 0000cf5b 00000080>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:02:08.-207 SpringBoard[36:1b07] 
+E36:BTM: failed to attach with error 9
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+<T00002300 0000d185 00000083>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 frame #15 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=15 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1 frame #16 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=16 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1 frame #17 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=17 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1W round 12 nprocs=51 bb=31 sb=36 P17 S0 CK95 T333
+J1M free=125519 act=14914 inact=1462 wire=50428 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00002400 0000d65d 00000086>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 frame #18 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=18 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1 frame #19 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=19 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1 frame #20 avg=64,64,64 lit=100% nzwords=518400 first=0 w0=ff404040
+IOS7LAB framebuffer presented transaction=20 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002500 0000d9d0 00000089>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002600 0000db3e 0000008c>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 X 115 SCHelper 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00002700 0000dc88 0000008f>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1W round 13 nprocs=51 bb=31 sb=36 P20 S0 CK95 T355
+J1M free=124133 act=15168 inact=1574 wire=50471 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:02:24.-822 SpringBoard[36:1b07] 
+E36:lockdown didn't have a ActivationState value set.
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002800 0000df7e 00000091>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+UDA: total faults=114688 UserEventAgent far20ac8ffc pc3a8ef17c fsr807
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E36:1969-12-31 16:02:28.-456 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x1108ad 0xc695d 0x324d7d03 0x324d79c1 0x324d1ca9 0x324d0569 0x324cb871 
+<T00002900 0000e20a 00000094>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp DuetLST 0 D904 P20 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1 sp ABDatabaseDoctor 0 D904 P20 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E36:1969-12-31 16:02:31.-214 SpringBoard[36:1b07] 
+E36:throwing out icon because its isn't visible in the model : node=<SBApplicationIcon: 0x1466bb20; nodeID: "com.apple.camera"> com.apple.camera
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:02:31.-200 SpringBoard[36:1b07] 
+E36:throwing out icon because its isn't visible in the model : node=<SBApplicationIcon: 0x14670940; nodeID: "com.apple.compass"> com.apple.compass
+E36:1969-12-31 16:02:31.-12 SpringBoard[36:1b07] 
+E36:throwing out icon because its isn't visible in the model : node=<SBApplicationIcon: 0x146715a0; nodeID: "com.apple.nike"> com.apple.nike
+<T00002a00 0000e63a 00000098>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp vsassetd 0 D904 P20 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1W round 14 nprocs=53 bb=31 sb=36 P20 S0 CK95 T374
+J1M free=120967 act=15908 inact=1866 wire=50806 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1U pid36 sl2784000
+0:381efa50 381ef84d
+ 2ecdaf3b 2ecde40d 2ecea447
+ 2eceba9b 2eceda2d 2fec736f
+ 2fec7179 1084d1 1ef2af
+
+2:381efa50 381ef84d
+
+3:381efaa0 3813cd41
+
+4:381efa50 381ef84d
+
+5:381efa50 381ef84d
+
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00002b00 0000e987 0000009b>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 sp voiced 0 D904 P20 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00002c00 0000eb10 0000009e>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00002d00 0000ece0 000000a0>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+M8930SD rd blk=2029426 n=1 res=0 #11265
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002e00 0000ee3e 000000a3>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 15 nprocs=54 bb=31 sb=36 P20 S0 CK95 T397
+J1M free=118339 act=16314 inact=2200 wire=51078 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+E36:1969-12-31 16:02:45.-398 SpringBoard[36:1200b] 
+E36:Using your own bundle identifier as an NSUserDefaults suite name does not make sense and will not work. Break on _NSUserDefaults_Log_Nonsensical_Suites to find 
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00002f00 0000f17a 000000a6>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003000 0000f2b0 000000a9>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 139 vsassetd 0
+J1 X 137 ABDatabaseDoctor 0
+<T00003100 0000f416 000000ab>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 16 nprocs=52 bb=31 sb=36 P20 S0 CK95 T424
+J1M free=117243 act=16694 inact=2137 wire=50993 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00003200 0000f6db 000000ae>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003300 0000f811 000000b1>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1 X 142 voiced 0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00003400 0000f959 000000b3>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7LAB framebuffer presented transaction=21 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+IOS7LAB framebuffer presented transaction=22 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+IOS7LAB framebuffer presented transaction=23 surface=1 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+UDA: total faults=131072 SpringBoard far52b7000 pc3a9e6e50 fsr807
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+<T00003500 0000fcac 000000b6>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 17 nprocs=52 bb=31 sb=36 P23 S0 CK95 T466
+J1M free=113775 act=17181 inact=3054 wire=50995 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1 sp touchsetupd 0 D904 P23 S0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E36:1969-12-31 16:03:05.-661 SpringBoard[36:1b07] 
+E36:Application windows are expected to have a root view controller at the end of application launch
+E36:1969-12-31 16:03:05.-653 SpringBoard[36:1b07] 
+E36:Application windows are expected to have a root view controller at the end of application launch
+J1Q head=0 tail=0 opened=1 pend=0 notify calls=0 ok=0 busy=0 err=0 noport=0 last=ffffffff qfail=0
+<T00003600 00010089 000000b9>
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+IOS7LAB remap64 result=0 reply_bytes=52
+
+
+** Log started Wed Dec 31 16:03:06 PST 1969 **
+
+CoreAnimation: updates deferred for too long
+IOS7LAB framebuffer presented transaction=24 surface=2 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7J1 TOUCH mxt x=47 y=265 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=down x=0 y=0 down=1 timestamp=188534707703; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=208 tail=208; queue-progress-only
+IOS7J1 TOUCH mxt x=61 y=269 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=188568421333; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=416 tail=416; queue-progress-only
+IOS7J1 TOUCH mxt x=70 y=274 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=188598471407; queue-enqueue-not-UI-consumption
+<T00003700 000107ad 000000bc>
+IOS7LEO TOUCH reader-head head=624 tail=624; queue-progress-only
+IOS7J1 TOUCH mxt x=78 y=275 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=188638852740; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=832 tail=832; queue-progress-only
+IOS7J1 TOUCH mxt x=85 y=275 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=188668500444; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=97 y=269 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=188730058666; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=114 y=267 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=188790760148; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7J1 TOUCH mxt x=136 y=269 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=188854888444; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=157 y=266 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=188918248740; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=205 y=252 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=188982449629; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=230 y=244 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=189045758518; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=231 y=240 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=189108701185; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=231 y=237 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=189172000888; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=232 y=233 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=189236789185; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=232 y=231 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=189300168148; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7J1 TOUCH mxt x=232 y=231 down=0 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=up x=0 y=0 down=0 timestamp=189364189481; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7J1 TOUCH mxt x=134 y=281 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=down x=0 y=0 down=1 timestamp=190042493037; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=144 y=279 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=190105906074; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=171 y=277 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=190169726074; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=195 y=274 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=190234321629; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=215 y=269 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=190298233629; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+IOS7J1 TOUCH mxt x=231 y=268 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=190363303259; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=244 y=266 down=1 opened=1
+IOS7LEO TOUCH reader-head head=624 tail=624; queue-progress-only
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=190414090962; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=253 y=265 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=190449486962; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=1040 tail=1040; queue-progress-only
+IOS7J1 TOUCH mxt x=259 y=264 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=190478785185; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=1248 tail=1248; queue-progress-only
+IOS7J1 TOUCH mxt x=268 y=262 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=190511005629; queue-enqueue-not-UI-consumption
+IOS7LEO TOUCH reader-head head=1456 tail=1456; queue-progress-only
+IOS7J1 TOUCH mxt x=279 y=258 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=190540870962; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=279 y=258 down=0 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=up x=0 y=0 down=0 timestamp=190589764592; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+<T00003800 000119dc 000000bf>
+IOS7J1 TOUCH mxt x=169 y=296 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=down x=0 y=0 down=1 timestamp=191754361185; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=169 y=293 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=191805674814; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+IOS7J1 TOUCH mxt x=181 y=288 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=191856832444; queue-enqueue-not-UI-consumption
+IOS7J1 TOUCH mxt x=202 y=282 down=1 opened=1
+IOS7LEO TOUCH enqueued seq=0 kind=move x=0 y=0 down=1 timestamp=191907925333; queue-enqueue-not-UI-consumption
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1W round 18 nprocs=52 bb=31 sb=36 P95 S0 CK95 T481
+J1M free=112205 act=17176 inact=3153 wire=51152 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00003900 00011e77 000000c2>
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E36:1969-12-31 16:03:17.-720 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00003a00 000120f5 000000c5>
+J1K raw gpio35 io=1 cfg=3  pm rt6=2a  -> home=0 power=1
+J1K power down opened=1
+J1K enqueue failed
+J1K raw gpio35 io=1 cfg=3  pm rt6=0a  -> home=0 power=1
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K power up opened=1
+J1K enqueue failed
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+E36:1969-12-31 16:03:18.-482 SpringBoard[36:1b07] 
+E36:Could not determine current country code: Error Domain=GEOErrorDomain Code=-2 "The operation couldn’t be completed. (GEOErrorDomain error -2.)"
+J1K raw gpio35 io=1 cfg=3  pm rt6=2a  -> home=0 power=1
+J1K power down opened=1
+J1K enqueue failed
+J1K raw gpio35 io=1 cfg=3  pm rt6=0a  -> home=0 power=1
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K power up opened=1
+J1K enqueue failed
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1Q head=2912 tail=2912 opened=1 pend=0 notify calls=16 ok=16 busy=0 err=0 noport=0 last=0 qfail=1
+J1K raw gpio35 io=1 cfg=3  pm rt6=06  -> home=0 power=0
+J1K raw gpio35 io=1 cfg=3  pm rt6=0a  -> home=0 power=1
+J1K power down opened=1
+J1K enqueue failed
+J1K raw gpio35 io=1 cfg=3  pm rt6=26  -> home=0 power=0
+J1K power up opened=1
+J1K enqueue failed
+<T00003b00 000125a3 000000c8>
+J1 sp assetsd 0 D904 P154 S0
+J1 sp voiced 0 D904 P155 S0
+J1K power down opened=1
+J1K enqueue failed
+J1K power up opened=1
+J1K enqueue failed
+<T00003c00 0001264e 000000cb>
+J1W round 19 nprocs=55 bb=31 sb=36 P156 Sa070002 CK95 T491
+J1M free=110100 act=17581 inact=3393 wire=51357 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:1969-12-31 16:03:24.-968 SpringBoard[36:1b07] 
+E36:[MPUSystemMediaControls] Disabling lock screen media controls updates for screen turning off.
+E36:1969-12-31 16:03:24.-963 SpringBoard[36:1b07] 
+E36:[MPUNowPlayingController] Not registered for now playing notifications. Ignoring call to -unregisterForNotifications.
+E36:1969-12-31 16:03:24.-876 SpringBoard[36:1b07] 
+E36:[MPUNowPlayingController] Not registered for now playing notifications. Ignoring call to -unregisterForNotifications.
+IOS7LAB surface request 2: <dict><key>IOSurfaceWidth</key><integer size="32">0x21c</integer><key>IOSurfaceIsGlobal</key><true/><key>IOSurfaceBytesPerRow</key><integer size="32">0x880</integer><key>IOSurfaceBytesPerElement</key><integer size="32">0x4</integer><key>IOSurfaceAllocSize</key><integer size="32">0x1fe000</integer><key>IOSurfacePixelFormat</key><integer size="64">0x42475241</integer><key>IOSurfaceHeight</key><integ
+IOS7LAB surface parsed w=540 h=960 fmt=42475241 row=2176 alloc=2088960 -> 0
+J1 sp calaccessd 0 D904 P156 Sa070002
+<T00003d00 00012b75 000000ce>
+J1 pmap_remove_range wired clamp 0<209
+J1 pmap_remove_range wired clamp 0<256
+J1 pmap_remove_range wired clamp 0<45
+IOS7LAB surface failure selector=17 result=e00002c7 scalar-in=1 struct-in=0 scalar-out=0 struct-out=0
+E36:kIOSurfaceMethodIncrementUseCount failed: e00002c7 
+UDA: total faults=147456 SpringBoard far657b000 pc3a9e6e22 fsr807
+IOS7LAB surface failure selector=18 result=e00002c7 scalar-in=1 struct-in=0 scalar-out=0 struct-out=0
+E36:kIOSurfaceMethodDecrementUseCount failed: e00002c7 
+IOS7LAB surface request 3: <dict><key>IOSurfaceWidth</key><integer size="32">0x21c</integer><key>IOSurfaceIsGlobal</key><true/><key>IOSurfaceBytesPerRow</key><integer size="32">0x880</integer><key>IOSurfaceBytesPerElement</key><integer size="32">0x4</integer><key>IOSurfaceAllocSize</key><integer size="32">0x1fe000</integer><key>IOSurfacePixelFormat</key><integer size="64">0x42475241</integer><key>IOSurfaceHeight</key><integ
+IOS7LAB surface parsed w=540 h=960 fmt=42475241 row=2176 alloc=2088960 -> 0
+<T00003e00 00012f7d 000000d0>
+J1 pmap_remove_range wired clamp 0<205
+IOS7LAB surface failure selector=17 result=e00002c7 scalar-in=1 struct-in=0 scalar-out=0 struct-out=0
+E36:kIOSurfaceMethodIncrementUseCount failed: e00002c7 
+IOS7LAB surface failure selector=18 result=e00002c7 scalar-in=1 struct-in=0 scalar-out=0 struct-out=0
+E36:kIOSurfaceMethodDecrementUseCount failed: e00002c7 
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a6520)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:03:29.-664 SpringBoard[36:1b07] 
+E36:SMS Plugin initialized.
+E36:1969-12-31 16:03:29.-189 SpringBoard[36:1b07] 
+E36:SIMToolkit plugin for SpringBoard initialized.
+E36:1969-12-31 16:03:29.-110 SpringBoard[36:1b07] 
+E36:Sharing Plugin initialized.
+J1K power down opened=1
+J1K enqueue failed
+J1K power up opened=1
+J1K enqueue failed
+E36:1969-12-31 16:03:30.-682 SpringBoard[36:1b07] 
+E36:ERROR: WiFi device not found.
+<T00003f00 00013349 000000d3>
+E36:1969-12-31 16:03:31.-644 SpringBoard[36:1b07] 
+E36:WiFi picker plugin initialized
+E36:1969-12-31 16:03:32.-366 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a6520)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1Q head=416 tail=416 opened=1 pend=0 notify calls=22 ok=22 busy=0 err=0 noport=0 last=0 qfail=1
+J1W round 20 nprocs=57 bb=31 sb=36 P156 Sa070002 CK95 T510
+J1M free=105884 act=17918 inact=3779 wire=51658 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1U pid36 sl2784000
+0:381efab8 3813cd0d
+ 31080883 3107978d 310793e1
+ 1000a7 11fbb7 1299bd
+ 30ea6fdf 2d47d807 2d47d7a3
+
+2:381efa50 381ef84d
+
+3:381efaa0 3813cd41
+
+4:381efa50 381ef84d
+
+5:381efa50 381ef84d
+
+<T00004000 00013757 000000d6>
+J1 sp MobileMail 0 D904 P156 Sa070002
+J1 sp ? 0 D904 P156 Sa070002
+E36:1969-12-31 16:03:35.-719 SpringBoard[36:1b07] 
+E36:lockdown didn't have a ActivationState value set.
+E36:1969-12-31 16:03:35.-705 SpringBoard[36:1b07] 
+E36:lockdown didn't have a ActivationState value set.
+E36:1969-12-31 16:03:35.-691 SpringBoard[36:1b07] 
+E36:lockdown didn't have a ActivationState value set.
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14650760)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E31:1969-12-31 16:03:36.-669 backboardd[31:e02b] 
+E31:Could not set priority of MobileMail[166] to 1, priority: Invalid argument
+E36:1969-12-31 16:03:36.-492 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1K home down opened=1
+J1K enqueue failed
+<T00004100 00013b10 000000d9>
+J1K home up opened=1
+J1K enqueue failed
+J1K home down opened=1
+J1K enqueue failed
+J1K home up opened=1
+J1K enqueue failed
+J1K home down opened=1
+J1K enqueue failed
+J1K home up opened=1
+J1K enqueue failed
+J1K home down opened=1
+J1K enqueue failed
+J1K home up opened=1
+J1K enqueue failed
+J1K home down opened=1
+J1K enqueue failed
+J1K home up opened=1
+J1K enqueue failed
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14655d40)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:03:39.-993 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00004200 00013e10 000000dc>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a39b0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+Data/Stack execution not permitted: assetsd[pid 157] at virtual address 0x185c000, protections were read-write
+J1 EXC 157 assetsd e1 far0 kr0
+ pc0185c028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf6c3 2fa0eb0b sl2784000
+E36:1969-12-31 16:03:41.-808 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 X 157 assetsd a
+<T00004300 000140ae 000000de>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14655d40)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1 sp assetsd 0 D904 P156 Sa070002
+J1K home down opened=1
+J1K enqueue failed
+J1W round 21 nprocs=59 bb=31 sb=36 P156 Sa070002 CK95 T525
+J1M free=103700 act=18109 inact=3946 wire=51833 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1K home up opened=1
+J1K enqueue failed
+J1K home down opened=1
+J1K enqueue failed
+E36:1969-12-31 16:03:44.-806 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1K home up opened=1
+J1K enqueue failed
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14725840)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+<T00004400 0001449b 000000e1>
+E36:1969-12-31 16:03:45.-82 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2df0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:03:48.-651 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00004500 00014765 000000e4>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a6d60)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:03:49.-04 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2fb0)  
+<T00004600 00014935 000000e7>
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:03:52.-830 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1461c360)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:03:53.-282 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 22 nprocs=57 bb=31 sb=36 P156 Sa070002 CK95 T542
+J1M free=102110 act=18218 inact=3865 wire=52010 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00004700 00014cf2 000000e9>
+Data/Stack execution not permitted: assetsd[pid 170] at virtual address 0x1845000, protections were read-write
+J1 EXC 170 assetsd e1 far0 kr0
+ pc01845028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf6c3 2fa0eb0b sl2784000
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b6c30)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1 X 170 assetsd a
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:1969-12-31 16:03:55.-508 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+UDA: total faults=163840 assetsd far3ac8d464 pc3a3d3e70 fsr7
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b52d0)  
+<T00004800 00015031 000000ec>
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1 kill 31 backboardd -> 166 sig17
+E36:1969-12-31 16:03:57.-745 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E31:1969-12-31 16:03:57.-619 backboardd[31:ea2b] 
+E31:com.apple.mobilemail failed to launch in time
+E31:1969-12-31 16:03:57.-446 backboardd[31:ea2b] 
+E31:Forcing crash report of MobileMail[166]...
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b5c30)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:03:59.-950 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00004900 000153da 000000ef>
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2df0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:00.-453 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 176] at virtual address 0x18b8000, protections were read-write
+J1 EXC 176 assetsd e1 far0 kr0
+ pc018b8028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1462abc0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1 X 176 assetsd a
+<T00004a00 00015775 000000f1>
+E36:1969-12-31 16:04:02.-833 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2fb0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:03.-482 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 23 nprocs=56 bb=31 sb=36 P156 Sa070002 CK95 T603
+J1M free=101595 act=18297 inact=3897 wire=51990 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00004b00 00015ad9 000000f4>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1476eff0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:05.-832 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14700370)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:06.-466 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 X 159 voiced 0
+<T00004c00 00015e10 000000f7>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147273a0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:07.-131 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14771a90)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:09.-1000 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00004d00 00016113 000000f9>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145bb5d0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1 X 25 backupd 0
+E36:1969-12-31 16:04:10.-236 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 X 72 atc 0
+Data/Stack execution not permitted: assetsd[pid 182] at virtual address 0x1845000, protections were read-write
+J1 EXC 182 assetsd e1 far0 kr0
+ pc01845028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 182 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1518f7e0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+<T00004e00 000164ce 000000fc>
+E36:1969-12-31 16:04:12.-648 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 X 23 misd 0
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147f3120)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:13.-265 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 24 nprocs=52 bb=31 sb=36 P156 Sa070002 CK95 T640
+J1M free=103143 act=18319 inact=3742 wire=51661 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00004f00 00016841 000000fe>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b0d20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:15.-846 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x146295d0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:16.-397 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+<T00005000 00016b66 00000101>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14771a90)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:17.-228 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b0d20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:18.-76 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005100 00016e67 00000104>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14771a90)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:20.-455 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147f3120)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:22.-847 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005200 00017169 00000106>
+Data/Stack execution not permitted: assetsd[pid 188] at virtual address 0x17bf000, protections were read-write
+J1 EXC 188 assetsd e1 far0 kr0
+ pc017bf028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 188 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1455ca30)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:23.-438 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 25 nprocs=52 bb=31 sb=36 P156 Sa070002 CK95 T674
+J1M free=102745 act=18302 inact=3725 wire=51731 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147f3120)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:25.-869 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005300 000176d8 00000109>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x146295d0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:26.-583 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b0060)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+<T00005400 00017925 0000010b>
+E36:1969-12-31 16:04:27.-210 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14684c20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:29.-504 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005500 00017b8d 0000010e>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b4e60)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:30.-181 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147f3120)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:32.-824 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005600 00017e8f 00000111>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1461c360)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+Data/Stack execution not permitted: assetsd[pid 193] at virtual address 0x1850000, protections were read-write
+J1 EXC 193 assetsd e1 far0 kr0
+ pc01850028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 193 assetsd a
+E36:1969-12-31 16:04:33.-241 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 26 nprocs=52 bb=31 sb=36 P156 Sa070002 CK95 T710
+J1M free=102186 act=18305 inact=3741 wire=51748 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1U pid36 sl2784000
+0:381efa50 381ef84d
+ 2d47d5e9 2d47bd4f 2d3e6729
+ 2d3e650b 323556d3 2fd47871
+ c4adb 3814bab7
+2:381efa50 381ef84d
+
+3:381efaa0 3813cd41
+
+4:381efa50 381ef84d
+
+5:381efa50 381ef84d
+
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14543a70)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:34.-119 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005700 0001845f 00000113>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b1180)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:36.-782 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147273a0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:37.-730 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+<T00005800 000187e7 00000116>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1518a640)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+UDA: total faults=180224 assetsd far3cd31f0f pc2bee35a2 fsr7
+E36:1969-12-31 16:04:38.-223 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1455ca30)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:39.-103 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005900 00018b26 00000118>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14684c20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:41.-782 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147ab340)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:42.-369 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 199] at virtual address 0x188e000, protections were read-write
+J1 EXC 199 assetsd e1 far0 kr0
+ pc0188e028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+<T00005a00 00018f23 0000011b>
+J1 X 199 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a81a0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1W round 27 nprocs=52 bb=31 sb=36 P156 Sa070002 CK95 T744
+J1M free=101789 act=18305 inact=3708 wire=51766 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:1969-12-31 16:04:43.-09 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1455ca30)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:45.-755 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005b00 00019333 0000011e>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14684c20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:46.-393 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x151642a0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:47.-131 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005c00 00019635 00000120>
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x146b9e70)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:49.-857 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b1180)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:50.-600 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005d00 000199bd 00000123>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a81a0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:51.-511 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1518a640)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:52.-477 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2450)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+<T00005e00 00019d59 00000125>
+J1W round 28 nprocs=53 bb=31 sb=36 P156 Sa070002 CK95 T777
+J1M free=100956 act=18301 inact=3708 wire=51882 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:1969-12-31 16:04:53.-84 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 205] at virtual address 0xfc000, protections were read-write
+J1 EXC 205 assetsd e1 far0 kr0
+ pc000fc028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 205 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8000)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:55.-694 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+M8930SD rd blk=2733605 n=1 res=0 #12289
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147700c0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:56.-664 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00005f00 0001a362 00000128>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:04:57.-263 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14516b50)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+<T00006000 0001a58c 0000012b>
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:1969-12-31 16:04:59.-906 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147ab040)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:00.-205 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006100 0001a817 0000012d>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14684c20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:02.-946 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a21b0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:03.-826 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 29 nprocs=54 bb=31 sb=36 P156 Sa070002 CK95 T831
+J1M free=100511 act=18302 inact=3697 wire=51911 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00006200 0001ac78 00000130>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:04.-795 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147eed40)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:05.-745 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 211] at virtual address 0x1819000, protections were read-write
+J1 EXC 211 assetsd e1 far0 kr0
+ pc01819028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 211 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1455a340)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:06.-381 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006300 0001b1fa 00000132>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a21b0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:08.-494 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006400 0001b38a 00000135>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:09.-244 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145ab790)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:11.-747 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006500 0001b6af 00000138>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b1180)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:13.-376 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 30 nprocs=53 bb=31 sb=36 P156 Sa070002 CK95 T855
+J1M free=100386 act=18296 inact=3696 wire=51920 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+<T00006600 0001b93b 0000013a>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2450)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:1969-12-31 16:05:15.-972 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 217] at virtual address 0x184c000, protections were read-write
+J1 EXC 217 assetsd e1 far0 kr0
+ pc0184c028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 217 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145abc00)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:16.-569 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1K home down opened=1
+J1K enqueue failed
+<T00006700 0001bdd8 0000013d>
+J1K home up opened=1
+J1K enqueue failed
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147e0740)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:17.-43 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1518f380)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:19.-842 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006800 0001c101 0000013f>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1518a640)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:1969-12-31 16:05:20.-332 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+UDA: total faults=196608 assetsd far3c8d2c24 pc3a8f4b5a fsr7
+E36:1969-12-31 16:05:21.-778 SpringBoard[36:bf0f] 
+E36:BBDataProvider: SLSocialBulletinDataProvider failed to load after 120 seconds.
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b3c80)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:22.-871 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006900 0001c4e9 00000142>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1451bb20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:23.-633 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 31 nprocs=53 bb=31 sb=36 P156 Sa070002 CK95 T878
+J1M free=99982 act=18282 inact=3681 wire=51945 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147e0740)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:24.-335 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006a00 0001c8e6 00000145>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1455a340)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:25.-249 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 223] at virtual address 0x1803000, protections were read-write
+J1 EXC 223 assetsd e1 far0 kr0
+ pc01803028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 223 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:26.-08 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006b00 0001ccf5 00000147>
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:28.-420 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:29.-267 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006c00 0001d05a 0000014a>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b3c80)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:30.-118 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1455a340)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:32.-714 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006d00 0001d37f 0000014c>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:33.-239 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 32 nprocs=54 bb=31 sb=36 P156 Sa070002 CK95 T903
+J1M free=99371 act=18282 inact=3683 wire=51974 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b0e70)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:35.-757 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006e00 0001d77c 0000014f>
+Data/Stack execution not permitted: assetsd[pid 229] at virtual address 0x17ce000, protections were read-write
+J1 EXC 229 assetsd e1 far0 kr0
+ pc017ce028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf6c3 2fa0eb0b sl2784000
+J1 X 229 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145133f0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:36.-597 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14617ee0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:37.-561 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00006f00 0001db8c 00000151>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147418c0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:38.-252 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1473db60)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:40.-868 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+<T00007000 0001def1 00000154>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14742d90)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:41.-729 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x15158ca0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:42.-580 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00007100 0001e216 00000157>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1475dd60)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:43.-531 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 33 nprocs=53 bb=31 sb=36 P156 Sa070002 CK95 T925
+J1M free=98908 act=18282 inact=3684 wire=51994 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b0e70)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:45.-637 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00007200 0001e613 00000159>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14742d90)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:46.-212 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 235] at virtual address 0x17e000, protections were read-write
+J1 EXC 235 assetsd e1 far0 kr0
+ pc0017e028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 235 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1475dd60)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:48.-767 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00007300 0001ea22 0000015c>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:49.-408 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp syncdefaultsd 0 D904 P156 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1475dd60)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+<T00007400 0001ec75 0000015f>
+E36:1969-12-31 16:05:50.-33 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147418c0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:1969-12-31 16:05:52.-603 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1451bb20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+<T00007500 0001effc 00000161>
+E36:1969-12-31 16:05:53.-132 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 34 nprocs=54 bb=31 sb=36 P156 Sa070002 CK95 T949
+J1M free=98177 act=18314 inact=3713 wire=52104 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147a3320)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:54.-58 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1518ccc0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:56.-876 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00007600 0001f4d0 00000164>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:57.-813 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 242] at virtual address 0x1843000, protections were read-write
+J1 EXC 242 assetsd e1 far0 kr0
+ pc01843028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 242 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145bc3d0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:58.-750 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+UDA: total faults=212992 launchd far3d0f6d32 pc2bf0d5a2 fsr7
+<T00007700 0001f91d 00000166>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2be0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:05:59.-717 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1459f160)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:00.-111 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00007800 0001fc1f 00000169>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2450)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:02.-367 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145bc3d0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:03.-335 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00007900 0001ff44 0000016c>
+J1W round 35 nprocs=54 bb=31 sb=36 P156 Sa070002 CK95 T1000
+J1M free=97769 act=18323 inact=3720 wire=52120 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14742d90)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:04.-251 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1475dd60)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:05.-212 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00007a00 000203a5 0000016e>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147a3320)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:06.-122 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 248] at virtual address 0x17ce000, protections were read-write
+J1 EXC 248 assetsd e1 far0 kr0
+ pc017ce028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 248 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145bc3d0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:08.-836 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00007b00 000207b5 00000171>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:09.-519 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1473db60)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:10.-492 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1518ccc0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+<T00007c00 00020b51 00000173>
+E36:1969-12-31 16:06:11.-133 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147a3320)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:13.-974 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1471b900)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1W round 36 nprocs=54 bb=31 sb=36 P156 Sa070002 CK95 T1024
+J1M free=97735 act=18323 inact=3722 wire=52072 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+J1 sp assetsd 0 D904 P156 Sa070002
+<T00007d00 00020f72 00000176>
+E36:1969-12-31 16:06:14.-607 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b0180)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:15.-580 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147a3320)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:16.-176 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00007e00 0002134c 00000179>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145133f0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:17.-111 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a1310)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:18.-79 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 254] at virtual address 0x187b000, protections were read-write
+J1 EXC 254 assetsd e1 far0 kr0
+ pc0187b028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 254 assetsd a
+<T00007f00 000217be 0000017b>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b0180)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:20.-976 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147a3320)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:21.-950 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147418c0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:22.-903 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008000 00021c32 0000017e>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1471b900)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:23.-877 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1W round 37 nprocs=53 bb=31 sb=36 P156 Sa070002 CK95 T1046
+J1M free=97491 act=18323 inact=3723 wire=52066 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147a3320)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:24.-545 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+<T00008100 00022053 00000180>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1471b900)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:25.-498 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14742d90)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:26.-138 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008200 00022355 00000183>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1471b900)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:27.-35 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a8950)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:29.-905 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+Data/Stack execution not permitted: assetsd[pid 260] at virtual address 0x18a3000, protections were read-write
+J1 EXC 260 assetsd e1 far0 kr0
+ pc018a3028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 260 assetsd a
+<T00008300 00022764 00000186>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1476f6b0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:30.-714 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145133f0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:31.-358 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008400 00022ac9 00000188>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1471b900)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:32.-328 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b0180)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+J1W round 38 nprocs=54 bb=31 sb=36 P156 Sa070002 CK95 T1068
+J1M free=97212 act=18323 inact=3723 wire=52089 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:1969-12-31 16:06:34.-882 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008500 00022ec7 0000018b>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2ec0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:35.-796 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b0180)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:36.-271 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008600 000231ec 0000018d>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147a3320)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:37.-151 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x15135b30)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:38.-66 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1471b900)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:40.-999 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008700 0002365f 00000190>
+Data/Stack execution not permitted: assetsd[pid 266] at virtual address 0x1895000, protections were read-write
+J1 EXC 266 assetsd e1 far0 kr0
+ pc01895028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+J1 X 266 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2450)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:41.-753 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147418c0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:42.-721 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008800 00023a6f 00000192>
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14742d90)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:43.-689 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1T clk hclk=00000000 md=00000000 ns=00000000 rst=00000000 haltA=3fd3ffff
+J1T gpio11 cfg=00000003 io=00000001
+J1T gpio16 cfg=00000000 io=00000001
+J1T gpio17 cfg=00000000 io=00000001
+J1T qup skipped (gsbi3 ahb clock off)
+J1P summary l31 46/28/40 -> cf/2b/41 wr=0 rpm ack=1 sel2=2000 val=3 lines irq=0 sda=1 scl=1
+J1I mxt rc=0 info 82 23 30 ab x24 y14 obj21 orc=0
+J1I T9 ctrl=83 orient=03 xr=959 yr=539 rid=2
+J1I mxt ok=1 polls=7268 chg=124 msgs=213 reports=105 errs=0 hid=104 last=2c1703ad
+J1I mxt dropped noopen=0 nopkt=0
+J1K keys home=0 power=0 events=0
+J1H 0 0e 06 00 00 00 00 00 00
+J1H 0 02 2c 5c eb 04 00 0b 00
+J1H 0 0e 06 00 03 00 00 00 00
+J1H 0 02 c0 5c eb 04 00 21 0f
+J1H 0 0e 06 00 00 00 00 00 00
+J1H 0 02 2c 5a ea 84 02 17 00
+J1H 0 0e 06 00 05 00 00 00 00
+J1H 0 02 c0 5a ea 84 05 2c 0f
+J1H 0 0e 06 00 00 00 00 00 00
+J1H 0 02 2c 58 e8 04 03 1d 00
+J1H 0 0e 06 00 03 00 00 00 00
+J1H 0 02 c0 58 e8 04 07 41 0f
+J1H 0 0e 06 00 00 00 00 00 00
+J1H 0 02 2c 57 e8 08 05 2a 00
+J1H 0 0e 06 00 06 00 00 00 00
+J1H 0 02 c0 57 e8 08 07 3a 0e
+J1I T37 @0088 sz130 inst1 rid0
+J1I T5 @010a sz9 inst1 rid0
+J1I T6 @0113 sz6 inst1 rid1
+J1I T38 @0119 sz8 inst1 rid0
+J1I T71 @0121 sz112 inst1 rid0
+J1I T7 @0191 sz4 inst1 rid0
+J1I T8 @0195 sz14 inst1 rid0
+J1I T9 @01a3 sz46 inst1 rid8
+J1I T18 @01d1 sz2 inst1 rid0
+J1I T25 @01d3 sz9 inst1 rid1
+J1I T42 @01dc sz10 inst1 rid1
+J1I T46 @01e6 sz10 inst1 rid1
+J1I T47 @01f0 sz26 inst1 rid0
+J1I T56 @020a sz30 inst1 rid1
+J1I T57 @0228 sz3 inst1 rid1
+J1I T61 @022b sz5 inst2 rid1
+J1I T65 @0235 sz11 inst1 rid0
+J1I T66 @0240 sz3 inst1 rid1
+J1I T70 @0243 sz10 inst8 rid1
+J1I T72 @0293 sz80 inst1 rid1
+J1I T80 @02e3 sz4 inst1 rid0
+J1W round 39 nprocs=54 bb=31 sb=36 P156 Sa070002 CK95 T1091
+J1M free=96890 act=18323 inact=3723 wire=52103 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2450)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:44.-235 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008900 00024544 00000195>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a1310)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:45.-155 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1 sp assetsd 0 D904 P156 Sa070002
+UDA: total faults=229376 assetsd far3c2420c0 pc3a3d3e4e fsr7
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x14742d90)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:46.-36 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147a3320)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:48.-984 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008a00 00024a17 00000198>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147418c0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:49.-502 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b2090)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+Data/Stack execution not permitted: assetsd[pid 272] at virtual address 0x1836000, protections were read-write
+J1 EXC 272 assetsd e1 far0 kr0
+ pc01836028 lr2f99739b
+ bt 2f9968bb 2f9b1f97 3657d4fd 36590fe5 36590e77 2fa0e9cd 3a8bf56f 2fa0eb0b sl2784000
+<T00008b00 00024d3c 0000019a>
+J1 X 272 assetsd a
+E36:1969-12-31 16:06:50.-169 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147418c0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:51.-78 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147b0180)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:52.-29 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008c00 00025127 0000019d>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147a9060)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:54.-959 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145abc00)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:55.-892 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+J1Q head=2080 tail=2080 opened=1 pend=0 notify calls=25 ok=25 busy=0 err=0 noport=0 last=0 qfail=1
+<T00008d00 0002548c 0000019f>
+J1 sp assetsd 0 D904 P156 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x145a1310)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:56.-388 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147418c0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:57.-310 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+<T00008e00 000257b1 000001a2>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1471b900)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+E36:1969-12-31 16:06:58.-265 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x10d1a5 0x111855 0x2faf13 0x2faa85 0x2fbf8f01 0x2fb6cd69 0x30558cc5 0x10f307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x147418c0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4737612 with error 22)  
+
+J1 timed reboot to recovery
+<Tdeadb007 00008e89 000001a4>
+
+0 Corrected bytes, 1205 unrecoverable blocks

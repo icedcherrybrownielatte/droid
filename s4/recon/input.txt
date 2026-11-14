@@ -1,0 +1,195 @@
+I: Bus=0019 Vendor=0001 Product=0001 Version=0001
+N: Name="max77803-muic"
+P: Phys=deskdock-key/input0
+S: Sysfs=/devices/platform/i2c-gpio.17/i2c-17/17-0066/max77803-muic/input/input0
+U: Uniq=
+H: Handlers=kbd event0 
+B: PROP=0
+B: EV=100003
+B: KEY=38 0 c0000 0 0 0
+
+I: Bus=0018 Vendor=0000 Product=0000 Version=0000
+N: Name="sec_touchscreen"
+P: Phys=
+S: Sysfs=/devices/platform/s3c2440-i2c.0/i2c-0/0-0020/input/input1
+U: Uniq=
+H: Handlers=event1 
+B: PROP=2
+B: EV=2b
+B: KEY=420 0 0 0 0 0 0 0 0 0 0
+B: ABS=4a678000 0
+B: SW=400000
+
+I: Bus=0018 Vendor=0000 Product=0000 Version=0000
+N: Name="sii8240_rcp"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input2
+U: Uniq=
+H: Handlers=kbd event2 
+B: PROP=0
+B: EV=3
+B: KEY=3ff 0 0 0 0 8 0 0 0 0 18200 128 40000801 1680 0 0 10000000
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="accelerometer_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input3
+U: Uniq=
+H: Handlers=event3 
+B: PROP=0
+B: EV=5
+B: REL=287
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="gyro_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input4
+U: Uniq=
+H: Handlers=event4 
+B: PROP=0
+B: EV=5
+B: REL=1fb
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="pressure_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input5
+U: Uniq=
+H: Handlers=event5 
+B: PROP=0
+B: EV=5
+B: REL=1c0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="light_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input6
+U: Uniq=
+H: Handlers=event6 
+B: PROP=0
+B: EV=5
+B: REL=3c0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="proximity_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input7
+U: Uniq=
+H: Handlers=event7 
+B: PROP=0
+B: EV=9
+B: ABS=2000000
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="temp_humidity_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input8
+U: Uniq=
+H: Handlers=event8 
+B: PROP=0
+B: EV=5
+B: REL=1c0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="gesture_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input9
+U: Uniq=
+H: Handlers=event9 
+B: PROP=0
+B: EV=9
+B: ABS=7c0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="sig_motion_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input10
+U: Uniq=
+H: Handlers=event10 
+B: PROP=0
+B: EV=5
+B: REL=200
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="step_det_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input11
+U: Uniq=
+H: Handlers=event11 
+B: PROP=0
+B: EV=5
+B: REL=200
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="step_cnt_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input12
+U: Uniq=
+H: Handlers=event12 
+B: PROP=0
+B: EV=5
+B: REL=200
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="ssp_context"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input13
+U: Uniq=
+H: Handlers=event13 
+B: PROP=0
+B: EV=5
+B: REL=38
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="gpio-keys"
+P: Phys=gpio-keys/input0
+S: Sysfs=/devices/platform/gpio-keys.0/input/input14
+U: Uniq=
+H: Handlers=kbd event14 
+B: PROP=0
+B: EV=23
+B: KEY=1000 0 1c0000 0 0 0
+B: SW=1
+
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="sec_touchkey"
+P: Phys=sec_touchkey/input0
+S: Sysfs=/devices/platform/i2c-gpio.8/i2c-8/8-0020/input/input15
+U: Uniq=
+H: Handlers=event15 
+B: PROP=0
+B: EV=1020003
+B: KEY=40000800 0 0 0 0
+B: LED=100
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="Headset"
+P: Phys=arizona/extcon
+S: Sysfs=/devices/platform/s3c64xx-spi.2/spi_master/spi2/spi2.0/arizona-extcon/input/input16
+U: Uniq=
+H: Handlers=kbd event16 
+B: PROP=0
+B: EV=3
+B: KEY=4 0 0 0 c0000 0 0 2
+
+I: Bus=0018 Vendor=0000 Product=0000 Version=0000
+N: Name="compass_sensor"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input17
+U: Uniq=
+H: Handlers=event17 
+B: PROP=0
+B: EV=d
+B: REL=2bf
+B: ABS=100 380700
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="meta_event"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input18
+U: Uniq=
+H: Handlers=event18 
+B: PROP=0
+B: EV=5
+B: REL=c0
+

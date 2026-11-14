@@ -1,0 +1,34 @@
+J1 ASCII frame 2
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                +@*                   |
+|                           =%@*==#@@=                 |
+|                         =@@@@@@@@@@.                 |
+|                         :@@@@@@@@@@*                 |
+|                          :@@@@@@@@@@:                |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+IOS7LAB framebuffer presented transaction=2 surface=2 actualCPU-conversion-MDP31-DMA-done BGRA-to-realRGB565-conversion

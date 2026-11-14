@@ -1,0 +1,24 @@
+[INFO] simplefb: ready (1080x1920)
+[INFO]              .__.____                     .___
+[INFO]  __ __  ____ |__|    |    _________     __| _/___________
+[INFO] |  |  \/    \|  |    |   /  _ \__  \   / __ |/ __ \_  __\
+[INFO] |  |  /   |  \  |    |__(  <_> ) __ \_/ /_/ \  ___/|  |\/
+[INFO] |____/|___|  /__|_______ \____(____  /\____ |\___  >__|
+[INFO]            \/           \/         \/      \/    \/
+[INFO] passed board initialization
+[INFO] welcome to uniLoader (2daf020) - date 2026-11-14 11:17:31 on samsung-ja3g
+[INFO] ja3g: CPSR=600001d3 SCTLR=00c50878 MIDR=412fc0f3 MPIDR=80000000
+[INFO] ja3g: load delta=00000000 RST_STAT=00000800 WDT=f458
+[INFO] ja3g: FIMD1 VIDCON0=00010023, scanout window 2
+[INFO] ja3g: win0 WINCON=00000000 START=00000000 END=00000000 SIZE=00000000 OSDB=00000000
+[INFO] ja3g: win1 WINCON=00000000 START=00000000 END=00000000 SIZE=00000000 OSDB=00000000
+[INFO] ja3g: win2 WINCON=00008035 START=67000000 END=677e9000 SIZE=000010e0 OSDB=0021bf7f
+[INFO] ja3g: win3 WINCON=00000000 START=00000000 END=00000000 SIZE=00000000 OSDB=00000000
+[INFO] ja3g: win4 WINCON=00000000 START=00000000 END=00000000 SIZE=00000000 OSDB=00000000
+[INFO] ja3g: fb 67000000 1080x1920 stride 4
+[INFO] ja3g: selftest done, rebooting to recovery soon
+
+0 Corrected bytes, 10 unrecoverable blocks
+Last reset was reset (RST_STAT=0x800)
+[    0.000000] B0      0 Initialized persistent memory from 60000000-601fffff
+[    0.139270] B0      1 persistent_ram: found existing buffer, size 1256, start 1256

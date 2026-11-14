@@ -1,0 +1,119 @@
+0010b100-0010b200 : msm_rpm_master_stat
+00500000-00500fff : msm_ssbi.0
+00700000-007060ff : hdmi_msm_qfprom_addr
+0080207c-0080207f : slimbus_slew_reg
+01a01000-01a01fff : coresight-etb.0
+01a03000-01a03fff : coresight-tpiu.0
+01a04000-01a04fff : coresight-funnel.0
+01a1c000-01a1cfff : coresight-etm.0
+01a1d000-01a1dfff : coresight-etm.1
+03000000-0327ffff : wcnss_mmio
+  03204000-032040ff : pil_riva
+04300000-0430ffff : kgsl_3d0_reg_memory
+  04300000-0430ffff : kgsl-3d0
+04310000-0431ffff : kgsl_3d0_shader_memory
+  04310000-0431ffff : kgsl-3d0
+04400000-044fffff : msm_vidc.0
+04500000-045fffff : vfe32
+  04500000-045fffff : msm_vfe
+04600000-046fffff : msm_gemini.0
+04700000-047effff : mipi_dsi
+04800000-048003ff : csid
+  04800000-048003ff : msm_csid
+04800400-048007ff : csid
+  04800400-048007ff : msm_csid
+04800800-04800bff : ispif
+  04800800-04800bff : msm_ispif
+04800c00-04800fff : csiphy
+  04800c00-04800fff : msm_csiphy
+04801000-048013ff : csiphy
+  04801000-048013ff : msm_csiphy
+04a00000-04a00fff : hdmi_msm_hdmi_addr
+04e00000-04efffff : msm_rotator.0
+05100000-051effff : mdp
+05300000-053fffff : vpe
+  05300000-053fffff : msm_vpe
+07400000-074fffff : physbase
+  07400000-074fffff : physbase
+07500000-075fffff : physbase
+  07500000-075fffff : physbase
+07600000-076fffff : physbase
+  07600000-076fffff : physbase
+07700000-077fffff : physbase
+  07700000-077fffff : physbase
+07800000-078fffff : physbase
+  07800000-078fffff : physbase
+07900000-079fffff : physbase
+  07900000-079fffff : physbase
+07a00000-07afffff : physbase
+  07a00000-07afffff : physbase
+07b00000-07bfffff : physbase
+  07b00000-07bfffff : physbase
+07c00000-07cfffff : physbase
+  07c00000-07cfffff : physbase
+08800000-088000ff : pil_qdsp6v4.1
+08900000-089000ff : pil_qdsp6v4.2
+08b00000-08b00003 : pil_qdsp6v4.2
+  08b00000-08b00003 : pil_qdsp6v4.1
+12180000-121807ff : core_mem
+12180800-12181fff : dml_mem
+12182000-12183fff : bam_mem
+12240000-12240fff : bamdma_dma
+12244000-12247fff : bamdma_bam
+12400000-124007ff : core_mem
+12400800-12401fff : dml_mem
+12402000-12403fff : bam_mem
+12480000-12480003 : gsbi_qup_i2c_addr
+  12480000-12480003 : qup_i2c
+124a0000-124a0fff : qup_phys_addr
+  124a0000-124a0fff : qup_i2c
+12500000-12501000 : msm_hsusb
+  12500000-12501000 : msm_otg
+    12500000-12500fff : msm_hsusb_host
+12800000-12803fff : pipe_mem
+16000000-16000003 : gsbi_base
+  16000000-16000003 : spi_qsd
+16080000-16080fff : spi_base
+  16080000-16080fff : spi_qsd
+16200000-16200003 : gsbi_qup_i2c_addr
+  16200000-16200003 : qup_i2c
+16280000-16280fff : qup_phys_addr
+  16280000-16280fff : qup_i2c
+16300000-16300003 : gsbi_qup_i2c_addr
+  16300000-16300003 : qup_i2c
+16380000-16380fff : qup_phys_addr
+  16380000-16380fff : qup_i2c
+16400000-16400fff : gsbi_resource
+16440000-16440fff : uartdm_resource
+16500000-16500003 : gsbi_resource
+  16500000-16500003 : msm_serial_hs
+16540000-16540fff : uartdm_resource
+18320000-1841ffff : msm_dmov
+1a000000-1a000003 : gsbi_qup_i2c_addr
+  1a000000-1a000003 : qup_i2c
+1a080000-1a080fff : qup_phys_addr
+  1a080000-1a080fff : qup_i2c
+1a100000-1a100003 : gsbi_qup_i2c_addr
+  1a100000-1a100003 : qup_i2c
+1a180000-1a180fff : qup_phys_addr
+  1a180000-1a180fff : qup_i2c
+1a200000-1a200003 : gsbi_qup_i2c_addr
+  1a200000-1a200003 : qup_i2c
+1a280000-1a280fff : qup_phys_addr
+  1a280000-1a280fff : qup_i2c
+1a500000-1a5001ff : msm_rng.0
+28080000-28081fff : slimbus_physical
+28084000-28085fff : slimbus_bam_physical
+28800000-288000ff : pil_qdsp6v4.0
+2a03f664-2a03f6a4 : pc-cntr
+2a03f720-2a04071f : tz_log.0
+80200000-87ffffff : System RAM
+  80208000-80e1854f : Kernel code
+  80e76000-811639ef : Kernel data
+8e800000-8effffff : System RAM
+8f800000-8fafffff : System RAM
+8fb00000-8fdfffff : rmtfs
+8fe00000-8fefffff : System RAM
+90000000-9fdfffff : System RAM
+a0000000-a5ffffff : System RAM
+a6100000-de9fffff : System RAM

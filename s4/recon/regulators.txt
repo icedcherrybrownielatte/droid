@@ -1,0 +1,43 @@
+/sys/class/regulator/regulator.0 dummy
+/sys/class/regulator/regulator.1 DC_5V enabled 5000000
+/sys/class/regulator/regulator.10 vdd_kfc range enabled 950000
+/sys/class/regulator/regulator.11 vcc_1.8v_ap range enabled 1800000
+/sys/class/regulator/regulator.12 vxpll_1.8v_ap range enabled 1800000
+/sys/class/regulator/regulator.13 vmipi_1.0v_ap range enabled 1000000
+/sys/class/regulator/regulator.14 vmipi_1.8v_ap range enabled 1800000
+/sys/class/regulator/regulator.15 vabb1_1.8v_ap range enabled 1800000
+/sys/class/regulator/regulator.16 vuotg_3.0v_ap range enabled 3000000
+/sys/class/regulator/regulator.17 vdd_ldo10 range enabled 1800000
+/sys/class/regulator/regulator.18 vhsic_1.0v_ap range enabled 1000000
+/sys/class/regulator/regulator.19 vdd_ldo12 range enabled 1800000
+/sys/class/regulator/regulator.2 safeout1 range enabled 4900000
+/sys/class/regulator/regulator.20 vdd_ldo13 range enabled 2800000
+/sys/class/regulator/regulator.21 vcc_3.0v_motor range disabled 3000000
+/sys/class/regulator/regulator.22 vcc_3.0v_lcd range disabled 3000000
+/sys/class/regulator/regulator.23 vcc_2.8v_ap range enabled 2800000
+/sys/class/regulator/regulator.24 tsp_avdd range disabled 3300000
+/sys/class/regulator/regulator.25 vt_cam_1.8v range disabled 1800000
+/sys/class/regulator/regulator.26 cam_isp_sensor_io_1.8v range disabled 1800000
+/sys/class/regulator/regulator.27 cam_sensor_core_1.2v range disabled 1050000
+/sys/class/regulator/regulator.28 v2mic_1.1v range enabled 1100000
+/sys/class/regulator/regulator.29 cam_sensor_a2.8v_pm range disabled 2800000
+/sys/class/regulator/regulator.3 safeout2 range disabled 4900000
+/sys/class/regulator/regulator.30 touch_1.8v_s range disabled 1800000
+/sys/class/regulator/regulator.31 cam_af_2.8v_pm range disabled 2800000
+/sys/class/regulator/regulator.32 vcc_2.8v_lcd disabled 3000000
+/sys/class/regulator/regulator.33 gesture_sensor enabled 1800000
+/sys/class/regulator/regulator.34 touchkey disabled 1800000
+/sys/class/regulator/regulator.35 tsp_vdd range disabled 1800000
+/sys/class/regulator/regulator.36 vcc_1.8v_mhl disabled 1800000
+/sys/class/regulator/regulator.37 vcc_3.3v_mhl disabled 3300000
+/sys/class/regulator/regulator.38 vsil_1.2a disabled 1200000
+/sys/class/regulator/regulator.39 uv_vcc_1.8v disabled 1800000
+/sys/class/regulator/regulator.4 CHARGER enabled
+/sys/class/regulator/regulator.40 touchkey_led disabled 3000000
+/sys/class/regulator/regulator.41 LDO1 disabled 1200000
+/sys/class/regulator/regulator.42 MICVDD disabled 3000000
+/sys/class/regulator/regulator.5 vdd_mif range enabled 837500
+/sys/class/regulator/regulator.6 vdd_arm range enabled 975000
+/sys/class/regulator/regulator.7 vdd_int range enabled 862500
+/sys/class/regulator/regulator.8 vdd_g3d range enabled 900000
+/sys/class/regulator/regulator.9 vdd_mem2 range enabled 1200000

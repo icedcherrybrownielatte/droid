@@ -1,0 +1,11 @@
+# big iOS stuff (re-download/re-extract: iPhone5,2 7.1.2 11D257 IPSW)
+*.ipsw
+ipsw_x/
+# already on the s4 repo release page (558 MB)
+s4/backup/SYSTEM.img.gz
+# portable GitHub CLI (re-download)
+tools/gh/
+# build junk
+*.o
+__pycache__/
+.git_hold/

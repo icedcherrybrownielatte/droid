@@ -1,0 +1,5 @@
+make[2]: Leaving directory '/home/user/xnu-j1/xnu/BUILD/obj/RELEASE_ARM_MSM8930_SERRANO'
+BUILD_FAILED
+0
+J1W round 0 nprocs=1 bb=0 sb=0 P0 S0 CK0 T0
+<T00000300 00000004 00000015>

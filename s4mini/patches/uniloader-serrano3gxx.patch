@@ -1,0 +1,314 @@
+diff --git a/Kconfig b/Kconfig
+index 31cbb5d..c071aa9 100644
+--- a/Kconfig
++++ b/Kconfig
+@@ -76,6 +76,14 @@ menu "Building options"
+ 
+ if EMBED_XNU
+ 
++config DEBUG_PAINT
++		bool "Paint debug bars into the bootloader framebuffer"
++		default y if SAMSUNG_J1XLTE
++		default n
++		help
++		  Writes colored progress bars at CONFIG_XNU_FB_BASE. Only enable on
++		  boards where that address is a known, mapped framebuffer.
++
+ config XNU_BLOB_LZ4
+ 		bool "Embedded XNU blob is a raw LZ4 block"
+ 		default n
+diff --git a/arch/arm/load-kernel.c b/arch/arm/load-kernel.c
+index 5bf7c5d..dc9f488 100644
+--- a/arch/arm/load-kernel.c
++++ b/arch/arm/load-kernel.c
+@@ -58,6 +58,10 @@ extern uint32_t delta_value;
+ 
+ static void fb_mark(unsigned int byte_off, unsigned int color)
+ {
++#ifndef CONFIG_DEBUG_PAINT
++	(void)byte_off; (void)color;
++	return;
++#endif
+ 	volatile unsigned int *fb = (volatile unsigned int *)CONFIG_XNU_FB_BASE;
+ 	unsigned int i;
+ 
+diff --git a/arch/arm/start.S b/arch/arm/start.S
+index fec1270..63d3680 100644
+--- a/arch/arm/start.S
++++ b/arch/arm/start.S
+@@ -69,6 +69,7 @@ _start:
+ 	mcr	p15, 4, r1, c1, c1, 2	/* HCPTR: full coprocessor access */
+ 	mov	r1, #0
+ 	mcr	p15, 4, r1, c2, c0, 2	/* HTTBCR = 0 */
++#ifdef CONFIG_DEBUG_PAINT
+ 	movw	r2, #0x5000		/* keep painting - now in magenta slot */
+ 	movt	r2, #0x57E6
+ 	movw	r3, #0x00FF
+@@ -84,6 +85,7 @@ _start:
+ 91:	str	r3, [r2], #4
+ 	subs	r1, r1, #1
+ 	bne	91b
++#endif
+ 	mov	r1, #0x13		/* SVC | irq+fiq stay masked via SPSR */
+ 	orr	r1, r1, #0xc0
+ 	msr	spsr_cxsf, r1
+@@ -291,10 +293,12 @@ eng2:
+  * r0 = framebuffer base, r1 = color.  Clobbers r0-r2 only.
+  */
+ paint:
++#ifdef CONFIG_DEBUG_PAINT
+ 	mov	r2, #1600
+ 71:	str	r1, [r0], #4
+ 	subs	r2, r2, #1
+ 	bne	71b
++#endif
+ 	bx	lr
+ 
+ /*
+@@ -323,6 +327,7 @@ ENTRY(jump_to_xnu)
+ 	mov r3, r0              /* stash entry */
+ 	mov r0, r1              /* r0 = boot_args (physical) */
+ 
++#ifdef CONFIG_DEBUG_PAINT
+ 	/* DIAG: WHITE @fb+0xE4000 = about to bx into the kernel. */
+ 	movw	r1, #0xD000
+ 	movt	r1, #0x57EE
+@@ -333,6 +338,7 @@ ENTRY(jump_to_xnu)
+ 	subs	ip, ip, #1
+ 	bne	91b
+ 
++#endif
+ 	mov r1, #0
+ 	mov r2, #0
+ 	mov ip, #0
+diff --git a/board/Kconfig b/board/Kconfig
+index d853646..3c71fe8 100644
+--- a/board/Kconfig
++++ b/board/Kconfig
+@@ -290,6 +290,13 @@ menu "Device Support"
+ 		help
+ 		  Say Y if you want to include support for Samsung Galaxy S20 FE
+ 
++	config SAMSUNG_SERRANO3GXX
++		bool "Support for Samsung Galaxy S4 mini (GT-I9190)"
++		default n
++		depends on QC32_8930
++		help
++		  Say Y if you want to include arm32 support for Samsung Galaxy S4 mini (GT-I9190, serrano3gxx)
++
+ 	config SAMSUNG_STARLTE
+ 		bool "Support for Samsung Galaxy S9"
+ 		default n
+@@ -407,11 +414,13 @@ menu "Device Specific Addresses"
+ 	config TEXT_BASE
+ 		hex "UniLoader Text Base"
+ 		default 0x20008000 if SAMSUNG_J1XLTE
++		default 0x80208000 if SAMSUNG_SERRANO3GXX
+ 		default 0x0
+ 
+ 	config PAYLOAD_ENTRY
+ 		hex "Payload Entry Address"
+ 		default 0x24000000 if SAMSUNG_J1XLTE
++		default 0xA6101000 if SAMSUNG_SERRANO3GXX
+ 		default 0x50000000 if NOTHING_TETRIS
+ 		default 0x050000000 if SAMSUNG_J4LTE
+ 		default 0x60000000 if VOLLA_ALGIZ
+@@ -420,6 +429,7 @@ menu "Device Specific Addresses"
+ 	config RAMDISK_ENTRY
+ 		hex "Ramdisk Entry Address"
+ 		default 0x22000000 if SAMSUNG_J1XLTE
++		default 0x82200000 if SAMSUNG_SERRANO3GXX
+ 		default 0x40000000 if NOTHING_TETRIS
+ 		default 0x51100000 if VOLLA_ALGIZ
+ 		default 0x48000000 if XIAOMI_BEGONIA
+diff --git a/board/Makefile b/board/Makefile
+index 5d3d516..040a4ee 100644
+--- a/board/Makefile
++++ b/board/Makefile
+@@ -36,6 +36,7 @@ lib-$(CONFIG_SAMSUNG_LUCKY7) += samsung/board-lucky7.o
+ lib-$(CONFIG_SAMSUNG_NOBLELTE) += samsung/board-noblelte.o
+ lib-$(CONFIG_SAMSUNG_R0Q) += samsung/board-r0q.o
+ lib-$(CONFIG_SAMSUNG_R8S) += samsung/board-r8s.o
++lib-$(CONFIG_SAMSUNG_SERRANO3GXX) += samsung/board-serrano3gxx.o
+ lib-$(CONFIG_SAMSUNG_STARLTE) += samsung/board-starlte.o
+ lib-$(CONFIG_SAMSUNG_X1S) += samsung/board-x1s.o
+ lib-$(CONFIG_SAMSUNG_ZEROFLTE) += samsung/board-zeroflte.o
+diff --git a/board/samsung/board-serrano3gxx.c b/board/samsung/board-serrano3gxx.c
+new file mode 100644
+index 0000000..80b306c
+--- /dev/null
++++ b/board/samsung/board-serrano3gxx.c
+@@ -0,0 +1,65 @@
++/* SPDX-License-Identifier: GPL-2.0 */
++/*
++ * Samsung Galaxy S4 mini (GT-I9190, serrano3gxx) support for uniLoader.
++ * MSM8930AB, 540x960 MIPI DSI video panel, 1.5 GB RAM.
++ *
++ * Display: the bootloader leaves MDP4 scanning out its own framebuffer.
++ * Its address is NOT yet known (the Linux kernel framebuffer at
++ * 0x822bd000 is allocated later and is invalid here), so CONFIG_XNU_FB_BASE
++ * defaults to 0 and no console device is registered until it is found.
++ * Panel pitch is 2176 bytes (544 px), so the logical width is 544.
++ */
++
++#include <board.h>
++#include <util.h>
++#include <stdint.h>
++#include <string.h>
++#include <drivers/framework.h>
++#include <lib/simplefb.h>
++#include <lib/debug.h>
++#include <soc/msm8930.h>
++
++#define FB_ADDRESS	CONFIG_XNU_FB_BASE
++#define FB_WIDTH	540
++#define FB_HEIGHT	960
++
++int serrano3gxx_init(void)
++{
++	return 0;
++}
++
++/* No serial console: UARTDM clocks are not guaranteed on, and touching a
++ * gated Qualcomm block hangs the CPU. */
++void uart_puts(const char *s)
++{
++	(void)s;
++}
++
++#if FB_ADDRESS
++static struct video_info serrano3gxx_fb = {
++	.format = FB_FORMAT_RGB888,
++	.width = FB_WIDTH,
++	.height = FB_HEIGHT,
++	.stride = 3,
++	.address = (void *)FB_ADDRESS
++};
++
++static const struct device serrano3gxx_devices[] = {
++	{ "simplefb", &serrano3gxx_fb, "fb" },
++};
++#endif
++
++struct board_data board_ops = {
++	.name = "samsung-serrano3gxx",
++	.ops = {
++		.early_init = serrano3gxx_init,
++	},
++#if FB_ADDRESS
++	.devices = serrano3gxx_devices,
++	.num_devices = ARRAY_SIZE(serrano3gxx_devices),
++#else
++	.devices = NULL,
++	.num_devices = 0,
++#endif
++	.quirks = 0
++};
+diff --git a/configs/serrano3gxx_defconfig b/configs/serrano3gxx_defconfig
+new file mode 100644
+index 0000000..c52b340
+--- /dev/null
++++ b/configs/serrano3gxx_defconfig
+@@ -0,0 +1,19 @@
++CONFIG_TEXT_BASE=0x80208000
++CONFIG_EMBED_XNU=y
++CONFIG_XNU_BLOB_LZ4=n
++CONFIG_PAYLOAD_ENTRY=0xA6101000
++CONFIG_RAMDISK_ENTRY=0x82200000
++CONFIG_RAMDISK_NO_COPY=y
++CONFIG_COMPRESS_GZIP=n
++CONFIG_LOGLEVEL=7
++CONFIG_XNU_EMBED_CACHESLICE=n
++CONFIG_XNU_PHYS_BASE=0xA6100000
++CONFIG_XNU_VIRT_BASE=0x80000000
++CONFIG_XNU_MEMSIZE=0x38800000
++CONFIG_XNU_CACHESLICE_TOP=0xDE900000
++CONFIG_XNU_FB_BASE=0x88100000
++CONFIG_XNU_FB_WIDTH=540
++CONFIG_XNU_FB_HEIGHT=960
++CONFIG_XNU_CMDLINE="-v keepsyms=1 kprintf=1 debug=0x14e"
++CONFIG_QC32_8930=y
++CONFIG_SAMSUNG_SERRANO3GXX=y
+diff --git a/include/soc/msm8930.h b/include/soc/msm8930.h
+new file mode 100644
+index 0000000..a74c7a6
+--- /dev/null
++++ b/include/soc/msm8930.h
+@@ -0,0 +1,32 @@
++/* SPDX-License-Identifier: GPL-2.0 */
++/*
++ * Qualcomm MSM8930 (Snapdragon 400, Krait) register map for uniLoader.
++ * Addresses from the Samsung/LineageOS msm8930 kernel (msm_iomap-8930.h,
++ * devices-8960.c) and /proc/iomem of a running GT-I9190.
++ */
++
++#ifndef MSM8930_H_
++#define MSM8930_H_
++
++/* Interrupt controller (qGIC) and timers */
++#define MSM8930_QGIC_DIST_BASE		0x02000000
++#define MSM8930_QGIC_CPU_BASE		0x02002000
++#define MSM8930_TMR_BASE		0x0200A000
++#define MSM8930_GPT_OFFSET		0x04
++#define MSM8930_DGT_OFFSET		0x24
++
++/* Display (MDP4 + MIPI DSI) */
++#define MSM8930_MDP_BASE		0x05100000
++#define MSM8930_DSI_BASE		0x04700000
++
++/* Storage: eMMC is SDC1, microSD slot is SDC3 */
++#define MSM8930_SDC1_BASE		0x12400000
++#define MSM8930_SDC3_BASE		0x12180000
++
++/* GSBI / UARTDM (NOT safe to touch unless the bootloader clocked it) */
++#define MSM8930_GSBI5_BASE		0x16400000
++#define MSM8930_UART5DM_BASE		(MSM8930_GSBI5_BASE + 0x40000)
++#define MSM8930_GSBI6_BASE		0x16500000
++#define MSM8930_UART6DM_BASE		(MSM8930_GSBI6_BASE + 0x40000)
++
++#endif /* MSM8930_H_ */
+diff --git a/soc/Kconfig b/soc/Kconfig
+index 1521d84..4c05718 100644
+--- a/soc/Kconfig
++++ b/soc/Kconfig
+@@ -213,6 +213,12 @@ config SONY
+ 		help
+ 		  Say Y if your device uses this Qualcomm SoC
+ 
++	config QC32_8930
++		bool "Support for QUALCOMM MSM8930"
++		select QUALCOMM
++		help
++		  Say Y if your device uses Qualcomm MSM8930 (Snapdragon 400, Krait)
++
+ 	config SM6125
+ 		bool "Support for QUALCOMM SM6125"
+ 		select QUALCOMM
+diff --git a/soc/Makefile b/soc/Makefile
+index aa76657..9132f40 100644
+--- a/soc/Makefile
++++ b/soc/Makefile
+@@ -9,3 +9,4 @@ lib-$(CONFIG_EXYNOS_9610) += exynos/exynos9610.o
+ lib-$(CONFIG_EXYNOS_9810) += exynos/exynos9810.o
+ lib-$(CONFIG_EXYNOS_990) += exynos/exynos990.o
+ lib-$(CONFIG_QC32_8916) += qualcomm/msm8916.o
++lib-$(CONFIG_QC32_8930) += qualcomm/msm8930.o
+diff --git a/soc/qualcomm/msm8930.c b/soc/qualcomm/msm8930.c
+new file mode 100644
+index 0000000..a7dad84
+--- /dev/null
++++ b/soc/qualcomm/msm8930.c
+@@ -0,0 +1,13 @@
++/* SPDX-License-Identifier: GPL-2.0 */
++/*
++ * Qualcomm MSM8930 SoC support for uniLoader.
++ * Nothing to initialise yet: the Samsung bootloader leaves clocks, GIC
++ * and the display running. Do not touch unclocked blocks - on Qualcomm an
++ * access to a gated peripheral stalls the bus.
++ */
++
++#include <soc/msm8930.h>
++
++void soc_init(void)
++{
++}

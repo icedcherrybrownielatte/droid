@@ -1,0 +1,25 @@
+major minor  #blocks  name
+
+ 254        0     954880 zram0
+ 179        0   15388672 mmcblk0
+ 179        1       4096 mmcblk0p1
+ 179        2       4096 mmcblk0p2
+ 179        3      20480 mmcblk0p3
+ 179        4       4096 mmcblk0p4
+ 179        5       4096 mmcblk0p5
+ 179        6       4096 mmcblk0p6
+ 179        7      20480 mmcblk0p7
+ 259        0       8192 mmcblk0p8
+ 259        1       8192 mmcblk0p9
+ 259        2       8192 mmcblk0p10
+ 259        3       8192 mmcblk0p11
+ 259        4       8192 mmcblk0p12
+ 259        5      90112 mmcblk0p13
+ 259        6     262144 mmcblk0p14
+ 259        7       4096 mmcblk0p15
+ 259        8     573440 mmcblk0p16
+ 259        9      12288 mmcblk0p17
+ 259       10       4096 mmcblk0p18
+ 259       11    2121728 mmcblk0p19
+ 259       12    2830336 mmcblk0p20
+ 259       13    9379840 mmcblk0p21

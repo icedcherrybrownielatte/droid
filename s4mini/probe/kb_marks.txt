@@ -1,0 +1,18 @@
+300 (0x12C): after PE_parse_boot_argn("trace", &new_nkdbufs, sizeof (new_nkdbufs));
+301 (0x12D): after PE_parse_boot_argn("trace_wake", &wake_nkdbufs, sizeof (wake_nkdbufs));
+302 (0x12E): after scale_setup();
+303 (0x12F): after vm_mem_bootstrap();
+304 (0x130): after vm_mem_init();
+305 (0x131): after sched_init();
+306 (0x132): after wait_queue_bootstrap();
+307 (0x133): after ipc_bootstrap();
+308 (0x134): after mac_policy_init();
+309 (0x135): after ipc_init();
+310 (0x136): after PMAP_ACTIVATE_KERNEL(master_cpu);
+311 (0x137): after machine_init();
+312 (0x138): after clock_init();
+313 (0x139): after ledger_init();
+314 (0x13A): after task_init();
+315 (0x13B): after thread_init();
+316 (0x13C): after thread_deallocate(thread);
+317 (0x13D): after load_context(thread);

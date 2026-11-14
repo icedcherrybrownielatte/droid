@@ -1,0 +1,1787 @@
+diff --git a/nokextd/IOS7NoKextd035.h b/nokextd/IOS7NoKextd035.h
+index 55e2966..3f0fd13 100644
+--- a/nokextd/IOS7NoKextd035.h
++++ b/nokextd/IOS7NoKextd035.h
+@@ -3,7 +3,7 @@
+ /* Scoped to the actual LEO/J1XLTE conditional translation units. This explicit
+  * source prefix follows generated numeric feature preincludes; command-line
+  * -D alone would not override an inherited no_kextd.h defining zero. */
+-#if !defined(BOARD_CONFIG_QSD8250_LEO) && !defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if !defined(BOARD_CONFIG_QSD8250_LEO) && !defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) && !defined(BOARD_CONFIG_MSM8930_SERRANO)
+ #error IOS7NoKextd035 requires the LEO/J1XLTE compilation target
+ #endif
+ #ifdef NO_KEXTD
+diff --git a/xnu/bsd/kern/bsd_init.c b/xnu/bsd/kern/bsd_init.c
+index 11e3051..b90ac50 100644
+--- a/xnu/bsd/kern/bsd_init.c
++++ b/xnu/bsd/kern/bsd_init.c
+@@ -404,7 +404,7 @@ bsd_init(void)
+ 
+ #define bsd_init_kprintf(x...) // kprintf("bsd_init: " x)
+ 
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	{ extern void ios7j1_stage(unsigned int); ios7j1_stage(0x0001); }
+ #endif
+ 
+@@ -804,11 +804,11 @@ bsd_init(void)
+ 	timeout(lightning_bolt, 0, hz);
+ 
+ 	bsd_init_kprintf("calling bsd_autoconf\n");
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	{ extern void j1_klog(const char *); j1_klog("J1BSD init: calling bsd_autoconf\n"); }
+ #endif
+ 	bsd_autoconf();
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	{ extern void j1_klog(const char *); j1_klog("J1BSD init: bsd_autoconf returned\n"); }
+ #endif
+ 
+@@ -872,20 +872,20 @@ bsd_init(void)
+ #endif
+ 
+ 		bsd_init_kprintf("vfs_mountroot\n");
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+         printf("J1 boot: vfs_mountroot begin\n");
+ #else
+         printf("Leo boot: vfs_mountroot begin\n");
+ #endif
+         err = vfs_mountroot();
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+         printf("J1 boot: vfs_mountroot returned errno=%d\n", err);
+ #else
+         printf("Leo boot: vfs_mountroot returned errno=%d\n", err);
+ #endif
+         if (err == 0 && mountlist.tqh_first)
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+             printf("J1 boot: root mount readonly=%u\n",
+ #else
+             printf("Leo boot: root mount readonly=%u\n",
+@@ -1072,13 +1072,13 @@ kern_return_t
+ bsd_autoconf(void)
+ {
+ 	kprintf("bsd_autoconf: calling kminit\n");
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	extern void j1_klog(const char *);
+ 	{ extern void ios7j1_stage(unsigned int); ios7j1_stage(0x0003); }
+ 	j1_klog("J1BSD autoconf: kminit begin\n");
+ #endif
+ 	kminit();
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	{ extern void ios7j1_stage(unsigned int); ios7j1_stage(0x0004); }
+ 	j1_klog("J1BSD autoconf: kminit done\n");
+ 	j1_klog("J1BSD autoconf: pseudo_inits begin\n");
+@@ -1093,7 +1093,7 @@ bsd_autoconf(void)
+ 	    for (pi = pseudo_inits; pi->ps_func; pi++)
+ 		(*pi->ps_func) (pi->ps_count);
+ 	}
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	j1_klog("J1BSD autoconf: pseudo_inits done\n");
+ 	j1_klog("J1BSD autoconf: IOKitBSDInit begin\n");
+ #endif
+diff --git a/xnu/bsd/kern/kern_credential.c b/xnu/bsd/kern/kern_credential.c
+index e4994ce..5c0d585 100644
+--- a/xnu/bsd/kern/kern_credential.c
++++ b/xnu/bsd/kern/kern_credential.c
+@@ -4516,7 +4516,7 @@ kauth_cred_unref_hashlocked(kauth_cred_t *credp)
+ void
+ kauth_cred_unref(kauth_cred_t *credp)
+ {
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	/* TEMP DIAG: bounded try + print on contention, then normal block.
+ 	 * Shows whether hangs sit on this mutex without changing semantics. */
+ 	boolean_t _got = FALSE;
+@@ -4532,7 +4532,7 @@ kauth_cred_unref(kauth_cred_t *credp)
+ #else
+ 	KAUTH_CRED_HASH_LOCK();
+ #endif
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC cred locked\n");
+ #endif
+ 	kauth_cred_unref_hashlocked(credp);
+diff --git a/xnu/bsd/kern/kern_exec.c b/xnu/bsd/kern/kern_exec.c
+index 7d4d5ab..fa7e05a 100644
+--- a/xnu/bsd/kern/kern_exec.c
++++ b/xnu/bsd/kern/kern_exec.c
+@@ -986,17 +986,17 @@ grade:
+ 		}
+ 		task_set_dyld_info(task, load_result.all_image_info_addr,
+ 		    load_result.all_image_info_size);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 		kprintf("J1EXEC dyldinfo done\n");
+ #endif
+ 	}
+     
+ 	/* Avoid immediate VM faults back into kernel */
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC prefault begin\n");
+ #endif
+ 	exec_prefault_data(p, imgp, &load_result);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC prefault done\n");
+ #endif
+ 
+@@ -1005,7 +1005,7 @@ grade:
+ 	}
+ 	/* Set the entry point */
+ 	thread_setentrypoint(thread, load_result.entry_point);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC entry set\n");
+ #endif
+ 
+@@ -1022,7 +1022,7 @@ grade:
+ 	 * already active.  MAY BLOCK!
+ 	 */
+ 	_aio_exec( p );
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC aio done\n");
+ #endif
+ 
+@@ -1153,7 +1153,7 @@ grade:
+ 	if (imgp->ip_px_sa != NULL) {
+ 		psa = (struct _posix_spawnattr *) imgp->ip_px_sa;
+ 		if (psa->psa_flags & POSIX_SPAWN_START_SUSPENDED) {
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 			kprintf("J1EXEC child suspended\n");
+ #endif
+ 			proc_lock(p);
+@@ -1246,7 +1246,7 @@ if (!spawn)
+ 	}
+ 
+ bad:
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC imgact return err=%d\n", error);
+ #endif
+ 	return(error);
+@@ -2066,7 +2066,7 @@ posix_spawn(proc_t ap, struct posix_spawn_args *uap, int32_t *retval)
+ 	}
+ #endif
+ 	error = exec_activate_image(imgp);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC activate=%d spawn=%d\n", error,
+ 		(imgp->ip_flags & IMGPF_SPAWN) ? 1 : 0);
+ #endif
+@@ -2478,7 +2478,7 @@ __mac_execve(proc_t p, struct __mac_execve_args *uap, int32_t *retval)
+ #endif
+ 
+ 	error = exec_activate_image(imgp);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC activate=%d spawn=%d\n", error,
+ 		(imgp->ip_flags & IMGPF_SPAWN) ? 1 : 0);
+ #endif
+@@ -2489,7 +2489,7 @@ __mac_execve(proc_t p, struct __mac_execve_args *uap, int32_t *retval)
+ #endif
+ 
+ 	kauth_cred_unref(&context.vc_ucred);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC cred_unref done\n");
+ #endif
+ 
+@@ -2498,15 +2498,15 @@ __mac_execve(proc_t p, struct __mac_execve_args *uap, int32_t *retval)
+ 		error = ENOEXEC;
+ 
+ 	if (error == 0) {
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 		kprintf("J1EXEC resettextvp begin\n");
+ #endif
+ 		exec_resettextvp(p, imgp);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 		kprintf("J1EXEC resettextvp done\n");
+ #endif
+ 		error = check_for_signature(p, imgp);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 		kprintf("J1EXEC sigcheck done err=%d\n", error);
+ #endif
+ 	}	
+@@ -2520,7 +2520,7 @@ __mac_execve(proc_t p, struct __mac_execve_args *uap, int32_t *retval)
+ 	if (imgp->ip_scriptlabelp)
+ 		mac_vnode_label_free(imgp->ip_scriptlabelp);
+ #endif
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC post-free\n");
+ #endif
+ 	if (!error) {
+@@ -2543,7 +2543,7 @@ exit_with_error:
+ 	if (bufp != NULL) {
+ 		FREE(bufp, M_TEMP);
+ 	}
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	kprintf("J1EXEC execve return err=%d\n", error);
+ #endif
+ #if BOARD_CONFIG_ARMPBA8
+diff --git a/xnu/bsd/kern/pthread_synch.c b/xnu/bsd/kern/pthread_synch.c
+index a05995a..cc3d754 100644
+--- a/xnu/bsd/kern/pthread_synch.c
++++ b/xnu/bsd/kern/pthread_synch.c
+@@ -225,7 +225,7 @@ bsdthread_create(__unused struct proc *p, struct bsdthread_create_args  *uap, us
+ #if defined(__i386__) || defined(__x86_64__)
+ 	stackaddr = 0xB0000000;
+ #elif defined(__arm__)
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+     stackaddr = 0x20000000;
+ #else
+     stackaddr = 0x2FD00000;
+@@ -357,7 +357,7 @@ bsdthread_create(__unused struct proc *p, struct bsdthread_create_args  *uap, us
+ 		/* Set up ARM registers... */
+ 		arm_thread_state_t state;
+ 		arm_thread_state_t *ts = &state;
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+         bzero(ts, sizeof(*ts));
+         ts->cpsr = 0x10U | (((uint32_t)p->p_threadstart & 1U) ? 0x20U : 0);
+ #endif
+@@ -367,7 +367,7 @@ bsdthread_create(__unused struct proc *p, struct bsdthread_create_args  *uap, us
+ 		ts->r[7] = 0;
+ 
+ 		ts->pc = (uint32_t)p->p_threadstart;
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+         ts->pc &= ~1U;
+ #endif
+ 		ts->sp = (int)((vm_offset_t)(th_stack-C_32_STK_ALIGN));
+@@ -1079,7 +1079,7 @@ workqueue_addnewthread(struct workqueue *wq, boolean_t oc_thread)
+ #if defined(__i386__) || defined(__x86_64__)
+ 	stackaddr = 0xB0000000;
+ #elif defined(__arm__)
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+     stackaddr = 0x20000000;
+ #else
+     stackaddr = 0x2FE00000;
+@@ -2305,7 +2305,7 @@ setup_wqthread(proc_t p, thread_t th, boolean_t overcommit, uint32_t priority, i
+      * Set up ARM registers and call.
+      */
+     {
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+         arm_thread_state_t state;
+         arm_thread_state_t *ts = &state;
+         uint32_t pthread_addr = (uint32_t)(tl->th_stackaddr +
+diff --git a/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/AppleARMPE.cpp b/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/AppleARMPE.cpp
+index 75a24f4..5699d35 100644
+--- a/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/AppleARMPE.cpp
++++ b/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/AppleARMPE.cpp
+@@ -24,14 +24,14 @@ bool AppleARMPE::init(OSDictionary * propTable)
+ }
+ 
+ extern const IORegistryPlane *gIODTPlane;
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ extern void ios7leo_register_sd(IOService *platform);
+ extern void ios7leo_register_display(IOService *platform);
+ extern void ios7leo_prepare_root_file();
+ extern void ios7leo_register_hid_touch(IOService *platform);
+ extern "C" void ios7leo_prepare_log_reader(void);
+ #endif
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ extern void ios7j1_register_sd(IOService *platform);
+ #endif
+ #if BOARD_CONFIG_ARMPBA8
+@@ -86,10 +86,10 @@ bool AppleARMPE::start(IOService * provider)
+     ios7lab_register_hid_touch(this);
+     ios7lab_register_sd(this);
+ #endif
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     ios7leo_register_display(this);
+     ios7leo_prepare_root_file();
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     ios7j1_register_sd(this);
+ #else
+     ios7leo_prepare_log_reader(); /* optional owned logger before rawmedia publication */
+diff --git a/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoDisplay.cpp b/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoDisplay.cpp
+index 8c9e812..a379c93 100644
+--- a/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoDisplay.cpp
++++ b/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoDisplay.cpp
+@@ -1,4 +1,4 @@
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ /* Leo adaptation of proven original iOS7 CPU surface/discovery wire. */
+ #include <IOKit/IOService.h>
+ #include <IOKit/IOUserClient.h>
+@@ -9,7 +9,7 @@
+ #include <IOKit/IOTimerEventSource.h>
+ #include <libkern/OSAtomic.h>
+ #include "IOS7LabSurfaceGeometry.h"
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ /* J1 backend: direct-FB present/ready/completed (see pe_exynos3475_j1.c). */
+ extern "C" {
+ int ios7j1_display_ready(void);
+@@ -212,7 +212,7 @@ extern "C" uint32_t ios7leo_graphics_event_take(LeoGraphicsEvent *out,uint32_t *
+     *out=leo_graphics_events[leo_graphics_state.events_taken++];leo_graphics_unlock();return 1;
+ }
+ 
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ static IOLock *primaryLock;
+ static IOMemoryDescriptor *primaryPixels;
+ static IOBufferMemoryDescriptor *primaryControl;
+@@ -1563,7 +1563,7 @@ void ios7leo_register_display(IOService *platform)
+         IOLog("Leo display registration failed; no provider published\n");return;
+     }
+     surfaces->setName("IOCoreSurfaceRoot");
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     surfaces->setProperty("IOS7LabBackend","J1 owned BGRA CPU surface / direct FB RGB565");
+     display->setName("IOS7J1FB");display->setProperty("IOS7LabBackend","Samsung J1 DECON direct RGB565 480x800");
+     surfaces->registerService();display->registerService();
+diff --git a/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoHFSFile.cpp b/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoHFSFile.cpp
+index fe2f784..1caf98d 100644
+--- a/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoHFSFile.cpp
++++ b/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoHFSFile.cpp
+@@ -1,4 +1,4 @@
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ /* Real readonly SD-backed file media. Original009 PAL/adapter are reused intact. */
+ #include <IOKit/storage/IOBlockStorageDevice.h>
+ #include <IOKit/storage/IOBlockStorageDriver.h>
+diff --git a/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoHIDTouch.cpp b/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoHIDTouch.cpp
+index 0a9bf6f..3735114 100644
+--- a/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoHIDTouch.cpp
++++ b/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoHIDTouch.cpp
+@@ -1,5 +1,5 @@
+ /* HTC HD2 integration/publication changes: Garysss123, 2026-10-04. Original license notices are preserved. */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ /* Real Type2A controller reports through the original iOS7 IOHIDLib queue.
+  * PL050, synthetic contacts, buttons and userland routing helpers are absent. */
+ #include <IOKit/IOService.h>
+@@ -234,7 +234,7 @@ int IOHIDEventService::delayMicroseconds(void *,uint32_t microseconds)
+ }
+ bool IOHIDEventService::publishProperties(void)
+ {
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+  setName("IOS7J1Touch");setProperty("HIDServiceSupport",true);
+  setProperty("IOS7LabBackend","Samsung J1 touch stub native HID queue (no-input)");
+  setProperty("PrimaryUsagePage",13,32);setProperty("PrimaryUsage",4,32);
+@@ -270,7 +270,7 @@ bool IOHIDEventService::start(IOService *provider)
+  lock=IOLockAlloc();queue=new IOS7LeoHIDQueue;
+  if(!lock || !queue || !queue->initWithCapacity(4096))return false;
+  queueMemory=queue->getMemoryDescriptor();if(!queueMemory)return false;
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+  /* J1: no touch controller mapped yet; publish HID service with no-input
+   * transport so SpringBoard GUI shows. Swipe wired later. */
+  state.ready=1; state.stage=7;
+@@ -356,7 +356,7 @@ void IOHIDEventService::poll(void)
+   if(!queue->sane() || !queue->enqueue(&pendingPacket,sizeof(pendingPacket))){leo_touch_inc(&queueFailures);publishSnapshot();IOLockUnlock(lock);return;}
+   commitPacket();
+  }
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+  /* J1 stub: no controller yet, no input, keep service alive for GUI. */
+  IOLockUnlock(lock); return;
+ #else
+diff --git a/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7M8930SDMMC.cpp b/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7M8930SDMMC.cpp
+new file mode 100644
+index 0000000..9e3fefe
+--- /dev/null
++++ b/xnu/iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7M8930SDMMC.cpp
+@@ -0,0 +1,10 @@
++/* MSM8930 (Galaxy S4 mini) storage: PLACEHOLDER.
++ * TODO: msmsdcc (SDC3 microSD @0x12180000, SDC1 eMMC @0x12400000) read-only PIO driver exposing an
++ * IOBlockStorageDevice, so IOS7LeoHFSFile can locate IOS7/ROOTFS.HFS like on the J1. */
++#if defined(BOARD_CONFIG_MSM8930_SERRANO)
++#include <IOKit/IOService.h>
++void ios7j1_register_sd(IOService *platform)
++{
++ (void)platform;
++}
++#endif
+diff --git a/xnu/iokit/Kernel/IODeviceTreeSupport.cpp b/xnu/iokit/Kernel/IODeviceTreeSupport.cpp
+index 5a6873c..c522ce6 100644
+--- a/xnu/iokit/Kernel/IODeviceTreeSupport.cpp
++++ b/xnu/iokit/Kernel/IODeviceTreeSupport.cpp
+@@ -296,7 +296,7 @@ int IODTGetDefault(const char *key, void *infoAddr, unsigned int infoSize )
+     OSData			*defaultObj;
+     unsigned int		defaultSize;
+ 
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     /* Early boot (sched_init etc.) runs before the registry/plane exist;
+      * report "no default" so callers use their built-in defaults. */
+     if (gIODTPlane == 0)
+diff --git a/xnu/iokit/Kernel/IOService.cpp b/xnu/iokit/Kernel/IOService.cpp
+index 76751a6..e51f61d 100644
+--- a/xnu/iokit/Kernel/IOService.cpp
++++ b/xnu/iokit/Kernel/IOService.cpp
+@@ -157,7 +157,7 @@ static int			gOutstandingJobs;
+ static int			gNumConfigThreads;
+ static int			gNumWaitingThreads;
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 
+ static unsigned ios7leo_match_role(IOService *target)
+ {
+@@ -201,7 +201,7 @@ extern "C" __attribute__((noinline)) void ios7leo_match_note(unsigned stage,unsi
+ #endif
+ /* IOS7LEO_MATCH_END */
+ 
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ extern "C" void j1_klog(const char *s) { IOLog("%s", s); }
+ #endif
+ 
+@@ -769,7 +769,7 @@ IOReturn IOService::catalogNewDrivers( OSOrderedSet * newTables )
+ 						IOOptionBits options )
+ {
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     unsigned leo_role=ios7leo_match_role(nub);
+ #endif
+ /* IOS7LEO_MATCH_END */
+@@ -783,7 +783,7 @@ IOReturn IOService::catalogNewDrivers( OSOrderedSet * newTables )
+     }
+ 
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     if (leo_role) ios7leo_match_note(1,leo_role,nub,0,job!=0,0,0,0,0,0);
+ #endif
+ /* IOS7LEO_MATCH_END */
+@@ -2665,7 +2665,7 @@ bool IOService::invokeNotifer( _IOServiceNotifier * notify )
+ void IOService::probeCandidates( OSOrderedSet * matches )
+ {
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     unsigned leo_role=ios7leo_match_role(this);
+ #endif
+ /* IOS7LEO_MATCH_END */
+@@ -2844,13 +2844,13 @@ void IOService::probeCandidates( OSOrderedSet * matches )
+     
+ 
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 if (leo_role) ios7leo_match_note(4,leo_role,this,symbol->getCStringNoCopy(),0,0,0,0,0,0);
+ #endif
+ /* IOS7LEO_MATCH_END */
+                 newInst = inst->probe( this, &score );
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 if (leo_role) ios7leo_match_note(5,leo_role,this,symbol->getCStringNoCopy(),newInst!=0,0,0,0,0,0);
+ #endif
+ /* IOS7LEO_MATCH_END */
+@@ -2929,7 +2929,7 @@ void IOService::probeCandidates( OSOrderedSet * matches )
+ #endif
+                 if( false == started)
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 {
+                     if (leo_role) ios7leo_match_note(6,leo_role,this,inst->getMetaClass()->getClassName(),0,0,0,0,0,0);
+ #endif
+@@ -2937,7 +2937,7 @@ void IOService::probeCandidates( OSOrderedSet * matches )
+ 
+                     started = startCandidate( inst );
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                     if (leo_role) ios7leo_match_note(7,leo_role,this,inst->getMetaClass()->getClassName(),started,0,0,0,0,0);
+                 }
+ #endif
+@@ -3188,7 +3188,7 @@ void _IOConfigThread::free( void )
+ void IOService::doServiceMatch( IOOptionBits options )
+ {
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     unsigned leo_role=ios7leo_match_role(this);
+     if (leo_role) ios7leo_match_note(3,leo_role,this,0,0,0,0,0,0,0);
+ #endif
+@@ -3275,13 +3275,13 @@ void IOService::doServiceMatch( IOOptionBits options )
+ 
+ 
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     if (leo_role) ios7leo_match_note(8,leo_role,this,0,0,0,0,0,0,0);
+ #endif
+ /* IOS7LEO_MATCH_END */
+     _adjustBusy( -1 );
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     if (leo_role) ios7leo_match_note(9,leo_role,this,0,__state[1] & kIOServiceBusyStateMask,0,0,0,0,0);
+ #endif
+ /* IOS7LEO_MATCH_END */
+@@ -3409,7 +3409,7 @@ IOReturn IOService::waitForState( UInt32 mask, UInt32 value,
+ 				   uint64_t timeout )
+ {
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     unsigned leo_role=ios7leo_match_role(this);
+     if(leo_role && mask==kIOServiceBusyStateMask && value==0)
+         ios7leo_match_note(10,leo_role,this,0,0,__state[0],__state[1],gOutstandingJobs,gNumWaitingThreads,gNumConfigThreads);
+@@ -3521,7 +3521,7 @@ void _IOConfigThread::main(void * arg, wait_result_t result)
+ 
+ 	  nub = job->nub;
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+           unsigned leo_role=ios7leo_match_role(nub);
+ #endif
+ /* IOS7LEO_MATCH_END */
+@@ -3535,7 +3535,7 @@ void _IOConfigThread::main(void * arg, wait_result_t result)
+ 
+ 	    case kMatchNubJob:
+ /* IOS7LEO_MATCH_BEGIN */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 if (leo_role) ios7leo_match_note(2,leo_role,nub,0,0,0,0,0,0,0);
+ #endif
+ /* IOS7LEO_MATCH_END */
+diff --git a/xnu/iokit/conf/files.arm b/xnu/iokit/conf/files.arm
+index e5b9925..b34aad2 100644
+--- a/xnu/iokit/conf/files.arm
++++ b/xnu/iokit/conf/files.arm
+@@ -54,4 +54,5 @@ iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoDisplay.cpp optional iok
+ iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7LeoHIDTouch.cpp optional iokitcpp
+ # J1 Exynos3475 SDMMC (DW-MMC PIO) block device
+ iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7J1SDMMC.cpp optional iokitcpp
++iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/IOS7M8930SDMMC.cpp optional iokitcpp
+ iokit/Drivers/KernelBuiltIn/ARM/AppleARMPlatform/j1_sdmmc.c standard
+diff --git a/xnu/libkern/c++/OSKext.cpp b/xnu/libkern/c++/OSKext.cpp
+index add1d4c..56e8e50 100644
+--- a/xnu/libkern/c++/OSKext.cpp
++++ b/xnu/libkern/c++/OSKext.cpp
+@@ -10472,7 +10472,7 @@ OSKext::getKmodInfo(
+     k = kmod;
+     kmod_info_scan_ptr = (kmod_info_t *)data;
+     while (k) {
+-        *kmod_info_scan_ptr = *k;
++        bcopy((const void *)k, (void *)kmod_info_scan_ptr, sizeof(kmod_info_t));
+         if (k->next) {
+             kmod_info_scan_ptr->next = k;
+         }
+diff --git a/xnu/makedefs/MakeInc.cmd b/xnu/makedefs/MakeInc.cmd
+index 723aebf..3e4eacd 100644
+--- a/xnu/makedefs/MakeInc.cmd
++++ b/xnu/makedefs/MakeInc.cmd
+@@ -46,9 +46,9 @@ ifeq ($(UNAME_S),Darwin)
+ 
+ 	# Host-specific verbosity
+ 	ifeq ($(VERBOSE),YES)
+-		XCRUN = /usr/bin/xcrun -verbose -log
++		XCRUN = /home/user/cctools/bin/xcrun -verbose -log
+ 	else
+-		XCRUN = /usr/bin/xcrun
++		XCRUN = /home/user/cctools/bin/xcrun
+ 	endif
+ 
+ 	# SDKROOT may be passed as a shorthand like "iphoneos.internal". We
+@@ -204,7 +204,7 @@ ifeq ($(UNAME_S),Darwin)
+ else ifeq ($(UNAME_S),Linux)
+ 
+ 	# Locate our xcrun tool
+-	export XCRUN := /usr/bin/xcrun
++	export XCRUN := /home/user/cctools/bin/xcrun
+ 
+ 	# If applicable, use the default sdk path given by xcrun. We don't want to use any local tools
+ 	# when building things that aren't meant to be used or ran on the host.
+diff --git a/xnu/makedefs/MakeInc.def b/xnu/makedefs/MakeInc.def
+index 17a0371..ff40a4a 100644
+--- a/xnu/makedefs/MakeInc.def
++++ b/xnu/makedefs/MakeInc.def
+@@ -121,7 +121,7 @@ endif
+ export SUPPORTED_I386_MACHINE_CONFIGS := DEFAULT
+ export SUPPORTED_X86_64_MACHINE_CONFIGS := DEFAULT
+ export SUPPORTED_ARM_MACHINE_CONFIGS := S5L8920X S5L8922X S5L8930X ARMPBA8 SUN4I OMAP3530 OMAP335X RASPBERRYPI \
+-					OMAP3430_RX51 ARM_RVEB_V6 S5L8720X S5L8900XRB MSM8960_TOUCHPAD IMX53 QSD8250_LEO EXYNOS3475_J1XLTE
++					OMAP3430_RX51 ARM_RVEB_V6 S5L8720X S5L8900XRB MSM8960_TOUCHPAD IMX53 QSD8250_LEO EXYNOS3475_J1XLTE MSM8930_SERRANO
+ export SUPPORTED_ARM64_MACHINE_CONFIGS := DEFAULT VEXPRESS 
+ 
+ #
+@@ -250,7 +250,7 @@ export DEFINES = -DAPPLE -DKERNEL -DKERNEL_PRIVATE -DXNU_KERNEL_PRIVATE \
+ KCC  := $(CC)
+ ifeq ($(UNAME_S),Linux)
+ # Drive the Mach-O link through clang with the classic ld64 backend.
+-KC++ := $(CXX) --target=armv7-apple-darwin -mthumb -fuse-ld=/home/kotu/j1ios/ios7/j1/ld64-wrapper
++KC++ := $(CXX) --target=armv7-apple-darwin -mthumb -fuse-ld=/home/user/cctools/bin/ld64-wrapper
+ else
+ KC++ := $(CXX)
+ endif
+@@ -327,11 +327,13 @@ ARCH_FLAGS_ARM_OMAP335X	= -arch armv7
+ ARCH_FLAGS_ARM_ARMPBA8	= -arch armv7
+ ARCH_FLAGS_ARM_QSD8250_LEO = -arch armv7
+ ARCH_FLAGS_ARM_EXYNOS3475_J1XLTE = -arch armv7
++ARCH_FLAGS_ARM_MSM8930_SERRANO = -arch armv7
+ 
+ # Linux cross builds: clang has no -arch; use target triple + Mach-O output.
+ ifeq ($(UNAME_S),Linux)
+ ARCH_FLAGS_ARM_QSD8250_LEO = --target=armv7-apple-darwin -mthumb
+ ARCH_FLAGS_ARM_EXYNOS3475_J1XLTE = --target=armv7-apple-darwin -mthumb
++ARCH_FLAGS_ARM_MSM8930_SERRANO = --target=armv7-apple-darwin -mthumb
+ endif
+ ARCH_FLAGS_ARM_MSM8960_TOUCHPAD	= -arch armv7
+ ARCH_FLAGS_ARM_RASPBERRYPI	= -arch armv6
+diff --git a/xnu/osfmk/arm/PlatformConfigs.h b/xnu/osfmk/arm/PlatformConfigs.h
+index 4b63798..2dc75ae 100644
+--- a/xnu/osfmk/arm/PlatformConfigs.h
++++ b/xnu/osfmk/arm/PlatformConfigs.h
+@@ -43,7 +43,7 @@
+ #endif
+ 
+ /* J1 Exynos3475 Cortex-A7: ARMv7-A, reuse A8-compatible path for bring-up. */
+-#ifdef BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO)
+ #define __ARM_PROCESSOR_CLASS_CORTEX_A8__ 1
+ #endif
+ 
+diff --git a/xnu/osfmk/arm/arm_init.c b/xnu/osfmk/arm/arm_init.c
+index cb76934..4616e57 100644
+--- a/xnu/osfmk/arm/arm_init.c
++++ b/xnu/osfmk/arm/arm_init.c
+@@ -70,7 +70,7 @@ void arm_processor_identify(void)
+ extern unsigned int ios7leo_read_fpsid(void);
+ extern unsigned int ios7leo_read_mvfr0(void);
+ #endif
+-#ifdef BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO)
+ #include <pexpert/arm/j1_entry.h>
+ #endif
+ void arm_init(boot_args * args)
+@@ -88,7 +88,7 @@ void arm_init(boot_args * args)
+ #ifdef BOARD_CONFIG_QSD8250_LEO
+     ios7leo_checkpoint(args,6);
+ #endif
+-#ifdef BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO)
+     ios7j1_checkpoint(args,6);
+ #endif
+ 
+@@ -138,7 +138,7 @@ void arm_init(boot_args * args)
+ #ifdef BOARD_CONFIG_QSD8250_LEO
+     ios7leo_checkpoint(args,7);
+ #endif
+-#ifdef BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO)
+     ios7j1_checkpoint(args,7);
+ #endif
+ 
+@@ -174,7 +174,7 @@ void arm_init(boot_args * args)
+     ios7leo_checkpoint(args,8);
+     ios7leo_forget_early_maps();
+ #endif
+-#ifdef BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO)
+     ios7j1_checkpoint(args,8);
+     ios7j1_forget_early_maps();
+ #endif
+@@ -194,7 +194,7 @@ void arm_init(boot_args * args)
+     /* Continue through the original kernel boot; this screen is not userspace. */
+     ios7leo_kernel_continuing();
+ #endif
+-#ifdef BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO)
+     ios7j1_checkpoint(args,10);
+     ios7j1_kernel_continuing();
+ #endif
+@@ -246,13 +246,13 @@ void arm_init(boot_args * args)
+      * VFP/float initialization. 
+      */
+     init_vfp();
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     {
+         unsigned int fpsid, mvfr0, cpacr;
+         __asm__ volatile("mrc p15,0,%0,c1,c0,2" : "=r"(cpacr));
+         if ((cpacr & 0xf00000U) != 0xf00000U || (cpacr & (1U << 30)))
+             panic("J1/Leo VFP access unavailable CPACR=%08x", cpacr);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+         /* J1 Cortex-A7 has VFPv4-D32; the kernel is built -msoft-float so
+          * vmrs is not encodable here. CPACR access check above suffices;
+          * VFP context init runs separately in init_vfp(). */
+diff --git a/xnu/osfmk/arm/arm_vm_init.c b/xnu/osfmk/arm/arm_vm_init.c
+index e2d8a47..587ec28 100644
+--- a/xnu/osfmk/arm/arm_vm_init.c
++++ b/xnu/osfmk/arm/arm_vm_init.c
+@@ -332,7 +332,7 @@ void arm_vm_init(uint32_t mem_limit, boot_args * args)
+     cpu_ttb = gTopOfKernel + L1_SIZE;
+     bzero((void*)phys_to_virt(cpu_ttb), L1_SIZE);
+ 
+-#ifdef BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO)
+     /* Seed the new tables with console/device identity sections BEFORE
+      * the switch, so early UART/FB/timers work immediately after. */
+     {
+diff --git a/xnu/osfmk/arm/armops.h b/xnu/osfmk/arm/armops.h
+index b51e7cb..3445885 100644
+--- a/xnu/osfmk/arm/armops.h
++++ b/xnu/osfmk/arm/armops.h
+@@ -44,7 +44,7 @@ extern void init_vfp(void);
+ extern void vfp_context_save(struct arm_vfp_state *state);
+ extern void vfp_context_load(struct arm_vfp_state *state);
+ extern uint32_t vfp_enable_exception(boolean_t enable);
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ extern uint32_t ios7leo_read_fpexc(void);
+ #endif
+ 
+diff --git a/xnu/osfmk/arm/armv/cache.s b/xnu/osfmk/arm/armv/cache.s
+index c89c430..c03cc8a 100644
+--- a/xnu/osfmk/arm/armv/cache.s
++++ b/xnu/osfmk/arm/armv/cache.s
+@@ -187,7 +187,7 @@ EnterARM(cache_initialize)
+ #endif
+ 
+     /* Enable L2 cache */
+-#if defined(_ARM_ARCH_7) && !defined(BOARD_CONFIG_QSD8250_LEO) && !defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(_ARM_ARCH_7) && !defined(BOARD_CONFIG_QSD8250_LEO) && !(defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     mrc     p15, 0, r0, c1, c0, 1
+     orr     r0, r0, #(1 << 1)
+ 
+diff --git a/xnu/osfmk/arm/armv/vfp.s b/xnu/osfmk/arm/armv/vfp.s
+index 2f65eb2..2b7cd73 100644
+--- a/xnu/osfmk/arm/armv/vfp.s
++++ b/xnu/osfmk/arm/armv/vfp.s
+@@ -56,7 +56,7 @@ EnterARM(init_vfp)
+ #endif
+     bx      lr
+ 
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ /* Actual privileged feature-register reads; no simulated capability values. */
+ EnterARM(ios7leo_read_fpsid)
+     vmrs    r0, fpsid
+diff --git a/xnu/osfmk/arm/commpage/commpage.c b/xnu/osfmk/arm/commpage/commpage.c
+index 0deaeac..f9d69bf 100644
+--- a/xnu/osfmk/arm/commpage/commpage.c
++++ b/xnu/osfmk/arm/commpage/commpage.c
+@@ -54,7 +54,7 @@ void commpage_update_active_cpus(void)
+ 
+     /* Lock the lock and update the global page value */
+     simple_lock(&commpage_active_cpus_lock);
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+     /* Original iOS7 libdispatch sizes its heap from LOGICAL_CPUS at +0x36.
+      * This reference machine runs exactly one present/active physical CPU. */
+     assert(processor_avail_count == 1);
+@@ -96,7 +96,7 @@ void commpage_populate(void)
+     /* Update CPU count */
+     simple_lock_init(&commpage_active_cpus_lock, 0);
+     commpage_update_active_cpus();
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+ #if BOARD_CONFIG_QSD8250_LEO
+     ml_cpu_info_t cpu_info;
+     ml_cpu_get_info(&cpu_info);
+diff --git a/xnu/osfmk/arm/cpu.c b/xnu/osfmk/arm/cpu.c
+index 4c655ed..95c1db7 100644
+--- a/xnu/osfmk/arm/cpu.c
++++ b/xnu/osfmk/arm/cpu.c
+@@ -504,7 +504,7 @@ void get_cachetype_cp15()
+                 type == CACHE_SEP_CACHE) {
+                 sel = i << 1;
+                 __asm __volatile("mcr p15, 2, %0, c0, c0, 0"::"r"(sel));
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 __asm __volatile("isb sy" ::: "memory");
+ #endif
+                 __asm __volatile("mrc p15, 1, %0, c0, c0, 0":"=r"(csize));
+@@ -515,7 +515,7 @@ void get_cachetype_cp15()
+             if (type == CACHE_ICACHE || type == CACHE_SEP_CACHE) {
+                 sel = (i << 1) | 1;
+                 __asm __volatile("mcr p15, 2, %0, c0, c0, 0"::"r"(sel));
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 __asm __volatile("isb sy" ::: "memory");
+ #endif
+                 __asm __volatile("mrc p15, 1, %0, c0, c0, 0":"=r"(csize));
+@@ -524,7 +524,7 @@ void get_cachetype_cp15()
+             i++;
+             clevel >>= 3;
+         }
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+         sel = 0;
+         __asm __volatile("mcr p15, 2, %0, c0, c0, 0"::"r"(sel));
+         __asm __volatile("isb sy" ::: "memory");
+diff --git a/xnu/osfmk/arm/hw_lock.s b/xnu/osfmk/arm/hw_lock.s
+index 88b259c..03a2d26 100644
+--- a/xnu/osfmk/arm/hw_lock.s
++++ b/xnu/osfmk/arm/hw_lock.s
+@@ -454,7 +454,7 @@ mlckslow:
+     str     r3, [r0]
+     b       __enable_preemption
+ mlckwait:
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+     /* lock_wait requires the interlock; unlock needs bit 1 to wake waiters. */
+     orr     r3, r3, #3
+ #else
+diff --git a/xnu/osfmk/arm/ios7_compat.h b/xnu/osfmk/arm/ios7_compat.h
+index 415149a..0a4177d 100644
+--- a/xnu/osfmk/arm/ios7_compat.h
++++ b/xnu/osfmk/arm/ios7_compat.h
+@@ -2,7 +2,7 @@
+ #define _ARM_IOS7_COMPAT_H_
+ 
+ /* Selected software ABI adapters only. This never changes board identity. */
+-#define IOS7_COMPAT_PLATFORM (BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#define IOS7_COMPAT_PLATFORM (BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO)
+ 
+ #if BOARD_CONFIG_ARMPBA8
+ #include <pexpert/pexpert.h>
+@@ -10,7 +10,7 @@
+ 
+ static inline int ios7_compat_vmabi_enabled(void)
+ {
+-#if BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+     return 1;
+ #elif BOARD_CONFIG_ARMPBA8
+     int enabled = 0;
+diff --git a/xnu/osfmk/arm/locore.s b/xnu/osfmk/arm/locore.s
+index 2b3acb9..cd5e0a9 100644
+--- a/xnu/osfmk/arm/locore.s
++++ b/xnu/osfmk/arm/locore.s
+@@ -118,7 +118,7 @@ mmu_reinitialize:
+     mov     r7, r7, lsl#20
+     orr     r8, r7, r6
+     str     r8, [r5]
+-#ifdef BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO)
+     /* J1: identity-map S3C UART (1MB @0x13800000) and panel FB
+      * (2MB @0x57E00000) so early physical console/pixels work under
+      * the boot tables. r6=rw section template, r4=TTB. */
+diff --git a/xnu/osfmk/arm/model_dep.c b/xnu/osfmk/arm/model_dep.c
+index 554ca6d..f62807f 100644
+--- a/xnu/osfmk/arm/model_dep.c
++++ b/xnu/osfmk/arm/model_dep.c
+@@ -147,7 +147,7 @@ static void machine_conf(void)
+ {
+     machine_info.memory_size = (typeof(machine_info.memory_size)) mem_size;
+     machine_info.max_mem = (typeof(machine_info.max_mem)) max_mem;
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     /*
+      * J1 bring-up (platform-specific, Exynos 3475):
+      * mc/commpage size per-CPU arrays from ml_get_max_cpus() (mcache.c:181,
+diff --git a/xnu/osfmk/arm/pmap.c b/xnu/osfmk/arm/pmap.c
+index a1c3d03..2eca20b 100644
+--- a/xnu/osfmk/arm/pmap.c
++++ b/xnu/osfmk/arm/pmap.c
+@@ -202,7 +202,7 @@ uint32_t virt_begin, virt_end;  /* Virtual Address Space. */
+ uint32_t avail_start, vm_first_phys;
+ vm_page_t commpage;
+ 
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+ /* PC lab compatibility alias for original iOS 7 ARMv7 userspace. */
+ #define IOS7LAB_COMMPAGE_ALIAS 0xFFFF4000U
+ #endif
+@@ -1689,7 +1689,7 @@ retry:
+     OSAddAtomic(1,&map->pm_stats.resident_count);pmap_ledger_credit(map,task_ledgers.phys_mem,PAGE_SIZE);
+     leo_mapping_wire(entry,wired);if(managed)leo_physical_wire_refresh(pn);
+     *pte=leo_pte_build(map,va,pn,prot,wired);if(managed)UNLOCK_PVH(pn);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     /* J1: freshly paged-in executable user pages may hold stale I-cache
+      * lines (PIO-filled, never executed). Clean D + invalidate I so the
+      * first userspace fetch sees real code, not garbage. */
+@@ -2863,7 +2863,7 @@ void pmap_create_sharedpage(void)
+      * Memset it.
+      */
+     memset((void *) _COMM_PAGE_BASE_ADDRESS, 0x00, PAGE_SIZE);
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+     /* Retain the control ABI at 0x40000000 and expose the same data read-only
+      * at the address used by the original iOS 7 dyld. Offset 0x90 remains
+      * zero: Cortex-A8 must take mach_absolute_time's syscall fallback,
+@@ -3258,7 +3258,7 @@ kern_return_t pmap_enter_options(pmap_t pmap, vm_map_offset_t va, ppnum_t pa, vm
+ 
+         if (va == _COMM_PAGE_BASE_ADDRESS)
+             template_pte |= L2_ACCESS_USER;
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+         if (pmap == kernel_pmap && va == IOS7LAB_COMMPAGE_ALIAS)
+             template_pte |= L2_ACCESS_USER | L2_ACCESS_APX | L2_NX_BIT;
+ #endif
+@@ -3452,7 +3452,7 @@ kern_return_t pmap_enter_options(pmap_t pmap, vm_map_offset_t va, ppnum_t pa, vm
+      */
+     if (va == _COMM_PAGE_BASE_ADDRESS)
+         template_pte |= L2_ACCESS_USER;
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+     if (pmap == kernel_pmap && va == IOS7LAB_COMMPAGE_ALIAS)
+         template_pte |= L2_ACCESS_USER | L2_ACCESS_APX | L2_NX_BIT;
+ #endif
+@@ -3464,7 +3464,7 @@ kern_return_t pmap_enter_options(pmap_t pmap, vm_map_offset_t va, ppnum_t pa, vm
+ 
+     *(uint32_t *) pte = template_pte;
+     pte_sync(pte);
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     /* J1: a freshly faulted executable page may hold stale I-cache lines
+      * (PIO-filled, never executed). pte_sync above only cleans D for the
+      * walker. Sync D + invalidate I via the linear map so the first fetch
+diff --git a/xnu/osfmk/arm/trap.c b/xnu/osfmk/arm/trap.c
+index 7914b88..ba5566e 100644
+--- a/xnu/osfmk/arm/trap.c
++++ b/xnu/osfmk/arm/trap.c
+@@ -275,7 +275,7 @@ ios7leo_installd_fault(thread_t thread, const abort_information_context_t *ctx,
+ #include "IOS7LeoAppFault057.h"
+ #endif
+ 
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ /*
+  * BRING-UP (J1): report a per-fault line only once per distinct page so a
+  * progressing fault walk is visible on the console without flooding it.
+@@ -442,7 +442,7 @@ void sleh_abort(void *context, int reason)
+ 
+                 /*
+ 
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 {
+                     static unsigned int j1sr_abk = 0;
+                     if (j1sr_abk < 30) { j1sr_abk++;
+@@ -461,7 +461,7 @@ void sleh_abort(void *context, int reason)
+                              : (VM_PROT_READ), FALSE, THREAD_UNINT, NULL,
+                              vm_map_trunc_page(0));
+ 
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 if (code == KERN_SUCCESS) {
+                     /* Bring-up (J1): the mapping is present in the active page
+                      * table (L1/L2 valid) yet the CPU keeps taking a
+@@ -633,7 +633,7 @@ void sleh_abort(void *context, int reason)
+                  */
+                 map = thread->map;
+ 
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 {
+                     static unsigned int uda_total = 0;
+                     uda_total++;
+@@ -647,7 +647,7 @@ void sleh_abort(void *context, int reason)
+                 }
+ #endif
+ 
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 {
+                     static unsigned int u_far = ~0u, u_pc = 0, u_fsr = 0, u_cnt = 0;
+                     if (dfar == u_far && arm_ctx->pc == u_pc && dfsr == u_fsr) {
+@@ -661,7 +661,7 @@ void sleh_abort(void *context, int reason)
+                 }
+ #endif
+ 
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 {
+                     static unsigned int j1sr_abu = 0;
+                     if (j1sr_abu < 30) { j1sr_abu++;
+@@ -681,7 +681,7 @@ void sleh_abort(void *context, int reason)
+                              (dfsr & 0x800) ? (VM_PROT_READ | VM_PROT_WRITE)
+                              : (VM_PROT_READ), FALSE, THREAD_UNINT, NULL,
+                              vm_map_trunc_page(0));
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+                 if (code == KERN_SUCCESS) {
+                     /* Same stale-TLB workaround as the kernel data-abort path:
+                      * the mapping is present (probe: active page table, valid
+diff --git a/xnu/osfmk/arm/traps_lo.s b/xnu/osfmk/arm/traps_lo.s
+index e2f6c7a..b19ed88 100644
+--- a/xnu/osfmk/arm/traps_lo.s
++++ b/xnu/osfmk/arm/traps_lo.s
+@@ -113,7 +113,7 @@ undef_from_kernel:
+  * Call the software interrupt handler.
+  */
+ EnterARM(fleh_swi)
+-#if !(BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if !(BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO)
+     cmn     r12, #3
+     beq     swi_trap_tb
+ #endif
+@@ -159,7 +159,7 @@ leo_frontier_entry_skip:
+     ldmfd   sp!, {r0,r1}
+ leo_frontier_entry_done:
+ #endif
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+     /* Original iOS ARMv7's -3 fallback returns the actual 64-bit clock.
+      * Use the normal saved-state/kernel-stack path and restore through
+      * swi_exit64, preserving both r0 and r1. */
+@@ -261,7 +261,7 @@ swi_trap_tb:
+     /* Fast return */
+     movs    pc, lr
+ 
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+ ios7lab_timebase:
+     blx     _mach_absolute_time
+     b       swi_exit64
+@@ -552,7 +552,7 @@ irq_restore_kernel:
+     ldr     r0, [r12, MACHINE_THREAD_PREEMPT_COUNT]
+ 
+     /* Preempt thread if necessary */
+-#if defined(BOARD_CONFIG_QSD8250_LEO) || defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if defined(BOARD_CONFIG_QSD8250_LEO) || (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+     cmp     r0, #0
+ #endif
+     bne     restore_kernel_context
+diff --git a/xnu/osfmk/console/arm/serial_console.c b/xnu/osfmk/console/arm/serial_console.c
+index d31f6cc..58062f3 100644
+--- a/xnu/osfmk/console/arm/serial_console.c
++++ b/xnu/osfmk/console/arm/serial_console.c
+@@ -192,7 +192,7 @@ _cnputc(char c)
+ 	extern void ios7leo_log_putc(char);
+ 	ios7leo_log_putc(c); /* try-only RAM producer, no SD or scheduling */
+ #endif
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 	{
+ 	extern void ios7j1_debug_putc(char);
+ 	extern void ios7j1_fast_putc(char);
+diff --git a/xnu/osfmk/ipc/mach_kernelrpc.c b/xnu/osfmk/ipc/mach_kernelrpc.c
+index 5b4135a..2618556 100644
+--- a/xnu/osfmk/ipc/mach_kernelrpc.c
++++ b/xnu/osfmk/ipc/mach_kernelrpc.c
+@@ -397,7 +397,7 @@ done:
+ #endif
+ /* IOS7LEO_VM_END */
+ /* IOS7J1_VM_BEGIN */
+-#if BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+ #include <mach/vm_statistics.h>
+ /* Original iOS7 ARM32 trap-10 passes a 64-bit size in r2:r3 and the flags
+  * in r4, but this port typedefs mach_vm_size_t as 32-bit (iOS 4.3 ABI), so
+@@ -442,7 +442,7 @@ done:
+ int
+ _kernelrpc_mach_vm_allocate_trap(struct _kernelrpc_mach_vm_allocate_trap_args *args)
+ {
+-#if BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+     return j1_vm_allocate((struct j1_vm_allocate_wire *)args);
+ #endif
+ 
+diff --git a/xnu/osfmk/mach/arm/vm_param.h b/xnu/osfmk/mach/arm/vm_param.h
+index 415140d..6c3d11e 100644
+--- a/xnu/osfmk/mach/arm/vm_param.h
++++ b/xnu/osfmk/mach/arm/vm_param.h
+@@ -60,7 +60,7 @@
+ #if defined (__arm__)
+ 
+ #define VM_MIN_ADDRESS		((vm_address_t) 0x00000000)
+-#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE
++#if BOARD_CONFIG_ARMPBA8 || BOARD_CONFIG_QSD8250_LEO || BOARD_CONFIG_EXYNOS3475_J1XLTE || BOARD_CONFIG_MSM8930_SERRANO
+ /* This ARM pmap uses a 1 GiB TTBR0 split. Ordinary user allocations must
+  * stay below the kernel-owned commpage at 0x40000000. */
+ #define VM_MAX_ADDRESS		((vm_address_t) 0x40000000)
+diff --git a/xnu/osfmk/vm/vm_map.c b/xnu/osfmk/vm/vm_map.c
+index 8a05f8f..d1a4581 100644
+--- a/xnu/osfmk/vm/vm_map.c
++++ b/xnu/osfmk/vm/vm_map.c
+@@ -2156,7 +2156,7 @@ StartAgain: ;
+ 		if (override_nx(map, alias) && cur_protection)
+ 		        cur_protection |= VM_PROT_EXECUTE;
+ 
+-#if defined(BOARD_CONFIG_EXYNOS3475_J1XLTE)
++#if (defined(BOARD_CONFIG_EXYNOS3475_J1XLTE) || defined(BOARD_CONFIG_MSM8930_SERRANO))
+ 		/* ckpt11: skip vm_map_pmap_enter for submaps. Dropping this
+ 		 * guard REGRESSES real hardware to a stall at J1SDRW rd#94209
+ 		 * (ckpt10, exact same signature) while QEMU still reaches
+diff --git a/xnu/pexpert/arm/msm8930_timer.c b/xnu/pexpert/arm/msm8930_timer.c
+new file mode 100755
+index 0000000..ebd21dc
+--- /dev/null
++++ b/xnu/pexpert/arm/msm8930_timer.c
+@@ -0,0 +1,182 @@
++/*
++ * MSM8930 qGIC + DGT timer for XNU. SCAFFOLD, see msm8930_timer.h.
++ * Register layout (kernel timer.c): TMR+0x24 = DGT {MATCH 0x0, COUNT 0x4,
++ * ENABLE 0x8 (bit0 EN, bit1 CLR_ON_MATCH), CLEAR 0xC}, DGT_CLK_CTL at TMR+0x34
++ * (divider; value 3 = /4).
++ */
++#include <mach/mach_types.h>
++#include <mach/arm/thread_status.h>
++#include <pexpert/pexpert.h>
++#include <pexpert/arm/protos.h>
++#include <machine/machine_routines.h>
++#include <kern/debug.h>
++#include "msm8930_timer.h"
++
++#if defined(BOARD_CONFIG_MSM8930_SERRANO)
++
++#define DGT_BASE		0x24U
++#define DGT_MATCH_VAL		(DGT_BASE + 0x00U)
++#define DGT_COUNT_VAL		(DGT_BASE + 0x04U)
++#define DGT_ENABLE		(DGT_BASE + 0x08U)
++#define DGT_CLEAR		(DGT_BASE + 0x0CU)
++#define DGT_CLK_CTL		0x34U
++#define DGT_CLK_DIV_4		3U
++#define DGT_EN			1U
++
++#define GIC_DIST_CTRL		0x000U
++#define GIC_DIST_ENABLE_SET	0x100U
++#define GIC_DIST_ENABLE_CLEAR	0x180U
++#define GIC_DIST_PENDING_CLEAR	0x280U
++#define GIC_DIST_PRI		0x400U
++#define GIC_DIST_CONFIG		0xc00U
++#define GIC_CPU_CTRL		0x00U
++#define GIC_CPU_PRIMASK		0x04U
++#define GIC_CPU_INTACK		0x0cU
++#define GIC_CPU_EOI		0x10U
++
++extern void rtc_configure(uint64_t hz);
++extern void rtclock_intr(arm_saved_state_t *regs);
++extern void ios7m8930_fb_flush(void);
++
++uint64_t clock_decrementer;
++static vm_offset_t m_tmr, m_gic_dist, m_gic_cpu;
++static uint32_t controller_ready, timebase_ready, armed;
++static uint32_t last_lo, hi_word;	/* software extension of the 32-bit counter */
++
++static inline uint32_t rd(vm_offset_t b, uint32_t o) { return *(volatile uint32_t *)(b + o); }
++static inline void wr(vm_offset_t b, uint32_t o, uint32_t v) { *(volatile uint32_t *)(b + o) = v; }
++static inline void drain(void) { __asm__ volatile("dsb sy" ::: "memory"); }
++
++/* Callers hold interrupts off. Counter is 32-bit: detect wrap on each read. */
++static uint64_t dgt_get_count(void)
++{
++	uint32_t a, b, lo;
++	do { a = rd(m_tmr, DGT_COUNT_VAL); b = rd(m_tmr, DGT_COUNT_VAL); } while (a != b);
++	lo = b;
++	if (lo < last_lo) hi_word++;
++	last_lo = lo;
++	return ((uint64_t)hi_word << 32) | lo;
++}
++
++void M8930_interrupt_init(void)
++{
++	boolean_t was = ml_set_interrupts_enabled(FALSE);
++	uint32_t i, irq = M8930_DGT_IRQ;
++	if (controller_ready) { ml_set_interrupts_enabled(was); return; }
++	m_gic_dist = ml_io_map(M8930_GIC_DIST_PA, M8930_IO_BYTES);
++	m_gic_cpu  = ml_io_map(M8930_GIC_CPU_PA, M8930_IO_BYTES);
++	if (!m_gic_dist || !m_gic_cpu) panic("M8930 GIC IO mapping failed");
++	/* Disable + clear all, then configure the DGT PPI: mid priority, level. */
++	for (i = 0; i < 8; i++) {
++		wr(m_gic_dist, GIC_DIST_ENABLE_CLEAR + i * 4, 0xffffffffU);
++		wr(m_gic_dist, GIC_DIST_PENDING_CLEAR + i * 4, 0xffffffffU);
++	}
++	wr(m_gic_dist, GIC_DIST_PRI + (irq / 4) * 4,
++	   (rd(m_gic_dist, GIC_DIST_PRI + (irq / 4) * 4) & ~(0xffU << ((irq % 4) * 8))) |
++	   (0x80U << ((irq % 4) * 8)));
++	wr(m_gic_dist, GIC_DIST_CONFIG + (irq / 16) * 4,
++	   rd(m_gic_dist, GIC_DIST_CONFIG + (irq / 16) * 4) & ~(0x3U << ((irq % 16) * 2)));
++	wr(m_gic_dist, GIC_DIST_CTRL, 1U);
++	wr(m_gic_cpu, GIC_CPU_PRIMASK, 0xf0U);
++	wr(m_gic_cpu, GIC_CPU_CTRL, 1U);
++	drain();
++	controller_ready = 1;
++	ml_set_interrupts_enabled(was);
++}
++
++void M8930_timebase_init(void)
++{
++	boolean_t was = ml_set_interrupts_enabled(FALSE);
++	uint64_t a, b;
++	uint32_t i;
++	if (!controller_ready) panic("M8930 timebase before GIC");
++	if (timebase_ready) { ml_set_interrupts_enabled(was); return; }
++	m_tmr = ml_io_map(M8930_TMR_PA, M8930_IO_BYTES);
++	if (!m_tmr) panic("M8930 timer IO mapping failed");
++	wr(m_tmr, DGT_CLK_CTL, DGT_CLK_DIV_4);
++	wr(m_tmr, DGT_ENABLE, 0);		/* stop, no clear-on-match: free-running */
++	wr(m_tmr, DGT_CLEAR, 0);
++	wr(m_tmr, DGT_ENABLE, DGT_EN);
++	drain();
++	last_lo = rd(m_tmr, DGT_COUNT_VAL);
++	hi_word = 0;
++	a = dgt_get_count(); b = a;
++	for (i = 0; i < 65536U; i++) { b = dgt_get_count(); if (b != a) break; }
++	if (a == b) panic("M8930 DGT did not advance");
++	timebase_ready = 1;
++	clock_decrementer = M8930_DGT_HZ / 100U;	/* 10 ms tick */
++	gPEClockFrequencyInfo.timebase_frequency_hz = M8930_DGT_HZ;
++	gPEClockFrequencyInfo.dec_clock_rate_hz = M8930_DGT_HZ;
++	rtc_configure(M8930_DGT_HZ);
++	M8930_timer_enabled(TRUE);
++	ml_set_interrupts_enabled(was);
++}
++
++void M8930_timer_enabled(int enable)
++{
++	boolean_t was = ml_set_interrupts_enabled(FALSE);
++	uint32_t irq = M8930_DGT_IRQ, ticks;
++	uint64_t req = clock_decrementer;
++	if (!timebase_ready) panic("M8930 timer before timebase");
++	if (!enable || req == ~0ULL) {
++		wr(m_gic_dist, GIC_DIST_ENABLE_CLEAR + (irq / 32) * 4, 1U << (irq % 32));
++		armed = 0;
++		ml_set_interrupts_enabled(was);
++		return;
++	}
++	ticks = req > 0x7fffffffU ? 0x7fffffffU : (uint32_t)req;
++	if (ticks < M8930_MIN_MATCH_TICKS) ticks = M8930_MIN_MATCH_TICKS;
++	/* MATCH_VAL is compared against the low 32 bits of COUNT_VAL. */
++	wr(m_tmr, DGT_MATCH_VAL, rd(m_tmr, DGT_COUNT_VAL) + ticks);
++	wr(m_gic_dist, GIC_DIST_PENDING_CLEAR + (irq / 32) * 4, 1U << (irq % 32));
++	wr(m_gic_dist, GIC_DIST_ENABLE_SET + (irq / 32) * 4, 1U << (irq % 32));
++	drain();
++	armed = 1;
++	ml_set_interrupts_enabled(was);
++}
++
++uint64_t M8930_get_timebase(void)
++{
++	uint64_t v;
++	boolean_t w;
++	if (!timebase_ready) return 0;
++	w = ml_set_interrupts_enabled(FALSE);
++	v = dgt_get_count();
++	ml_set_interrupts_enabled(w);
++	return v;
++}
++
++uint64_t M8930_timer_value(void)
++{
++	boolean_t w = ml_set_interrupts_enabled(FALSE);
++	int32_t rem = 0;
++	if (timebase_ready && armed)
++		rem = (int32_t)(rd(m_tmr, DGT_MATCH_VAL) - rd(m_tmr, DGT_COUNT_VAL));
++	ml_set_interrupts_enabled(w);
++	return rem > 0 ? (uint32_t)rem : 0;
++}
++
++void M8930_handle_interrupt(void *context)
++{
++	uint32_t ack, irq, budget;
++	if (!controller_ready || !timebase_ready) panic("M8930 IRQ before init");
++	for (budget = 0; budget < 64U; budget++) {
++		ack = rd(m_gic_cpu, GIC_CPU_INTACK);
++		irq = ack & 0x3ffU;
++		if (irq >= 1020U) return;			/* spurious / none pending */
++		if (irq != M8930_DGT_IRQ) {
++			wr(m_gic_cpu, GIC_CPU_EOI, ack);
++			panic("M8930 unexpected IRQ %u", irq);
++		}
++		wr(m_gic_cpu, GIC_CPU_EOI, ack);
++		drain();
++		(void)dgt_get_count();			/* keep the wrap tracker current */
++		rtclock_intr((arm_saved_state_t *)context);
++		ios7m8930_fb_flush();
++#if !CONFIG_TICKLESS
++		M8930_timer_enabled(TRUE);
++#endif
++	}
++	panic("M8930 IRQ drain budget exceeded");
++}
++#endif /* BOARD_CONFIG_MSM8930_SERRANO */
+diff --git a/xnu/pexpert/arm/msm8930_timer.h b/xnu/pexpert/arm/msm8930_timer.h
+new file mode 100755
+index 0000000..be1fbdc
+--- /dev/null
++++ b/xnu/pexpert/arm/msm8930_timer.h
+@@ -0,0 +1,26 @@
++/*
++ * MSM8930 (Galaxy S4 mini, serrano3gxx) interrupt controller + DGT timer.
++ * SCAFFOLD: written from the Samsung/LineageOS msm8930 kernel, NOT compiled
++ * or run on hardware yet.
++ */
++#ifndef IOS7LAB_M8930_TIMER_H
++#define IOS7LAB_M8930_TIMER_H
++#include <mach/mach_types.h>
++
++#define M8930_TMR_PA		0x0200A000U	/* GPT at +0x04, DGT at +0x24 */
++#define M8930_GIC_DIST_PA	0x02000000U
++#define M8930_GIC_CPU_PA	0x02002000U
++#define M8930_IO_BYTES		0x1000U
++
++#define M8930_DGT_HZ		6750000U	/* 27 MHz / 4, per Linux timer.c */
++#define M8930_DGT_IRQ		17U		/* PPI 1 (INT_DEBUG_TIMER_EXP) */
++#define M8930_MIN_MATCH_TICKS	16U
++
++void M8930_interrupt_init(void);
++void M8930_timebase_init(void);
++void M8930_handle_interrupt(void *context);
++uint64_t M8930_get_timebase(void);
++uint64_t M8930_timer_value(void);
++void M8930_timer_enabled(int enable);
++extern uint64_t clock_decrementer;
++#endif
+diff --git a/xnu/pexpert/arm/pe_msm8930_serrano.c b/xnu/pexpert/arm/pe_msm8930_serrano.c
+new file mode 100644
+index 0000000..5fc284a
+--- /dev/null
++++ b/xnu/pexpert/arm/pe_msm8930_serrano.c
+@@ -0,0 +1,425 @@
++/* J1 Exynos3475 PE (Galaxy J1 2016). HD2-architecture adaptation.
++ * Validates loader handoff, maps FB/UART, installs GIC/MCT dispatch,
++ * provides direct-FB display backend (no MDP DMA) and fatal reporter.
++ * Numeric addresses are factual J1 hardware data. */
++#if defined(BOARD_CONFIG_MSM8930_SERRANO)
++#include <mach/mach_types.h>
++#include <mach/host_info.h>
++#include <pexpert/pexpert.h>
++#include <pexpert/device_tree.h>
++#include <pexpert/arm/boot.h>
++#include <pexpert/arm/protos.h>
++#include <pexpert/arm/j1_handoff.h>
++#include <pexpert/arm/j1_entry.h>
++#include "msm8930_timer.h"
++#include <machine/machine_routines.h>
++#include <kern/debug.h>
++#include <kern/clock.h>
++#include <mach/vm_param.h>
++
++extern int switch_to_serial_console(void);
++extern host_t host_self(void);
++extern kern_return_t host_statistics64(host_t host, host_flavor_t flavor,
++                                       host_info64_t info,
++                                       mach_msg_type_number_t *count);
++extern uint64_t sane_size;
++extern unsigned int vm_page_free_count,vm_page_free_reserved,vm_page_free_target;
++
++static volatile unsigned int *j1_pixels;
++/* 32bpp BGRA shadow framebuffer in cached kernel memory; ios7m8930_fb_flush() converts it to the
++ * bootloader's 24bpp RGB888 scanout buffer (540x960, stride 1620) a slice per timer tick. */
++#define M8930_W 540U
++#define M8930_H 960U
++static unsigned int m8930_shadow[M8930_W*M8930_H] __attribute__((aligned(4096)));
++static unsigned int m8930_scan_pa;
++static vm_offset_t m8930_scan_map;
++static unsigned int m8930_flush_row;
++extern boolean_t pmap_initialized;
++void ios7m8930_fb_flush(void)
++{
++ unsigned int y,n;
++ if(!m8930_scan_pa||!j1_pixels) return;
++ if(!m8930_scan_map){
++  if(!pmap_initialized) return;
++  m8930_scan_map=ml_io_map(m8930_scan_pa,0x180000);
++  if(!m8930_scan_map) return;
++ }
++ for(n=0;n<60;n++){
++  const unsigned char *src; volatile unsigned int *dst; unsigned int x;
++  y=m8930_flush_row; if(++m8930_flush_row>=M8930_H) m8930_flush_row=0;
++  src=(const unsigned char *)j1_pixels+y*(M8930_W*4U);
++  dst=(volatile unsigned int *)(m8930_scan_map+y*1620U);
++  for(x=0;x<M8930_W;x+=4){
++   /* 4 BGRA pixels -> 12 bytes R,G,B */
++   unsigned int a=(unsigned int)src[2]|((unsigned int)src[1]<<8)|((unsigned int)src[0]<<16)|((unsigned int)src[6]<<24);
++   unsigned int b=(unsigned int)src[5]|((unsigned int)src[4]<<8)|((unsigned int)src[10]<<16)|((unsigned int)src[9]<<24);
++   unsigned int c=(unsigned int)src[8]|((unsigned int)src[14]<<8)|((unsigned int)src[13]<<16)|((unsigned int)src[12]<<24);
++   dst[0]=a; dst[1]=b; dst[2]=c; dst+=3; src+=16;
++  }
++ }
++}
++static vm_offset_t j1_fb_map;
++static unsigned int j1_fb_physical;
++static volatile unsigned int j1_graphics_owner,j1_fatal_active;
++static unsigned int j1_stage;
++static volatile unsigned int j1_console_count;
++static volatile unsigned int j1_fatal_category;
++static volatile unsigned int j1_fatal_state[8];
++
++void ios7j1_stage(unsigned int n)
++{
++ (void)n;
++}
++static unsigned int j1_callsite(void *r){ return (((unsigned int)r)&~1U)-4U; }
++
++int ios7j1_fatal_report(unsigned int cat, unsigned int cs,
++ unsigned int pc,unsigned int lr,unsigned int far,unsigned int fsr,
++ unsigned int mask,const char *msg)
++{
++ (void)cs;
++ if(j1_fatal_active) return 0;
++ j1_fatal_active=1;
++ if(gPESocDispatch.uart_putc==ios7j1_debug_putc) (void)switch_to_serial_console();
++ j1_fatal_category=cat;
++ j1_fatal_state[0]=cat;j1_fatal_state[1]=j1_stage;
++ j1_fatal_state[2]=mask&15U;j1_fatal_state[3]=pc;
++ j1_fatal_state[4]=lr;j1_fatal_state[5]=far;j1_fatal_state[6]=fsr;
++ return 1;
++}
++void __attribute__((noreturn)) ios7j1_final_boundary(unsigned int reason)
++{
++ if(reason) ios7j1_fatal_report(0xf000U|(reason&0xfffU),
++  j1_callsite(__builtin_return_address(0)),0,0,0,0,0,"ENTRY GUARD");
++ __asm__ volatile("cpsid if" ::: "memory");
++ for(;;) __asm__ volatile("dsb sy\n\twfi" ::: "memory");
++}
++void ios7j1_forget_early_maps(void){ j1_pixels=0; j1_fb_map=0; }
++/* UART S3C @0x13820000: TX-only debug putc (factual offsets).
++ * Before SocSupport maps it, write the physical address directly
++ * (early boot runs identity-mapped); after, use the mapping. */
++#define J1_UART_PA 0x13820000U
++static vm_offset_t j1_uart_map;
++static void j1_uart_putc_phys(char c){ (void)c; }
++static void j1_uart_putc_raw(char c){ (void)c; }
++void ios7j1_debug_putc(char c)
++{
++ if(j1_console_count<1024) j1_console_count++;
++ if(j1_uart_map) j1_uart_putc_raw(c);
++ else j1_uart_putc_phys(c);
++}
++static void j1_puts(const char *s)
++{
++ while(*s) ios7j1_debug_putc(*s++);
++}
++static void j1_puthex(unsigned int v)
++{
++ int i; char h[8];
++ for(i=0;i<8;i++){ unsigned int n=(v>>((7-i)*4))&15U; h[i]=(char)(n<10?('0'+n):('a'+n-10)); }
++ for(i=0;i<8;i++) ios7j1_debug_putc(h[i]);
++}
++/* Early fault reporter for bring-up (called from sleh_abort before any
++ * handling that might itself fault). Lock-free, UART+FB only. */
++static volatile unsigned int j1_flt_n;
++static volatile unsigned int j1_flt_last_pc = 0xffffffffU;
++void ios7j1_fault_report(unsigned int pc,unsigned int lr,unsigned int far,
++                         unsigned int fsr,unsigned int cpsr,unsigned int reason)
++{
++ if(j1_flt_n>=16) {
++  /* Past the detailed window: only report a NEW faulting pc, once, so an
++   * infinite fault loop is diagnosable without flooding the console. */
++  if(pc==j1_flt_last_pc) return;
++  j1_flt_last_pc=pc;
++  j1_puts("J1FLT+ pc=");
++  j1_puthex(pc);
++  j1_puts(" far=");
++  j1_puthex(far);
++  j1_puts(" fsr=");
++  j1_puthex(fsr);
++  j1_puts(" cpsr=");
++  j1_puthex(cpsr);
++  j1_puts(" reason=");
++  j1_puthex(reason);
++  j1_puts("\n");
++  return;
++ }
++ j1_flt_n++;
++ j1_puts("J1FLT n=");
++ j1_puthex(j1_flt_n);
++ j1_puts(" pc=");
++ j1_puthex(pc);
++ j1_puts(" lr=");
++ j1_puthex(lr);
++ j1_puts(" far=");
++ j1_puthex(far);
++ j1_puts(" fsr=");
++ j1_puthex(fsr);
++ j1_puts(" cpsr=");
++ j1_puthex(cpsr);
++ j1_puts(" reason=");
++ j1_puthex(reason);
++ j1_puts("\n");
++}
++void ios7j1_fault_regs(unsigned int r0,unsigned int r1,unsigned int r2,
++                       unsigned int r3)
++{
++ if(j1_flt_n>=16) return;
++ j1_puts("J1REGS r0=");
++ j1_puthex(r0);
++ j1_puts(" r1=");
++ j1_puthex(r1);
++ j1_puts(" r2=");
++ j1_puthex(r2);
++ j1_puts(" r3=");
++ j1_puthex(r3);
++ j1_puts("\n");
++}
++static int j1_getc(void){ return -1; }
++static void j1_uart_init(void){ }
++void ios7j1_kernel_continuing(void){ }
++void ios7j1_timer_observe(unsigned int t,unsigned int c){ (void)t;(void)c; }
++int ios7j1_panic_text_begin(unsigned int r,unsigned int k,unsigned int p){ (void)r;(void)k;(void)p; return 0; }
++void ios7j1_panic_text_putc(char c){ (void)c; }
++void ios7j1_panic_text_end(void){ }
++
++/* Direct-FB backend: 480x800x32 BGRA CPU copy, no DMA (always completed). */
++static uint64_t j1_graphics_seq=1;
++/* Panel text console (fast_putc): active during boot, auto-disabled the moment
++ * the GUI display driver presents its first frame so logs stop clobbering it. */
++volatile int j1_panel_console_enabled=1;
++int ios7j1_display_ready(void)
++{
++ return j1_pixels && !j1_fatal_active &&
++  PE_state.video.v_width==540 && PE_state.video.v_height==960 &&
++  PE_state.video.v_rowBytes==2160 && PE_state.video.v_depth==32;
++}
++int ios7j1_display_present(const uint8_t *px,uint32_t bytes,uint32_t row,
++                           uint32_t fmt,uint64_t *seq)
++{
++ unsigned int y;
++ if(!px||!seq) return 0;
++ if(!(fmt==0x42475241U||fmt==0x52474241U)) return 0;
++ if(row<2160U||bytes<2073600U) return 0;
++ if(!ios7j1_display_ready()) return 0;
++ for(y=0;y<960;y++){
++  const uint8_t *src=px+(uint64_t)y*row;
++  uint8_t *dst=(uint8_t *)j1_pixels+y*2160U;
++  unsigned int i;
++  for(i=0;i<2160U;i++) dst[i]=src[i];
++ }
++ *seq=j1_graphics_seq++;
++ if(!j1_graphics_seq) j1_graphics_seq=1;
++ j1_panel_console_enabled=0;
++ return 1;
++}
++int ios7j1_display_completed(uint64_t s){ return s && s<j1_graphics_seq; }
++
++static int j1_video_ok(const boot_args *a)
++{
++ unsigned long long end=(unsigned long long)a->Video.v_baseAddr+2073600U;
++ unsigned long long ramend=(unsigned long long)a->physBase+a->memSize;
++ return a->Revision==1 && a->Version==2 && a->virtBase==0x80000000U &&
++  a->physBase==0xA6100000U && a->memSize==0x38800000U &&
++  a->topOfKernelData>=a->physBase && !(a->topOfKernelData&0x3fffU) &&
++  (unsigned long long)a->topOfKernelData+0x220000U<=ramend &&
++  a->Video.v_width==540 && a->Video.v_height==960 &&
++  a->Video.v_rowBytes==2160 && a->Video.v_depth==32 &&
++  !(a->Video.v_baseAddr&3U) && a->Video.v_baseAddr==0x88100000U &&
++  end<=(unsigned long long)0x88100000U+0x200000U;
++}
++void ios7j1_checkpoint(boot_args *a, unsigned int stage)
++{
++ if(j1_fatal_active) return;
++ if(stage==6){
++  if(!j1_video_ok(a)) ios7j1_final_boundary(1);
++  m8930_scan_pa=a->Video.v_baseAddr;
++  j1_fb_physical=m8930_scan_pa;
++  j1_pixels=(volatile unsigned int *)m8930_shadow;
++  /* Earliest serial: point dispatch at our putc (physical UART)
++   * so PE_early_puts from here on is visible on the emulator. */
++  gPESocDispatch.uart_putc=ios7j1_debug_putc;
++  gPESocDispatch.uart_getc=j1_getc;
++  gPESocDispatch.uart_init=j1_uart_init;
++  j1_puts("J1 stage6 video ok\n");
++ }
++ if(stage!=j1_stage+1U||stage<6||stage>10){
++  if(!(stage==6&&j1_stage==0)) ios7j1_final_boundary(3);
++ }
++ j1_stage=stage;
++ if(stage==7) j1_puts("J1 stage7\n");
++ else if(stage==8) j1_puts("J1 stage8\n");
++ else if(stage==9) j1_puts("J1 stage9\n");
++ else if(stage==10) j1_puts("J1 stage10\n");
++}
++void PE_init_SocSupport_stub(void)
++{
++ DTEntry chosen;
++ ios7lab_j1_handoff *h=0;
++ unsigned int size=0;
++ boot_args *args=(boot_args *)PE_state.bootArgs;
++ vm_offset_t fb;
++ static ios7lab_j1_handoff j1_default_handoff;
++ if(!j1_video_ok(args)) ios7j1_final_boundary(4);
++ /* Handoff via /chosen when the loader provides it; otherwise synthesize
++  * defaults from boot_args (uniLoader passes physBase/video/top directly). */
++ if(DTLookupEntry(0,"/chosen",&chosen)==kSuccess &&
++    DTGetProperty(chosen,IOS7LAB_J1_DT_PROPERTY,(void **)&h,&size)==kSuccess &&
++    size==128&&h&&h->magic==IOS7LAB_J1_MAGIC&&h->version==1&&
++    h->bytes==128&&h->machine==0x8930U){
++  /* loader-provided handoff accepted as-is */
++ }else{
++  j1_default_handoff.magic=IOS7LAB_J1_MAGIC; j1_default_handoff.version=1;
++  j1_default_handoff.bytes=128; j1_default_handoff.flags=IOS7LAB_J1_FLAGS;
++  j1_default_handoff.machine=0x8930U;
++  j1_default_handoff.disp_physical=0x88100000U;
++  j1_default_handoff.dma_address=args->Video.v_baseAddr;
++  j1_default_handoff.dma_stride=2160; j1_default_handoff.dma_xy=0;
++  j1_default_handoff.width=540; j1_default_handoff.height=960;
++  j1_default_handoff.row_bytes=2160; j1_default_handoff.pixel_format=0x42475241U;
++  j1_default_handoff.framebuffer_bytes=2073600;
++  j1_default_handoff.memory_base=args->physBase;
++  j1_default_handoff.memory_bytes=args->memSize;
++  j1_default_handoff.top_of_kernel_data=args->topOfKernelData;
++  j1_default_handoff.checkpoint_count=5;
++  h=&j1_default_handoff;
++ }
++ (void)h;
++ fb=(vm_offset_t)m8930_shadow;
++ j1_uart_map=0;
++ if(!fb) ios7j1_final_boundary(5);
++ /* DATA integrity + translation self-check before IOKit matching. */
++ {
++  extern unsigned int cons_ops[], nconsops, cons_ops_index;
++  unsigned int ttbr0, ttbr1, ttcr, l1e, l2e, pa;
++  unsigned int *l1tab;
++  j1_puts("J1DATA cons_ops[0]=");
++  j1_puthex(cons_ops[0]);
++  j1_puts(" [1]=");
++  j1_puthex(cons_ops[2]);
++  j1_puts(" n=");
++  j1_puthex(nconsops);
++  j1_puts(" idx=");
++  j1_puthex(cons_ops_index);
++  j1_puts("\n");
++  __asm__ volatile("mrc p15,0,%0,c2,c0,0" : "=r"(ttbr0));
++  __asm__ volatile("mrc p15,0,%0,c2,c0,1" : "=r"(ttbr1));
++  __asm__ volatile("mrc p15,0,%0,c2,c0,2" : "=r"(ttcr));
++  l1tab=(unsigned int *)((ttbr1&~0x3FFFU)-0xA6100000U+0x80000000U);
++  if((ttcr&7U)==0)
++   l1tab=(unsigned int *)((ttbr0&~0x3FFFU)-0xA6100000U+0x80000000U);
++  l1e=l1tab[0x8066ece0U>>20];
++  pa=0; l2e=0;
++  if((l1e&3U)==1){
++   unsigned int *l2=(unsigned int *)((l1e&~0x3FFU)-0xA6100000U+0x80000000U);
++   l2e=l2[(0x8066ece0U>>12)&0xFFU];
++   if((l2e&3U)==2||(l2e&3U)==3)
++    pa=(l2e&0xFFFFF000U)|(0x8066ece0U&0xFFFU);
++  }else if((l1e&3U)==2){
++   pa=(l1e&0xFFF00000U)|(0x8066ece0U&0xFFFFFU);
++  }
++  j1_puts("J1DATA ttbr0=");
++  j1_puthex(ttbr0);
++  j1_puts(" ttbr1=");
++  j1_puthex(ttbr1);
++  j1_puts(" ttcr=");
++  j1_puthex(ttcr);
++  j1_puts(" l1=");
++  j1_puthex(l1e);
++  j1_puts(" l2=");
++  j1_puthex(l2e);
++  j1_puts(" pa=");
++  j1_puthex(pa);
++  j1_puts("\n");
++ }
++ j1_pixels=(volatile unsigned int *)fb;
++ j1_fb_map=fb;
++ PE_state.video.v_baseAddr=fb;
++ PE_state.video.v_rowBytes=2160;PE_state.video.v_width=540;
++ PE_state.video.v_height=960;PE_state.video.v_depth=32;
++ gPESocDispatch.uart_putc=ios7j1_debug_putc;
++ gPESocDispatch.uart_getc=j1_getc;
++ gPESocDispatch.uart_init=j1_uart_init;
++ gPESocDispatch.interrupt_init=M8930_interrupt_init;
++ gPESocDispatch.timebase_init=M8930_timebase_init;
++ gPESocDispatch.handle_interrupt=M8930_handle_interrupt;
++ gPESocDispatch.get_timebase=M8930_get_timebase;
++ gPESocDispatch.timer_value=M8930_timer_value;
++ gPESocDispatch.timer_enabled=M8930_timer_enabled;
++ {
++  PE_Video cv=PE_state.video;
++  cv.v_baseAddr=(unsigned int)m8930_shadow; cv.v_baseAddrHigh=0;
++  cv.v_offset=0; cv.v_length=960U*2160U;
++  cv.v_width=540; cv.v_height=960; cv.v_rowBytes=2160; cv.v_depth=32;
++  cv.v_scale=kPEScaleFactor1x;
++  initialize_screen(&cv,kPETextMode);
++ }
++ ios7j1_checkpoint(args,9);
++ __asm__ volatile("" ::: "memory");
++}
++
++/* Fast panel console modeled on the iOS4 exynos_fb_putc: the stock
++ * video_console is too slow on uncached FB (per-char cursor
++ * read-modify-write plus full-frame bcopy scroll). This draws only SET
++ * pixels (transparent background, no cursor), wraps at 480x800, and
++ * CLEARS on full (no scroll copy). iso_font is LSB-first (X=0 is bit0),
++ * same as vc_render_char. */
++#define J1F_W 8U
++#define J1F_H 16U
++#define J1F_COLS 60U
++#define J1F_ROWS 50U
++#define J1F_FB_W 540U
++#define J1F_FB_H 960U
++static unsigned int j1f_cx, j1f_cy;
++static int j1f_remapped, j1f_wiped;extern unsigned char iso_font[];
++extern boolean_t pmap_initialized;
++static void j1f_blank_line(volatile unsigned int *fb, unsigned int y)
++{
++    unsigned int x, yy;
++    for (yy = 0; yy < 16; yy++) {
++        volatile unsigned int *row = fb + (y + yy) * 540U;
++        for (x = 0; x < 540; x++) row[x] = 0xFF000000U;
++    }
++}
++void ios7j1_fast_putc(char c)
++{
++    volatile unsigned int *fb = j1_pixels;
++    unsigned int x, y;
++    unsigned char uc = (unsigned char)c;
++    if (!j1_panel_console_enabled) return;
++    /* The early ml_io_map done in PE_init_SocSupport does not survive
++     * pmap_bootstrap's table rebuild: re-resolve once running on the
++     * final tables, else output vanishes into a stale mapping. */
++    if (!j1f_remapped && pmap_initialized) {
++        /* shadow framebuffer lives in kernel memory: nothing to remap */
++        j1f_remapped = 1;
++    }
++    if (!fb) return;
++    if (!j1f_wiped) {
++        unsigned int i, n = 540U * 960U;
++        for (i = 0; i < n; i++) fb[i] = 0xFF000000U;
++        j1f_wiped = 1;
++        j1f_cx = 0; j1f_cy = 0;
++    }
++    if (c == '\n') {
++        j1f_cx = 0; j1f_cy += 16;
++        if (j1f_cy + 16 > 960) j1f_cy = 0;
++        j1f_blank_line(fb, j1f_cy);
++    }
++    else if (c == '\r') { j1f_cx = 0; }
++    else if (uc >= 32 && uc < 127) {
++        unsigned char *g = &iso_font[uc * 16];
++        for (y = 0; y < 16; y++) {
++            unsigned char bits = g[y];
++            volatile unsigned int *row =
++                fb + (j1f_cy + y) * 540U + j1f_cx;
++            for (x = 0; x < 8; x++)
++                if (bits & (1U << x)) row[x] = 0xFFFFFFFFU;
++        }
++        j1f_cx += 8;
++        if (j1f_cx + 8 > 540) {
++            j1f_cx = 0; j1f_cy += 16;
++            if (j1f_cy + 16 > 960) j1f_cy = 0;
++            j1f_blank_line(fb, j1f_cy);
++        }
++    }
++}
++#endif
+diff --git a/xnu/pexpert/conf/files.arm b/xnu/pexpert/conf/files.arm
+index 651f773..2d650c2 100644
+--- a/xnu/pexpert/conf/files.arm
++++ b/xnu/pexpert/conf/files.arm
+@@ -12,6 +12,8 @@ pexpert/arm/pe_qsd8250_leo.c standard
+ pexpert/arm/leo_qsd8250_timer.c standard
+ pexpert/arm/pe_exynos3475_j1.c standard
+ pexpert/arm/j1_timer.c standard
++pexpert/arm/pe_msm8930_serrano.c standard
++pexpert/arm/msm8930_timer.c standard
+ pexpert/arm/pe_omap3430.c		standard
+ pexpert/arm/pe_omap3530.c		standard
+ pexpert/arm/pe_omap335x.c		standard

@@ -1,0 +1,76 @@
+[    0.000000] B0      0 clkout: bad source 0
+[    0.000000] B0      0 clkout: bad source 0
+[    0.000000] B0      0 (sec_debug_set_upload_magic) 66262564
+[    0.000000] B0      0 (sec_debug_set_upload_cause) cafebabe
+[    0.103925] B0      1 gpio: GPC0 has missing PM functions
+[    0.104015] B0      1 gpio: GPC3 has missing PM functions
+[    0.105711] B0      1 gpio: GPZ has no PM function
+[    0.125982] B0      1 panel I
+[    0.126887] B0      1 synaptics_verify_panel_revision: panel_revision: 8, system_rev: 10, lcdtype: 0x428047, touch_type: 8, el_type: M4, h_sync: OK, ddi_type: SDC
+[    0.126982] B0      1 synaptics_tsp_init touch : 526
+[    0.136823] B0      1 [exynos5_universal5410_fpga_init] initialization start!
+[    0.136876] B0      1 [exynos5_universal5410_fpga_init] SYSTEM REVISION is bigger than 5
+[    0.136932] B0      1 [exynos5_universal5410_fpga_init] Change the Barcode I2C line
+[    0.136985] B0      1 [exynos5_universal5410_fpga_init] SYSTEM REVISION : 10
+[    0.137034] B0      1 [exynos5_universal5410_fpga_init] BARCODE SCL : 217
+[    0.137107] B0      1 [exynos5_universal5410_fpga_init] BARCODE SDA : 218
+[    0.137368] B0      1 irda_device_init called!
+[    0.137412] B0      1 irda_device_init complete
+[    0.158999] B0      1 Failed to get (null) clock
+[    0.159182] B0      1 Failed to get (null) clock
+[    0.165313] B0      1 exynos_interface_init: failed to create sysfs interface
+[    0.338124] B0      1 exynos5-i2c exynos5-hs-i2c.2: no platform data
+[    2.671369] B0      1 gps_host_wake_isr GPS pin level[Low]
+[    2.671783] B0      1 s3c-adc samsung-adc-v5: operating without regulator "vdd" .
+[    2.694044] B1    720 alg: comp: Compression test 1 failed for lzo-generic: output len = 57
+[    2.868519] B0      1 ion_device_add_heap: can not insert multiple heaps with id 1
+[    2.875001] B0      1 ion_device_add_heap: can not insert multiple heaps with id 0
+[    3.053558] B0      1 [TSP] synaptics_power on
+[    3.370601] B0      1 Initialize JPEG driver
+[    3.379589] B0      1 s5p-hdmi exynos5-hdmi: Set HDMI phy power off
+[    3.922859] B3      1 wm5102-codec wm5102-codec: dapm: unknown pin RCV
+[    3.928075] B3      1 wm5102-codec wm5102-codec: dapm: unknown pin VPS
+[    3.934570] B3      1 wm5102-codec wm5102-codec: dapm: unknown pin SPK
+[    3.941072] B3      1 wm5102-codec wm5102-codec: dapm: unknown pin HP
+[    4.223463] B0      1 mif: modem_probe: mif_sipc5
+[    4.229605] B0      1 mif: modem_probe: link created: usb
+[    4.236960] B0      1 mif: sipc5_init_io_device: dm_state : umts_dm0, sucess
+[    4.248282] B0      1 mif: modem_probe: Complete!!!
+[    4.382684] B0      1 sec_touchkey_driver 8-0020: JA LCD type Print : 0x428047
+[    4.777301] B1      1 sec-battery sec-battery: sec_battery_probe: Failed to Enable Wakeup Source(-6)
+[    4.788955] B1      1 ice4_fpga: probe complete barcode_emul_probe
+[    5.007388] B1      1 mmc_force_presence_change: called for device exynos5_device_dwmci1
+[    5.332436] B0      5 dw_mmc dw_mmc.1: data CRC error
+[    5.336397] B0      5 dw_mmc dw_mmc.1: data CRC error
+[    5.517704] B1      8 exynos-xhci exynos-xhci.0: exynos_xhci_runtime_suspend
+[    5.523478] B1      8 exynos-xhci exynos-xhci.0: exynos_xhci_runtime_suspend<-- retval(0)
+[    5.799604] B2      1 init: property_set("ro.boot.selinux", "enforcing") failed
+[    5.885238] B2      1 init: waitpid failed: No child processes
+[    5.892533] B2      1 init: /init.rc: 13: invalid keyword 'setcon'
+[    5.897672] B2      1 init: /init.rc: 63: invalid keyword 'load_all_props'
+[    5.904535] B2      1 init: could not import file '/init.recovery.logd.rc' from '/init.rc': No such file or directory
+[    5.915411] B2      1 init: could not import file '/init.recovery.vold_decrypt.rc' from '/init.rc': No such file or directory
+[    5.932431] B2   1544 charger: void healthd_board_init(struct healthd_config *): Unable to load battery scale image
+[    6.802345] B2      1 init: /dev/hw_random not found
+[    6.815377] B2      1 init: /dev/hw_random not found
+[    6.820366] B2      1 android_usb: already disabled
+[    6.825634] B2      1 fs_mgr: Cannot open file /fstab.universal5410
+[    6.830599] B2      1 init: unable to read fstab /fstab.universal5410: No such file or directory
+[    6.841800] B2      1 android_usb: already disabled
+[    6.907304] B0    460 audience_es325 4-003e: firmware request failed
+[    7.021591] B2      1 init: avc:  denied  { set } for property=twrp.crash_counter pid=2347 uid=0 gid=0 scontext=u:r:recovery:s0 tcontext=u:object_r:default_prop:s0 tclass=property_service permissive=1
+[    7.575058] B0   2347 synaptics_rmi4_i2c 0-0020: synaptics_rmi4_start_device already power on
+[    8.582225] B0    460 Initialize JPEG Hx driver
+[   10.099534] B2      1 init: avc:  denied  { set } for property=sys.usb.config pid=2347 uid=0 gid=0 scontext=u:r:recovery:s0 tcontext=u:object_r:system_radio_prop:s0 tclass=property_service permissive=1
+[   10.116953] B2      1 android_usb: already disabled
+[  124.873105] L2      1 android_usb: already disabled
+[  135.125510] L0   2347 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  147.259459] B3   2347 s3c-fb exynos5-fb.1: s3c_fb_set_par::output_on is FALSE
+[  169.880877] L2      1 SysRq : Emergency Remount R/O
+[  169.985765] L2      1 (sec_debug_set_upload_magic) 0
+[  169.997406] L0   2347 [TSP] synaptics_power off
+[  171.038621] L0      1 Restarting system with command 'download'.
+[  171.043357] L0      1 sec_reboot (104, download)
+
+No errors detected
+Last reset was reset (RST_STAT=0x800)

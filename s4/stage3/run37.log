@@ -1,0 +1,4 @@
+S4 state: recovery
+flashed stage3/boot_xnu.img (5451776 bytes) md5 33ce2be587c237c25071707a43a1059b
+try 1: back after 464 s
+115322 stage3/lastk37.txt

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Security Check</title>
+
+	<meta name="viewport" content="width=device-width">
+	<meta name="color-scheme" content="light dark">
+
+	<style>
+	:root {
+		color-scheme: light dark;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		display: flex;
+		align-items: center;
+		height: calc(100vh - 2em);
+		margin: 1em;
+		font: 11pt/1.4 system-ui, -apple-system, "Helvetica Neue", sans-serif;
+		text-align: center;
+		user-select: none;
+		cursor: default;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		body {
+			background: #000;
+			color: #fff;
+		}
+	}
+
+	body > div {
+		max-width: 400px;
+		margin: 0 auto;
+	}
+
+	.challenge-form {
+		display: table;
+		min-width: 302px;
+		margin: 2rem auto;
+	}
+
+	#recaptcha_widget {
+		min-width: 302px;
+		min-height: 76px;
+		margin-bottom: 0.5rem;
+	}
+
+	.zone-name-title,
+	#challenge-running {
+		display: none;
+	}
+	</style>
+<meta http-equiv="refresh" content="360"></head>
+<body>
+	<div>
+		<div id="content"><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cFPWv: 'b',cH: 'RBtgE1AaEKo2LAWccOl4fnVQDPqU6aix3ebmhPIg8gc-1794327044-1.2.1.1-iEy4Zrj_9zKpg4_QYykti_t52iipKL79ip1imfagPebcatCAOJIHdTSBojEVRQDv',cITimeS: '1794327044',cRay: 'a586543d3bff99d3',cTplC:1,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/wiki/Keys:Sochi_11D257_(iPhone5,2)?__cf_chl_tk=aplP3N6sjOsvy4X0HXYkDriMggks3hJDTwTGw.N121k-1794327044-1.0.1.1-00pKWESkPzeKoEhIwE110l0uizRPQlSlEagPgxzDcvI",cvId: '3',cZone: 'theapplewiki.com',fa:"/wiki/Keys:Sochi_11D257_(iPhone5,2)?__cf_chl_f_tk=aplP3N6sjOsvy4X0HXYkDriMggks3hJDTwTGw.N121k-1794327044-1.0.1.1-00pKWESkPzeKoEhIwE110l0uizRPQlSlEagPgxzDcvI",md: '4GJGoAU6qJse3SyZEw9L4C5DID8iYrJqOJY4eazzwek-1794327044-1.2.1.1-D9k4RVF1Vp0VsS7.VHEmK9eo020XHyZfVyY12OGKE75EMZYUBq9Hvv5Eu8QwOCgc0q5Itjc0hV_gjXTvGoyVng64i_eoSz3YDBoVjzvz79KhbiptiQRRWbOpLfkkmn..46PwTP9KsmXOP1SQR6fpXXoP90i2CYjPIFdtVXOpjHGZo3evHoNS5PSCtvfhJ2ayYs0A2EsIhXw9KP2vi7v7hZ6ojJfL3yOyBkqOpbXx6D3_u.SPlVhsfEvuLj0EHxTh2d8GZVGR1AwvJ_ws.W.AUYwb2.4iBONTiDjyb9817Q5VUSA.G8RVcpf2ddTRyL2FVmniVaiFp7OgSFJPLn0tIlqnKYjABvnIVUKH8SwZ8YjsaObzsYP3xn4TL2XtTxRNRMjvmWYlBmbYGSyP5Ta0UIoAa1HCeVsgCM16m6FUer4RGpdl4GmShjuLXeluYxFaXFLDa2HbzLFARfw2nSi_EqcX4znw3QKPXKsWP_MSMXqve5Pw5SDz6gXKv5GOfJ9q6g0oNfusiZuGbmq9MBL7rZ0bD.t5UeLyLIKSPUH9PuSqxeMMIYWeP63.Dyc8IC9MwGn0TvoXGAKuVt4POHFga5WeHgCdPIo0s9OILb1xInFFQ9OBy_Ye.mLSo9_cR4BrCY84soLYgUW4JxBLTuSzYYbDUa6Xic6NH5OEwgZXGQPk9tZfrtyFx6yS2RimhIYY8frV_Db6ZaBBDlNwUIm5_lGBPm3LkL03NF5hiluolb.p4hRALswmNttmTgSVLTtJ_qX2Vdi8OzjFQcw4LW1kmWkywDxBnwbbfSFtnDW9TmeYM.RwFURmU2zjE2jIhlq_MHfX2IYWZ8DJ7KMRF0liIUUFjFDmbO_RDjrVnF0CzslFRiU9DzQPwMCST8Va6bbHOEj29fzHdpxB.TLsb2nyR31IiJRh.s3efMXKHwPIDTZy3Zen9Aiv2cVFRYYpaKkdMdfGoZ2.dIs1LD54QexBxWSGLL21iRAFClipn.9Se9PU3pWx0ZCn_wgq0GOwHW6FcZa90h2XlyaNeKWaxyhd1c8BuhkF9CAFFBQ2f4DcOv8wd7G1BK7TMU1uGGxsG5SWGndMIQlubbd0CAareTkHjg',mdrd: 'JMBj0ze.zTdaDrqx.QL1m0P8K2LaicXERL1G9H8vOWw-1794327044-1.2.1.1-R9VH1cbdJoFj_bOIcTdCWc8Zilphjf27s7xuvpOuo_cJKKRF.FHEqZihXqw_HOpb.cTwL3TaT04BoTai3pUmp0jlBE3Zj3QrR_5xp5_PsqrACF2rFpzGiPtkGeXQudrcilWuuNee4alqdANjLBWJVffHZWOLJTrSXpzYuyyMy6GsvDemXbVdq6hha8SUkP1dkZnDROxWPpJN8MOvTe773yIRmkm2qWQMN8mKMf65C_o',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a586543d3bff99d3';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/wiki/Keys:Sochi_11D257_(iPhone5,2)?__cf_chl_rt_tk=aplP3N6sjOsvy4X0HXYkDriMggks3hJDTwTGw.N121k-1794327044-1.0.1.1-00pKWESkPzeKoEhIwE110l0uizRPQlSlEagPgxzDcvI"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>
+	</div>
+</body>
+</html>

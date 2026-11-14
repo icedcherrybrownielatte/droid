@@ -1,0 +1,19 @@
+######################################################################
+#BEGIN	Machine dependent Makefile fragment for arm
+######################################################################
+
+# Files here assemble fine with clang's integrated assembler.
+
+######################################################################
+#END	Machine dependent Makefile fragment for arm
+######################################################################
+
+ifeq (-arch armv7,$(ARCH_FLAGS_ARM))
+vm_pageout.o_CFLAGS_ADD += -O0
+vm_fault.o_CFLAGS_ADD += -O0
+endif
+
+rtclock.o_CFLAGS_ADD += -O0
+sched_prim.o_CFLAGS_ADD += -O0
+thread_call.o_CFLAGS_ADD += -O0
+device_server.o_CFLAGS_ADD += -O0

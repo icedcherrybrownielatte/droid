@@ -1,0 +1,126 @@
+           CPU0       CPU1       
+ 17:          0          0       GIC  dg_timer
+ 18:      26202      20326       GIC  gp_timer
+ 20:          0          0       GIC  apps_wdog_bark
+ 30:          0          0       GIC  MSM_L1
+ 34:          1          0       GIC  MSM_L2
+ 48:        562          0       GIC  msmgpio
+ 51:       3547          0       GIC  rpm_drv
+ 52:          1          1       GIC  mpm_drv
+ 53:          0          0       GIC  rpm_err
+ 54:          0          0       GIC  pm_drv
+ 67:          0          0       GIC  modem_wdog_fw
+ 68:          0          0       GIC  modem_wdog_sw
+ 69:        412          0       GIC  smd_dev
+ 70:          6          0       GIC  smd_smsm
+ 79:          0          0       GIC  vpe
+ 80:          0          0       GIC  vfe
+ 81:         28          0       GIC  vidc
+ 84:          0          0       GIC  msm_iommu_nonsecure_irq, msm_iommu_nonsecure_irq
+ 86:          0          0       GIC  msm_iommu_nonsecure_irq, msm_iommu_nonsecure_irq
+ 88:          0          0       GIC  msm_iommu_nonsecure_irq
+ 90:          0          0       GIC  msm_iommu_nonsecure_irq, msm_iommu_nonsecure_irq
+ 92:          0          0       GIC  msm_iommu_nonsecure_irq, msm_iommu_nonsecure_irq
+ 94:          0          0       GIC  msm_iommu_nonsecure_irq, msm_iommu_nonsecure_irq
+ 96:          0          0       GIC  msm_iommu_nonsecure_irq, msm_iommu_nonsecure_irq
+100:          0          0       GIC  msm_iommu_nonsecure_irq, msm_iommu_nonsecure_irq
+102:          0          0       GIC  msm_iommu_nonsecure_irq, msm_iommu_nonsecure_irq
+105:          0          0       GIC  msm_rotator
+107:       2192          0       GIC  MDP
+111:          0          0       GIC  hdmi_msm_isr
+112:       5709          0       GIC  kgsl-3d0
+114:        277          1       GIC  MIPI_DSI
+115:          2          0       GIC  csid
+116:          3          0       GIC  csid
+119:          0          0       GIC  q6_wdog
+121:          0          0       GIC  smd_smsm
+122:         32          0       GIC  smd_dev
+128:          0          0       GIC  sps
+130:      10672          0       GIC  sps
+132:        546          0       GIC  msm_otg, msm_hsusb
+134:         26          0       GIC  msm-sdcc (cmd), msm-sdcc (pio)
+136:      34374          0       GIC  msm-sdcc (cmd), msm-sdcc (pio)
+137:          0          0       GIC  sps
+169:          0          0       GIC  smd_smsm
+170:          0          0       GIC  smd_dev
+171:          0          0       GIC  csiphy
+172:          0          0       GIC  csiphy
+179:        924          0       GIC  spi_qsd
+183:       1357          0       GIC  qup_err_intr
+185:        876          0       GIC  qup_err_intr
+193:        306          0       GIC  qup_err_intr
+199:          5          0       GIC
+203:          0          0       GIC  msmdatamover
+210:          0          0       GIC  tsens_interrupt
+222:          0          0       GIC  qup_err_intr
+224:          0          0       GIC  qup_err_intr
+228:       4790          0       GIC  qup_err_intr
+230:         68          0       GIC  smd_dev
+231:          0          0       GIC  riva_wdog
+236:          0          0       GIC  smd_smsm
+241:         12          0       GIC  sps
+290:          0          0   msmgpio  batt-irq
+299:        242          0   msmgpio  Atmel MXT336S
+302:          7          0   msmgpio  tsu6721 micro USB
+323:          0          0   msmgpio  Home
+334:          0          0   msmgpio  sec_headset_detect
+337:          0          0   msmgpio  proximity_int
+338:          0          0   msmgpio  Vol Up
+353:          2          0   msmgpio  tc360
+355:          0          0   msmgpio  mpu6500_input
+366:          0          0   msmgpio  flip_cover
+369:          0          0   msmgpio  Vol Down
+392:        311          0   msmgpio  pm8xxx_usr_irq
+448:          0          0    pm8xxx  VCP_IRQ
+449:          0          0    pm8xxx  CHGWDOG_IRQ
+452:          0          0    pm8xxx  VBATDET_LOW_IRQ
+453:          0          0    pm8xxx  BATT_INSERTED_IRQ
+455:          9          0    pm8xxx  USBIN_VALID_IRQ
+456:          0          0    pm8xxx  TRKLCHG_IRQ
+457:          5          0    pm8xxx  FASTCHG_IRQ
+458:          0          0    pm8xxx  LOOP_CHANGE_IRQ
+459:          0          0    pm8xxx  CHGSTATE_IRQ
+460:          0          0    pm8xxx  CHGFAIL_IRQ
+461:          0          0    pm8xxx  CHGDONE_IRQ
+462:          0          0    pm8xxx  ATCFAIL_IRQ
+463:          0          0    pm8xxx  ATCDONE_IRQ
+464:          0          0    pm8xxx  VDD_LOOP_IRQ
+465:          0          0    pm8xxx  COARSE_DET_LOW_IRQ
+466:          0          0    pm8xxx  BAT_TEMP_OK_IRQ
+467:         12          2    pm8xxx  CHG_GONE_IRQ
+468:          0          0    pm8xxx  BATTTEMP_COLD_IRQ
+469:          0          0    pm8xxx  CHGHOT_IRQ
+470:          0          0    pm8xxx  BATTTEMP_HOT_IRQ
+471:          0          0    pm8xxx  BATT_REMOVED_IRQ
+474:          0          0    pm8xxx  pm8921_overtemp_irq
+479:          0          0    pm8xxx  pm8xxx_rtc_alarm
+480:          0          0    pm8xxx  DCIN_UV_IRQ
+481:          0          0    pm8xxx  DCIN_OV_IRQ
+482:          0          0    pm8xxx  DCIN_VALID_IRQ
+484:          0          0    pm8xxx  BATFET_IRQ
+485:          0          0    pm8xxx  VBATDET_IRQ
+486:          0          0    pm8xxx  pm8921_batt_alarm_irq
+487:          0          0    pm8xxx  VREG_OV_IRQ
+489:          0          0    pm8xxx  msm_otg_id
+490:          0          0    pm8xxx  pmic8xxx_pwrkey_release
+491:          0          0    pm8xxx  pmic8xxx_pwrkey_press
+492:          0          0    pm8xxx  restart_from_pmic
+495:          0          0    pm8xxx  pm8921_tempstat_irq
+512:          0          0    pm8xxx  pm8xxx_btm_cool_interrupt
+513:          0          0    pm8xxx  pm8xxx_btm_warm_interrupt
+518:        287          0    pm8xxx  pm8xxx_adc_interrupt
+560:          2          1    pm8xxx  bms_eoc_ccadc
+562:          0          0    pm8xxx  PM8921_BMS_GOOD_OCV
+563:          0          0    pm8xxx  PM8921_BMS_OCV_FOR_R
+564:          0          0    pm8xxx  PM8921_BMS_VSENSE_FOR_R
+565:          1          0    pm8xxx  PM8921_BMS_VSENSE_THR
+566:          0          0    pm8xxx  PM8921_BMS_CC_THR
+567:          1          0    pm8xxx  PM8921_BMS_SBI_WRITE_OK
+IPI0:          0          1  CPU start interrupts
+IPI1:          0          0  Timer broadcast interrupts
+IPI2:      25874      37722  Rescheduling interrupts
+IPI3:          0          0  Function call interrupts
+IPI4:       8294       5813  Single function call interrupts
+IPI5:          0          0  CPU stop interrupts
+IPI6:          0          0  CPU backtrace
+Err:          0

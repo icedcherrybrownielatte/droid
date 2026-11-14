@@ -1,0 +1,183 @@
+XNUTRACE15365164315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008200 0001c815 00000182>
+J1 sp assetsd 0 D904 P105 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x176840a0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:27.-417 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1774afd0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:28.-352 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008300 0001cb3a 00000185>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x175e1d20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:30.-864 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1774b690)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:31.-838 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008400 0001ce3c 00000187>
+Data/Stack execution not permitted: assetsd[pid 266] at virtual address 0x1890000, protections were read-write
+J1 EXC 266 assetsd e1 far0 kr0
+ pc01890028 lr3047939b
+ bt 304788bb 30493f97 3705f4fd 37072fe5 37072e77 304f09cd 3b3a156f 304f0b0b sl3266000
+J1 X 266 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x176c1470)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:32.-819 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1774bf00)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:33.-794 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+J1W round 38 nprocs=53 bb=31 sb=36 P105 Sa070002 CK95 T1079
+J1M free=97390 act=18331 inact=3754 wire=51678 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x176b1f20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:34.-683 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008500 0001d4ba 0000018a>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x175e1d20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:35.-610 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x176c1470)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:36.-586 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008600 0001d7bc 0000018d>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1774afd0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+J1 sp assetsd 0 D904 P105 Sa070002
+E36:1969-12-31 16:06:38.-936 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x176b22f0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:39.-562 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008700 0001dae1 0000018f>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1774afd0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:40.-78 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1818a500)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:41.-13 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008800 0001dde1 00000192>
+Data/Stack execution not permitted: assetsd[pid 272] at virtual address 0x17d0000, protections were read-write
+J1 EXC 272 assetsd e1 far0 kr0
+ pc017d0028 lr3047939b
+ bt 304788bb 30493f97 3705f4fd 37072fe5 37072e77 304f09cd 3b3a156f 304f0b0b sl3266000
+J1 X 272 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1774b330)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:43.-668 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+J1T clk hclk=00000000 md=00000000 ns=00000000 rst=00000000 haltA=3fd3ffff
+J1T gpio11 cfg=00000003 io=00000001
+J1T gpio16 cfg=00000000 io=00000001
+J1T gpio17 cfg=00000000 io=00000001
+J1T qup skipped (gsbi3 ahb clock off)
+J1P summary l31 46/28/40 -> cf/2b/41 wr=0 rpm ack=1 sel2=2000 val=3 lines irq=0 sda=1 scl=1
+J1I mxt rc=0 info 82 23 30 ab x24 y14 obj21 orc=0
+J1I T9 ctrl=83 orient=03 xr=959 yr=539 rid=2
+J1I mxt ok=1 polls=7252 chg=165 msgs=289 reports=140 errs=0 hid=140 last=201f912c
+J1I mxt dropped noopen=0 nopkt=0
+J1K keys home=0 power=0 events=0
+J1H 0 0e 06 00 00 00 00 00 00
+J1H 0 02 20 7e 4b 40 02 12 01
+J1H 0 0e 06 00 02 00 00 00 00
+J1H 0 02 9c 7e 4b 40 02 12 01
+J1H 0 0e 0d 00 06 00 00 00 00
+J1H 0 02 9c 6c 53 80 06 3a c0
+J1H 0 0e 0d 00 08 00 00 00 00
+J1H 0 02 98 52 5b 84 08 46 c1
+J1H 0 0e 0d 00 07 00 00 00 00
+J1H 0 02 9c 4b 5e 88 07 46 c1
+J1H 0 0e 0d 00 09 00 00 00 00
+J1H 0 02 c0 45 63 88 0a 54 f0
+J1H 0 0e 07 00 00 00 00 00 00
+J1H 0 02 20 82 45 84 02 0f 00
+J1H 0 0e 07 00 02 00 00 00 00
+J1H 0 02 9c 7e 4a c8 02 0f 00
+J1I T37 @0088 sz130 inst1 rid0
+J1I T5 @010a sz9 inst1 rid0
+J1I T6 @0113 sz6 inst1 rid1
+J1I T38 @0119 sz8 inst1 rid0
+J1I T71 @0121 sz112 inst1 rid0
+J1I T7 @0191 sz4 inst1 rid0
+J1I T8 @0195 sz14 inst1 rid0
+J1I T9 @01a3 sz46 inst1 rid8
+J1I T18 @01d1 sz2 inst1 rid0
+J1I T25 @01d3 sz9 inst1 rid1
+J1I T42 @01dc sz10 inst1 rid1
+J1I T46 @01e6 sz10 inst1 rid1
+J1I T47 @01f0 sz26 inst1 rid0
+J1I T56 @020a sz30 inst1 rid1
+J1I T57 @0228 sz3 inst1 rid1
+J1I T61 @022b sz5 inst2 rid1
+J1I T65 @0235 sz11 inst1 rid0
+J1I T66 @0240 sz3 inst1 rid1
+J1I T70 @0243 sz10 inst8 rid1
+J1I T72 @0293 sz80 inst1 rid1
+J1I T80 @02e3 sz4 inst1 rid0
+J1W round 39 nprocs=53 bb=31 sb=36 P105 Sa070002 CK95 T1101
+J1M free=97051 act=18331 inact=3755 wire=51689 target=1997 min=1051
+J1B n24: d51 c8 ce d5a d56 d4c 194 4b49d85 4b49d91 4b49d8f 4b49da2 c81 c8d 4b49d9f 4e 4f d9 4b49d9d 192 e20 cd b39 af5 3ae8
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x177473e0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:44.-609 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008900 0001e961 00000194>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1774bf00)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:45.-313 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x175ec700)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:46.-217 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008a00 0001ec63 00000197>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1774b330)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:48.-975 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+J1 sp assetsd 0 D904 P105 Sa070002
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x175e1d20)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+UDA: total faults=229376 assetsd far3d3fe0c7 pc306fa1ea fsr7
+E36:1969-12-31 16:06:49.-345 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008b00 0001efc5 0000019a>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x176c1a60)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:50.-247 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x176840a0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:51.-94 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008c00 0001f2c6 0000019c>
+Data/Stack execution not permitted: assetsd[pid 277] at virtual address 0x1883000, protections were read-write
+J1 EXC 277 assetsd e1 far0 kr0
+ pc01883028 lr3047939b
+ bt 304788bb 30493f97 3705f4fd 37072fe5 37072e77 304f09cd 3b3a156f 304f0b0b sl3266000
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x17698cb0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:53.-981 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+J1 X 277 assetsd a
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x181b98b0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:54.-642 SpringBoard[36:1b07] 
+E36:CTServerConnection returned error: (2, 5). Destroying connection. (Callstack: (0x1281a5 0x12c855 0x315f13 0x315a85 0x306daf01 0x3064ed69 0x3103acc5 0x12a307 0x1
+<T00008d00 0001f6d6 0000019f>
+E36:__MKBAssertionFinalize: __MKBAssertionFinalize(0x1774afd0)  
+E36:MKBDeviceLockAssertion: MKBDeviceLockAssertion  (asserttype:4848204 with error 22)  
+E36:1969-12-31 16:06:55.-593 SpringBoard[36:1b07] 
+E36:CTServerConnection retur
+4 Corrected bytes, 97 unrecoverable blocks

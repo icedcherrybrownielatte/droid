@@ -1,0 +1,23 @@
+Processor	: ARMv7 Processor rev 2 (v7l)
+processor	: 0
+BogoMIPS	: 1590.88
+
+processor	: 1
+BogoMIPS	: 1590.88
+
+processor	: 2
+BogoMIPS	: 1590.88
+
+processor	: 3
+BogoMIPS	: 1590.88
+
+Features	: swp half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 2
+
+Hardware	: UNIVERSAL5410
+Revision	: 000a
+Serial		: 4b1060974d002325

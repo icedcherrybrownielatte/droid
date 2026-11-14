@@ -1,0 +1,1650 @@
+[    8.847459] init: starting service 'exec 2 (/system/bin/vdc checkpoint prepareCheckpoint)'...
+[    8.857714] init: SVC_EXEC service 'exec 2 (/system/bin/vdc checkpoint prepareCheckpoint)' pid 214 (uid 1000 gid 1000+0 context default) started; waiting...
+[    8.875263] init: Service 'exec 2 (/system/bin/vdc checkpoint prepareCheckpoint)' (pid 214) exited with status 0 waiting took 0.025000 seconds
+[    8.880512] init: starting service 'exec 3 (/system/bin/fsverity_init)'...
+[    8.884632] init: SVC_EXEC service 'exec 3 (/system/bin/fsverity_init)' pid 215 (uid 0 gid 0+0 context default) started; waiting...
+[    8.971127] init: Service 'exec 3 (/system/bin/fsverity_init)' (pid 215) exited with status 0 waiting took 0.089000 seconds
+[    8.971707] init: Switched to default mount namespace
+[    8.985594] init: starting service 'apexd'...
+[    9.035983] apexd: Marking APEXd as starting
+[    9.036990] apexd: Scanning /system/apex for embedded keys
+[    9.039035] apexd: Scanning /product/apex for embedded keys
+[    9.039096] apexd: ... does not exist. Skipping
+[    9.039157] apexd: Populating APEX database from mounts...
+[    9.039432] apexd: Failed to walk /product/apex : Can't open /product/apex for reading : No such file or directory
+[    9.040103] apexd: Found "/apex/com.android.tzdata@290000000"
+[    9.040225] apexd: Found "/apex/com.android.runtime@1"
+[    9.040378] apexd: 2 packages restored.
+[    9.040470] apexd: Scanning /data/apex/sessions looking for sessions to be activated.
+[    9.049046] apexd: Scanning /data/apex/active looking for APEX packages.
+[    9.051640] apexd: Activated 0 packages. Skipped: 0
+[    9.051701] apexd: Scanning /system/apex looking for APEX packages.
+[    9.052189] apexd: Found /system/apex/com.android.tzdata
+[    9.052403] apexd: Skipping activation of /system/apex/com.android.tzdata same package with higher version 290000000 is already active
+[    9.052464] apexd: Found /system/apex/com.android.resolv
+[    9.052708] apexd: Creating mount point: /apex/com.android.resolv@290000000
+[    9.052922] apexd: Successfully bind-mounted flattened package /system/apex/com.android.resolv on /apex/com.android.resolv@290000000
+[    9.052983] apexd: Creating bind-mount for /apex/com.android.resolv for /apex/com.android.resolv@290000000
+[    9.053044] apexd: Creating mountpoint /apex/com.android.resolv
+[    9.053105] apexd: Bind-mounting /apex/com.android.resolv@290000000 to /apex/com.android.resolv
+[    9.053197] apexd: Successfully activated /system/apex/com.android.resolv package_name: com.android.resolv version: 290000000
+[    9.053227] apexd: Found /system/apex/com.android.conscrypt
+[    9.053471] apexd: Creating mount point: /apex/com.android.conscrypt@299900000
+[    9.053624] apexd: Successfully bind-mounted flattened package /system/apex/com.android.conscrypt on /apex/com.android.conscrypt@299900000
+[    9.053654] apexd: Creating bind-mount for /apex/com.android.conscrypt for /apex/com.android.conscrypt@299900000
+[    9.053715] apexd: Creating mountpoint /apex/com.android.conscrypt
+[    9.053807] apexd: Bind-mounting /apex/com.android.conscrypt@299900000 to /apex/com.android.conscrypt
+[    9.053868] apexd: Successfully activated /system/apex/com.android.conscrypt package_name: com.android.conscrypt version: 299900000
+[    9.053929] apexd: Found /system/apex/com.android.media
+[    9.058171] apexd: Creating mount point: /apex/com.android.media@290000000
+[    9.058690] apexd: Successfully bind-mounted flattened package /system/apex/com.android.media on /apex/com.android.media@290000000
+[    9.058843] apexd: Creating bind-mount for /apex/com.android.media for /apex/com.android.media@290000000
+[    9.059026] apexd: Creating mountpoint /apex/com.android.media
+[    9.059240] apexd: Bind-mounting /apex/com.android.media@290000000 to /apex/com.android.media
+[    9.059484] apexd: Successfully activated /system/apex/com.android.media package_name: com.android.media version: 290000000
+[    9.059636] apexd: Found /system/apex/com.android.runtime.release
+[    9.060460] apexd: Skipping activation of /system/apex/com.android.runtime.release same package with higher version 1 is already active
+[    9.060705] apexd: Found /system/apex/com.android.media.swcodec
+[    9.061437] apexd: Creating mount point: /apex/com.android.media.swcodec@290000000
+[    9.061895] apexd: Successfully bind-mounted flattened package /system/apex/com.android.media.swcodec on /apex/com.android.media.swcodec@290000000
+[    9.062047] apexd: Creating bind-mount for /apex/com.android.media.swcodec for /apex/com.android.media.swcodec@290000000
+[    9.062231] apexd: Creating mountpoint /apex/com.android.media.swcodec
+[    9.062444] apexd: Bind-mounting /apex/com.android.media.swcodec@290000000 to /apex/com.android.media.swcodec
+[    9.062658] apexd: Successfully activated /system/apex/com.android.media.swcodec package_name: com.android.media.swcodec version: 290000000
+[    9.062810] apexd: Activated 4 packages. Skipped: 2
+[    9.062963] apexd: Scanning /product/apex looking for APEX packages.
+[    9.063238] apexd: Failed to activate packages from /product/apex : Failed to scan /product/apex : Can't open /product/apex for reading : No such file or directory
+[    9.068762] apexd: Marking APEXd as ready
+[    9.127422] init: start_waiting_for_property("apexd.status", "ready"): already set
+[    9.129040] init: Parsing file /apex/com.android.media.swcodec@290000000/etc/init.rc...
+[    9.130016] init: starting service 'exec 4 (/system/bin/vdc --wait cryptfs init_user0)'...
+[    9.155135] vdc: Waited 0ms for vold
+[    9.156020] init: SVC_EXEC service 'exec 4 (/system/bin/vdc --wait cryptfs init_user0)' pid 222 (uid 0 gid 0+0 context default) started; waiting...
+[    9.212452] init: Service 'exec 4 (/system/bin/vdc --wait cryptfs init_user0)' (pid 222) exited with status 0 waiting took 0.081000 seconds
+[    9.215717] selinux: SELinux: Skipping restorecon on directory(/data)
+[    9.215717] 
+[    9.216358] init: starting service 'exec 5 (/system/bin/tzdatacheck /apex/com.android.runtime/etc/tz /data/misc/zoneinfo)'...
+[    9.224019] init: SVC_EXEC service 'exec 5 (/system/bin/tzdatacheck /apex/com.android.runtime/etc/tz /data/misc/zoneinfo)' pid 224 (uid 1000 gid 1000+0 context default) started; waiting...
+[    9.235464] init: Service 'exec 5 (/system/bin/tzdatacheck /apex/com.android.runtime/etc/tz /data/misc/zoneinfo)' (pid 224) exited with status 0 waiting took 0.017000 seconds
+[    9.236502] init: processing action (post-fs-data) from (/init.usb.rc:6)
+[    9.239127] init: processing action (post-fs-data) from (/vendor/etc/init/hw/init.qcom.rc:141)
+[    9.302426] init: processing action (post-fs-data) from (/system/etc/init/adb_root.rc:6)
+[    9.303494] init: processing action (post-fs-data) from (/system/etc/init/art_apex_boot_integrity.rc:19)
+[    9.304043] init: starting service 'exec 6 (/system/bin/art_apex_boot_integrity)'...
+[    9.307706] init: SVC_EXEC service 'exec 6 (/system/bin/art_apex_boot_integrity)' pid 225 (uid 0 gid 0+0 context default) started; waiting...
+[    9.415656] init: Service 'exec 6 (/system/bin/art_apex_boot_integrity)' (pid 225) exited with status 0 waiting took 0.110000 seconds
+[    9.415809] init: processing action (post-fs-data) from (/system/etc/init/bootstat.rc:9)
+[    9.423287] init: processing action (post-fs-data) from (/system/etc/init/gsid.rc:10)
+[    9.425911] init: processing action (post-fs-data) from (/system/etc/init/incidentd.rc:21)
+[    9.426888] init: processing action (post-fs-data) from (/system/etc/init/iorapd.rc:27)
+[    9.427834] init: processing action (post-fs-data) from (/system/etc/init/lineage-ssh.rc:1)
+[    9.430215] init: processing action (post-fs-data) from (/system/etc/init/lineage-system.rc:5)
+[    9.432260] init: processing action (post-fs-data) from (/system/etc/init/lineage-updates.rc:1)
+[    9.433175] init: processing action (post-fs-data) from (/system/etc/init/logtagd.rc:4)
+[    9.436685] init: processing action (post-fs-data) from (/system/etc/init/perfetto.rc:67)
+[    9.437631] init: processing action (post-fs-data) from (/system/etc/init/recovery-persist.rc:1)
+[    9.438913] init: starting service 'exec 7 (/system/bin/recovery-persist)'...
+[    9.444224] init: processing action (post-fs-data) from (/system/etc/init/statsd.rc:25)
+[    9.447886] init: processing action (post-fs-data) from (/vendor/etc/init/hostapd.android.rc:9)
+[    9.450450] init: processing action (post-fs-data) from (/vendor/etc/init/vendor.lineage.livedisplay@2.0-service.serrano.rc:6)
+[    9.451243] init: processing action (load_persist_props_action) from (/init.rc:315)
+[    9.451518] init: Couldn't load property file '/data/local.prop': open() failed: No such file or directory: No such file or directory
+[    9.461376] init: Wait for property 'ro.persistent_properties.ready=true' took 9ms
+[    9.461742] init: starting service 'logd-reinit'...
+[    9.478406] init: processing action (load_persist_props_action) from (/system/etc/init/flags_health_check.rc:1)
+[    9.480177] init: starting service 'exec 8 (/system/bin/flags_health_check BOOT_FAILURE)'...
+[    9.489424] logd.daemon: reinit
+[    9.494246] init: SVC_EXEC service 'exec 8 (/system/bin/flags_health_check BOOT_FAILURE)' pid 232 (uid 1000 gid 1000+0 context default) started; waiting...
+[    9.494368] init: Service 'logd-reinit' (pid 231) exited with status 0
+[    9.502090] init: Service 'exec 7 (/system/bin/recovery-persist)' (pid 230) exited with status 0
+[    9.531176] init: Service 'exec 8 (/system/bin/flags_health_check BOOT_FAILURE)' (pid 232) exited with status 0 waiting took 0.049000 seconds
+[    9.531359] init: processing action (load_persist_props_action) from (/system/etc/init/logcatd.rc:31)
+[    9.531909] init: processing action (ro.crypto.state=unencrypted && zygote-start) from (/init.rc:638)
+[    9.532000] init: Command 'exec_start update_verifier_nonencrypted' action=ro.crypto.state=unencrypted && zygote-start (/init.rc:640) took 0ms and failed: Service not found
+[    9.532488] init: starting service 'netd'...
+[    9.535693] init: Created socket '/dev/socket/dnsproxyd', mode 660, user 0, group 3003
+[    9.536578] init: Created socket '/dev/socket/mdns', mode 660, user 0, group 1000
+[    9.537372] init: Created socket '/dev/socket/fwmarkd', mode 660, user 0, group 3003
+[    9.542072] init: starting service 'zygote'...
+[    9.545399] init: Created socket '/dev/socket/zygote', mode 660, user 0, group 1000
+[    9.546253] init: Created socket '/dev/socket/usap_pool_primary', mode 660, user 0, group 1000
+[    9.548542] init: Command 'start zygote_secondary' action=ro.crypto.state=unencrypted && zygote-start (/init.rc:643) took 0ms and failed: service zygote_secondary not found
+[    9.548634] init: processing action (zygote-start) from (/system/etc/init/bootstat.rc:72)
+[    9.549214] init: starting service 'exec 9 (/system/bin/bootstat --set_system_boot_reason)'...
+[    9.556905] init: processing action (firmware_mounts_complete) from (/init.rc:321)
+[    9.557057] init: processing action (early-boot) from (/vendor/etc/init/hw/init.qcom.rc:46)
+[    9.595238] init: processing action (early-boot) from (/system/etc/init/installd.rc:5)
+[    9.665527] init: processing action (boot) from (/init.rc:664)
+[    9.669861] init: property 'dev.mnt.blk.data' doesn't exist while expanding '/sys/fs/f2fs/${dev.mnt.blk.data}/cp_interval'
+[    9.670074] init: Command 'write /sys/fs/f2fs/${dev.mnt.blk.data}/cp_interval 200' action=boot (/init.rc:693) took 0ms and failed: cannot expand '/sys/fs/f2fs/${dev.mnt.blk.data}/cp_interval'
+[    9.670135] init: property 'dev.mnt.blk.data' doesn't exist while expanding '/sys/fs/f2fs/${dev.mnt.blk.data}/gc_urgent_sleep_time'
+[    9.670318] init: Command 'write /sys/fs/f2fs/${dev.mnt.blk.data}/gc_urgent_sleep_time 50' action=boot (/init.rc:694) took 0ms and failed: cannot expand '/sys/fs/f2fs/${dev.mnt.blk.data}/gc_urgent_sleep_time'
+[    9.670379] init: property 'dev.mnt.blk.data' doesn't exist while expanding '/sys/devices/virtual/block/${dev.mnt.blk.data}/queue/discard_max_bytes'
+[    9.670593] init: Command 'write /sys/devices/virtual/block/${dev.mnt.blk.data}/queue/discard_max_bytes 134217728' action=boot (/init.rc:699) took 0ms and failed: cannot expand '/sys/devices/virtual/block/${dev.mnt.blk.data}/queue/discard_max_bytes'
+[    9.693758] init: starting service 'hidl_memory'...
+[    9.815321] init: starting service 'vendor.cas-hal-1-1'...
+[    9.842057] init: starting service 'vendor.configstore-hal'...
+[    9.850663] init: starting service 'vendor.drm-hal-1-0'...
+[    9.869494] init: starting service 'vendor.gnss_service'...
+[    9.882435] init: starting service 'vendor.gralloc-2-0'...
+[    9.905417] init: starting service 'vendor.hwcomposer-2-1'...
+[    9.915672] init: starting service 'vendor.health-hal-2-0'...
+[    9.923393] init: Opened file '/dev/kmsg', flags 1
+[    9.945887] init: starting service 'vendor.ir-hal-1-0'...
+[    9.969113] init: starting service 'vendor.light-hal-2-0'...
+[    9.988921] init: starting service 'vendor.memtrack-hal-1-0'...
+[   10.005737] init: starting service 'vendor.power-hal-1-1'...
+[   10.028628] init: starting service 'vendor.sensors-hal-1-0'...
+[   10.042301] init: starting service 'vendor.usb-hal-1-0'...
+[   10.072363] init: starting service 'vendor.vibrator-1-0'...
+[   10.099008] init: starting service 'vendor.wifi_hal_legacy'...
+[   10.119548] init: starting service 'vendor.touch-hal-1-0-serrano'...
+[   10.139844] init: Command 'class_start hal' action=boot (/init.rc:766) took 446ms and succeeded
+[   10.140607] init: starting service 'rmt_storage'...
+[   10.177720] init: starting service 'qmuxd'...
+[   10.219014] init: starting service 'ashmemd'...
+[   10.238699] init: starting service 'audioserver'...
+[   10.250206] healthd: BatteryFullChargePath not found
+[   10.250236] healthd: BatteryCycleCountPath not found
+[   10.279719] init: starting service 'gpu'...
+[   10.556844] init: starting service 'lmkd'...
+[   10.631924] init: Created socket '/dev/socket/lmkd', mode 660, user 1000, group 1000
+[   10.636197] init: starting service 'surfaceflinger'...
+[   10.664611] ueventd: firmware: loading 'a300_pm4.fw' for '/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/a300_pm4.fw'
+[   10.683595] init: Failed to bind socket 'pdx/system/vr/display/client': No such file or directory
+[   10.685731] init: Command 'class_start core' action=boot (/init.rc:768) took 545ms and succeeded
+[   10.686036] init: Service 'exec 9 (/system/bin/bootstat --set_system_boot_reason)' (pid 235) exited with status 0
+[   10.693026] init: Failed to bind socket 'pdx/system/vr/display/manager': No such file or directory
+[   10.693850] init: Failed to bind socket 'pdx/system/vr/display/vsync': No such file or directory
+[   10.694613] init: processing action (boot) from (/init.usb.rc:21)
+[   10.695437] init: processing action (persist.sys.usb.config=* && boot) from (/init.usb.rc:102)
+[   10.696017] init: processing action (boot) from (/vendor/etc/init/hw/init.qcom.rc:55)
+[   10.702121] ueventd: loading /devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/a300_pm4.fw took 36ms
+[   10.731848] ueventd: firmware: loading 'a300_pfp.fw' for '/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/a300_pfp.fw'
+[   10.745917] ueventd: loading /devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/a300_pfp.fw took 19ms
+[   10.848954] warning: `qmuxd' uses 32-bit capabilities (legacy support in use)
+[   10.856920] subsys-restart: restart_level_set(): Phase 3 behavior activated.
+[   10.857195] init: processing action (boot) from (/vendor/etc/init/hw/init.qcom.power.rc:42)
+[   10.861803] init: processing action (boot) from (/system/etc/init/bootstat.rc:63)
+[   10.862444] init: processing action (boot) from (/system/etc/init/dumpstate.rc:1)
+[   10.862536] ueventd: firmware: loading 'q6.mdt' for '/devices/platform/pil_qdsp6v4.0/pil0/firmware/q6.mdt'
+[   10.863268] init: processing action (boot) from (/system/etc/init/gsid.rc:14)
+[   10.864092] init: starting service 'exec 10 (/system/bin/gsid run-startup-tasks)'...
+[   10.877613] init: processing action (boot) from (/system/etc/init/lineage-iosched.rc:16)
+[   10.965817] ueventd: loading /devices/platform/pil_qdsp6v4.0/pil0/firmware/q6.mdt took 101ms
+[   11.002472] init: Command 'restorecon --recursive /sys/block/mmcblk0/queue' action=boot (/system/etc/init/lineage-iosched.rc:17) took 124ms and succeeded
+[   11.002838] selinux: SELinux: Could not get canonical path for /sys/block/sda/queue restorecon: No such file or directory.
+[   11.002838] 
+[   11.003265] selinux: SELinux: Could not get canonical path for /sys/block/sde/queue restorecon: No such file or directory.
+[   11.003265] 
+[   11.006653] selinux: SELinux: Could not get canonical path for /sys/block/dm-0/queue restorecon: No such file or directory.
+[   11.006653] 
+[   11.007385] init: processing action (enable_property_trigger) from (<Builtin Action>:0)
+[   11.007843] init: processing action (security.perf_harden=1) from (/init.rc:832)
+[   11.008972] init: processing action (ro.debuggable=1) from (/init.rc:856)
+[   11.009400] init: Command 'start console' action=ro.debuggable=1 (/init.rc:862) took 0ms and failed: Could not start service: Couldn't open console '/dev/console': No such device
+[   11.009430] init: processing action (sys.usb.config=adb && sys.usb.configfs=0) from (/init.usb.rc:34)
+[   11.021394] enable_store: android_usb: already disabled
+[   11.027987] ueventd: firmware: loading 'q6.b03' for '/devices/platform/pil_qdsp6v4.0/pil0/firmware/q6.b03'
+[   11.032992] init: starting service 'adbd'...
+[   11.050724] init: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[   11.056828] init: processing action (sys.usb.config=adb) from (/vendor/etc/init/hw/init.qcom.usb.rc:39)
+[   11.075843] init: processing action (ro.iorapd.enable=false) from (/system/etc/init/iorapd.rc:24)
+[   11.076300] init: processing action (persist.traced.enable=1) from (/system/etc/init/perfetto.rc:50)
+[   11.078071] init: Service 'exec 10 (/system/bin/gsid run-startup-tasks)' (pid 272) exited with status 0
+[   11.080665] init: starting service 'traced'...
+[   11.086128] init: Created socket '/dev/socket/traced_consumer', mode 666, user 0, group 0
+[   11.087135] init: Created socket '/dev/socket/traced_producer', mode 666, user 0, group 0
+[   11.097482] init: starting service 'traced_probes'...
+[   11.108011] init: Opened file '/dev/kmsg', flags 1
+[   11.115305] init: processing action (nonencrypted) from (/init.rc:770)
+[   11.116770] init: starting service 'wcnss-service'...
+[   11.129955] init: starting service 'irsc_util'...
+[   11.149580] init: starting service 'adb_root'...
+[   11.172226] init: starting service 'bpfloader'...
+[   11.185991] ueventd: loading /devices/platform/pil_qdsp6v4.0/pil0/firmware/q6.b03 took 158ms
+[   11.186357] init: starting service 'drm'...
+[   11.205707] init: starting service 'idmap2d'...
+[   11.206256] ueventd: firmware: loading 'q6.b04' for '/devices/platform/pil_qdsp6v4.0/pil0/firmware/q6.b04'
+[   11.232260] init: starting service 'incidentd'...
+[   11.258812] init: starting service 'installd'...
+[   11.269586] wcnss_wlan triggered by userspace
+[   11.282679] init: starting service 'keystore'...
+[   11.296780] ueventd: loading /devices/platform/pil_qdsp6v4.0/pil0/firmware/q6.b04 took 90ms
+[   11.306760] init: starting service 'mediadrm'...
+[   11.328002] ueventd: firmware: loading 'wcnss.mdt' for '/devices/platform/pil_riva/pil3/firmware/wcnss.mdt'
+[   11.329009] init: starting service 'mediaextractor'...
+[   11.343842] random: nonblocking pool is initialized
+[   11.345856] init: starting service 'mediametrics'...
+[   11.349946] ueventd: firmware: loading 'q6.b05' for '/devices/platform/pil_qdsp6v4.0/pil0/firmware/q6.b05'
+[   11.362032] init: starting service 'media'...
+[   11.375553] init: starting service 'statsd'...
+[   11.383641] read descriptors
+[   11.383641] read descriptors
+[   11.383671] read strings
+[   11.392186] init: starting service 'storaged'...
+[   11.407782] init: Opened file '/d/mmc0/mmc0:0001/ext_csd', flags 0
+[   11.415138] init: Created socket '/dev/socket/statsdw', mode 222, user 1066, group 1066
+[   11.415656] init: starting service 'wificond'...
+[   11.435647] init: starting service 'vendor.media.omx'...
+[   11.452403] init: starting service 'ril-daemon'...
+[   11.482496] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[   11.486159] init: starting service 'media.swcodec'...
+[   11.501846] init: Command 'class_start main' action=nonencrypted (/init.rc:771) took 386ms and succeeded
+[   11.502609] init: starting service 'geomagneticd'...
+[   11.528948] init: starting service 'loc_launcher'...
+[   11.555623] init: starting service 'gatekeeperd'...
+[   11.579154] init: starting service 'tombstoned'...
+[   11.592949] init: Created socket '/dev/socket/tombstoned_crash', mode 666, user 1000, group 1000
+[   11.602350] init: starting service 'usbd'...
+[   11.610651] init: Created socket '/dev/socket/tombstoned_intercept', mode 666, user 1000, group 1000
+[   11.611597] init: Created socket '/dev/socket/tombstoned_java_trace', mode 666, user 1000, group 1000
+[   11.629116] init: Command 'class_start late_start' action=nonencrypted (/init.rc:772) took 126ms and succeeded
+[   11.629757] init: Service 'irsc_util' (pid 283) exited with status 0
+[   11.632595] init: Service 'bpfloader' (pid 285) exited with status 0
+[   11.634762] init: processing action (enable-low-power) from (/vendor/etc/init/hw/init.qcom.power.rc:15)
+[   11.744849] ueventd: loading /devices/platform/pil_riva/pil3/firmware/wcnss.mdt took 417ms
+[   11.749458] ueventd: loading /devices/platform/pil_qdsp6v4.0/pil0/firmware/q6.b05 took 399ms
+[   11.767892] ueventd: firmware: loading 'q6.b06' for '/devices/platform/pil_qdsp6v4.0/pil0/firmware/q6.b06'
+[   11.801220] ueventd: firmware: loading 'wcnss.b02' for '/devices/platform/pil_riva/pil3/firmware/wcnss.b02'
+[   12.425057] ueventd: loading /devices/platform/pil_qdsp6v4.0/pil0/firmware/q6.b06 took 657ms
+[   12.426308] ueventd: loading /devices/platform/pil_riva/pil3/firmware/wcnss.b02 took 625ms
+[   12.470105] ueventd: firmware: loading 'wcnss.b04' for '/devices/platform/pil_riva/pil3/firmware/wcnss.b04'
+[   12.501846] ueventd: loading /devices/platform/pil_riva/pil3/firmware/wcnss.b04 took 33ms
+[   12.517930] ueventd: firmware: loading 'wcnss.b05' for '/devices/platform/pil_riva/pil3/firmware/wcnss.b05'
+[   12.699404] ueventd: loading /devices/platform/pil_riva/pil3/firmware/wcnss.b05 took 181ms
+[   12.731176] ueventd: firmware: loading 'wcnss.b06' for '/devices/platform/pil_riva/pil3/firmware/wcnss.b06'
+[   12.843949] ueventd: loading /devices/platform/pil_riva/pil3/firmware/wcnss.b06 took 113ms
+[   13.014375] pil pil0: q6: Brought out of reset
+[   13.019929] ueventd: firmware: loading 'modem_fw.mdt' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.mdt'
+[   13.053410] apr_tal:Q6 Is Up
+[   13.110209] pil pil3: wcnss: Brought out of reset
+[   13.133496] init: Service 'usbd' (pid 322) exited with status 0
+[   13.155379] init: Received control message 'interface_start' for 'android.hardware.media.c2@1.0::IComponentStore/default' from pid: 175 (/system/bin/hwservicemanager)
+[   13.155440] init: Could not find 'android.hardware.media.c2@1.0::IComponentStore/default' for ctl.interface_start
+[   13.158217] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.mdt took 138ms
+[   13.161391] init: Received control message 'interface_start' for 'android.hardware.usb.gadget@1.0::IUsbGadget/default' from pid: 175 (/system/bin/hwservicemanager)
+[   13.161422] init: Could not find 'android.hardware.usb.gadget@1.0::IUsbGadget/default' for ctl.interface_start
+[   13.187486] init: Received control message 'interface_start' for 'android.hardware.audio@5.0::IDevicesFactory/default' from pid: 175 (/system/bin/hwservicemanager)
+[   13.187547] init: Could not find 'android.hardware.audio@5.0::IDevicesFactory/default' for ctl.interface_start
+[   13.195635] ueventd: firmware: loading 'modem_fw.b02' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b02'
+[   13.199969] init: Received control message 'interface_start' for 'android.hardware.audio@4.0::IDevicesFactory/default' from pid: 175 (/system/bin/hwservicemanager)
+[   13.200030] init: Could not find 'android.hardware.audio@4.0::IDevicesFactory/default' for ctl.interface_start
+[   13.205859] init: Received control message 'interface_start' for 'android.hardware.keymaster@4.0::IKeymasterDevice/default' from pid: 175 (/system/bin/hwservicemanager)
+[   13.205920] init: Could not find 'android.hardware.keymaster@4.0::IKeymasterDevice/default' for ctl.interface_start
+[   13.244834] [CAMERA]][s5k3h5xa_sensor_power_up:460] ----Camera power on ----
+[   13.244925] [CAMERA]][s5k3h5xa_sensor_power_up:463] PMIC_MODEL_PM8917
+[   13.245078] 8917_l32: Failed to create debugfs directory
+[   13.245383] [CAMERA]][s5k3h5xa_sensor_power_up:496] [CAM_SENSOR_A2P8]::SET OK
+[   13.249595] [CAMERA]][s5k3h5xa_sensor_power_up:510] [CAM_CORE_EN::CAM_ISP_CORE_1P2::ret::1]::SET OK
+[   13.252922] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   13.257469] [CAMERA]][s5k3h5xa_sensor_power_up:529] [CAM_MCLK0::rc::0]::SET Ok
+[   13.258599] init: Received control message 'interface_start' for 'android.hardware.audio.effect@5.0::IEffectsFactory/default' from pid: 175 (/system/bin/hwservicemanager)
+[   13.258660] init: Could not find 'android.hardware.audio.effect@5.0::IEffectsFactory/default' for ctl.interface_start
+[   13.258782] 8917_l11: Failed to create debugfs directory
+[   13.259453] [CAMERA]][s5k3h5xa_sensor_power_up:541] [VREG_CAM_AF_2P8]::SET OK
+[   13.260796] 8917_l34: Failed to create debugfs directory
+[   13.261040] [CAMERA]][s5k3h5xa_sensor_power_up:553] [CAM_SENSOR_IO_1P8]::SET OK
+[   13.262261] [CAMERA]][s5k3h5xa_sensor_power_up:562] [GPIO_CAM1_RST_N]::SET OK
+[   13.264153] init: Received control message 'interface_start' for 'android.hardware.audio.effect@4.0::IEffectsFactory/default' from pid: 175 (/system/bin/hwservicemanager)
+[   13.264214] init: Could not find 'android.hardware.audio.effect@4.0::IEffectsFactory/default' for ctl.interface_start
+[   13.265527] [CAMERA]][s5k3h5xa_sensor_power_up:592] [return rc::0]::Success
+[   13.265924] msm_enqueue: queue eventdata new max is 1
+[   13.366763] q6asm_get_audio_client: invalid session: -1
+[   13.366885] audio client is null
+[   13.366915] msm_sec_sa_ep_get: sa_ep  ret=-1 score=0
+[   13.463177] wcnss_wlan_ctrl_probe: SMD ctrl channel up
+[   13.463970] wcnss: version 01040102
+[   13.464001] wcnss: schedule dnld work for riva
+[   13.464001] wcnss: NV download
+[   13.476758] ueventd: firmware: loading 'wlan/prima/WCNSS_qcom_wlan_nv.bin' for '/devices/platform/wcnss_wlan.0/firmware/wlan!prima!WCNSS_qcom_wlan_nv.bin'
+[   13.725652] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b02 took 530ms
+[   13.753425] ueventd: firmware: loading 'modem_fw.b03' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b03'
+[   13.884938] ueventd: loading /devices/platform/wcnss_wlan.0/firmware/wlan!prima!WCNSS_qcom_wlan_nv.bin took 408ms
+[   13.894368] wcnss: NV bin size: 29772, total_fragments: 10
+[   13.894430] wcnss: no space available for smd frame
+[   13.917320] wcnss: no space available for smd frame
+[   13.920952] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b03 took 168ms
+[   13.932000] ueventd: firmware: loading 'modem_fw.b04' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b04'
+[   13.940729] wcnss: no space available for smd frame
+[   13.954249] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b04 took 22ms
+[   13.958095] ueventd: firmware: loading 'modem_fw.b05' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b05'
+[   13.963985] wcnss: no space available for smd frame
+[   14.060857] msm_enqueue: queue control new max is 1
+[   14.100686] init: Received control message 'interface_start' for 'android.hardware.audio.effect@4.0::IEffectsFactory/default' from pid: 175 (/system/bin/hwservicemanager)
+[   14.100747] init: Could not find 'android.hardware.audio.effect@4.0::IEffectsFactory/default' for ctl.interface_start
+[   14.101754] init: Received control message 'interface_start' for 'android.hardware.audio.effect@5.0::IEffectsFactory/default' from pid: 175 (/system/bin/hwservicemanager)
+[   14.101785] init: Could not find 'android.hardware.audio.effect@5.0::IEffectsFactory/default' for ctl.interface_start
+[   14.249626] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b05 took 291ms
+[   14.258507] ueventd: firmware: loading 'modem_fw.b09' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b09'
+[   14.274561] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b09 took 16ms
+[   14.276026] ueventd: firmware: loading 'modem_fw.b10' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b10'
+[   14.431832] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b10 took 155ms
+[   14.449259] init: Received control message 'interface_start' for 'android.hardware.graphics.mapper@3.0::IMapper/default' from pid: 175 (/system/bin/hwservicemanager)
+[   14.449381] init: Could not find 'android.hardware.graphics.mapper@3.0::IMapper/default' for ctl.interface_start
+[   14.455272] ueventd: firmware: loading 'modem_fw.b11' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b11'
+[   14.494704] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b11 took 39ms
+[   14.502456] ueventd: firmware: loading 'modem_fw.b12' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b12'
+[   14.641507] [CAMERA]][msm_camera_flash_led:561] [led_state::3]
+[   14.641660] [CAMERA]][msm_camera_flash_led:564] [MSM_CAMERA_LED_INIT][MIC2871YMK]
+[   14.642240] imx175_spi_read_id: ReadID:0xf8, 0x12
+[   14.642392] imx175_spi_read : Enter - reg_addr : 0x40
+[   14.642575] imx175_spi_read : Enter - reg_addr : 0x1000
+[   14.642850] imx175_spi_read : Enter - reg_addr : 0x2000
+[   14.643064] imx175_spi_read : Enter - reg_addr : 0x300c
+[   14.648618] imx175_spi_read : Enter - reg_addr : 0x1200
+[   14.648954] imx175_spi_read : Enter - reg_addr : 0x1218
+[   14.654204] imx175_format_calibrationdata: is_all_supported= 1
+[   14.654295] [shchang : imx175_format_afdata] Little Endian!!
+[   14.654417] [shchang : imx175_format_wbdata] Little Endian!!
+[   14.737189] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b12 took 234ms
+[   14.749000] ueventd: firmware: loading 'modem_fw.b13' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b13'
+[   14.754494] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b13 took 5ms
+[   14.761300] ueventd: firmware: loading 'modem_fw.b15' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b15'
+[   14.900412] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b15 took 139ms
+[   14.905692] ueventd: firmware: loading 'modem_fw.b16' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b16'
+[   14.975247] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b16 took 69ms
+[   14.981535] ueventd: firmware: loading 'modem_fw.b17' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b17'
+[   15.015931] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b17 took 34ms
+[   15.018159] ueventd: firmware: loading 'modem_fw.b18' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b18'
+[   15.023226] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   15.249107] mdp_bus_scale_restore_request: ab=2000000000 ib=2000000000
+[   15.249259] mdp_bus_scale_restore_request: ab=2000000000 ib=2000000000
+[   15.277949] mipi_dsi_controller_cfg: DSI status=3020202 failed
+[   15.298153] mipi_dsi_controller_cfg: FIFO status=3020202 failed
+[   15.317808] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b18 took 299ms
+[   15.334686] ueventd: firmware: loading 'modem_fw.b23' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b23'
+[   15.342408] ************active_reset**************
+[   15.367465] active_reset: DISP_RST_GPIO high
+[   15.373081] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b23 took 39ms
+[   15.377414] ueventd: firmware: loading 'modem_fw.b24' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b24'
+[   15.382542] mipi_samsung_disp_on
+[   15.382542] mipi_samsung_disp_send_cmd cmd = 0x7
+[   15.382694] mipi_samsung_manufacture_id: manufacture_id1=41
+[   15.382786] mipi_samsung_manufacture_id: manufacture_id2=80
+[   15.382908] mipi_samsung_manufacture_id: manufacture_id3=7
+[   15.382908] mipi_samsung_manufacture_id: manufacture_id=418007
+[   15.382908] cmd_set_change : ldi_rev : G 
+[   15.383763] read_reg : C8[33] : 00 1c 00 2f 00 3f .62 60 62 5f 5d 5e .53 4f 52 5a 56 5a .69 66 69 69 69 6b .61 57 5c 50 33 5f .02 03 02 00 00 00 .
+[   15.384343] read_reg : B5[16] : 01 27 01 2b 01 29 .09 0b a7 0c 5a 21 .01 7c 7b 7d 00 00 .
+[   15.384739] read_reg : B6[12] : 7c 7b 7c 78 78 78 .7e 7e 7d 7d 7d 7d .
+[   15.384953] read_reg : B6[1] : 17 14 aa 64 2a 03 .
+[   15.384983] coordinate_tunning x : 2983, y : 3162, tune_number : 5
+[   15.384983] gamma_cell_determine ldi_revision: 0x418007
+[   15.385167] generate_gray_scale end
+[   15.386571] [lcd] mipi_samsung_disp_on
+[   15.386906] mipi_samsung_disp_send_cmd cmd = 0x2
+[   15.535785] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b24 took 160ms
+[   15.552083] ueventd: firmware: loading 'modem_fw.b25' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b25'
+[   15.653074] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b25 took 101ms
+[   15.653441] [mipi_samsung_late_init] ID : 0x418007
+[   15.653471] [mdnie lite] is negative Mode On = 0
+[   15.653471] [mdnie lite] negative off when resume, tuning again!
+[   15.653471] [mdnie lite] mDNIe_Set_Mode start , mode(0), background(1)
+[   15.653502] [mdnie lite]  = UI MODE =
+[   15.653502] [mdnie lite]  = STANDARD MODE =
+[   15.653502] [mdnie lite]  send tuning cmd!!
+[   15.666503] ueventd: firmware: loading 'modem_fw.b27' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b27'
+[   15.672516] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b27 took 6ms
+[   15.682313] ueventd: firmware: loading 'modem_fw.b28' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b28'
+[   15.686922] [mdnie lite] mDNIe_Set_Mode end , mode(0), background(1)
+[   15.686952] Atmel MXT336S 3-004a: mxt_start. but touch already on
+[   15.686952] input input10: tc360_resume, already enabled.
+[   15.686983] input input10: tc360_resume
+[   15.689241] hdmi_msm hdmi_msm.1: hdmi_msm_hpd_feature: 1
+[   15.813093] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b28 took 131ms
+[   15.836410] ueventd: firmware: loading 'modem_fw.b31' for '/devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b31'
+[   15.959468] ueventd: loading /devices/platform/pil_qdsp6v4.1/pil1/firmware/modem_fw.b31 took 126ms
+[   16.063177] init: Received control message 'start' for 'bootanim' from pid: 264 (/system/bin/surfaceflinger)
+[   16.063757] init: starting service 'bootanim'...
+[   16.073126] [CAMERA]][msm_camera_flash_led:561] [led_state::4]
+[   16.073645] [CAMERA]][MIC2871YMK_set_flash_flash:425] [teddy][Torch flash]OFF
+[   16.073798] [CAMERA]][msm_camera_flash_led:575] [MSM_CAMERA_LED_RELEASE][MIC2871YMK]
+[   16.113993] [CAMERA]][s5k3h5xa_sensor_power_down:636] ----Camera power off ----
+[   16.114054] [CAMERA]][s5k3h5xa_sensor_power_down:644] [GPIO_CAM1_RST_N]::OFF OK
+[   16.114268] 8917_l11: Failed to create debugfs directory
+[   16.114695] [CAMERA]][s5k3h5xa_sensor_power_down:653] [VREG_CAM_AF_2P8]::OFF OK
+[   16.119853] 8917_l34: Failed to create debugfs directory
+[   16.119884] [CAMERA]][s5k3h5xa_sensor_power_down:665] [CAM_SENSOR_IO_1P8]::OFF OK
+[   16.127147] [CAMERA]][s5k3h5xa_sensor_power_down:674] [CAM_CORE_EN::CAM_ISP_CORE_1P2::ret::0]::OFF OK
+[   16.132824] 8917_l32: Failed to create debugfs directory
+[   16.132855] [CAMERA]][s5k3h5xa_sensor_power_down:709] [CAM_SENSOR_A2P8]::OFF OK
+[   16.133801] pil pil1: modem_fw: Brought out of reset
+[   16.142682] msm_release_ion_client Calling ion_client_destroy
+[   16.143567] ueventd: firmware: loading 'modem.mdt' for '/devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.mdt'
+[   16.165786] ueventd: loading /devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.mdt took 22ms
+[   16.184159] ueventd: firmware: loading 'modem.b02' for '/devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b02'
+[   16.243277] 8917_l32: Failed to create debugfs directory
+[   16.243491] [S5K6A3YX] s5k6a3yx_sensor_power_up:[CAM_SENSOR_A2P8]::SET OK
+[   16.243491] 
+[   16.249473] [S5K6A3YX] s5k6a3yx_sensor_power_up:[CAM2_RST_N::ret::1]::Set OK
+[   16.249473] 
+[   16.251030] 8917_l34: Failed to create debugfs directory
+[   16.251243] [S5K6A3YX] s5k6a3yx_sensor_power_up:[CAM_SENSOR_IO_1P8]::SET OK
+[   16.251243] 
+[   16.259667] msm_enqueue: queue eventdata new max is 1
+[   16.262566] msm_enqueue: queue control new max is 1
+[   16.264855] [s5k6ayx] Start calibrating....
+[   16.265038] [s5k6ayx] uOPTData[0xa3d] = 0x1...Sum = 1...
+[   16.265191] [s5k6ayx] uOPTData[0xa3e] = 0x2...Sum = 3...
+[   16.265374] [s5k6ayx] uOPTData[0xa3f] = 0x1...Sum = 4...
+[   16.266259] [s5k6ayx] uOPTData[0xa40] = 0x0...Sum = 4...
+[   16.266412] ueventd: loading /devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b02 took 82ms
+[   16.266809] [s5k6ayx] uOPTData[0xa41] = 0x1...Sum = 5...
+[   16.267907] [s5k6ayx] uOPTData[0xa42] = 0x3...Sum = 8...
+[   16.268274] [s5k6ayx] Ajusting Calibration data to the sensor!!
+[   16.280756] ueventd: firmware: loading 'modem.b03' for '/devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b03'
+[   16.375949] ueventd: loading /devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b03 took 97ms
+[   16.385136] ueventd: firmware: loading 'modem.b04' for '/devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b04'
+[   16.406104] 8917_l34: Failed to create debugfs directory
+[   16.406104] [S5K6A3YX] s5k6a3yx_sensor_power_down:[CAM_SENSOR_IO_1P8]::OFF OK
+[   16.406104] 
+[   16.407477] [S5K6A3YX] s5k6a3yx_sensor_power_down:[CAM2_RST_N::ret::0]::OFF OK
+[   16.407477] 
+[   16.408698] 8917_l32: Failed to create debugfs directory
+[   16.408728] [S5K6A3YX] s5k6a3yx_sensor_power_down:[CAM_SENSOR_A2P8]::OFF OK
+[   16.408728] 
+[   16.409980] msm_release_ion_client Calling ion_client_destroy
+[   16.505936] 8917_l32: Failed to create debugfs directory
+[   16.506180] [S5K6A3YX] s5k6a3yx_sensor_power_up:[CAM_SENSOR_A2P8]::SET OK
+[   16.506180] 
+[   16.509262] [S5K6A3YX] s5k6a3yx_sensor_power_up:[CAM2_RST_N::ret::1]::Set OK
+[   16.509262] 
+[   16.511124] 8917_l34: Failed to create debugfs directory
+[   16.511338] [S5K6A3YX] s5k6a3yx_sensor_power_up:[CAM_SENSOR_IO_1P8]::SET OK
+[   16.511338] 
+[   16.522050] msm_enqueue: queue eventdata new max is 1
+[   16.524187] msm_enqueue: queue control new max is 1
+[   16.526903] [s5k6ayx] Start calibrating....
+[   16.527910] [s5k6ayx] uOPTData[0xa3d] = 0x1...Sum = 1...
+[   16.528094] [s5k6ayx] uOPTData[0xa3e] = 0x2...Sum = 3...
+[   16.528277] [s5k6ayx] uOPTData[0xa3f] = 0x1...Sum = 4...
+[   16.528429] [s5k6ayx] uOPTData[0xa40] = 0x0...Sum = 4...
+[   16.528612] [s5k6ayx] uOPTData[0xa41] = 0x1...Sum = 5...
+[   16.528857] [s5k6ayx] uOPTData[0xa42] = 0x3...Sum = 8...
+[   16.528979] [s5k6ayx] Ajusting Calibration data to the sensor!!
+[   16.653105] ueventd: loading /devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b04 took 268ms
+[   16.678376] ueventd: firmware: loading 'modem.b05' for '/devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b05'
+[   16.698458] 8917_l34: Failed to create debugfs directory
+[   16.698458] [S5K6A3YX] s5k6a3yx_sensor_power_down:[CAM_SENSOR_IO_1P8]::OFF OK
+[   16.698458] 
+[   16.699679] [S5K6A3YX] s5k6a3yx_sensor_power_down:[CAM2_RST_N::ret::0]::OFF OK
+[   16.699679] 
+[   16.701632] 8917_l32: Failed to create debugfs directory
+[   16.701663] [S5K6A3YX] s5k6a3yx_sensor_power_down:[CAM_SENSOR_A2P8]::OFF OK
+[   16.701663] 
+[   16.702914] msm_release_ion_client Calling ion_client_destroy
+[   16.712711] ueventd: loading /devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b05 took 34ms
+[   16.731329] ueventd: firmware: loading 'modem.b06' for '/devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b06'
+[   16.772684] [CAMERA]][s5k3h5xa_sensor_power_up:460] ----Camera power on ----
+[   16.772806] [CAMERA]][s5k3h5xa_sensor_power_up:463] PMIC_MODEL_PM8917
+[   16.772897] 8917_l32: Failed to create debugfs directory
+[   16.773203] [CAMERA]][s5k3h5xa_sensor_power_up:496] [CAM_SENSOR_A2P8]::SET OK
+[   16.774484] [CAMERA]][s5k3h5xa_sensor_power_up:510] [CAM_CORE_EN::CAM_ISP_CORE_1P2::ret::1]::SET OK
+[   16.775675] [CAMERA]][s5k3h5xa_sensor_power_up:529] [CAM_MCLK0::rc::0]::SET Ok
+[   16.777475] 8917_l11: Failed to create debugfs directory
+[   16.777994] [CAMERA]][s5k3h5xa_sensor_power_up:541] [VREG_CAM_AF_2P8]::SET OK
+[   16.779124] 8917_l34: Failed to create debugfs directory
+[   16.779337] [CAMERA]][s5k3h5xa_sensor_power_up:553] [CAM_SENSOR_IO_1P8]::SET OK
+[   16.780619] [CAMERA]][s5k3h5xa_sensor_power_up:562] [GPIO_CAM1_RST_N]::SET OK
+[   16.783732] [CAMERA]][s5k3h5xa_sensor_power_up:592] [return rc::0]::Success
+[   16.784343] msm_enqueue: queue eventdata new max is 1
+[   16.786876] msm_enqueue: queue control new max is 1
+[   16.793804] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   16.979032] init: Received control message 'interface_start' for 'android.hardware.graphics.mapper@3.0::IMapper/default' from pid: 175 (/system/bin/hwservicemanager)
+[   16.979093] init: Could not find 'android.hardware.graphics.mapper@3.0::IMapper/default' for ctl.interface_start
+[   17.117594] init: Received control message 'interface_start' for 'android.hardware.graphics.allocator@3.0::IAllocator/default' from pid: 175 (/system/bin/hwservicemanager)
+[   17.117656] init: Could not find 'android.hardware.graphics.allocator@3.0::IAllocator/default' for ctl.interface_start
+[   17.130840] init: Received control message 'interface_start' for 'android.hardware.graphics.mapper@3.0::IMapper/default' from pid: 175 (/system/bin/hwservicemanager)
+[   17.130901] init: Could not find 'android.hardware.graphics.mapper@3.0::IMapper/default' for ctl.interface_start
+[   17.159438] mdp4_overlay_borderfill_stage_up mixer(0) start
+[   17.159468] mdp4_overlay_borderfill_stage_up mixer(0) end
+[   17.163680] mdp4_overlay_mdp_perf_upd mdp clk is changed [1] from 0 to 59080000
+[   17.201007] ueventd: loading /devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b06 took 470ms
+[   17.237753] ueventd: firmware: loading 'modem.b07' for '/devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b07'
+[   17.316221] [CAMERA]][msm_camera_flash_led:561] [led_state::3]
+[   17.316313] [CAMERA]][msm_camera_flash_led:564] [MSM_CAMERA_LED_INIT][MIC2871YMK]
+[   17.316709] imx175_spi_read_id: ReadID:0xf8, 0x12
+[   17.316801] imx175_spi_read : Enter - reg_addr : 0x40
+[   17.317045] imx175_spi_read : Enter - reg_addr : 0x1000
+[   17.317289] imx175_spi_read : Enter - reg_addr : 0x2000
+[   17.317533] imx175_spi_read : Enter - reg_addr : 0x300c
+[   17.322997] imx175_spi_read : Enter - reg_addr : 0x1200
+[   17.323576] imx175_spi_read : Enter - reg_addr : 0x1218
+[   17.330108] imx175_format_calibrationdata: is_all_supported= 1
+[   17.330260] [shchang : imx175_format_afdata] Little Endian!!
+[   17.330321] [shchang : imx175_format_wbdata] Little Endian!!
+[   17.392583] ueventd: loading /devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b07 took 155ms
+[   17.410926] ueventd: firmware: loading 'modem.b08' for '/devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b08'
+[   17.458477] ueventd: loading /devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b08 took 48ms
+[   17.505631] ueventd: firmware: loading 'modem.b09' for '/devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b09'
+[   17.520219] ueventd: loading /devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b09 took 15ms
+[   17.526629] ueventd: firmware: loading 'modem.b10' for '/devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b10'
+[   17.526629] [CAMERA]][msm_camera_flash_led:561] [led_state::4]
+[   17.527086] [CAMERA]][MIC2871YMK_set_flash_flash:425] [teddy][Torch flash]OFF
+[   17.530932] [CAMERA]][msm_camera_flash_led:575] [MSM_CAMERA_LED_RELEASE][MIC2871YMK]
+[   17.562643] ueventd: loading /devices/platform/pil_qdsp6v4.2/pil2/firmware/modem.b10 took 36ms
+[   17.566305] [CAMERA]][s5k3h5xa_sensor_power_down:636] ----Camera power off ----
+[   17.566488] [CAMERA]][s5k3h5xa_sensor_power_down:644] [GPIO_CAM1_RST_N]::OFF OK
+[   17.566671] 8917_l11: Failed to create debugfs directory
+[   17.571249] [CAMERA]][s5k3h5xa_sensor_power_down:653] [VREG_CAM_AF_2P8]::OFF OK
+[   17.585380] 8917_l34: Failed to create debugfs directory
+[   17.585380] [CAMERA]][s5k3h5xa_sensor_power_down:665] [CAM_SENSOR_IO_1P8]::OFF OK
+[   17.593712] [CAMERA]][s5k3h5xa_sensor_power_down:674] [CAM_CORE_EN::CAM_ISP_CORE_1P2::ret::0]::OFF OK
+[   17.603113] 8917_l32: Failed to create debugfs directory
+[   17.603143] [CAMERA]][s5k3h5xa_sensor_power_down:709] [CAM_SENSOR_A2P8]::OFF OK
+[   17.608362] msm_release_ion_client Calling ion_client_destroy
+[   18.575186] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   19.241110] pil pil2: modem: Brought out of reset
+[   19.992339] Notify: smsm init
+[   20.597253] dummy0: no IPv6 routers present
+[   20.845750] init: Received control message 'interface_start' for 'android.hardware.power.stats@1.0::IPowerStats/default' from pid: 175 (/system/bin/hwservicemanager)
+[   20.845841] init: Could not find 'android.hardware.power.stats@1.0::IPowerStats/default' for ctl.interface_start
+[   21.221883] brightness_control mipi_pd.brightness_level : 0 candela : 98
+[   21.221883] mipi_samsung_disp_send_cmd cmd = 0x6
+[   21.253135] mipi_samsung_disp_backlight 102
+[   21.514298] apr_tal:Modem Is Up
+[   22.138165] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[   23.487349] wcnss_post_bootup: Cancel APPS vote for Iris & Riva
+[   23.784037] sps:BAM 0x124c2000 is registered.
+[   23.786906] sps:BAM 0x124c2000 enabled: ver:0x5, number of pipes:6
+[   23.907767] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   24.127178] init: Received control message 'start' for 'idmap2d' from pid: 498 (system_server)
+[   24.317350] smd_pkt_open: DATA17_CNTL open failed -19
+[   24.465069] init: Received control message 'interface_start' for 'android.hardware.sensors@2.0::ISensors/default' from pid: 175 (/system/bin/hwservicemanager)
+[   24.465130] init: Could not find 'android.hardware.sensors@2.0::ISensors/default' for ctl.interface_start
+[   24.903677] 8917_l33: Failed to create debugfs directory
+[   24.918113] init: Received control message 'interface_start' for 'android.hardware.vibrator@1.3::IVibrator/default' from pid: 175 (/system/bin/hwservicemanager)
+[   24.918205] init: Could not find 'android.hardware.vibrator@1.3::IVibrator/default' for ctl.interface_start
+[   25.482893] init: Received control message 'interface_start' for 'android.hardware.input.classifier@1.0::IInputClassifier/default' from pid: 175 (/system/bin/hwservicemanager)
+[   25.482954] init: Could not find 'android.hardware.input.classifier@1.0::IInputClassifier/default' for ctl.interface_start
+[   25.633175] init: processing action (sys.sysctl.extra_free_kbytes=*) from (/init.rc:819)
+[   25.678315] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   25.816450] init: Received control message 'interface_start' for 'android.hardware.boot@1.0::IBootControl/default' from pid: 175 (/system/bin/hwservicemanager)
+[   25.816511] init: Could not find 'android.hardware.boot@1.0::IBootControl/default' for ctl.interface_start
+[   25.854661] init: Received control message 'interface_start' for 'android.hardware.oemlock@1.0::IOemLock/default' from pid: 175 (/system/bin/hwservicemanager)
+[   25.854723] init: Could not find 'android.hardware.oemlock@1.0::IOemLock/default' for ctl.interface_start
+[   26.759407] binder: 174:174 BC_REQUEST_DEATH_NOTIFICATION death notification already set
+[   26.982420] init: Received control message 'interface_start' for 'android.hardware.usb.gadget@1.0::IUsbGadget/default' from pid: 175 (/system/bin/hwservicemanager)
+[   26.982450] init: Could not find 'android.hardware.usb.gadget@1.0::IUsbGadget/default' for ctl.interface_start
+[   27.025911] acc_open
+[   27.025942] acc_release
+[   27.234732] type=1400 audit(1794305677.038:4): avc: denied { read } for comm="Binder:179_2" name="/" dev="mmcblk0p19" ino=2 scontext=u:r:vold:s0 tcontext=u:object_r:persist_data_file:s0 tclass=dir permissive=0
+[   27.448893] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   27.588493] init: Received control message 'interface_start' for 'vendor.lineage.trust@1.0::IUsbRestrict/default' from pid: 175 (/system/bin/hwservicemanager)
+[   27.588524] init: Could not find 'vendor.lineage.trust@1.0::IUsbRestrict/default' for ctl.interface_start
+[   27.653410] init: Received control message 'interface_start' for 'android.hardware.weaver@1.0::IWeaver/default' from pid: 175 (/system/bin/hwservicemanager)
+[   27.653532] init: Could not find 'android.hardware.weaver@1.0::IWeaver/default' for ctl.interface_start
+[   27.661498] init: Received control message 'interface_start' for 'android.hardware.authsecret@1.0::IAuthSecret/default' from pid: 175 (/system/bin/hwservicemanager)
+[   27.661590] init: Could not find 'android.hardware.authsecret@1.0::IAuthSecret/default' for ctl.interface_start
+[   27.933160] tc360 16-0020: tc360_led_set: ignore LED control (set same brightness)
+[   28.127941] init: Received control message 'interface_start' for 'android.hardware.thermal@2.0::IThermal/default' from pid: 175 (/system/bin/hwservicemanager)
+[   28.128002] init: Could not find 'android.hardware.thermal@2.0::IThermal/default' for ctl.interface_start
+[   28.133557] init: Received control message 'interface_start' for 'android.hardware.thermal@1.1::IThermal/default' from pid: 175 (/system/bin/hwservicemanager)
+[   28.133618] init: Could not find 'android.hardware.thermal@1.1::IThermal/default' for ctl.interface_start
+[   28.164260] init: Received control message 'interface_start' for 'vendor.lineage.touch@1.0::IStylusMode/default' from pid: 175 (/system/bin/hwservicemanager)
+[   28.164321] init: Could not find 'vendor.lineage.touch@1.0::IStylusMode/default' for ctl.interface_start
+[   28.164718] init: Received control message 'interface_start' for 'vendor.lineage.touch@1.0::IGloveMode/default' from pid: 175 (/system/bin/hwservicemanager)
+[   28.164779] init: Could not find 'vendor.lineage.touch@1.0::IGloveMode/default' for ctl.interface_start
+[   28.757576] msm_vidc_dec: Inside vid_dec_open()
+[   28.757576] 
+[   28.757576] res_trk_download_firmware(): Request firmware download
+[   28.770028] ueventd: firmware: loading 'vidc_1080p.fw' for '/devices/platform/msm_vidc.0/firmware/vidc_1080p.fw'
+[   28.803052] ueventd: loading /devices/platform/msm_vidc.0/firmware/vidc_1080p.fw took 33ms
+[   28.804669] 
+[   28.804669] VIDC: vidc_freq = 266670000, req_perf_lvl = 244801, set_perf_lvl = 244801
+[   28.814649] 
+[   28.814649] <ERROR>: fw_version 9:23:2014
+[   28.820753] msm_vidc_dec: Inside vid_dec_release()
+[   28.833419] msm_vidc_dec: Return from vid_dec_release()
+[   28.852556] msm_vidc_dec: Inside vid_dec_open()
+[   28.854387] 
+[   28.854387] VIDC: vidc_freq = 266670000, req_perf_lvl = 244801, set_perf_lvl = 244801
+[   28.864184] 
+[   28.864214] <ERROR>: fw_version 9:23:2014
+[   28.873126] msm_vidc_dec: Inside vid_dec_release()
+[   28.881825] msm_vidc_dec: Return from vid_dec_release()
+[   28.939356] msm_vidc_dec: Inside vid_dec_open()
+[   28.945032] 
+[   28.945032] VIDC: vidc_freq = 266670000, req_perf_lvl = 244801, set_perf_lvl = 244801
+[   28.957881] 
+[   28.957881] <ERROR>: fw_version 9:23:2014
+[   28.976010] msm_vidc_dec: Inside vid_dec_release()
+[   28.993987] msm_vidc_dec: Return from vid_dec_release()
+[   28.997344] msm_vidc_dec: Inside vid_dec_open()
+[   28.998626] 
+[   28.998626] VIDC: vidc_freq = 266670000, req_perf_lvl = 244801, set_perf_lvl = 244801
+[   29.010926] 
+[   29.010926] <ERROR>: fw_version 9:23:2014
+[   29.023836] msm_vidc_dec: Inside vid_dec_release()
+[   29.037417] msm_vidc_dec: Return from vid_dec_release()
+[   29.055241] init: Received control message 'interface_start' for 'android.hardware.gnss@2.0::IGnss/default' from pid: 175 (/system/bin/hwservicemanager)
+[   29.055302] init: Could not find 'android.hardware.gnss@2.0::IGnss/default' for ctl.interface_start
+[   29.064947] init: Received control message 'interface_start' for 'android.hardware.gnss@1.1::IGnss/default' from pid: 175 (/system/bin/hwservicemanager)
+[   29.065008] init: Could not find 'android.hardware.gnss@1.1::IGnss/default' for ctl.interface_start
+[   29.120158] msm_vidc_venc: Inside vid_enc_open()
+[   29.120158] 
+[   29.120158] msm_vidc_enc: Inside vid_enc_open_client()
+[   29.122447] 
+[   29.122447] VIDC: vidc_freq = 266670000, req_perf_lvl = 244801, set_perf_lvl = 244801
+[   29.130901] 
+[   29.130901] <ERROR>: fw_version 9:23:2014
+[   29.136303] 
+[   29.136303] msm_vidc_enc: Inside vid_enc_release()
+[   29.136303] 
+[   29.136303] msm_vidc_enc: Inside vid_enc_close_client()
+[   29.147962] 
+[   29.147962] msm_vidc_enc: Return from vid_enc_release()
+[   29.172379] msm_vidc_venc: Inside vid_enc_open()
+[   29.172379] 
+[   29.172379] msm_vidc_enc: Inside vid_enc_open_client()
+[   29.173599] 
+[   29.173630] VIDC: vidc_freq = 266670000, req_perf_lvl = 244801, set_perf_lvl = 244801
+[   29.184220] 
+[   29.184220] <ERROR>: fw_version 9:23:2014
+[   29.190202] 
+[   29.190202] msm_vidc_enc: Inside vid_enc_release()
+[   29.190202] 
+[   29.190202] msm_vidc_enc: Inside vid_enc_close_client()
+[   29.200274] 
+[   29.200274] msm_vidc_enc: Return from vid_enc_release()
+[   29.220387] msm_vidc_venc: Inside vid_enc_open()
+[   29.220387] 
+[   29.220387] msm_vidc_enc: Inside vid_enc_open_client()
+[   29.223073] 
+[   29.223073] VIDC: vidc_freq = 266670000, req_perf_lvl = 244801, set_perf_lvl = 244801
+[   29.230276] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[   29.237662] 
+[   29.237692] <ERROR>: fw_version 9:23:2014
+[   29.244285] 
+[   29.244285] msm_vidc_enc: Inside vid_enc_release()
+[   29.244315] 
+[   29.244315] msm_vidc_enc: Inside vid_enc_close_client()
+[   29.257042] 
+[   29.257042] msm_vidc_enc: Return from vid_enc_release()
+[   30.017823] init: Received control message 'interface_start' for 'android.hardware.input.classifier@1.0::IInputClassifier/default' from pid: 175 (/system/bin/hwservicemanager)
+[   30.017884] init: Could not find 'android.hardware.input.classifier@1.0::IInputClassifier/default' for ctl.interface_start
+[   31.067022] init: Received control message 'interface_start' for 'android.hardware.graphics.mapper@3.0::IMapper/default' from pid: 175 (/system/bin/hwservicemanager)
+[   31.067083] init: Could not find 'android.hardware.graphics.mapper@3.0::IMapper/default' for ctl.interface_start
+[   31.391149] init: Received control message 'interface_start' for 'android.hardware.radio@1.3::IRadio/slot1' from pid: 175 (/system/bin/hwservicemanager)
+[   31.391210] init: Could not find 'android.hardware.radio@1.3::IRadio/slot1' for ctl.interface_start
+[   31.396398] init: Received control message 'interface_start' for 'android.hardware.radio@1.2::IRadio/slot1' from pid: 175 (/system/bin/hwservicemanager)
+[   31.396429] init: Could not find 'android.hardware.radio@1.2::IRadio/slot1' for ctl.interface_start
+[   31.397008] init: Received control message 'interface_start' for 'android.hardware.radio@1.4::IRadio/slot1' from pid: 175 (/system/bin/hwservicemanager)
+[   31.397039] init: Could not find 'android.hardware.radio@1.4::IRadio/slot1' for ctl.interface_start
+[   32.774729] init: Received control message 'interface_start' for 'android.hardware.radio.config@1.1::IRadioConfig/default' from pid: 175 (/system/bin/hwservicemanager)
+[   32.774790] init: Could not find 'android.hardware.radio.config@1.1::IRadioConfig/default' for ctl.interface_start
+[   32.775339] init: Received control message 'interface_start' for 'android.hardware.radio.config@1.0::IRadioConfig/default' from pid: 175 (/system/bin/hwservicemanager)
+[   32.775400] init: Could not find 'android.hardware.radio.config@1.0::IRadioConfig/default' for ctl.interface_start
+[   33.017060] init: Received control message 'interface_start' for 'android.hardware.radio.config@1.1::IRadioConfig/default' from pid: 175 (/system/bin/hwservicemanager)
+[   33.017121] init: Could not find 'android.hardware.radio.config@1.1::IRadioConfig/default' for ctl.interface_start
+[   33.036777] init: Received control message 'interface_start' for 'android.hardware.radio.config@1.0::IRadioConfig/default' from pid: 175 (/system/bin/hwservicemanager)
+[   33.037631] init: Could not find 'android.hardware.radio.config@1.0::IRadioConfig/default' for ctl.interface_start
+[   33.042240] init: Received control message 'interface_start' for 'android.hardware.radio.config@1.0::IRadioConfig/default' from pid: 175 (/system/bin/hwservicemanager)
+[   33.042301] init: Could not find 'android.hardware.radio.config@1.0::IRadioConfig/default' for ctl.interface_start
+[   33.044346] init: Received control message 'interface_start' for 'android.hardware.radio.config@1.1::IRadioConfig/default' from pid: 175 (/system/bin/hwservicemanager)
+[   33.044407] init: Could not find 'android.hardware.radio.config@1.1::IRadioConfig/default' for ctl.interface_start
+[   33.552662] [CAMERA]][s5k3h5xa_sensor_power_up:460] ----Camera power on ----
+[   33.552846] [CAMERA]][s5k3h5xa_sensor_power_up:463] PMIC_MODEL_PM8917
+[   33.552998] 8917_l32: Failed to create debugfs directory
+[   33.553273] [CAMERA]][s5k3h5xa_sensor_power_up:496] [CAM_SENSOR_A2P8]::SET OK
+[   33.554768] [CAMERA]][s5k3h5xa_sensor_power_up:510] [CAM_CORE_EN::CAM_ISP_CORE_1P2::ret::1]::SET OK
+[   33.556172] [CAMERA]][s5k3h5xa_sensor_power_up:529] [CAM_MCLK0::rc::0]::SET Ok
+[   33.557576] 8917_l11: Failed to create debugfs directory
+[   33.558248] [CAMERA]][s5k3h5xa_sensor_power_up:541] [VREG_CAM_AF_2P8]::SET OK
+[   33.559346] 8917_l34: Failed to create debugfs directory
+[   33.559591] [CAMERA]][s5k3h5xa_sensor_power_up:553] [CAM_SENSOR_IO_1P8]::SET OK
+[   33.560811] [CAMERA]][s5k3h5xa_sensor_power_up:562] [GPIO_CAM1_RST_N]::SET OK
+[   33.563955] [CAMERA]][s5k3h5xa_sensor_power_up:592] [return rc::0]::Success
+[   33.564413] msm_enqueue: queue eventdata new max is 1
+[   33.573203] msm_enqueue: queue control new max is 1
+[   34.105386] [CAMERA]][msm_camera_flash_led:561] [led_state::3]
+[   34.105508] [CAMERA]][msm_camera_flash_led:564] [MSM_CAMERA_LED_INIT][MIC2871YMK]
+[   34.105997] imx175_spi_read_id: ReadID:0xf8, 0x12
+[   34.106119] imx175_spi_read : Enter - reg_addr : 0x40
+[   34.106332] imx175_spi_read : Enter - reg_addr : 0x1000
+[   34.106668] imx175_spi_read : Enter - reg_addr : 0x2000
+[   34.106912] imx175_spi_read : Enter - reg_addr : 0x300c
+[   34.114390] imx175_spi_read : Enter - reg_addr : 0x1200
+[   34.114634] imx175_spi_read : Enter - reg_addr : 0x1218
+[   34.122020] imx175_format_calibrationdata: is_all_supported= 1
+[   34.122081] [shchang : imx175_format_afdata] Little Endian!!
+[   34.122234] [shchang : imx175_format_wbdata] Little Endian!!
+[   34.239523] [CAMERA]][msm_camera_flash_led:561] [led_state::4]
+[   34.240103] [CAMERA]][MIC2871YMK_set_flash_flash:425] [teddy][Torch flash]OFF
+[   34.240195] [CAMERA]][msm_camera_flash_led:575] [MSM_CAMERA_LED_RELEASE][MIC2871YMK]
+[   34.270685] [CAMERA]][s5k3h5xa_sensor_power_down:636] ----Camera power off ----
+[   34.270837] [CAMERA]][s5k3h5xa_sensor_power_down:644] [GPIO_CAM1_RST_N]::OFF OK
+[   34.274072] 8917_l11: Failed to create debugfs directory
+[   34.275812] [CAMERA]][s5k3h5xa_sensor_power_down:653] [VREG_CAM_AF_2P8]::OFF OK
+[   34.281001] 8917_l34: Failed to create debugfs directory
+[   34.281001] [CAMERA]][s5k3h5xa_sensor_power_down:665] [CAM_SENSOR_IO_1P8]::OFF OK
+[   34.286586] [CAMERA]][s5k3h5xa_sensor_power_down:674] [CAM_CORE_EN::CAM_ISP_CORE_1P2::ret::0]::OFF OK
+[   34.291744] 8917_l32: Failed to create debugfs directory
+[   34.291774] [CAMERA]][s5k3h5xa_sensor_power_down:709] [CAM_SENSOR_A2P8]::OFF OK
+[   34.297329] msm_release_ion_client Calling ion_client_destroy
+[   34.392247] init: Received control message 'interface_start' for 'vendor.lineage.camera.motor@1.0::ICameraMotor/default' from pid: 175 (/system/bin/hwservicemanager)
+[   34.392278] init: Could not find 'vendor.lineage.camera.motor@1.0::ICameraMotor/default' for ctl.interface_start
+[   34.412421] init: Received control message 'stop' for 'idmap2d' from pid: 498 (system_server)
+[   34.412452] init: Sending signal 9 to service 'idmap2d' (pid 290) process group...
+[   34.418525] libprocessgroup: Successfully killed process cgroup uid 1000 pid 290 in 5ms
+[   34.439371] init: Service 'idmap2d' (pid 290) received signal 9
+[   34.563222] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   34.924217] init: Received control message 'start' for 'idmap2d' from pid: 498 (system_server)
+[   34.924797] init: starting service 'idmap2d'...
+[   35.161086] init: Received control message 'interface_start' for 'vendor.lineage.trust@1.0::IUsbRestrict/default' from pid: 175 (/system/bin/hwservicemanager)
+[   35.161147] init: Could not find 'vendor.lineage.trust@1.0::IUsbRestrict/default' for ctl.interface_start
+[   35.398290] init: Received control message 'interface_start' for 'android.hardware.graphics.mapper@3.0::IMapper/default' from pid: 175 (/system/bin/hwservicemanager)
+[   35.398351] init: Could not find 'android.hardware.graphics.mapper@3.0::IMapper/default' for ctl.interface_start
+[   36.333312] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   36.430215] mpu6500_input_accel_delay_store : delay = 66
+[   36.431252] accel_open_calibration: Can't open calibration file
+[   36.431374] mpu6500_input_accel_enable_store : enable = 1
+[   36.786235] init: Received control message 'interface_start' for 'android.hardware.graphics.allocator@3.0::IAllocator/default' from pid: 175 (/system/bin/hwservicemanager)
+[   36.786296] init: Could not find 'android.hardware.graphics.allocator@3.0::IAllocator/default' for ctl.interface_start
+[   36.827529] init: processing action (service.bootanim.exit=1) from (/vendor/etc/init/vendor.lineage.livedisplay@2.0-service.serrano.rc:15)
+[   36.828506] init: starting service 'vendor.livedisplay-hal-2-0-serrano'...
+[   36.901693] [mdnie lite] set background mode : 0
+[   36.901785] [mdnie lite]  mode_store, input background(0)
+[   36.901907] [mdnie lite] mDNIe_Set_Mode start , mode(0), background(0)
+[   36.901999] [mdnie lite]  = UI MODE =
+[   36.902060] [mdnie lite]  = DYNAMIC MODE =
+[   36.902182] [mdnie lite]  send tuning cmd!!
+[   36.952876] [mdnie lite] mDNIe_Set_Mode end , mode(0), background(0)
+[   38.103799] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   39.885395] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   41.677186] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   41.699954] init: Service 'bootanim' (pid 440) exited with status 0
+[   41.831588] init: processing action (service.bootanim.exit=1) from (/vendor/etc/init/vendor.lineage.livedisplay@2.0-service.serrano.rc:15)
+[   41.873432] brightness_control mipi_pd.brightness_level : 98 candela : 105
+[   41.873462] mipi_samsung_disp_send_cmd cmd = 0x6
+[   41.902151] mipi_samsung_disp_backlight 105
+[   41.906790] brightness_control mipi_pd.brightness_level : 105 candela : 105
+[   41.906821] mipi_samsung_disp_send_cmd cmd = 0x6
+[   41.921928] init: Received control message 'interface_start' for 'vendor.lineage.livedisplay@2.0::IColorEnhancement/default' from pid: 175 (/system/bin/hwservicemanager)
+[   41.922142] init: Could not find 'vendor.lineage.livedisplay@2.0::IColorEnhancement/default' for ctl.interface_start
+[   41.923790] init: Received control message 'interface_start' for 'vendor.lineage.livedisplay@2.0::IReadingEnhancement/default' from pid: 175 (/system/bin/hwservicemanager)
+[   41.923851] init: Could not find 'vendor.lineage.livedisplay@2.0::IReadingEnhancement/default' for ctl.interface_start
+[   41.928216] init: Received control message 'interface_start' for 'vendor.lineage.livedisplay@2.0::IAutoContrast/default' from pid: 175 (/system/bin/hwservicemanager)
+[   41.928277] init: Could not find 'vendor.lineage.livedisplay@2.0::IAutoContrast/default' for ctl.interface_start
+[   41.935022] init: Received control message 'interface_start' for 'vendor.lineage.livedisplay@2.0::IColorBalance/default' from pid: 175 (/system/bin/hwservicemanager)
+[   41.935083] init: Could not find 'vendor.lineage.livedisplay@2.0::IColorBalance/default' for ctl.interface_start
+[   41.935479] mipi_samsung_disp_backlight 108
+[   41.937524] brightness_control mipi_pd.brightness_level : 105 candela : 111
+[   41.937555] mipi_samsung_disp_send_cmd cmd = 0x6
+[   41.940729] init: Received control message 'interface_start' for 'vendor.lineage.livedisplay@2.0::IAdaptiveBacklight/default' from pid: 175 (/system/bin/hwservicemanager)
+[   41.940790] init: Could not find 'vendor.lineage.livedisplay@2.0::IAdaptiveBacklight/default' for ctl.interface_start
+[   41.942743] sdcardfs version 2.0
+[   41.942774] sdcardfs: dev_name -> /data/media
+[   41.942774] sdcardfs: options -> fsuid=1023,fsgid=1023,multiuser,derive_gid,default_normal,unshared_obb,mask=6,userid=0,gid=1015
+[   41.942774] sdcardfs: mnt -> d5b91850
+[   41.942835] sdcardfs: mounted on top of /data/media type ext4
+[   41.942987] SELinux: initialized (dev sdcardfs, type sdcardfs), uses genfs_contexts
+[   41.943506] Remount options were mask=23,gid=9997 for vfsmnt d6025190.
+[   41.943506] sdcardfs : options - debug:1
+[   41.943506] sdcardfs : options - gid:9997
+[   41.943506] sdcardfs : options - mask:23
+[   41.943781] Remount options were mask=7,gid=9997 for vfsmnt d70dce50.
+[   41.943781] sdcardfs : options - debug:1
+[   41.943781] sdcardfs : options - gid:9997
+[   41.943781] sdcardfs : options - mask:7
+[   41.948786] Remount options were mask=7,gid=9997 for vfsmnt d533dc10.
+[   41.948786] sdcardfs : options - debug:1
+[   41.948786] sdcardfs : options - gid:9997
+[   41.948817] sdcardfs : options - mask:7
+[   41.953212] init: Received control message 'interface_start' for 'vendor.lineage.livedisplay@2.0::IPictureAdjustment/default' from pid: 175 (/system/bin/hwservicemanager)
+[   41.954310] init: Could not find 'vendor.lineage.livedisplay@2.0::IPictureAdjustment/default' for ctl.interface_start
+[   41.961208] mipi_samsung_auto_brightness_store : skip first auto brightness store (0) (114)!!
+[   41.961330] [mdnie lite] outdoor value = 0, scenario = 0
+[   41.961483] [mdnie lite] mDNIe_Set_Mode start , mode(0), background(0)
+[   41.961544] [mdnie lite]  = UI MODE =
+[   41.961696] [mdnie lite]  = DYNAMIC MODE =
+[   41.967037] init: processing action (sys.boot_completed=1) from (/init.rc:810)
+[   41.967831] init: starting service 'exec 11 (/bin/rm -rf /data/per_boot)'...
+[   41.968808] mipi_samsung_disp_backlight 114
+[   41.969632] [mdnie lite]  send tuning cmd!!
+[   41.974820] brightness_control mipi_pd.brightness_level : 111 candela : 119
+[   41.974820] mipi_samsung_disp_send_cmd cmd = 0x6
+[   41.980772] selinux: SELinux: Skipping restorecon on directory(/data/system_ce/0)
+[   41.980772] 
+[   41.985655] selinux: SELinux: Skipping restorecon on directory(/data/vendor_ce/0)
+[   41.985655] 
+[   41.990843] selinux: SELinux: Skipping restorecon on directory(/data/misc_ce/0)
+[   41.990874] 
+[   42.010804] init: SVC_EXEC service 'exec 11 (/bin/rm -rf /data/per_boot)' pid 1163 (uid 1000 gid 1000+0 context default) started; waiting...
+[   42.018861] [mdnie lite] mDNIe_Set_Mode end , mode(0), background(0)
+[   42.052128] mipi_samsung_disp_backlight 120
+[   42.056371] brightness_control mipi_pd.brightness_level : 119 candela : 134
+[   42.056401] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.074317] brightness_control mipi_pd.brightness_level : 134 candela : 134
+[   42.074317] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.086586] mipi_samsung_disp_backlight 135
+[   42.089913] brightness_control mipi_pd.brightness_level : 134 candela : 143
+[   42.089913] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.118815] mipi_samsung_disp_backlight 144
+[   42.118815] mipi_samsung_auto_brightness_store : 0
+[   42.119059] [mdnie lite] outdoor value = 0, scenario = 0
+[   42.119151] [mdnie lite] mDNIe_Set_Mode start , mode(0), background(0)
+[   42.119273] [mdnie lite]  = UI MODE =
+[   42.119334] [mdnie lite]  = DYNAMIC MODE =
+[   42.136487] mipi_samsung_disp_backlight 144
+[   42.136975] [mdnie lite]  send tuning cmd!!
+[   42.139081] brightness_control mipi_pd.brightness_level : 143 candela : 152
+[   42.139081] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.168869] [mdnie lite] mDNIe_Set_Mode end , mode(0), background(0)
+[   42.171829] init: Service 'exec 11 (/bin/rm -rf /data/per_boot)' (pid 1163) exited with status 0 waiting took 0.195000 seconds
+[   42.173355] init: processing action (sys.boot_completed=1) from (/vendor/etc/init/hw/init.qcom.rc:605)
+[   42.174332] brightness_control mipi_pd.brightness_level : 152 candela : 152
+[   42.174332] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.174881] init: starting service 'qcom-audio'...
+[   42.189989] init: starting service 'exec 12 (/vendor/bin/dumpsys deviceidle whitelist +com.android.deskclock)'...
+[   42.202166] mipi_samsung_disp_backlight 153
+[   42.204669] brightness_control mipi_pd.brightness_level : 152 candela : 162
+[   42.204700] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.207782] init: SVC_EXEC service 'exec 12 (/vendor/bin/dumpsys deviceidle whitelist +com.android.deskclock)' pid 1188 (uid 0 gid 0+0 context u:r:vendor_init:s0) started; waiting...
+[   42.219044] mipi_samsung_disp_backlight 162
+[   42.219075] mipi_samsung_auto_brightness_store : 0
+[   42.219258] [mdnie lite] outdoor value = 0, scenario = 0
+[   42.219319] [mdnie lite] mDNIe_Set_Mode start , mode(0), background(0)
+[   42.219471] [mdnie lite]  = UI MODE =
+[   42.219533] [mdnie lite]  = DYNAMIC MODE =
+[   42.219624] [mdnie lite]  send tuning cmd!!
+[   42.252189] [mdnie lite] mDNIe_Set_Mode end , mode(0), background(0)
+[   42.256889] brightness_control mipi_pd.brightness_level : 162 candela : 162
+[   42.256889] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.285487] mipi_samsung_disp_backlight 162
+[   42.289638] brightness_control mipi_pd.brightness_level : 162 candela : 172
+[   42.289668] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.318785] mipi_samsung_disp_backlight 177
+[   42.318815] mipi_samsung_auto_brightness_store : 0
+[   42.318998] [mdnie lite] outdoor value = 0, scenario = 0
+[   42.319121] [mdnie lite] mDNIe_Set_Mode start , mode(0), background(0)
+[   42.319212] [mdnie lite]  = UI MODE =
+[   42.319334] [mdnie lite]  = DYNAMIC MODE =
+[   42.319426] [mdnie lite]  send tuning cmd!!
+[   42.352235] [mdnie lite] mDNIe_Set_Mode end , mode(0), background(0)
+[   42.360994] init: Service 'exec 12 (/vendor/bin/dumpsys deviceidle whitelist +com.android.deskclock)' (pid 1188) exited with status 0 waiting took 0.169000 seconds
+[   42.361635] init: starting service 'exec 13 (/vendor/bin/dumpsys deviceidle whitelist +com.android.messaging)'...
+[   42.374149] init: SVC_EXEC service 'exec 13 (/vendor/bin/dumpsys deviceidle whitelist +com.android.messaging)' pid 1193 (uid 0 gid 0+0 context u:r:vendor_init:s0) started; waiting...
+[   42.385472] mipi_samsung_disp_backlight 177
+[   42.386967] 'created /dev/adsprpc-smd c 235 0'
+[   42.387852] brightness_control mipi_pd.brightness_level : 172 candela : 195
+[   42.387852] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.418800] mipi_samsung_disp_backlight 195
+[   42.421516] brightness_control mipi_pd.brightness_level : 195 candela : 195
+[   42.421547] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.440286] init: Service 'exec 13 (/vendor/bin/dumpsys deviceidle whitelist +com.android.messaging)' (pid 1193) exited with status 0 waiting took 0.077000 seconds
+[   42.452128] mipi_samsung_disp_backlight 201
+[   42.453929] brightness_control mipi_pd.brightness_level : 195 candela : 207
+[   42.453929] mipi_samsung_disp_send_cmd cmd = 0x6
+[   42.473340] init: processing action (sys.boot_completed=1 && sys.logbootcomplete=1) from (/system/etc/init/bootstat.rc:78)
+[   42.474103] init: starting service 'exec 14 (/system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)'...
+[   42.487227] mipi_samsung_disp_backlight 207
+[   42.490981] init: Service 'qcom-audio' (pid 1187) exited with status 0
+[   42.492202] init: processing action (sys.boot_completed=1) from (/system/etc/init/flags_health_check.rc:7)
+[   42.511765] init: processing action (sys.boot_completed=1) from (/system/etc/init/logd.rc:32)
+[   42.512467] init: starting service 'logd-auditctl'...
+[   42.534167] init: processing action (sys.boot_completed=1 && sys.wifitracing.started=0) from (/system/etc/init/wifi-events.rc:20)
+[   42.535449] selinux: SELinux: Could not get canonical path for /sys/kernel/debug/tracing/instances/wifi restorecon: No such file or directory.
+[   42.535449] 
+[   42.539356] init: Service 'logd-auditctl' (pid 1200) exited with status 0
+[   42.546741] init: Service 'exec 14 (/system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)' (pid 1198) exited with status 0
+[   43.447611] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   43.829116] init: Received control message 'interface_start' for 'android.hardware.secure_element@1.0::ISecureElement/SIM1' from pid: 175 (/system/bin/hwservicemanager)
+[   43.829146] init: Could not find 'android.hardware.secure_element@1.0::ISecureElement/SIM1' for ctl.interface_start
+[   43.829665] init: Received control message 'interface_start' for 'android.hardware.secure_element@1.1::ISecureElement/SIM1' from pid: 175 (/system/bin/hwservicemanager)
+[   43.829696] init: Could not find 'android.hardware.secure_element@1.1::ISecureElement/SIM1' for ctl.interface_start
+[   43.829971] init: Received control message 'interface_start' for 'android.hardware.secure_element@1.1::ISecureElement/eSE1' from pid: 175 (/system/bin/hwservicemanager)
+[   43.830001] init: Could not find 'android.hardware.secure_element@1.1::ISecureElement/eSE1' for ctl.interface_start
+[   43.848496] init: Received control message 'interface_start' for 'android.hardware.secure_element@1.0::ISecureElement/eSE1' from pid: 175 (/system/bin/hwservicemanager)
+[   43.848557] init: Could not find 'android.hardware.secure_element@1.0::ISecureElement/eSE1' for ctl.interface_start
+[   45.057347] init: Received control message 'interface_start' for 'android.hardware.graphics.mapper@3.0::IMapper/default' from pid: 175 (/system/bin/hwservicemanager)
+[   45.057408] init: Could not find 'android.hardware.graphics.mapper@3.0::IMapper/default' for ctl.interface_start
+[   45.089424] init: Received control message 'interface_start' for 'android.hardware.graphics.allocator@3.0::IAllocator/default' from pid: 175 (/system/bin/hwservicemanager)
+[   45.089485] init: Could not find 'android.hardware.graphics.allocator@3.0::IAllocator/default' for ctl.interface_start
+[   45.218037] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[   45.588341] init: Received control message 'interface_start' for 'vendor.lineage.touch@1.0::ITouchscreenGesture/default' from pid: 175 (/system/bin/hwservicemanager)
+[   45.588402] init: Could not find 'vendor.lineage.touch@1.0::ITouchscreenGesture/default' for ctl.interface_start
+[   46.120463] apexd: Can't open /product/apex for reading : No such file or directory
+[   46.531146] init: Received control message 'stop' for 'idmap2d' from pid: 498 (system_server)
+[   46.531207] init: Sending signal 9 to service 'idmap2d' (pid 1133) process group...
+[   46.536700] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1133 in 5ms
+[   46.569143] init: Service 'idmap2d' (pid 1133) received signal 9
+[   46.879169] init: Received control message 'start' for 'gsid' from pid: 498 (system_server)
+[   46.879688] init: starting service 'gsid'...
+[   46.946650] init: Received control message 'stop' for 'gsid' from pid: 498 (system_server)
+[   46.946680] init: Sending signal 9 to service 'gsid' (pid 1490) process group...
+[   46.952235] libprocessgroup: Successfully killed process cgroup uid 0 pid 1490 in 5ms
+[   46.985869] init: Service 'gsid' (pid 1490) received signal 9
+[   46.989439] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   46.999633] type=1400 audit(1794305677.038:4): avc: denied { read } for comm="Binder:179_2" name="/" dev="mmcblk0p19" ino=2 scontext=u:r:vold:s0 tcontext=u:object_r:persist_data_file:s0 tclass=dir permissive=0
+[   47.006073] type=1400 audit(1794305696.808:5): avc: granted { read } for comm="main" name="u:object_r:net_dns_prop:s0" dev="tmpfs" ino=6189 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:net_dns_prop:s0 tclass=file app=com.android.email
+[   48.759133] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   51.271722] brightness_control mipi_pd.brightness_level : 207 candela : 195
+[   51.271722] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.301693] mipi_samsung_disp_backlight 205
+[   51.303403] brightness_control mipi_pd.brightness_level : 195 candela : 195
+[   51.303433] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.335022] mipi_samsung_disp_backlight 202
+[   51.336822] brightness_control mipi_pd.brightness_level : 195 candela : 195
+[   51.336853] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.368350] mipi_samsung_disp_backlight 196
+[   51.369937] brightness_control mipi_pd.brightness_level : 195 candela : 183
+[   51.369967] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.401678] mipi_samsung_disp_backlight 190
+[   51.403387] brightness_control mipi_pd.brightness_level : 183 candela : 183
+[   51.403418] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.435037] mipi_samsung_disp_backlight 184
+[   51.436716] brightness_control mipi_pd.brightness_level : 183 candela : 172
+[   51.436716] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.468548] mipi_samsung_disp_backlight 178
+[   51.470410] brightness_control mipi_pd.brightness_level : 172 candela : 172
+[   51.470410] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.501693] mipi_samsung_disp_backlight 172
+[   51.503372] brightness_control mipi_pd.brightness_level : 172 candela : 162
+[   51.503372] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.535022] mipi_samsung_disp_backlight 166
+[   51.537982] brightness_control mipi_pd.brightness_level : 162 candela : 152
+[   51.538013] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.568350] mipi_samsung_disp_backlight 160
+[   51.571036] brightness_control mipi_pd.brightness_level : 152 candela : 152
+[   51.571066] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.602716] mipi_samsung_disp_backlight 154
+[   51.604517] brightness_control mipi_pd.brightness_level : 152 candela : 143
+[   51.604517] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.635006] mipi_samsung_disp_backlight 148
+[   51.636716] brightness_control mipi_pd.brightness_level : 143 candela : 134
+[   51.636716] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.668335] mipi_samsung_disp_backlight 142
+[   51.669952] brightness_control mipi_pd.brightness_level : 134 candela : 134
+[   51.669983] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.701693] mipi_samsung_disp_backlight 136
+[   51.703372] brightness_control mipi_pd.brightness_level : 134 candela : 126
+[   51.703403] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.735022] mipi_samsung_disp_backlight 130
+[   51.737311] brightness_control mipi_pd.brightness_level : 126 candela : 119
+[   51.737311] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.769327] mipi_samsung_disp_backlight 124
+[   51.771036] brightness_control mipi_pd.brightness_level : 119 candela : 111
+[   51.771066] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.802838] mipi_samsung_disp_backlight 118
+[   51.804394] brightness_control mipi_pd.brightness_level : 111 candela : 111
+[   51.804425] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.836105] mipi_samsung_disp_backlight 112
+[   51.840653] brightness_control mipi_pd.brightness_level : 111 candela : 105
+[   51.840683] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.868396] mipi_samsung_disp_backlight 106
+[   51.874256] brightness_control mipi_pd.brightness_level : 105 candela : 98
+[   51.874317] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.902456] mipi_samsung_disp_backlight 100
+[   51.905478] brightness_control mipi_pd.brightness_level : 98 candela : 93
+[   51.905508] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.936151] mipi_samsung_disp_backlight 94
+[   51.939356] brightness_control mipi_pd.brightness_level : 93 candela : 87
+[   51.939356] mipi_samsung_disp_send_cmd cmd = 0x6
+[   51.968808] mipi_samsung_disp_backlight 88
+[   51.971310] brightness_control mipi_pd.brightness_level : 87 candela : 82
+[   51.971341] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.003052] mipi_samsung_disp_backlight 82
+[   52.007630] brightness_control mipi_pd.brightness_level : 82 candela : 72
+[   52.007691] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.037326] mipi_samsung_disp_backlight 76
+[   52.043613] brightness_control mipi_pd.brightness_level : 72 candela : 64
+[   52.043644] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.068396] mipi_samsung_disp_backlight 67
+[   52.076484] brightness_control mipi_pd.brightness_level : 64 candela : 64
+[   52.076514] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.101754] mipi_samsung_disp_backlight 64
+[   52.107858] brightness_control mipi_pd.brightness_level : 64 candela : 56
+[   52.107889] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.136212] mipi_samsung_disp_backlight 58
+[   52.138654] brightness_control mipi_pd.brightness_level : 56 candela : 50
+[   52.138684] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.168441] mipi_samsung_disp_backlight 52
+[   52.171799] brightness_control mipi_pd.brightness_level : 50 candela : 44
+[   52.171829] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.202990] mipi_samsung_disp_backlight 46
+[   52.207874] brightness_control mipi_pd.brightness_level : 44 candela : 39
+[   52.207904] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.235556] mipi_samsung_disp_backlight 40
+[   52.243155] brightness_control mipi_pd.brightness_level : 39 candela : 34
+[   52.243216] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.268731] mipi_samsung_disp_backlight 34
+[   52.271814] brightness_control mipi_pd.brightness_level : 34 candela : 27
+[   52.271844] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.301632] mipi_samsung_disp_backlight 28
+[   52.303525] brightness_control mipi_pd.brightness_level : 27 candela : 22
+[   52.303525] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.333496] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   52.335510] mipi_samsung_disp_backlight 22
+[   52.340424] brightness_control mipi_pd.brightness_level : 22 candela : 16
+[   52.340485] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.369540] mipi_samsung_disp_backlight 16
+[   52.375034] brightness_control mipi_pd.brightness_level : 16 candela : 10
+[   52.375095] mipi_samsung_disp_send_cmd cmd = 0x6
+[   52.402960] mipi_samsung_disp_backlight 10
+[   53.372653] init: Received control message 'interface_start' for 'android.hardware.graphics.mapper@3.0::IMapper/default' from pid: 175 (/system/bin/hwservicemanager)
+[   53.372745] init: Could not find 'android.hardware.graphics.mapper@3.0::IMapper/default' for ctl.interface_start
+[   53.890798] brightness_control mipi_pd.brightness_level : 10 candela : 10
+[   53.890828] mipi_samsung_disp_send_cmd cmd = 0x6
+[   53.915000] mpu6500_input_accel_enable_store : enable = 0
+[   53.918419] mipi_samsung_disp_backlight 0
+[   53.963558] brightness_control mipi_pd.brightness_level : 10 candela : 10
+[   53.963558] mipi_samsung_disp_send_cmd cmd = 0x6
+[   53.965878] [TSP] power off
+[   53.965908] mxts_power_onoff: tsp 3.3V[l31] off is finished.
+[   53.966366] mxts_power_onoff: tsp 1.8V[lvs6] off is finished.
+[   53.985380] mipi_samsung_disp_backlight 0
+[   53.985380] mipi_samsung_auto_brightness_store : 0
+[   53.985624] [mdnie lite] outdoor value = 0, scenario = 0
+[   53.985624] [mdnie lite] mDNIe_Set_Mode start , mode(0), background(0)
+[   53.985655] [mdnie lite]  = UI MODE =
+[   53.985655] [mdnie lite]  = DYNAMIC MODE =
+[   53.985655] [mdnie lite]  send tuning cmd!!
+[   53.997283] tkey_led_power: off
+[   53.997344] 8917_l36: Failed to create debugfs directory
+[   53.997375] tkey_led_powerTKEY_LED 3.3V[l36] off is finished.
+[   53.997375] tc360_power: power off
+[   53.997375] tc360_power: tkey 2.2V[l30] off is finished.
+[   53.997375] input input10: tc360_suspend (0x1)
+[   53.998992] mipi_samsung_disp_send_cmd cmd = 0x3
+[   54.034976] [mdnie lite] mDNIe_Set_Mode end , mode(0), background(0)
+[   54.240653] [lcd] mipi_samsung_disp_off
+[   54.246360] ************active_reset**************
+[   54.246360] active_reset: DISP_RST_GPIO low
+[   54.380802] mdp4_dsi_video_wait4vsync timeout ret=0
+[   54.410346] Atmel MXT336S 3-004a: mxt_stop. but touch already off
+[   54.410376] input input10: tc360_suspend, already disabled.
+[   54.410376] input input10: tc360_suspend (0x1)
+[   54.471387] init: Received control message 'interface_start' for 'vendor.lineage.trust@1.0::IUsbRestrict/default' from pid: 175 (/system/bin/hwservicemanager)
+[   54.471448] init: Could not find 'vendor.lineage.trust@1.0::IUsbRestrict/default' for ctl.interface_start
+[   55.171310] PM: suspend entry 2026-11-10 10:15:04.985341121 UTC
+[   55.171310] PM: Syncing filesystems ... done.
+[   55.592156] PM: Preparing system for mem sleep
+[   55.593163] Freezing user space processes ... (elapsed 0.002 seconds) done.
+[   55.595635] Freezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[   55.597894] PM: Entering mem sleep
+[   55.597894] Suspending console(s) (use no_console_suspend to debug)
+[   55.625118] PM: suspend of devices complete after 26.217 msecs
+[   55.625881] PM: late suspend of devices complete after 0.763 msecs
+[   55.627315] PM: noirq suspend of devices complete after 1.434 msecs
+[   55.627315] Disabling non-boot CPUs ...
+[   55.640347] msm_pm_enter
+[   55.640347] msm_pm_enter: power collapse
+[   55.640347] msm_pm_enter: return
+[   55.640561] Enabling non-boot CPUs ...
+[   55.654082] CPU1 is up
+[   55.655913] PM: noirq resume of devices complete after 1.712 msecs
+[   55.658263] usbin_valid_irq_handler: usbin_valid_irq_handler: activated =====================
+[   55.659148] PM: early resume of devices complete after 1.192 msecs
+[   55.666809] tsu6721_irq_thread is called
+[   55.667083] proximity_onoff : proximity turn on/off = 1
+[   55.670379] tsu6721 15-0025: tsu6721_irq_thread: intr : 0x1 intr2 : 0x0
+[   55.695345] tsu6721 15-0025: dev1: 0x4, dev2: 0x0, dev3: 0x2, ADC: 0x1f Jig:OFF
+[   55.695345] tsu6721_attach_dev Save state
+[   55.695376] [MUIC] USB Connected
+[   55.695406] tsu6721_callback USB Cable is attached
+[   55.695437] handle_cable_insertion_removal: batt_present = 1
+[   55.695528] handle_usb_insertion_removal: handle_usb_insertion_removal : usb_present(1)
+[   55.695650] handle_cable_insertion_removal: handle_cable_insertion_removal : USB is inserted, chg_current 500, batt_present(1)
+[   55.695711] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (500)--------
+[   55.695833] pm_chg_usb_trim: trim_orig 53 write 0x3f index=2 value 0xa to USB_OVP_TRIM
+[   55.695895] pm8921_set_max_battery_charge_current: pm8921_set_max_battery_charge_current (475mA)--------
+[   55.695925] pm_chg_ibatmax_set: pm_chg_ibatmax_set : ibat is chagned (475)---------
+[   55.698641] power_supply usb: driver failed to report `health' property: 4294967274
+[   55.703616] msm_hsusb_config_vddcx 189: msm_hsusb_config_vddcx: min_vol:3 max_vol:4
+[   55.703677] msm_otg msm_otg: USB exited from low power mode
+[   55.706119] tsu6721 15-0025: dev1: 0x4, dev2: 0x0, dev3: 0x2, ADC: 0x1f Jig:OFF
+[   55.706119] tsu6721_attach_dev Save state
+[   55.706149] [MUIC] USB Connected
+[   55.706180] tsu6721_callback USB Cable is attached
+[   55.706210] pm_batt_power_set_property: Same cable type, no need to change
+[   55.707370] pm_abs_time_management: pm_abs_time_management: Charging Time : 0 secs (rechg:0)
+[   55.710331] get_prop_batt_status: get_prop_batt_status: check ui term (cnt:1)
+[   55.713444] tsu6721_monitor lastINT[1][0] lastDev[4][0][2] currDev[4][0][2] callState[0][0]
+[   55.713474] update_heartbeat: health(1),stat(1),chgen(1),fsm(1),cable(1),extchg(0)
+[   55.713596] update_heartbeat: soc(98/98), i(2900), temp(306), batt(1), absexpr(0), siop(100)
+[   55.714390] PM: resume of devices complete after 55.269 msecs
+[   55.721654] PM: Finishing wakeup.
+[   55.721684] Restarting tasks ... 
+[   55.729742] pm_abs_time_management: pm_abs_time_management: Charging Time : 2 secs (rechg:0)done.
+[   55.730474] PM: suspend exit 2026-11-10 10:15:07.018649055 UTC
+[   55.735540] get_prop_batt_status: get_prop_batt_status: Full charged 1,1,1,1
+[   55.738745] tsu6721_monitor lastINT[1][0] lastDev[4][0][2] currDev[4][0][2] callState[0][0]
+[   55.740057] update_heartbeat: health(1),stat(4),chgen(0),fsm(1),cable(1),extchg(0)
+[   55.740180] update_heartbeat: soc(98/98), i(2900), temp(307), batt(1), absexpr(0), siop(100)
+[   55.865832] msm_otg msm_otg: ulpi_read: timeout 48040000
+[   55.928582] mdp_bus_scale_restore_request: ab=335544320 ib=402653184
+[   55.939050] mdp_bus_scale_restore_request: ab=335544320 ib=402653184
+[   55.962734] msm_otg msm_otg: ulpi_write: timeout
+[   56.008545] ************active_reset**************
+[   56.033694] active_reset: DISP_RST_GPIO high
+[   56.066778] mipi_samsung_disp_on
+[   56.066778] [lcd] mipi_samsung_disp_on
+[   56.066809] mipi_samsung_disp_send_cmd cmd = 0x2
+[   56.099923] init: Received control message 'interface_start' for 'vendor.lineage.trust@1.0::IUsbRestrict/default' from pid: 175 (/system/bin/hwservicemanager)
+[   56.100015] init: Could not find 'vendor.lineage.trust@1.0::IUsbRestrict/default' for ctl.interface_start
+[   56.186021] msm_otg msm_otg: ulpi_write: timeout
+[   56.316770] [mipi_samsung_late_init] ID : 0x418007
+[   56.316770] [mdnie lite] is negative Mode On = 0
+[   56.316770] [mdnie lite] negative off when resume, tuning again!
+[   56.316770] [mdnie lite] mDNIe_Set_Mode start , mode(0), background(0)
+[   56.316770] [mdnie lite]  = UI MODE =
+[   56.316770] [mdnie lite]  = DYNAMIC MODE =
+[   56.316770] [mdnie lite]  send tuning cmd!!
+[   56.334625] msm_otg msm_otg: ulpi_write: timeout
+[   56.350038] [mdnie lite] mDNIe_Set_Mode end , mode(0), background(0)
+[   56.350068] [TSP] power on
+[   56.350282] mxts_power_onoff: tsp 3.3V[l31] on is finished.
+[   56.350740] mxts_power_onoff: tsp 1.8V[lvs6] on is finished.
+[   56.377201] msm_otg msm_otg: ulpi_write: timeout
+[   56.429207] msm_otg msm_otg: ulpi_write: timeout
+[   56.466595] tc360_power: power on
+[   56.466809] tc360_power: tkey 2.2V[l30] on is finished.
+[   56.468029] Atmel MXT336S 3-004a: Reset is ongoing
+[   56.468029] Atmel MXT336S 3-004a: Current state is Charging mode
+[   56.478773] msm_otg msm_otg: ulpi_write: timeout
+[   56.497634] mpu6500_input_accel_delay_store : delay = 66
+[   56.498275] accel_open_calibration: Can't open calibration file
+[   56.498275] mpu6500_input_accel_enable_store : enable = 1
+[   56.503189] Atmel MXT336S 3-004a: charging mode
+[   56.503189] Atmel MXT336S 3-004a: Current state is Charging mode
+[   56.525835] Atmel MXT336S 3-004a: 555clear_cover_enable = 0 
+[   56.537646] Atmel MXT336S 3-004a: set_charger_ <<<MXT_GR_GDC_STATUS_AQUIRED
+[   56.537677] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[   56.537677] Atmel MXT336S 3-004a: [GDC] GF is Disabled
+[   56.545734] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[   56.546589] Atmel MXT336S 3-004a: Timer2 Enabled with [0 msec]
+[   56.546589] Atmel MXT336S 3-004a: Command Calibration!!
+[   56.549977] Atmel MXT336S 3-004a: T72 MSG: 2A 02 11 
+[   56.551472] Atmel MXT336S 3-004a: T6 All Cleared
+[   56.559102] msm_otg msm_otg: ulpi_read: timeout 48870000
+[   56.569754] tkey_led_power: on
+[   56.569815] 8917_l36: Failed to create debugfs directory
+[   56.570059] tkey_led_powerTKEY_LED 3.3V[l36] on is finished.
+[   56.570059] input input10: tc360_resume
+[   56.586296] brightness_control mipi_pd.brightness_level : 10 candela : 207
+[   56.586296] mipi_samsung_disp_send_cmd cmd = 0x6
+[   56.602929] msm_otg msm_otg: ulpi_write: timeout
+[   56.616633] mipi_samsung_disp_backlight 207
+[   56.616786] Atmel MXT336S 3-004a: 555clear_cover_enable = 0 
+[   56.625270] msm_otg msm_otg: ulpi_write: timeout
+[   56.631710] Atmel MXT336S 3-004a: set_charger_ <<<MXT_GR_GDC_STATUS_AQUIRED
+[   56.631710] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[   56.631863] Atmel MXT336S 3-004a: [GDC] GF is Disabled
+[   56.633175] Atmel MXT336S 3-004a: Calibration is on going  0!!
+[   56.633175] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[   56.634488] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[   56.651030] Atmel MXT336S 3-004a: T6 All Cleared
+[   56.661071] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[   56.662078] Atmel MXT336S 3-004a: Timer2 Enabled with [0 msec]
+[   56.662078] Atmel MXT336S 3-004a: Command Calibration!!
+[   56.696932] msm_otg msm_otg: ulpi_write: timeout
+[   56.749030] Atmel MXT336S 3-004a: Calibration is on going  0!!
+[   56.749030] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[   56.749946] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[   56.762459] Atmel MXT336S 3-004a: T6 All Cleared
+[   56.789592] msm_otg msm_otg: ulpi_read: timeout 48870000
+[   56.815901] msm_otg msm_otg: ulpi_write: timeout
+[   56.865130] msm_otg msm_otg: ulpi_write: timeout
+[   56.920616] msm_otg msm_otg: ulpi_write: timeout
+[   56.948634] msm_otg msm_otg: ulpi_write: timeout
+[   56.973782] msm_otg msm_otg: ulpi_write: timeout
+[   57.004211] msm_otg msm_otg: ulpi_read: timeout 48040000
+[   57.027895] msm_otg msm_otg: ulpi_write: timeout
+[   57.028139] msm_otg msm_otg: gadget on
+[   57.034426] msm_otg_start_peripheral 1489: msm_otg_start_peripheral disable_peripheral: 0
+[   57.034457] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESET_EVENT received
+[   57.418556] Atmel MXT336S 3-004a: T72 MSG: 12 02 12 
+[   57.776804] Atmel MXT336S 3-004a: Timer1 Enabled with [900 msec]
+[   57.780131] Atmel MXT336S 3-004a: [TSP] T65: GRADTHR = 6, LPFILTCOEF = 3 for TouchNum = 1 
+[   57.800671] Atmel MXT336S 3-004a: [P][0]: T[0][0]
+[   57.953273] Atmel MXT336S 3-004a: [R][0]: T[0][0] M[14]
+[   58.329223] init: Received control message 'interface_start' for 'vendor.lineage.trust@1.0::IUsbRestrict/default' from pid: 175 (/system/bin/hwservicemanager)
+[   58.329284] init: Could not find 'vendor.lineage.trust@1.0::IUsbRestrict/default' for ctl.interface_start
+[   58.663085] Atmel MXT336S 3-004a: No cfg data in file
+[   58.663116] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Waiting
+[   59.198779] Atmel MXT336S 3-004a: T72 MSG: 12 02 12 
+[   60.059331] Atmel MXT336S 3-004a: T72 MSG: 12 02 12 
+[   61.771341] Atmel MXT336S 3-004a: T72 MSG: 12 02 12 
+[   62.628841] Atmel MXT336S 3-004a: T72 MSG: 12 02 12 
+[   63.483045] Atmel MXT336S 3-004a: T72 MSG: 12 02 12 
+[   64.342347] Atmel MXT336S 3-004a: T72 MSG: 12 02 12 
+[   65.118693] power_supply usb: driver failed to report `health' property: 4294967274
+[   65.119517] usbin_valid_irq_handler: usbin_valid_irq_handler: activated =====================
+[   65.130505] power_supply usb: driver failed to report `health' property: 4294967274
+[   65.139478] usbin_valid_irq_handler: usbin_valid_irq_handler: activated =====================
+[   65.698336] usbin_valid_irq_handler: usbin_valid_irq_handler: activated =====================
+[   65.699282] power_supply usb: driver failed to report `health' property: 4294967274
+[   65.707645] tsu6721_irq_thread is called
+[   65.711612] tsu6721 15-0025: tsu6721_irq_thread: intr : 0x2 intr2 : 0x0
+[   65.713566] power_supply usb: driver failed to report `health' property: 4294967274
+[   65.733312] [MUIC] USB Disonnected
+[   65.733374] tsu6721_callback USB Cable is detached
+[   65.733465] handle_cable_insertion_removal: batt_present = 1
+[   66.034030] handle_usb_insertion_removal: handle_usb_insertion_removal : usb_present(0)
+[   66.034152] sec_fg_calculate_dynamic_scale: sec_fg_calculate_dynamic_scale: 971 is used for capacity_max
+[   66.034182] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (2)--------
+[   66.034243] pm_chg_usb_trim: trim_orig 53 write 0x35 index=0 value 0x0 to USB_OVP_TRIM
+[   66.036654] msm_otg msm_otg: gadget off
+[   66.036685] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_DISCONNECT_EVENT received
+[   66.036807] Atmel MXT336S 3-004a: battery mode
+[   66.036807] Atmel MXT336S 3-004a: Current state is Battery mode
+[   66.036990] power_supply usb: driver failed to report `health' property: 4294967274
+[   66.037601] android_work: android_work: did not send uevent (0 0   (null))
+[   66.048466] tsu6721_monitor lastINT[2][0] lastDev[4][0][2] currDev[0][0][0] callState[0][0]
+[   66.048466] update_heartbeat: health(1),stat(2),chgen(0),fsm(3),cable(0),extchg(0)
+[   66.048527] update_heartbeat: soc(100/98), i(271900), temp(307), batt(1), absexpr(0), siop(100)
+[   66.066381] msm_otg msm_otg: phy_reset: success
+[   66.104349] Atmel MXT336S 3-004a: 555clear_cover_enable = 0 
+[   66.126567] Atmel MXT336S 3-004a: set_charger_ <<<MXT_GR_GDC_STATUS_AQUIRED
+[   66.126598] Atmel MXT336S 3-004a: [GDC] changed gdc_value Waiting -> Init
+[   66.126690] Atmel MXT336S 3-004a: [GDC] GF is Disabled
+[   66.139661] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[   66.140515] Atmel MXT336S 3-004a: Timer2 Enabled with [0 msec]
+[   66.140546] Atmel MXT336S 3-004a: Command Calibration!!
+[   66.171951] msm_hsusb_config_vddcx 189: msm_hsusb_config_vddcx: min_vol:1 max_vol:4
+[   66.171951] msm_otg msm_otg: USB in low power mode
+[   66.238242] Atmel MXT336S 3-004a: Calibration is on going  0!!
+[   66.238272] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[   66.239920] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[   66.255302] Atmel MXT336S 3-004a: T6 All Cleared
+[   66.977872] Atmel MXT336S 3-004a: T72 MSG: 12 02 11 
+[   69.914024] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   71.685975] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   73.454265] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   75.226918] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   80.570059] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   82.340698] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   84.111063] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[   85.876209] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   87.662261] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   89.455058] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[   91.225301] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[   92.994323] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[   94.766336] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[   96.536578] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  100.110605] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  101.881245] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  103.651945] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  105.422768] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  107.203418] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  110.767404] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  112.532702] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  114.308591] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  116.079261] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  117.775034] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  119.546741] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  121.328582] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  124.891133] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  126.183335] tsu6721_monitor lastINT[2][0] lastDev[4][0][2] currDev[0][0][0] callState[0][0]
+[  126.183335] update_heartbeat: health(1),stat(2),chgen(0),fsm(3),cable(0),extchg(0)
+[  126.183580] update_heartbeat: soc(100/98), i(222800), temp(308), batt(1), absexpr(0), siop(100)
+[  126.661986] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  128.432717] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  130.201892] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  131.194628] usbin_valid_irq_handler: usbin_valid_irq_handler: activated =====================
+[  131.236624] tsu6721_irq_thread is called
+[  131.240805] tsu6721 15-0025: tsu6721_irq_thread: intr : 0x1 intr2 : 0x0
+[  131.268609] tsu6721 15-0025: dev1: 0x20, dev2: 0x0, dev3: 0x2, ADC: 0x1f Jig:OFF
+[  131.269281] tsu6721_attach_dev Save state
+[  131.269281] [MUIC] CDP Connected
+[  131.269342] tsu6721_callback USB CDP is attached
+[  131.269403] handle_cable_insertion_removal: batt_present = 1
+[  131.269494] handle_usb_insertion_removal: handle_usb_insertion_removal : usb_present(1)
+[  131.293575] power_supply usb: driver failed to report `health' property: 4294967274
+[  131.304867] msm_hsusb_config_vddcx 189: msm_hsusb_config_vddcx: min_vol:3 max_vol:4
+[  131.304898] msm_otg msm_otg: USB exited from low power mode
+[  131.467175] Atmel MXT336S 3-004a: charging mode
+[  131.467205] Atmel MXT336S 3-004a: Current state is Charging mode
+[  131.471478] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (500)--------
+[  131.471570] pm_chg_usb_trim: trim_orig 53 write 0x3f index=2 value 0xa to USB_OVP_TRIM
+[  131.472241] pm8921_set_max_battery_charge_current: pm8921_set_max_battery_charge_current (1500mA)--------
+[  131.472821] pm_chg_ibatmax_set: pm_chg_ibatmax_set : ibat is chagned (1500)---------
+[  131.474988] power_supply usb: driver failed to report `health' property: 4294967274
+[  131.477491] msm_otg msm_otg: gadget on
+[  131.485121] pm_abs_time_management: pm_abs_time_management: Charging Time : 0 secs (rechg:0)
+[  131.491042] tsu6721_monitor lastINT[1][0] lastDev[20][0][2] currDev[20][0][2] callState[1][0]
+[  131.491042] update_heartbeat: health(1),stat(1),chgen(1),fsm(1),cable(8),extchg(0)
+[  131.491103] update_heartbeat: soc(100/98), i(33200), temp(308), batt(1), absexpr(0), siop(100)
+[  131.499740] msm_otg_start_peripheral 1489: msm_otg_start_peripheral disable_peripheral: 0
+[  131.499801] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESET_EVENT received
+[  131.547199] Atmel MXT336S 3-004a: 555clear_cover_enable = 0 
+[  131.559682] Atmel MXT336S 3-004a: set_charger_ <<<MXT_GR_GDC_STATUS_AQUIRED
+[  131.559713] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[  131.559926] Atmel MXT336S 3-004a: [GDC] GF is Disabled
+[  131.569754] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[  131.570578] Atmel MXT336S 3-004a: Timer2 Enabled with [0 msec]
+[  131.570608] Atmel MXT336S 3-004a: Command Calibration!!
+[  131.648008] Atmel MXT336S 3-004a: Calibration is on going  0!!
+[  131.648008] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[  131.648954] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[  131.659972] Atmel MXT336S 3-004a: T6 All Cleared
+[  131.737829] android_work: android_work: did not send uevent (0 0   (null))
+[  131.751564] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  131.808393] android_work: android_work: sent uevent USB_STATE=CONNECTED
+[  131.836746] android_work: android_work: sent uevent USB_STATE=DISCONNECTED
+[  131.924828] android_work: android_work: sent uevent USB_STATE=CONNECTED
+[  131.929955] android_usb gadget: high-speed config #1: android_usb
+[  131.983030] android_work: android_work: sent uevent USB_STATE=CONFIGURED
+[  132.296413] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (600)--------
+[  132.296474] pm_chg_usb_trim: trim_orig 53 write 0x41 index=3 value 0xc to USB_OVP_TRIM
+[  132.323058] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (700)--------
+[  132.323119] pm_chg_usb_trim: trim_orig 53 write 0x45 index=4 value 0x10 to USB_OVP_TRIM
+[  132.350099] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (800)--------
+[  132.350160] pm_chg_usb_trim: trim_orig 53 write 0x45 index=5 value 0x10 to USB_OVP_TRIM
+[  132.376438] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (850)--------
+[  132.376468] pm_chg_usb_trim: trim_orig 53 write 0x48 index=6 value 0x13 to USB_OVP_TRIM
+[  132.403113] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (900)--------
+[  132.403143] pm_chg_usb_trim: trim_orig 53 write 0x49 index=7 value 0x14 to USB_OVP_TRIM
+[  132.429757] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (950)--------
+[  132.429818] pm_chg_usb_trim: trim_orig 53 write 0x48 index=8 value 0x13 to USB_OVP_TRIM
+[  132.452342] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  132.456523] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (1000)--------
+[  132.456584] pm_chg_usb_trim: trim_orig 53 write 0x38 index=9 value 0x3 to USB_OVP_TRIM
+[  133.157637] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  133.863543] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  134.569235] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  135.274500] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  135.923271] Atmel MXT336S 3-004a: Timer1 Enabled with [900 msec]
+[  135.924950] Atmel MXT336S 3-004a: [P][0]: T[0][0]
+[  136.027559] Atmel MXT336S 3-004a: T72 MSG: 12 02 11 
+[  136.060827] Atmel MXT336S 3-004a: [R][0]: T[0][0] M[9]
+[  136.835769] Atmel MXT336S 3-004a: No cfg data in file
+[  136.835800] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Waiting
+[  136.902914] Atmel MXT336S 3-004a: T72 MSG: 12 02 11 
+[  137.758980] Atmel MXT336S 3-004a: T72 MSG: 12 02 11 
+[  138.615046] Atmel MXT336S 3-004a: T72 MSG: 12 02 11 
+[  139.124858] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_SUSPEND_EVENT received
+[  139.130871] usbin_valid_irq_handler: usbin_valid_irq_handler: activated =====================
+[  139.130932] handle_cable_insertion_removal: batt_present = 1
+[  139.131023] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (2)--------
+[  139.131084] pm_chg_usb_trim: trim_orig 53 write 0x35 index=0 value 0x0 to USB_OVP_TRIM
+[  139.132244] power_supply usb: driver failed to report `health' property: 4294967274
+[  139.139996] tsu6721_irq_thread is called
+[  139.141156] power_supply usb: driver failed to report `health' property: 4294967274
+[  139.144666] tsu6721 15-0025: tsu6721_irq_thread: intr : 0x2 intr2 : 0x0
+[  139.146223] tsu6721_monitor lastINT[2][0] lastDev[20][0][2] currDev[20][0][0] callState[1][0]
+[  139.146375] update_heartbeat: health(1),stat(2),chgen(0),fsm(3),cable(0),extchg(0)
+[  139.163406] update_heartbeat: soc(99/97), i(132900), temp(308), batt(1), absexpr(0), siop(100)
+[  139.166427] [MUIC] CDP Disconnected
+[  139.166488] tsu6721_callback USB CDP is detached
+[  139.166549] pm_batt_power_set_property: Same cable type, no need to change
+[  139.168686] msm_otg msm_otg: gadget off
+[  139.168838] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_DISCONNECT_EVENT received
+[  139.169479] android_work: android_work: sent uevent USB_STATE=DISCONNECTED
+[  139.208423] msm_otg msm_otg: phy_reset: success
+[  139.311490] msm_hsusb_config_vddcx 189: msm_hsusb_config_vddcx: min_vol:1 max_vol:4
+[  139.311521] msm_otg msm_otg: USB in low power mode
+[  139.366336] Atmel MXT336S 3-004a: battery mode
+[  139.366336] Atmel MXT336S 3-004a: Current state is Battery mode
+[  139.427224] Atmel MXT336S 3-004a: 555clear_cover_enable = 0 
+[  139.442026] Atmel MXT336S 3-004a: set_charger_ <<<MXT_GR_GDC_STATUS_AQUIRED
+[  139.442026] Atmel MXT336S 3-004a: [GDC] changed gdc_value Waiting -> Init
+[  139.442118] Atmel MXT336S 3-004a: [GDC] GF is Disabled
+[  139.451243] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[  139.452128] Atmel MXT336S 3-004a: Timer2 Enabled with [0 msec]
+[  139.452159] Atmel MXT336S 3-004a: Command Calibration!!
+[  139.523851] Atmel MXT336S 3-004a: Calibration is on going  0!!
+[  139.523851] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[  139.524828] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[  139.537311] Atmel MXT336S 3-004a: T6 All Cleared
+[  139.713505] handle_usb_insertion_removal: handle_usb_insertion_removal : usb_present(0)
+[  139.713749] power_supply usb: driver failed to report `health' property: 4294967274
+[  140.380589] Atmel MXT336S 3-004a: T72 MSG: 12 02 11 
+[  141.238638] Atmel MXT336S 3-004a: T72 MSG: 12 02 11 
+[  142.950221] Atmel MXT336S 3-004a: T72 MSG: 12 02 11 
+[  144.662200] Atmel MXT336S 3-004a: T72 MSG: 12 02 11 
+[  145.516007] Atmel MXT336S 3-004a: T72 MSG: 12 02 12 
+[  147.184129] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  148.954707] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  150.724156] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  152.495315] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  154.276941] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  156.432015] usbin_valid_irq_handler: usbin_valid_irq_handler: activated =====================
+[  156.474774] tsu6721_irq_thread is called
+[  156.479017] tsu6721 15-0025: tsu6721_irq_thread: intr : 0x1 intr2 : 0x0
+[  156.504501] tsu6721 15-0025: dev1: 0x4, dev2: 0x0, dev3: 0x2, ADC: 0x1f Jig:OFF
+[  156.504959] tsu6721_attach_dev Save state
+[  156.504959] [MUIC] USB Connected
+[  156.505020] tsu6721_callback USB Cable is attached
+[  156.505112] handle_cable_insertion_removal: batt_present = 1
+[  156.505203] handle_usb_insertion_removal: handle_usb_insertion_removal : usb_present(1)
+[  156.505417] handle_cable_insertion_removal: handle_cable_insertion_removal : USB is inserted, chg_current 500, batt_present(1)
+[  156.505478] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (500)--------
+[  156.505569] pm_chg_usb_trim: trim_orig 53 write 0x3f index=2 value 0xa to USB_OVP_TRIM
+[  156.506638] pm8921_set_max_battery_charge_current: pm8921_set_max_battery_charge_current (475mA)--------
+[  156.507370] pm_chg_ibatmax_set: pm_chg_ibatmax_set : ibat is chagned (475)---------
+[  156.509812] power_supply usb: driver failed to report `health' property: 4294967274
+[  156.516770] msm_hsusb_config_vddcx 189: msm_hsusb_config_vddcx: min_vol:3 max_vol:4
+[  156.516923] msm_otg msm_otg: USB exited from low power mode
+[  156.520036] pm_abs_time_management: pm_abs_time_management: Charging Time : 0 secs (rechg:0)
+[  156.526506] get_prop_batt_status: get_prop_batt_status: check ui term (cnt:1)
+[  156.528185] tsu6721_monitor lastINT[1][0] lastDev[4][0][2] currDev[4][0][2] callState[0][1]
+[  156.528185] update_heartbeat: health(1),stat(1),chgen(1),fsm(1),cable(1),extchg(0)
+[  156.528246] update_heartbeat: soc(99/97), i(22100), temp(309), batt(1), absexpr(0), siop(100)
+[  156.639737] msm_otg msm_otg: gadget on
+[  156.643888] msm_otg_start_peripheral 1489: msm_otg_start_peripheral disable_peripheral: 0
+[  156.643918] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESET_EVENT received
+[  156.704043] Atmel MXT336S 3-004a: charging mode
+[  156.704043] Atmel MXT336S 3-004a: Current state is Charging mode
+[  156.759072] android_work: android_work: did not send uevent (0 0   (null))
+[  156.775308] Atmel MXT336S 3-004a: 555clear_cover_enable = 0 
+[  156.793346] Atmel MXT336S 3-004a: set_charger_ <<<MXT_GR_GDC_STATUS_AQUIRED
+[  156.793377] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[  156.793499] Atmel MXT336S 3-004a: [GDC] GF is Disabled
+[  156.807874] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[  156.809064] Atmel MXT336S 3-004a: Timer2 Enabled with [0 msec]
+[  156.809095] Atmel MXT336S 3-004a: Command Calibration!!
+[  156.840927] android_work: android_work: sent uevent USB_STATE=CONNECTED
+[  156.883412] Atmel MXT336S 3-004a: Calibration is on going  0!!
+[  156.883412] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[  156.883564] android_usb gadget: high-speed config #1: android_usb
+[  156.884327] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[  156.905569] Atmel MXT336S 3-004a: T6 All Cleared
+[  156.938165] android_work: android_work: sent uevent USB_STATE=CONFIGURED
+[  157.214252] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  157.920372] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  158.626918] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  159.333068] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  160.039127] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  161.449961] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  161.646421] msm_ta_detect_work 2111: msm_ta_detect_work: USB exit ta detection - frindex
+[  162.156783] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  162.862261] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  163.567678] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  164.273676] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  164.979948] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  165.686342] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  166.392003] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  167.097726] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  167.802929] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  168.508957] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  170.624904] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  171.330596] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  172.036471] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  172.743903] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  173.450389] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  174.155898] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  174.861345] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  175.566519] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  176.272821] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  176.977475] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  177.682893] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  178.389256] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  179.094765] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  179.800854] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  180.506546] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  181.211689] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  181.918327] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  182.622951] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  183.328460] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  184.033755] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  185.443094] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  186.148603] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  186.854387] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  187.559194] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  188.264764] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  188.969998] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  189.675782] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  190.381107] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  191.086403] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  191.791393] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  192.497115] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  193.202838] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  194.613276] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  195.297543] usbin_valid_irq_handler: usbin_valid_irq_handler: activated =====================
+[  195.297604] handle_cable_insertion_removal: batt_present = 1
+[  195.297665] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (2)--------
+[  195.297726] pm_chg_usb_trim: trim_orig 53 write 0x35 index=0 value 0x0 to USB_OVP_TRIM
+[  195.298977] power_supply usb: driver failed to report `health' property: 4294967274
+[  195.305173] power_supply usb: driver failed to report `health' property: 4294967274
+[  195.307034] tsu6721_irq_thread is called
+[  195.311918] tsu6721 15-0025: tsu6721_irq_thread: intr : 0x2 intr2 : 0x0
+[  195.313108] tsu6721_monitor lastINT[2][0] lastDev[4][0][2] currDev[4][0][0] callState[0][1]
+[  195.313138] update_heartbeat: health(1),stat(2),chgen(0),fsm(3),cable(0),extchg(0)
+[  195.318754] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  195.333099] [MUIC] USB Disonnected
+[  195.333129] tsu6721_callback USB Cable is detached
+[  195.333190] pm_batt_power_set_property: Same cable type, no need to change
+[  195.333343] update_heartbeat: soc(99/97), i(140500), temp(311), batt(1), absexpr(0), siop(100)
+[  195.335601] msm_otg msm_otg: gadget off
+[  195.335754] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_DISCONNECT_EVENT received
+[  195.336456] android_work: android_work: sent uevent USB_STATE=DISCONNECTED
+[  195.346619] read descriptors
+[  195.346680] read descriptors
+[  195.346711] read strings
+[  195.375522] msm_otg msm_otg: phy_reset: success
+[  195.478010] msm_hsusb_config_vddcx 189: msm_hsusb_config_vddcx: min_vol:1 max_vol:4
+[  195.478040] msm_otg msm_otg: USB in low power mode
+[  195.533007] Atmel MXT336S 3-004a: battery mode
+[  195.533038] Atmel MXT336S 3-004a: Current state is Battery mode
+[  195.607477] Atmel MXT336S 3-004a: 555clear_cover_enable = 0 
+[  195.629726] Atmel MXT336S 3-004a: set_charger_ <<<MXT_GR_GDC_STATUS_AQUIRED
+[  195.629757] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[  195.629879] Atmel MXT336S 3-004a: [GDC] GF is Disabled
+[  195.649015] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[  195.650114] Atmel MXT336S 3-004a: Timer2 Enabled with [0 msec]
+[  195.650144] Atmel MXT336S 3-004a: Command Calibration!!
+[  195.730871] Atmel MXT336S 3-004a: Calibration is on going  0!!
+[  195.730871] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[  195.731847] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[  195.737036] handle_usb_insertion_removal: handle_usb_insertion_removal : usb_present(0)
+[  195.737341] power_supply usb: driver failed to report `health' property: 4294967274
+[  195.753059] Atmel MXT336S 3-004a: T6 All Cleared
+[  198.503433] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  200.275354] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  202.045750] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  203.816267] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  205.597710] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  207.389287] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  209.159743] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  210.930016] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  212.700473] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  214.470959] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  218.044101] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  219.682252] usbin_valid_irq_handler: usbin_valid_irq_handler: activated =====================
+[  219.721654] tsu6721_irq_thread is called
+[  219.725835] tsu6721 15-0025: tsu6721_irq_thread: intr : 0x1 intr2 : 0x0
+[  219.751899] tsu6721 15-0025: dev1: 0x4, dev2: 0x0, dev3: 0x2, ADC: 0x1f Jig:OFF
+[  219.752540] tsu6721_attach_dev Save state
+[  219.752571] [MUIC] USB Connected
+[  219.752601] tsu6721_callback USB Cable is attached
+[  219.752693] handle_cable_insertion_removal: batt_present = 1
+[  219.752754] handle_usb_insertion_removal: handle_usb_insertion_removal : usb_present(1)
+[  219.753212] handle_cable_insertion_removal: handle_cable_insertion_removal : USB is inserted, chg_current 500, batt_present(1)
+[  219.753303] __pm8921_charger_vbus_draw: __pm8921_charger_vbus_draw: vbus is changed (500)--------
+[  219.753395] pm_chg_usb_trim: trim_orig 53 write 0x3f index=2 value 0xa to USB_OVP_TRIM
+[  219.754036] pm8921_set_max_battery_charge_current: pm8921_set_max_battery_charge_current (475mA)--------
+[  219.754372] pm_chg_ibatmax_set: pm_chg_ibatmax_set : ibat is chagned (475)---------
+[  219.756630] power_supply usb: driver failed to report `health' property: 4294967274
+[  219.765603] msm_hsusb_config_vddcx 189: msm_hsusb_config_vddcx: min_vol:3 max_vol:4
+[  219.765664] msm_otg msm_otg: USB exited from low power mode
+[  219.769235] pm_abs_time_management: pm_abs_time_management: Charging Time : 0 secs (rechg:0)
+[  219.777414] get_prop_batt_status: get_prop_batt_status: check ui term (cnt:1)
+[  219.780527] tsu6721_monitor lastINT[1][0] lastDev[4][0][2] currDev[4][0][2] callState[0][0]
+[  219.780589] update_heartbeat: health(1),stat(1),chgen(1),fsm(1),cable(1),extchg(0)
+[  219.780680] update_heartbeat: soc(99/97), i(21500), temp(312), batt(1), absexpr(0), siop(100)
+[  219.811963] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  219.886403] msm_otg msm_otg: gadget on
+[  219.889760] msm_otg_start_peripheral 1489: msm_otg_start_peripheral disable_peripheral: 0
+[  219.889790] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESET_EVENT received
+[  219.949641] Atmel MXT336S 3-004a: charging mode
+[  219.949671] Atmel MXT336S 3-004a: Current state is Charging mode
+[  220.005218] android_work: android_work: did not send uevent (0 0   (null))
+[  220.025148] Atmel MXT336S 3-004a: 555clear_cover_enable = 0 
+[  220.049900] Atmel MXT336S 3-004a: set_charger_ <<<MXT_GR_GDC_STATUS_AQUIRED
+[  220.049900] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[  220.049992] Atmel MXT336S 3-004a: [GDC] GF is Disabled
+[  220.074194] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[  220.075629] Atmel MXT336S 3-004a: Timer2 Enabled with [0 msec]
+[  220.075629] Atmel MXT336S 3-004a: Command Calibration!!
+[  220.087074] android_work: android_work: sent uevent USB_STATE=CONNECTED
+[  220.108469] android_usb gadget: high-speed config #1: android_usb
+[  220.148054] Atmel MXT336S 3-004a: Calibration is on going  0!!
+[  220.148084] Atmel MXT336S 3-004a: [GDC] changed gdc_value Init -> Init
+[  220.149061] Atmel MXT336S 3-004a: Timer1 Enabled with [0 msec]
+[  220.159163] Atmel MXT336S 3-004a: T6 All Cleared
+[  220.159865] android_work: android_work: sent uevent USB_STATE=CONFIGURED
+[  220.666534] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  221.372836] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  222.078559] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  222.784220] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  223.488997] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  224.194140] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  224.899008] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  224.899710] msm_ta_detect_work 2111: msm_ta_detect_work: USB exit ta detection - frindex
+[  225.604761] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  226.310086] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  227.016480] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  227.721898] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  228.426827] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  229.131878] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  229.836807] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  230.541370] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  231.246970] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  231.951411] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  232.656615] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  233.361178] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  234.066839] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  234.773355] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  235.479566] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  236.185197] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  236.891561] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  237.849198] type=1400 audit(1794305697.191:6): avc: granted { read } for comm="main" name="u:object_r:net_dns_prop:s0" dev="tmpfs" ino=6189 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:net_dns_prop:s0 tclass=file app=com.android.email
+[  237.849259] type=1400 audit(1794305889.132:7): avc: denied { read } for comm="cat" name="cmdline" dev="proc" ino=4026533625 scontext=u:r:shell:s0 tcontext=u:object_r:proc_cmdline:s0 tclass=file permissive=0
+[  238.302945] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  239.346680] type=1400 audit(1794305889.132:7): avc: denied { read } for comm="cat" name="cmdline" dev="proc" ino=4026533625 scontext=u:r:shell:s0 tcontext=u:object_r:proc_cmdline:s0 tclass=file permissive=0
+[  239.346741] type=1400 audit(1794305890.605:8): avc: denied { read } for comm="cat" name="virtual_size" dev="sysfs" ino=8419 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=0
+[  239.347047] type=1400 audit(1794305890.605:8): avc: denied { read } for comm="cat" name="virtual_size" dev="sysfs" ino=8419 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=0
+[  239.347077] type=1400 audit(1794305890.605:9): avc: denied { read } for comm="cat" name="stride" dev="sysfs" ino=8421 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=0
+[  239.347321] type=1400 audit(1794305890.605:9): avc: denied { read } for comm="cat" name="stride" dev="sysfs" ino=8421 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=0
+[  239.347352] type=1400 audit(1794305890.605:10): avc: denied { read } for comm="cat" name="bits_per_pixel" dev="sysfs" ino=8412 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=0
+[  239.714390] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  240.420997] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  241.127056] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  241.832504] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  242.538684] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  243.245017] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  244.655241] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  245.361513] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  246.067511] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  246.164779] init: Service 'adbd' (pid 279) exited with status 1
+[  246.164840] init: Sending signal 9 to service 'adbd' (pid 279) process group...
+[  246.165145] libprocessgroup: Successfully killed process cgroup uid 0 pid 279 in 0ms
+[  246.190599] init: starting service 'adbd'...
+[  246.199847] init: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[  246.274408] read descriptors
+[  246.274439] read descriptors
+[  246.274469] read strings
+[  246.277613] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_SUSPEND_EVENT received
+[  246.425820] android_work: android_work: sent uevent USB_STATE=DISCONNECTED
+[  246.509354] android_work: android_work: sent uevent USB_STATE=CONNECTED
+[  246.529314] android_usb gadget: high-speed config #1: android_usb
+[  246.583183] android_work: android_work: sent uevent USB_STATE=CONFIGURED
+[  247.477765] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  248.183030] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  248.888478] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  249.593346] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
+[  250.298672] Atmel MXT336S 3-004a: T72 MSG: 10 02 12 
+[  251.004425] Atmel MXT336S 3-004a: T72 MSG: 10 02 13 
